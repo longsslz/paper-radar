@@ -1,0 +1,70 @@
+[
+  {
+    "paper_id": "fixture:oect-meta-001",
+    "title": "Reconfigurable Microwave Metadevices Based on Organic Electrochemical Transistors",
+    "authors": [
+      "Giovanni E. Bonacchini",
+      "Fiorenzo Omenetto"
+    ],
+    "venue": "Nature Electronics",
+    "published_at": "2026-06-03",
+    "source": "fixture",
+    "doi": null,
+    "url": "https://example.com/oect-meta-001",
+    "pdf_url": "",
+    "robot_type_tags": [
+      "oect_omiec",
+      "tunable_metasurface",
+      "terahertz_microwave"
+    ],
+    "paper_type": "direct",
+    "score": 1.0,
+    "abstract": "We demonstrate an organic electrochemical transistor gated microwave metadevice using PEDOT:PSS electrochemical gating to tune metasurface resonance and wavefront response in fabricated low-voltage devices.",
+    "key_figure_path": "",
+    "key_figure_caption": ""
+  },
+  {
+    "paper_id": "fixture:mutable-001",
+    "title": "Electrochemically Mutable Soft Metasurfaces",
+    "authors": [
+      "Scott T. Keene",
+      "Philippe Lalanne"
+    ],
+    "venue": "Nature Materials",
+    "published_at": "2026-06-01",
+    "source": "fixture",
+    "doi": null,
+    "url": "https://example.com/mutable-001",
+    "pdf_url": "",
+    "robot_type_tags": [
+      "oect_omiec",
+      "tunable_metasurface"
+    ],
+    "paper_type": "transferable",
+    "score": 0.93,
+    "abstract": "An OMIEC soft metasurface changes optical constants through reversible electrochemical doping, enabling tunable visible and near-infrared metasurface pixels in measured flexible devices.",
+    "key_figure_path": "",
+    "key_figure_caption": ""
+  },
+  {
+    "paper_id": "fixture:dnn-001",
+    "title": "Programmable Diffractive Deep Neural Network Based on a Digital-Coding Metasurface Array",
+    "authors": [
+      "Tie Jun Cui"
+    ],
+    "venue": "Nature Electronics",
+    "published_at": "2026-05-30",
+    "source": "fixture",
+    "doi": null,
+    "url": "https://example.com/dnn-001",
+    "pdf_url": "",
+    "robot_type_tags": [
+      "metasurface_computing"
+    ],
+    "paper_type": "direct",
+    "score": 1.0,
+    "abstract": "A programmable digital coding metasurface performs diffractive neural network computing and classification with independently controlled metasurface elements.",
+    "key_figure_path": "",
+    "key_figure_caption": ""
+  }
+]

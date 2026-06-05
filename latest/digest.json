@@ -1,0 +1,91 @@
+[
+  {
+    "title": "Reconfigurable Microwave Metadevices Based on Organic Electrochemical Transistors",
+    "authors": [
+      "Giovanni E. Bonacchini",
+      "Fiorenzo Omenetto"
+    ],
+    "venue": "Nature Electronics",
+    "published_at": "2026-06-03",
+    "paper_type": "direct",
+    "robot_type_tags": [
+      "oect_omiec",
+      "tunable_metasurface",
+      "terahertz_microwave"
+    ],
+    "score": 1.0,
+    "url": "https://example.com/oect-meta-001",
+    "pdf_url": "",
+    "analysis": {
+      "core_insight": "当前仅有摘要，尚不足以可靠还原 oect omiec 的核心科学洞见。",
+      "problem_frame": "该工作围绕 oect omiec 的器件、波调控或物理计算任务展开，但仅凭摘要还不能准确确认其真正受限的材料-器件瓶颈。",
+      "first_principles": "需要从原文中确认作者究竟在优化哪一个基本约束：离子迁移、掺杂动力学、光学常数调制、阵列寻址、噪声，还是计算可训练性。",
+      "mechanism": "摘要不足以支撑机制级判断；生产版本应读取全文后再给出因果链。",
+      "boundary_advanced": "当前无法负责任地判断它把能力边界推进了多少。",
+      "old_problem": "这类工作试图缓解 oect omiec 中器件、波调控、传感和计算难以集成的老问题。",
+      "why_it_works": "从摘要看，方法通过更贴合材料-器件-物理场耦合约束的设计来提升可用性。",
+      "true_novelty": "当前骨架阶段仅基于标题与摘要做初判；真正的新意仍需要接入全文或更强分析器后确认。",
+      "evidence_summary": "摘要中尚未看到明确 benchmark 证据，并给出了器件制备、阵列或实测响应验证。",
+      "email_summary": "聚焦 oect omiec 的感知能力提升；摘要中尚未看到明确 benchmark 证据，并给出了器件制备、阵列或实测响应验证。",
+      "importance_reason": "与研究画像高度相关，且具备继续深读的潜力。"
+    }
+  },
+  {
+    "title": "Electrochemically Mutable Soft Metasurfaces",
+    "authors": [
+      "Scott T. Keene",
+      "Philippe Lalanne"
+    ],
+    "venue": "Nature Materials",
+    "published_at": "2026-06-01",
+    "paper_type": "transferable",
+    "robot_type_tags": [
+      "oect_omiec",
+      "tunable_metasurface"
+    ],
+    "score": 0.93,
+    "url": "https://example.com/mutable-001",
+    "pdf_url": "",
+    "analysis": {
+      "core_insight": "当前仅有摘要，尚不足以可靠还原 oect omiec 的核心科学洞见。",
+      "problem_frame": "该工作围绕 oect omiec 的器件、波调控或物理计算任务展开，但仅凭摘要还不能准确确认其真正受限的材料-器件瓶颈。",
+      "first_principles": "需要从原文中确认作者究竟在优化哪一个基本约束：离子迁移、掺杂动力学、光学常数调制、阵列寻址、噪声，还是计算可训练性。",
+      "mechanism": "摘要不足以支撑机制级判断；生产版本应读取全文后再给出因果链。",
+      "boundary_advanced": "当前无法负责任地判断它把能力边界推进了多少。",
+      "old_problem": "这类工作试图缓解 oect omiec 中器件、波调控、传感和计算难以集成的老问题。",
+      "why_it_works": "从摘要看，方法通过更贴合材料-器件-物理场耦合约束的设计来提升可用性。",
+      "true_novelty": "当前骨架阶段仅基于标题与摘要做初判；真正的新意仍需要接入全文或更强分析器后确认。",
+      "evidence_summary": "摘要中尚未看到明确 benchmark 证据，并给出了器件制备、阵列或实测响应验证。",
+      "email_summary": "聚焦 oect omiec 的感知能力提升；摘要中尚未看到明确 benchmark 证据，并给出了器件制备、阵列或实测响应验证。",
+      "importance_reason": "与研究画像高度相关，且具备继续深读的潜力。"
+    }
+  },
+  {
+    "title": "Programmable Diffractive Deep Neural Network Based on a Digital-Coding Metasurface Array",
+    "authors": [
+      "Tie Jun Cui"
+    ],
+    "venue": "Nature Electronics",
+    "published_at": "2026-05-30",
+    "paper_type": "direct",
+    "robot_type_tags": [
+      "metasurface_computing"
+    ],
+    "score": 1.0,
+    "url": "https://example.com/dnn-001",
+    "pdf_url": "",
+    "analysis": {
+      "core_insight": "当前仅有摘要，尚不足以可靠还原 metasurface computing 的核心科学洞见。",
+      "problem_frame": "该工作围绕 metasurface computing 的器件、波调控或物理计算任务展开，但仅凭摘要还不能准确确认其真正受限的材料-器件瓶颈。",
+      "first_principles": "需要从原文中确认作者究竟在优化哪一个基本约束：离子迁移、掺杂动力学、光学常数调制、阵列寻址、噪声，还是计算可训练性。",
+      "mechanism": "摘要不足以支撑机制级判断；生产版本应读取全文后再给出因果链。",
+      "boundary_advanced": "当前无法负责任地判断它把能力边界推进了多少。",
+      "old_problem": "这类工作试图缓解 metasurface computing 中器件、波调控、传感和计算难以集成的老问题。",
+      "why_it_works": "从摘要看，方法通过更贴合材料-器件-物理场耦合约束的设计来提升可用性。",
+      "true_novelty": "当前骨架阶段仅基于标题与摘要做初判；真正的新意仍需要接入全文或更强分析器后确认。",
+      "evidence_summary": "摘要中尚未看到明确 benchmark 证据，并给出了器件制备、阵列或实测响应验证。",
+      "email_summary": "聚焦 metasurface computing 的感知能力提升；摘要中尚未看到明确 benchmark 证据，并给出了器件制备、阵列或实测响应验证。",
+      "importance_reason": "与研究画像高度相关，且具备继续深读的潜力。"
+    }
+  }
+]
