@@ -1,7 +1,7 @@
 [
   {
     "paper_id": "fixture:oect-meta-001",
-    "title": "Reconfigurable Microwave Metadevices Based on Organic Electrochemical Transistors",
+    "title": "Reconfigurable microwave metadevices based on organic electrochemical transistors",
     "authors": [
       "Giovanni E. Bonacchini",
       "Fiorenzo Omenetto"
@@ -19,9 +19,9 @@
     ],
     "paper_type": "direct",
     "score": 1.0,
-    "abstract": "We demonstrate an organic electrochemical transistor gated microwave metadevice using PEDOT:PSS electrochemical gating to tune metasurface resonance and wavefront response in fabricated low-voltage devices.",
-    "key_figure_path": "",
-    "key_figure_caption": ""
+    "abstract": "Electrically tunable metadevices can add novel functionalities to electronic and electromagnetic systems such as antennas and cloaking technologies. However, current microwave metadevices are based on materials that require sophisticated and expensive fabrication processes, and are not compatible with large-area and high-throughput deposition techniques on flexible platforms. Here we report reconfigurable microwave resonators that are electrically tuned by organic electrochemical transistors. The devices are fabricated via inkjet printing onto polyimide substrates using commercial metal nanoparticle and conducting polymer inks. By applying electrostatic gating to the polymer&#8212;a mixed ion&#8211;electron conductor&#8212;we show that the amplitude and frequency of different microwave resonant structures, including individual magnetic and electric split-ring resonators as well as a metasurface, can be modulated in the sub-5-GHz range. Electrically tunable metamaterial-inspired devices in the microwave range can be created by using resonators that are integrated with organic electrochemical transistors and are entirely fabricated via inkjet-printed onto polyimide substrates.",
+    "key_figure_path": "output/figures/fixture_oect-meta-001_local_pdf_p2_i3.png",
+    "key_figure_caption": "Fig. 1 | Reconfigurable microwave devices. a,b, Illustration of an amplitude-modulated DBSRR (a) and its equivalent circuit model (b), where an OECT"
   },
   {
     "paper_id": "fixture:mutable-001",

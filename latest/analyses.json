@@ -1,16 +1,16 @@
 {
   "fixture:oect-meta-001": {
-    "core_insight": "当前仅有摘要，尚不足以可靠还原 oect omiec 的核心科学洞见。",
-    "problem_frame": "该工作围绕 oect omiec 的器件、波调控或物理计算任务展开，但仅凭摘要还不能准确确认其真正受限的材料-器件瓶颈。",
-    "first_principles": "需要从原文中确认作者究竟在优化哪一个基本约束：离子迁移、掺杂动力学、光学常数调制、阵列寻址、噪声，还是计算可训练性。",
-    "mechanism": "摘要不足以支撑机制级判断；生产版本应读取全文后再给出因果链。",
-    "boundary_advanced": "当前无法负责任地判断它把能力边界推进了多少。",
-    "old_problem": "这类工作试图缓解 oect omiec 中器件、波调控、传感和计算难以集成的老问题。",
-    "why_it_works": "从摘要看，方法通过更贴合材料-器件-物理场耦合约束的设计来提升可用性。",
-    "true_novelty": "当前骨架阶段仅基于标题与摘要做初判；真正的新意仍需要接入全文或更强分析器后确认。",
-    "evidence_summary": "摘要中尚未看到明确 benchmark 证据，并给出了器件制备、阵列或实测响应验证。",
-    "email_summary": "聚焦 oect omiec 的感知能力提升；摘要中尚未看到明确 benchmark 证据，并给出了器件制备、阵列或实测响应验证。",
-    "importance_reason": "与研究画像高度相关，且具备继续深读的潜力。"
+    "core_insight": "这篇论文把 OECT 从低压生物电子器件推进到可重构微波超器件的主动调控节点。",
+    "problem_frame": "传统微波超材料可调谐通常依赖二极管、MEMS 或外接偏置网络，柔性、生物兼容、低压和连续电导调控难以同时满足。",
+    "first_principles": "OECT 的栅压通过离子注入/抽取改变 PEDOT:PSS 沟道的掺杂态和电导率；当这个可变电导被放进超材料谐振单元，局域电磁边界条件就会随电化学状态改变。",
+    "mechanism": "作者将 PEDOT:PSS OECT 集成到微波 split-ring/metadevice 结构中，用电化学门控调节有机沟道电导，进而改变谐振强度、频率响应和超器件透射特性。",
+    "boundary_advanced": "它证明了有机混合离子-电子器件可以直接驱动超表面/超材料响应，为 OECT 阵列化调控超表面像素打开了第一步。",
+    "old_problem": "以往 OECT 主要停留在生物传感、放大和突触器件；超表面调控则更多依赖无机电子或相变材料，两条路线缺少器件级接口。",
+    "why_it_works": "PEDOT:PSS 的电导可被低电压电化学门控大幅、可逆地调制，微波谐振结构又对单元内电导变化高度敏感，因此小电压可以转化为可测的电磁响应变化。",
+    "true_novelty": "真正新意不是单独做 OECT 或单独做可调超材料，而是把 OECT 的离子-电子耦合作为超器件的可编程材料状态变量。",
+    "evidence_summary": "Nature Electronics 论文；本次已从用户提供的 24 页 PDF 提取全文文本和关键图，论文展示了基于 organic electrochemical transistors 的 reconfigurable microwave metadevices。",
+    "email_summary": "Omenetto/Bonacchini 的 Nature Electronics 工作：用 PEDOT:PSS OECT 低压电化学门控微波超器件，是 OECT × 超表面交叉的关键起点。",
+    "importance_reason": "这正对应感传算一体化路线中的“同一 OECT 器件既能感知/记忆，又能调控超表面单元”的最小可验证物理接口。"
   },
   "fixture:mutable-001": {
     "core_insight": "当前仅有摘要，尚不足以可靠还原 oect omiec 的核心科学洞见。",
