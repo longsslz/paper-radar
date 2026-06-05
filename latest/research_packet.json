@@ -9,9 +9,9 @@
     "venue": "Nature Electronics",
     "published_at": "2026-06-03",
     "source": "fixture",
-    "doi": null,
-    "url": "https://example.com/oect-meta-001",
-    "pdf_url": "",
+    "doi": "10.1038/s41928-021-00590-0",
+    "url": "https://www.nature.com/articles/s41928-021-00590-0",
+    "pdf_url": "https://www.nature.com/articles/s41928-021-00590-0.pdf",
     "robot_type_tags": [
       "oect_omiec",
       "tunable_metasurface",
@@ -33,9 +33,9 @@
     "venue": "Nature Materials",
     "published_at": "2026-06-01",
     "source": "fixture",
-    "doi": null,
-    "url": "https://example.com/mutable-001",
-    "pdf_url": "",
+    "doi": "10.1038/s41563-024-02042-4",
+    "url": "https://www.nature.com/articles/s41563-024-02042-4",
+    "pdf_url": "https://www.nature.com/articles/s41563-024-02042-4.pdf",
     "robot_type_tags": [
       "oect_omiec",
       "tunable_metasurface"
@@ -55,9 +55,9 @@
     "venue": "Nature Electronics",
     "published_at": "2026-05-30",
     "source": "fixture",
-    "doi": null,
-    "url": "https://example.com/dnn-001",
-    "pdf_url": "",
+    "doi": "10.1038/s41928-022-00719-9",
+    "url": "https://www.nature.com/articles/s41928-022-00719-9",
+    "pdf_url": "https://www.nature.com/articles/s41928-022-00719-9.pdf",
     "robot_type_tags": [
       "metasurface_computing"
     ],

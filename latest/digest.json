@@ -14,8 +14,8 @@
       "terahertz_microwave"
     ],
     "score": 1.0,
-    "url": "https://example.com/oect-meta-001",
-    "pdf_url": "",
+    "url": "https://www.nature.com/articles/s41928-021-00590-0",
+    "pdf_url": "https://www.nature.com/articles/s41928-021-00590-0.pdf",
     "analysis": {
       "core_insight": "当前仅有摘要，尚不足以可靠还原 oect omiec 的核心科学洞见。",
       "problem_frame": "该工作围绕 oect omiec 的器件、波调控或物理计算任务展开，但仅凭摘要还不能准确确认其真正受限的材料-器件瓶颈。",
@@ -44,8 +44,8 @@
       "tunable_metasurface"
     ],
     "score": 0.93,
-    "url": "https://example.com/mutable-001",
-    "pdf_url": "",
+    "url": "https://www.nature.com/articles/s41563-024-02042-4",
+    "pdf_url": "https://www.nature.com/articles/s41563-024-02042-4.pdf",
     "analysis": {
       "core_insight": "当前仅有摘要，尚不足以可靠还原 oect omiec 的核心科学洞见。",
       "problem_frame": "该工作围绕 oect omiec 的器件、波调控或物理计算任务展开，但仅凭摘要还不能准确确认其真正受限的材料-器件瓶颈。",
@@ -72,8 +72,8 @@
       "metasurface_computing"
     ],
     "score": 1.0,
-    "url": "https://example.com/dnn-001",
-    "pdf_url": "",
+    "url": "https://www.nature.com/articles/s41928-022-00719-9",
+    "pdf_url": "https://www.nature.com/articles/s41928-022-00719-9.pdf",
     "analysis": {
       "core_insight": "当前仅有摘要，尚不足以可靠还原 metasurface computing 的核心科学洞见。",
       "problem_frame": "该工作围绕 metasurface computing 的器件、波调控或物理计算任务展开，但仅凭摘要还不能准确确认其真正受限的材料-器件瓶颈。",
