@@ -104,17 +104,17 @@
     "importance_reason": "neuromorphic physical computing 的核心是利用物理过程本身完成有用映射。这篇从光子计算角度证明，非理想物理属性经过设计后可以提高系统能力。"
   },
   "crossref:10.1038/s41928-024-01200-5": {
-    "core_insight": "这篇 Nature Electronics 条目是本期最贴近 OECT/OMIEC × neuromorphic perception 的入选项，但本地没有解析到全文或摘要；可确认的信息是题名、期刊、作者、DOI、官方 PDF URL 和 publisher Fig.1。基于这些证据，它应被视为关于 organic electrochemical neurons 在神经形态感知中作用的方向性材料，而非可进行细节复述的完整研究论文证据。",
-    "problem_frame": "OECT/OMIEC 神经形态感知面对的根本问题是如何把离子-电子耦合、突触/神经元动态和真实感知任务连接起来。题名指向 organic electrochemical neurons，说明关注点不只是 OECT 作为传感晶体管，而是把有机电化学器件上升到神经元级事件处理/感知计算模块。",
+    "core_insight": "这篇 Nature Electronics Perspective 把 OECT 从“湿态传感晶体管/突触器件”推进到“organic electrochemical neuron”这一系统角色：利用 OMIEC 的离子-电子耦合、柔性、生物兼容性和多模态感知潜力，讨论它如何支撑可适应、可生物集成的 neuromorphic event-based sensing。",
+    "problem_frame": "OECT/OMIEC 神经形态感知面对的根本问题是如何把离子-电子耦合、突触/神经元动态和真实感知任务连接起来。官方页面摘要明确指出，硅或其他无机人工神经元限制了柔性、生物兼容性和多感官能力；这篇文章的问题意识正是用 OECT-based organic electrochemical neurons 重新组织神经形态传感与感知。",
     "first_principles": "OECT/OMIEC 的第一性原理是离子进入/退出有机混合导体改变掺杂态和沟道电导，从而把化学/生物/电刺激转化为带记忆和时间动力学的电信号。神经元功能通常需要阈值、积分、泄漏、尖峰或非线性响应；这些都可能由离子迁移、电容耦合和电化学掺杂动力学提供。",
-    "mechanism": "由于本地全文缺失，不能确认该条目具体器件结构、测试任务或性能数字。可谨慎推断的机制框架是：organic electrochemical neuron 利用 OMIEC 中离子-电子耦合产生类神经元动态，把感知输入转换为事件化或非线性响应，用于 neuromorphic perception。任何关于材料配方、阈值电压、能耗或准确率的细节都需要后续取得全文后补证。",
-    "boundary_advanced": "它的潜在先进性在于直接命中本方向的核心材料和计算层级；但当前内容置信度低，因为缺少本地全文/摘要。与本期多数 metasurface 论文相比，它在材料方向最核心，在证据完整度上最弱。",
-    "old_problem": "老问题是有机电化学器件常被证明为单一传感器或突触曲线，却难以形成神经元级、感知任务级的系统叙事。题名显示该条目可能试图把 OECT/OMIEC 的器件物理与 neuromorphic perception 直接挂钩。",
-    "why_it_works": "若其论点成立，原因应在于 OECT/OMIEC 的离子掺杂动力学天然提供时间积分、记忆、非线性和低电压生物接口，这些特性比纯电子晶体管更适合模拟湿态/生物感知中的神经动力学。但这仍需全文证据确认。",
-    "true_novelty": "在当前证据下，不能判定具体技术新意；可确认的选题新意是把 organic electrochemical neurons 放在 neuromorphic perception 框架下，而不是只讨论材料或单器件。后续应补全文来确认它是研究论文、评论、News & Views 还是综述性观点。",
-    "evidence_summary": "证据等级低但非空：本地研究包有 Nature Electronics 元数据、DOI 10.1038/s41928-024-01200-5、官方 PDF URL 和 publisher Fig.1；fulltext 和 abstract 均为空。因此本分析只保留可由题名/期刊/作者/图像线索支撑的方向性判断，不给出未经证实的性能数字或实验细节。",
-    "email_summary": "Nature Electronics：Organic electrochemical neurons for neuromorphic perception 是本期最贴近 OECT/OMIEC 神经形态感知的条目，但本地未抓到全文/摘要。应作为高相关、低证据完整度文献保留，后续优先补全文。",
-    "importance_reason": "本方向需要持续跟踪 OECT/OMIEC 从传感器、突触到神经元/感知系统的演进。这篇题名直接命中核心路线，哪怕本周证据不足，也值得列为优先补证对象。"
+    "mechanism": "官方 HTML metadata 给出的机制框架是：以 organic electrochemical transistors 为基础构建 organic electrochemical neurons，考察这些神经元和系统如何模拟生物体的感知原则，并从材料、器件、电路和系统层面推进 adaptable and biointegrable neuromorphic event-based sensing。这里的重点不是某个单一性能数字，而是把 OECT 的离子动力学、电导可塑性和生物接口属性组织成感知系统架构。",
+    "boundary_advanced": "它的先进性在于直接命中本方向的核心材料和计算层级：OECT/OMIEC 不再只是传感器或突触，而是被放入 neuron、event-based sensing 和 perception 的系统坐标中。证据边界也要讲清楚：当前本地仍未取得可解析 PDF 全文，因此不能确认具体器件结构、测试任务、能耗或准确率。",
+    "old_problem": "老问题是有机电化学器件常被证明为单一传感器、突触曲线或低压 biointerface，却难以形成神经元级、感知任务级的系统叙事。该 Perspective 的价值是把 OECT 器件物理、类生物感知原则和神经形态系统路线放到同一张图里。",
+    "why_it_works": "这个路线成立的原因在于 OECT/OMIEC 的离子掺杂动力学天然提供时间积分、记忆、非线性、低电压操作和湿态生物接口；这些特性比纯无机电子神经元更适合贴近皮肤、植物、体液和多模态化学/生物信号的感知场景。",
+    "true_novelty": "真正新意不是提出一个单器件指标，而是把 organic electrochemical neurons 明确作为 neuromorphic sensing and perception 的平台单元来讨论，并把发展路径拆到 materials、devices、circuits 和 systems 四层。这正好对应本方向从材料态走向真实感知任务的路线图。",
+    "evidence_summary": "证据等级中等偏低：本地研究包有 Nature Electronics 元数据、DOI 10.1038/s41928-024-01200-5、官方 PDF URL 和 publisher Fig.1；手动检查官方页面 HTML metadata 后补到摘要级证据，确认它是 Perspective，讨论 OECT-based organic electrochemical neurons、bioelectronic/robotic perception、living-organism sensory principles，以及 materials/devices/circuits/systems 层面的推进策略。但可解析 PDF 全文仍未进入本地包，所以不写具体性能数字。",
+    "email_summary": "Nature Electronics Perspective：这篇把 OECT-based organic electrochemical neurons 放进 neuromorphic sensing and perception 框架，强调柔性、生物兼容、多感官和 event-based sensing。它是本期 OECT/OMIEC 主线的概念锚点，但仍需补 PDF 全文确认图表和细节。",
+    "importance_reason": "本方向需要的不是又一条孤立突触曲线，而是 OECT/OMIEC 如何成为可感知、可适应、可生物集成的神经形态系统单元。这篇给出了最贴近主线的概念坐标。"
   },
   "openalex:W4398769281": {
     "core_insight": "这篇 Nature Electronics 工作把 PEDOT:PSS 有机生物电子纤维直接原位 tether 到皮肤、胚胎和植物等活体表面，形成开放、透气、可修复、可升级和可回收的 bioelectronic interface；其中包括 on-skin electrodes、skin-gated OECT 和植物/触觉增强接口。",
