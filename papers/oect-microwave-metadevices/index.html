@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="paper-lens-venue" content="Nature Electronics" />
+  <meta name="citation_journal_title" content="Nature Electronics" />
+  <title>Paper Lens · Reconfigurable microwave metadevices based on organic electrochemical transistors</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper:#f4f1e8; --paper-strong:#fbfaf4; --ink:#181410; --ink-soft:#4a4037;
+      --muted:#73695f; --line:#2a2119; --line-soft:rgba(42,33,25,.24);
+      --rule:rgba(42,33,25,.44); --accent:#a93522; --accent-dark:#401d15;
+      --signal:#2d6d65; --signal-soft:rgba(45,109,101,.10); --amber:#9a6424;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      background:linear-gradient(90deg,var(--accent) 0 18px,transparent 18px),
+        repeating-linear-gradient(0deg,rgba(42,33,25,.026),rgba(42,33,25,.026) 1px,transparent 1px,transparent 8px),
+        var(--paper);
+      color:var(--ink);
+      font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",serif;
+    }
+    main { width:min(1180px,calc(100vw - 40px)); margin:0 auto; padding:42px 0 78px; }
+    .topbar { display:flex; justify-content:space-between; gap:16px; padding-bottom:16px; border-bottom:2px solid var(--line); }
+    .brand { font-weight:800; }
+    .brand small { color:var(--muted); font-weight:600; }
+    .nav { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+    .nav a { color:var(--ink); text-decoration:none; border:1px solid var(--line-soft); background:rgba(255,255,255,.24); padding:8px 10px; font-size:13px; }
+    .nav a.primary { background:var(--ink); border-color:var(--ink); color:var(--paper-strong); }
+    .masthead { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr); gap:38px; align-items:end; padding:38px 0 28px; border-bottom:2px solid var(--line); }
+    .eyebrow,.section-kicker { color:var(--accent); font-size:13px; font-weight:800; text-transform:uppercase; }
+    h1,h2,h3 { font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; letter-spacing:0; }
+    h1 { margin:10px 0 16px; font-size:clamp(42px,6vw,76px); line-height:.96; }
+    h2 { margin:8px 0 16px; font-size:34px; line-height:1.08; }
+    h3 { margin:8px 0; font-size:22px; }
+    p { color:var(--ink-soft); line-height:1.78; }
+    .lede { color:var(--ink-soft); line-height:1.82; font-size:19px; margin:0; }
+    .box,.answer,.read-card,.panel,.stat { border:1px solid var(--line); background:rgba(255,255,255,.22); padding:18px; }
+    .meta-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .meta-grid span { display:block; color:var(--muted); font-size:12px; margin-bottom:5px; }
+    .quick-answer,.story,.panel,.figure-map { padding-block:28px; border-bottom:1px solid var(--rule); }
+    .answer-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .answer .num { color:var(--accent); font-family:"SF Mono","Menlo",monospace; font-size:12px; }
+    .stat-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:14px; }
+    .stat strong { display:block; font-size:25px; line-height:1; color:var(--signal); }
+    .stat span { display:block; margin-top:9px; color:var(--muted); font-size:12px; line-height:1.45; }
+    .story { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr); gap:22px; }
+    .figure-card { border:1px solid var(--line); background:var(--paper-strong); padding:18px; }
+    .figure-card .label { color:var(--accent); font-weight:800; font-family:"SF Mono","Menlo",monospace; font-size:12px; }
+    .figure-card h3 { font-size:28px; }
+    .read-card { align-self:start; position:sticky; top:16px; }
+    .read-card dt { color:var(--accent); font-weight:800; margin-top:12px; }
+    .read-card dd { margin:6px 0 0; color:var(--ink-soft); line-height:1.72; }
+    .notice { border-left:4px solid var(--accent); background:rgba(255,255,255,.28); padding:12px 14px; color:var(--muted); font-size:13px; line-height:1.7; }
+    .glossary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .glossary div { border-top:1px solid var(--rule); padding-top:12px; }
+    a { color:var(--accent); }
+    @media (max-width:760px) {
+      main { width:auto; margin:0 24px 0 42px; }
+      .masthead,.answer-grid,.story,.stat-grid,.glossary,.meta-grid { grid-template-columns:1fr; }
+      .read-card { position:static; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="topbar">
+      <div class="brand">Paper Lens <small>Figure-led reading note</small></div>
+      <div class="nav">
+        <a href="../index.html">返回书架</a>
+        <a href="../../latest/">Paper Radar</a>
+        <a class="primary" href="https://www.nature.com/articles/s41928-021-00590-0">官方论文</a>
+      </div>
+    </nav>
+
+    <section class="masthead">
+      <div>
+        <div class="eyebrow">Nature Electronics · 2021</div>
+        <h1>用 OECT 给微波超器件加一个低压可调旋钮</h1>
+        <p class="lede">这篇论文把 PEDOT:PSS 有机电化学晶体管接进 split-ring resonator 和 metasurface，用离子-电子耦合调节微波谐振的幅度与频率。它是 OECT / OMIEC 进入可重构电磁器件的一块关键拼图。</p>
+      </div>
+      <div class="box">
+        <b>Position</b>
+        <p>传统可调微波超材料常依赖二极管、MEMS 或无机材料，难以同时满足柔性、低压、可打印和生物电子兼容。本文证明 OMIEC/OECT 可以作为微波谐振单元里的主动电导状态变量。</p>
+        <div class="meta-grid">
+          <p><span>Paper</span>Reconfigurable microwave metadevices based on organic electrochemical transistors</p>
+          <p><span>Authors</span>Giorgio E. Bonacchini; Fiorenzo G. Omenetto</p>
+          <p><span>Venue</span>Nature Electronics</p>
+          <p><span>DOI</span>10.1038/s41928-021-00590-0</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-answer">
+      <div class="section-kicker">Quick answer</div>
+      <h2>先把论文的答案讲出来</h2>
+      <div class="answer-grid">
+        <article class="answer"><span class="num">01</span><h3>问题</h3><p>微波超材料想要可重构，但常用调谐材料和工艺不够柔性、低成本或可大面积打印。</p></article>
+        <article class="answer"><span class="num">02</span><h3>方法</h3><p>把 PEDOT:PSS OECT 放到 SRR 的 split/gap 位置，通过电化学门控改变通道电导，从而改变等效 LC 谐振。</p></article>
+        <article class="answer"><span class="num">03</span><h3>证据</h3><p>论文展示 amplitude modulation、frequency modulation，以及 4 × 6 ELC metasurface 在约 3.8 GHz 的电调响应。</p></article>
+      </div>
+      <div class="stat-grid">
+        <div class="stat"><strong>0.1-5 GHz</strong><span>论文声明的可调微波范围</span></div>
+        <div class="stat"><strong>~40 dB</strong><span>DBSRR 幅度调制量级</span></div>
+        <div class="stat"><strong>~35 MHz</strong><span>频率调制器件的频移量级</span></div>
+        <div class="stat"><strong>4 × 6</strong><span>ELC metasurface 阵列规模</span></div>
+      </div>
+      <p class="notice">公开版 Paper Lens 不重新发布论文 PDF 或出版社原图；请通过官方论文链接查看原始 Fig. 1-3。这个页面保留的是讲解路线和证据解释。</p>
+    </section>
+
+    <section class="figure-map">
+      <div class="section-kicker">Figure map</div>
+      <h2>这篇论文应该按三张主图来读</h2>
+      <p>Fig. 1 看器件概念和等效电路；Fig. 2 看单个 resonator 是否真的能调；Fig. 3 看这个策略能不能扩展到 metasurface。三步连起来，证据链就是“材料态 → 谐振单元 → 阵列器件”。</p>
+    </section>
+
+    <section class="story" id="fig1">
+      <div class="figure-card">
+        <div class="label">FIG. 1</div>
+        <h3>从 split-ring resonator 到 OECT 调谐节点</h3>
+        <p>重点看 OECT 被放在哪里：PEDOT:PSS 通道跨接在 split 或 gap 上，等效为 LC 谐振电路里的可变电导/电容调制通道。这个布局决定了后面所有调谐都不是“外部加一个开关”，而是把 OMIEC 的掺杂状态直接嵌入电磁边界条件。</p>
+      </div>
+      <dl class="read-card">
+        <dt>Look here first</dt>
+        <dd>先看 amplitude-modulated DBSRR 的 split/channel，再看 frequency-modulated 结构里的 additional gaps 和 tuning capacitance。</dd>
+        <dt>Evidence</dt>
+        <dd>Fig. 1 证明作者不是只做 OECT 电学测试，而是把 OECT 与微波谐振几何共同设计。</dd>
+        <dt>Talk-ready sentence</dt>
+        <dd>“这篇的关键是把 OECT 变成了超材料单元的状态变量，而不是把它当普通外接晶体管。”</dd>
+      </dl>
+    </section>
+
+    <section class="story" id="fig2">
+      <div class="figure-card">
+        <div class="label">FIG. 2</div>
+        <h3>电化学门控如何变成 S11 的幅度和频率变化</h3>
+        <p>Fig. 2 是核心实验图：随着 gate voltage 变化，PEDOT:PSS 从高导电态向去掺杂低导电态转变，SRR 的反射损耗、相位和谐振频率随之改变。它把 OECT 的电导调制翻译成了微波测量里的可观测响应。</p>
+      </div>
+      <dl class="read-card">
+        <dt>Look here first</dt>
+        <dd>先看 S11 曲线随 Vgate 的移动，再看幅度调制和频率调制随尺寸变化的汇总图。</dd>
+        <dt>Evidence</dt>
+        <dd>不同尺寸 DBSRR 都出现调制，说明机制不是单个器件偶然现象，而与谐振几何和 OECT 状态耦合有关。</dd>
+        <dt>Talk-ready sentence</dt>
+        <dd>“OECT 的慢速离子门控在这里变成了微波谐振强度和频率的低压旋钮。”</dd>
+      </dl>
+    </section>
+
+    <section class="story" id="fig3">
+      <div class="figure-card">
+        <div class="label">FIG. 3</div>
+        <h3>从单元器件走向 4 × 6 ELC metasurface</h3>
+        <p>Fig. 3 说明这个策略可以扩展到阵列。作者把两个 OECT 放入每个 ELC resonator 的 split 位置，用 ion gel 作为 gating medium，展示 metasurface 在约 3.8 GHz 附近的回波损耗变化。</p>
+      </div>
+      <dl class="read-card">
+        <dt>Look here first</dt>
+        <dd>先看 unit cell，再看 4 × 6 阵列照片，最后看 Vgate 从 0 到 5 V 时的 S11 曲线。</dd>
+        <dt>Evidence</dt>
+        <dd>阵列响应证明 OECT 调谐不是只适用于孤立 resonator，而可进入 metasurface 级别。</dd>
+        <dt>Talk-ready sentence</dt>
+        <dd>“这张图把论文从器件演示推进到超表面演示，也暴露了阵列门控电压和像素设计仍需优化。”</dd>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <div class="section-kicker">Limitations</div>
+      <h2>边界和下一步</h2>
+      <p>本文的调制速度、长期循环稳定性、像素级独立寻址和高频段扩展仍不是最终答案。对我们的 OECT/OMIEC × 可重构超表面路线来说，它更像一篇“物理接口论文”：证明有机混合离子-电子导体可以直接参与电磁边界调控。下一步应关注阵列化独立控制、可记忆状态、THz/毫米波频段响应，以及如何把材料迟滞变成可训练权重。</p>
+      <div class="glossary">
+        <div><b>OECT</b><p>有机电化学晶体管，利用离子进入/退出有机半导体体相调节电导。</p></div>
+        <div><b>OMIEC</b><p>有机混合离子-电子导体，同时支持离子和电子输运。</p></div>
+        <div><b>DBSRR / ELC</b><p>微波超材料常见谐振单元，等效 LC 响应对局部电导和电容变化敏感。</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

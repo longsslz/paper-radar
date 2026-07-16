@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paper Lens · Library</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper:#f4f1e8; --paper-strong:#fbfaf4; --ink:#181410; --ink-soft:#4a4037;
+      --muted:#73695f; --line:#2a2119; --line-soft:rgba(42,33,25,.24);
+      --rule:rgba(42,33,25,.44); --accent:#a93522; --signal:#2d6d65;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      background:linear-gradient(90deg,var(--accent) 0 18px,transparent 18px),
+        repeating-linear-gradient(0deg,rgba(42,33,25,.026),rgba(42,33,25,.026) 1px,transparent 1px,transparent 8px),
+        var(--paper);
+      color:var(--ink);
+      font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",serif;
+    }
+    main { width:min(1120px,calc(100vw - 40px)); margin:0 auto; padding:44px 0 72px; }
+    .masthead { display:grid; grid-template-columns:minmax(0,1fr) 260px; gap:36px; padding-bottom:26px; border-bottom:2px solid var(--line); }
+    .eyebrow { color:var(--accent); font-size:13px; font-weight:800; text-transform:uppercase; }
+    h1 { margin:10px 0 16px; font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; font-size:76px; line-height:.93; letter-spacing:0; }
+    .lede { margin:0; max-width:720px; color:var(--ink-soft); line-height:1.8; font-size:19px; }
+    .stat { align-self:end; border:1px solid var(--line); background:rgba(255,255,255,.22); padding:18px 15px; min-height:104px; }
+    .stat strong { display:block; font-size:34px; line-height:1; }
+    .stat span { display:block; margin-top:14px; color:var(--muted); font-size:12px; text-transform:uppercase; }
+    .list { margin-top:28px; }
+    .paper { display:grid; grid-template-columns:190px minmax(0,1fr); gap:18px; padding:18px 0 20px; border-top:1px solid var(--rule); }
+    .paper-id { color:var(--accent); font-family:"SF Mono","Menlo",monospace; font-size:12px; padding-top:8px; }
+    h2 { margin:0; font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; font-size:29px; line-height:1.18; letter-spacing:0; }
+    h2 a { color:var(--ink); text-decoration:none; }
+    h2 a:hover { color:var(--accent); }
+    p { margin:9px 0 0; color:var(--ink-soft); line-height:1.65; }
+    span { display:block; margin-top:8px; color:var(--signal); font-size:13px; }
+    @media (max-width:680px) {
+      main { width:auto; margin:0 24px 0 42px; padding-top:28px; }
+      .masthead, .paper { grid-template-columns:1fr; }
+      h1 { font-size:44px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="masthead">
+      <div>
+        <div class="eyebrow">Paper Lens · Library</div>
+        <h1>论文细读<br>书架</h1>
+        <p class="lede">这里集中保存本地生成的 Paper Lens 页面，方便回看、检索和准备讲解。</p>
+      </div>
+      <div class="stat"><strong>2</strong><span>paper lenses</span></div>
+    </section>
+    <section class="list">
+        <article class="paper">
+          <div class="paper-id">00-imperceptible-bioelectronic-fibres</div>
+          <div>
+            <h2><a href="00-imperceptible-bioelectronic-fibres/index.html">把 PEDOT:PSS 纤维直接“织”到活体表面</a></h2>
+            <p>Imperceptible augmentation of living systems with organic bioelectronic fibres</p>
+            <span>Nature Electronics</span>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-id">oect-microwave-metadevices</div>
+          <div>
+            <h2><a href="oect-microwave-metadevices/index.html">用 OECT 给微波超器件加一个低压可调旋钮</a></h2>
+            <p>Reconfigurable microwave metadevices based on organic electrochemical transistors</p>
+            <span>Nature Electronics</span>
+          </div>
+        </article>
+    </section>
+  </main>
+</body>
+</html>

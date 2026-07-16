@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="paper-lens-venue" content="Nature Electronics" />
+  <meta name="citation_journal_title" content="Nature Electronics" />
+  <title>Paper Lens · Imperceptible augmentation of living systems with organic bioelectronic fibres</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper:#f4f1e8; --paper-strong:#fbfaf4; --ink:#181410; --ink-soft:#4a4037;
+      --muted:#73695f; --line:#2a2119; --line-soft:rgba(42,33,25,.24);
+      --rule:rgba(42,33,25,.44); --accent:#a93522; --accent-dark:#401d15;
+      --signal:#2d6d65; --signal-soft:rgba(45,109,101,.10); --amber:#9a6424;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      background:linear-gradient(90deg,var(--accent) 0 18px,transparent 18px),
+        repeating-linear-gradient(0deg,rgba(42,33,25,.026),rgba(42,33,25,.026) 1px,transparent 1px,transparent 8px),
+        var(--paper);
+      color:var(--ink);
+      font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",serif;
+    }
+    main { width:min(1180px,calc(100vw - 40px)); margin:0 auto; padding:42px 0 78px; }
+    .topbar { display:flex; justify-content:space-between; gap:16px; padding-bottom:16px; border-bottom:2px solid var(--line); }
+    .brand { font-weight:800; }
+    .brand small { color:var(--muted); font-weight:600; }
+    .nav { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+    .nav a { color:var(--ink); text-decoration:none; border:1px solid var(--line-soft); background:rgba(255,255,255,.24); padding:8px 10px; font-size:13px; }
+    .nav a.primary { background:var(--ink); border-color:var(--ink); color:var(--paper-strong); }
+    .masthead { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr); gap:38px; align-items:end; padding:38px 0 28px; border-bottom:2px solid var(--line); }
+    .eyebrow,.section-kicker { color:var(--accent); font-size:13px; font-weight:800; text-transform:uppercase; }
+    h1,h2,h3 { font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; letter-spacing:0; }
+    h1 { margin:10px 0 16px; font-size:clamp(42px,6vw,76px); line-height:.96; }
+    h2 { margin:8px 0 16px; font-size:34px; line-height:1.08; }
+    h3 { margin:8px 0; font-size:22px; }
+    p { color:var(--ink-soft); line-height:1.78; }
+    .lede { color:var(--ink-soft); line-height:1.82; font-size:19px; margin:0; }
+    .box,.answer,.read-card,.panel,.stat { border:1px solid var(--line); background:rgba(255,255,255,.22); padding:18px; }
+    .meta-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .meta-grid span { display:block; color:var(--muted); font-size:12px; margin-bottom:5px; }
+    .quick-answer,.story,.panel,.figure-map { padding-block:28px; border-bottom:1px solid var(--rule); }
+    .answer-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .answer .num { color:var(--accent); font-family:"SF Mono","Menlo",monospace; font-size:12px; }
+    .stat-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:14px; }
+    .stat strong { display:block; font-size:25px; line-height:1; color:var(--signal); }
+    .stat span { display:block; margin-top:9px; color:var(--muted); font-size:12px; line-height:1.45; }
+    .story { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr); gap:22px; }
+    .figure-card { border:1px solid var(--line); background:var(--paper-strong); padding:18px; }
+    .figure-card .label { color:var(--accent); font-weight:800; font-family:"SF Mono","Menlo",monospace; font-size:12px; }
+    .figure-card h3 { font-size:28px; }
+    .read-card { align-self:start; position:sticky; top:16px; }
+    .read-card dt { color:var(--accent); font-weight:800; margin-top:12px; }
+    .read-card dd { margin:6px 0 0; color:var(--ink-soft); line-height:1.72; }
+    .notice { border-left:4px solid var(--accent); background:rgba(255,255,255,.28); padding:12px 14px; color:var(--muted); font-size:13px; line-height:1.7; }
+    .glossary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .glossary div { border-top:1px solid var(--rule); padding-top:12px; }
+    a { color:var(--accent); }
+    @media (max-width:760px) {
+      main { width:auto; margin:0 24px 0 42px; }
+      .masthead,.answer-grid,.story,.stat-grid,.glossary,.meta-grid { grid-template-columns:1fr; }
+      .read-card { position:static; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="topbar">
+      <div class="brand">Paper Lens <small>Figure-led reading note</small></div>
+      <div class="nav">
+        <a href="../index.html">返回书架</a>
+        <a href="../../latest/">Paper Radar</a>
+        <a class="primary" href="https://doi.org/10.1038/s41928-024-01174-4">官方论文</a>
+      </div>
+    </nav>
+
+    <section class="masthead">
+      <div>
+        <div class="eyebrow">Nature Electronics · 2024</div>
+        <h1>把 PEDOT:PSS 纤维直接“织”到活体表面</h1>
+        <p class="lede">这篇论文提出一种 orbital spinning 方法，把 PEDOT:PSS 基有机生物电子纤维原位 tether 到皮肤、鸡胚和植物表面。核心不是做一块更薄的贴片，而是去掉连续基底，用开放纤维网络实现几乎无感的电子增强。</p>
+      </div>
+      <div class="box">
+        <b>Position</b>
+        <p>传统柔性电子依赖薄膜基底，舒适性、透气性和可持续性仍受限制；传统纤维/织物虽透气，却难以在活体表面即时形成高功能图案。本文把 OMIEC 材料、微纤维形态和原位制造合并成一种 living interface。</p>
+        <div class="meta-grid">
+          <p><span>Paper</span>Imperceptible augmentation of living systems with organic bioelectronic fibres</p>
+          <p><span>Authors</span>Wenyu Wang et al.</p>
+          <p><span>Venue</span>Nature Electronics</p>
+          <p><span>DOI</span>10.1038/s41928-024-01174-4</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-answer">
+      <div class="section-kicker">Quick answer</div>
+      <h2>先把论文的答案讲出来</h2>
+      <div class="answer-grid">
+        <article class="answer"><span class="num">01</span><h3>问题</h3><p>活体表面需要电子功能，但连续塑料基底会影响触觉、透气、汗液/气体交换和生命周期环境成本。</p></article>
+        <article class="answer"><span class="num">02</span><h3>方法</h3><p>用 PEDOT:PSS、透明质酸和 PEO 的水相墨水，通过 orbital spinning 在目标表面原位拉出开放纤维网络。</p></article>
+        <article class="answer"><span class="num">03</span><h3>证据</h3><p>论文展示指尖 ECG/EMG 电极、皮肤门控 OECT、触觉增强、植物氨气警示、纤维修复/升级/回收等多场景演示。</p></article>
+      </div>
+      <div class="stat-grid">
+        <div class="stat"><strong>1-5 μm</strong><span>单根 bioelectronic fibre 宽度量级</span></div>
+        <div class="stat"><strong>98%</strong><span>低密度纤维阵列约 500 nm 透过率</span></div>
+        <div class="stat"><strong>2-5 μl</strong><span>典型网络沉积溶液用量</span></div>
+        <div class="stat"><strong>0.1-0.3 mg</strong><span>典型网络干质量输入量级</span></div>
+      </div>
+      <p class="notice">公开版 Paper Lens 不重新发布论文 PDF 或出版社原图；请通过官方论文链接查看原始 Fig. 1-5。这个页面保留的是讲解路线、关键数字和证据解释。</p>
+    </section>
+
+    <section class="figure-map">
+      <div class="section-kicker">Figure map</div>
+      <h2>这篇论文按五张主图读最顺</h2>
+      <p>Fig. 1 建立“无感增强”的设计目标；Fig. 2 证明 orbital spinning 能控制纤维生成、变形和 tethering；Fig. 3 验证皮肤电极的电生理能力；Fig. 4 展示无基底双面开放网络带来的触觉和 OECT 接口；Fig. 5 则把纤维网络扩展到植物、LED 耦合、修复和重构。</p>
+    </section>
+
+    <section class="story" id="fig1">
+      <div class="figure-card">
+        <div class="label">FIG. 1</div>
+        <h3>先看“为什么不能只是做更薄贴片”</h3>
+        <p>Fig. 1 把问题从材料导电性拉回到活体界面：纤维数量密度、方向和材料模态都要可定制；纤维要贴合从微米到毫米尺度的生物表面起伏；网络还要能在原位重构、升级和局部修复。</p>
+      </div>
+      <dl class="read-card">
+        <dt>Look here first</dt>
+        <dd>先看 fibre number density、orientation 和 modalities，再看它与皮肤/植物等复杂表面的接触方式。</dd>
+        <dt>Evidence</dt>
+        <dd>Fig. 1 证明作者的目标不是单个器件参数，而是一种不遮挡宿主功能的 living interface 形态。</dd>
+        <dt>Talk-ready sentence</dt>
+        <dd>“这篇论文的核心转向，是把电子界面从薄膜贴片改成开放的 PEDOT:PSS 微纤维网络。”</dd>
+      </dl>
+    </section>
+
+    <section class="story" id="fig2">
+      <div class="figure-card">
+        <div class="label">FIG. 2</div>
+        <h3>orbital spinning 怎样把水相墨水变成活体表面纤维</h3>
+        <p>Fig. 2 是制造机制图：纤维从水相黏弹性溶液中被拉出，绕目标物体沉积，并通过目标边界和运动产生 tethering。纤维间距决定透明度，论文报告低密度网络可接近 98% 透过率。</p>
+      </div>
+      <dl class="read-card">
+        <dt>Look here first</dt>
+        <dd>先看 fibre initiation 和 drawn tethering，再看 transmittance 随 fibre spacing 的线性变化。</dd>
+        <dt>Evidence</dt>
+        <dd>这张图把“可制造性”说清楚：它不是把现成网膜转移到皮肤上，而是在目标表面即时生成网络。</dd>
+        <dt>Talk-ready sentence</dt>
+        <dd>“orbital spinning 的价值是让目标物体自己成为模板，省掉数字复制、掩膜和转移步骤。”</dd>
+      </dl>
+    </section>
+
+    <section class="story" id="fig3">
+      <div class="figure-card">
+        <div class="label">FIG. 3</div>
+        <h3>指尖电极：无基底网络能不能真的测生理信号</h3>
+        <p>Fig. 3 检验 on-skin electrode 的核心性能：纤维沿指纹脊线覆盖，随着沉积时间增加接触阻抗下降，并可采集 ECG/EMG 信号。耐摩擦、办公使用和短时水冲洗测试说明它不是只在静态照片里成立。</p>
+      </div>
+      <dl class="read-card">
+        <dt>Look here first</dt>
+        <dd>先看指纹表面覆盖，再看 contact impedance 与 ECG/EMG 曲线，最后看稳定性测试。</dd>
+        <dt>Evidence</dt>
+        <dd>电生理信号是这篇从“材料漂亮”走向“界面可用”的第一层证据。</dd>
+        <dt>Talk-ready sentence</dt>
+        <dd>“它证明开放纤维网络不仅透气透明，也能形成足够好的皮肤-电极耦合。”</dd>
+      </dl>
+    </section>
+
+    <section class="story" id="fig4">
+      <div class="figure-card">
+        <div class="label">FIG. 4</div>
+        <h3>双面开放的纤维网络带来新的交互方式</h3>
+        <p>Fig. 4 展示 substrate-free 结构的真正优势：纤维两面都暴露，所以可以通过接触另一个人的皮肤采集双人 ECG；也能把皮肤本身作为 gate，形成 skin-gated OECT；还可以配合彩色 pH 响应纤维做 mist / pH 双模态触觉增强。</p>
+      </div>
+      <dl class="read-card">
+        <dt>Look here first</dt>
+        <dd>先看 dual-ECG 接触测量，再看 skin-gated OECT 的电流开关响应，最后看 mist/pH 双模态演示。</dd>
+        <dt>Evidence</dt>
+        <dd>这张图说明“无基底”不是舒适性卖点而已，它改变了电子界面与外界接触的拓扑。</dd>
+        <dt>Talk-ready sentence</dt>
+        <dd>“当纤维两面都暴露，皮肤、他人和环境都可以成为电路的一部分。”</dd>
+      </dl>
+    </section>
+
+    <section class="story" id="fig5">
+      <div class="figure-card">
+        <div class="label">FIG. 5</div>
+        <h3>从皮肤走向植物：可连接、可擦除、可重写</h3>
+        <p>Fig. 5 把纤维网络用作微 LED 连接和植物叶片传感界面。PEDOT:PSS 对氨气等环境暴露产生电阻变化，可调节 LED 亮度；湿润区域又能选择性擦除纤维，使界面可以写入、擦除、覆盖和重构。</p>
+      </div>
+      <dl class="read-card">
+        <dt>Look here first</dt>
+        <dd>先看不同 fibre orientation 的图案精度，再看 LED 连接和植物叶片氨气警示，最后看 write-erase-overlay 的闭环。</dd>
+        <dt>Evidence</dt>
+        <dd>Fig. 5 是系统级证据：纤维不仅是电极，也能作为可更新的分布式互连和环境响应界面。</dd>
+        <dt>Talk-ready sentence</dt>
+        <dd>“这篇最有意思的地方，是电子界面终于可以像临时生物材料一样被局部续写和回收。”</dd>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <div class="section-kicker">Limitations and takeaways</div>
+      <h2>这篇对 OECT/OMIEC 方向为什么重要</h2>
+      <p>它不是超表面论文，但它把 PEDOT:PSS/OMIEC 从器件通道推进到活体表面可制造网络。对 OECT/OMIEC × 可重构超表面方向，真正可借鉴的是三点：第一，材料态可以和生物表面拓扑一起设计；第二，开放网络减少了基底对宿主功能的遮挡；第三，可擦除、可修复、可升级的界面逻辑，很适合作为未来可重构、可维护的传感-计算-显示表面。</p>
+      <div class="glossary">
+        <div><b>PEDOT:PSS</b><p>常用有机混合离子-电子导体，兼具导电性、可加工性和生物电子应用基础。</p></div>
+        <div><b>Orbital spinning</b><p>绕目标物体轨道式拉丝/沉积，让目标边界引导纤维 tethering 和图案形成。</p></div>
+        <div><b>Imperceptible interface</b><p>不是完全看不见，而是尽量不妨碍触觉、透气、形变和宿主生理功能。</p></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
