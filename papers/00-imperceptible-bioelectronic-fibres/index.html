@@ -53,6 +53,10 @@
     .figure-card .label { color:var(--accent); font-weight:800; font-family:"SF Mono","Menlo",monospace; font-size:12px; }
     .figure-card h3 { font-size:28px; }
     .figure-visual { display:block; width:100%; height:auto; margin:14px 0 16px; border:1px solid var(--line-soft); background:#fbfaf4; }
+    .panel-guide { display:grid; gap:8px; margin-top:14px; }
+    .panel-guide div { display:grid; grid-template-columns:34px minmax(0,1fr); gap:10px; align-items:start; border-top:1px solid var(--line-soft); padding-top:8px; }
+    .panel-guide b { color:var(--accent); font-family:"SF Mono","Menlo",monospace; font-size:13px; }
+    .panel-guide span { color:var(--ink-soft); line-height:1.62; font-size:14px; }
     .read-card { align-self:start; position:sticky; top:16px; }
     .read-card dt { color:var(--accent); font-weight:800; margin-top:12px; }
     .read-card dd { margin:6px 0 0; color:var(--ink-soft); line-height:1.72; }
@@ -125,6 +129,11 @@
         <h3>先看“为什么不能只是做更薄贴片”</h3>
         <img class="figure-visual" src="assets/fig1-nocaption.png" alt="Fig. 1 full figure from the paper" />
         <p>Fig. 1 把问题从材料导电性拉回到活体界面：纤维数量密度、方向和材料模态都要可定制；纤维要贴合从微米到毫米尺度的生物表面起伏；网络还要能在原位重构、升级和局部修复。</p>
+        <div class="panel-guide">
+          <div><b>a</b><span>定义设计自由度：纤维密度决定覆盖程度，方向决定图案/受力/连接方式，材料模态决定它是电极、传感器还是互连。</span></div>
+          <div><b>b</b><span>把不同界面技术放到尺度坐标里比较：生物表面特征、纤维直径、纳米网、3D 打印/热拉纤维分别落在哪个尺寸区间，说明本文瞄准的是“微米纤维 + 开放网络”。</span></div>
+          <div><b>c</b><span>给出整体路线：原位纤维 tethering 可连接微电子和电子织物，并支持修复、升级、回收；雷达图说明它在无感性、材料效率、可定制性和环保性上优于若干替代方案。</span></div>
+        </div>
       </div>
       <dl class="read-card">
         <dt>Look here first</dt>
@@ -142,6 +151,12 @@
         <h3>orbital spinning 怎样把水相墨水变成活体表面纤维</h3>
         <img class="figure-visual" src="assets/fig2-nocaption.png" alt="Fig. 2 full figure from the paper" />
         <p>Fig. 2 是制造机制图：纤维从水相黏弹性溶液中被拉出，绕目标物体沉积，并通过目标边界和运动产生 tethering。纤维间距决定透明度，论文报告低密度网络可接近 98% 透过率。</p>
+        <div class="panel-guide">
+          <div><b>a</b><span>展示纤维如何从 PEDOT:PSS/PEO/HA 水相墨水中被拉出并绕指尖沉积；下方透过率曲线说明纤维间距越大，网络越透明。</span></div>
+          <div><b>b</b><span>证明纤维能贴合不同形貌：头发、蒲公英种子、鸡胚等表面，强调纤维不是只适合平面基底。</span></div>
+          <div><b>c</b><span>展示湿润和表面 tethering 过程：纤维可以跨越微结构并贴附在复杂纹理上，说明它能和皮肤微地形共形接触。</span></div>
+          <div><b>d</b><span>展示原位图案化既可以“加法写入”纤维阵列，也可以“减法擦除”局部纤维，为后续可重构界面铺垫。</span></div>
+        </div>
       </div>
       <dl class="read-card">
         <dt>Look here first</dt>
@@ -159,6 +174,16 @@
         <h3>指尖电极：无基底网络能不能真的测生理信号</h3>
         <img class="figure-visual" src="assets/fig3-nocaption.png" alt="Fig. 3 full figure from the paper" />
         <p>Fig. 3 检验 on-skin electrode 的核心性能：纤维沿指纹脊线覆盖，随着沉积时间增加接触阻抗下降，并可采集 ECG/EMG 信号。耐摩擦、办公使用和短时水冲洗测试说明它不是只在静态照片里成立。</p>
+        <div class="panel-guide">
+          <div><b>a</b><span>看形貌：纤维覆盖在指纹脊线上，而不是用连续薄膜封住皮肤；这是“无感”和保留触觉的关键。</span></div>
+          <div><b>b</b><span>看阻抗随沉积时间下降：沉积更多纤维后，皮肤-电极接触更充分，电极更适合采集低幅生理信号。</span></div>
+          <div><b>c</b><span>对比纤维电极和凝胶电极采集 ECG：如果波形关键峰能对应，说明纤维电极不是只有导电性，而是真的能读出生理信号。</span></div>
+          <div><b>d</b><span>展示 EMG 负载实验：手指/拇指动作带来的肌电信号能被纤维电极区分，且幅度随负载变化。</span></div>
+          <div><b>e</b><span>展示可修复性：损伤后重新沉积纤维，阻抗恢复，说明界面可以局部维护而不是整片丢弃。</span></div>
+          <div><b>f</b><span>测试裸露纤维电极在日常佩戴、点击、干摩擦和湿环境中的稳定性，回答“能不能用一会儿就坏”的问题。</span></div>
+          <div><b>g</b><span>加入保护纤维后做湿摩擦测试，说明通过结构保护可以提升耐磨耐湿能力。</span></div>
+          <div><b>h</b><span>封装接触区后进行水冲洗循环，证明连接端也能被保护，避免器件只在干燥实验条件下成立。</span></div>
+        </div>
       </div>
       <dl class="read-card">
         <dt>Look here first</dt>
@@ -176,6 +201,11 @@
         <h3>双面开放的纤维网络带来新的交互方式</h3>
         <img class="figure-visual" src="assets/fig4-nocaption.png" alt="Fig. 4 full figure from the paper" />
         <p>Fig. 4 展示 substrate-free 结构的真正优势：纤维两面都暴露，所以可以通过接触另一个人的皮肤采集双人 ECG；也能把皮肤本身作为 gate，形成 skin-gated OECT；还可以配合彩色 pH 响应纤维做 mist / pH 双模态触觉增强。</p>
+        <div class="panel-guide">
+          <div><b>a</b><span>展示 augmented touch：佩戴者通过纤维电极接触另一个人的手指/手腕，同时读到双方 ECG 成分；这说明开放纤维界面能把“触摸”变成电生理耦合。</span></div>
+          <div><b>b</b><span>展示 skin-gated OECT：皮肤接触区域作为 gate，PEDOT:PSS 纤维作为 channel，门压脉冲让电导可逆变化，证明纤维网络能承担 OECT 器件功能。</span></div>
+          <div><b>c</b><span>展示双模态感知：PEDOT:PSS 纤维读 mist 引起的电阻变化，pH 响应纤维给颜色信息，从而区分酸性、碱性和中性水雾。</span></div>
+        </div>
       </div>
       <dl class="read-card">
         <dt>Look here first</dt>
@@ -193,6 +223,14 @@
         <h3>从皮肤走向植物：可连接、可擦除、可重写</h3>
         <img class="figure-visual" src="assets/fig5-nocaption.png" alt="Fig. 5 full figure from the paper" />
         <p>Fig. 5 把纤维网络用作微 LED 连接和植物叶片传感界面。PEDOT:PSS 对氨气等环境暴露产生电阻变化，可调节 LED 亮度；湿润区域又能选择性擦除纤维，使界面可以写入、擦除、覆盖和重构。</p>
+        <div class="panel-guide">
+          <div><b>a</b><span>展示纤维方向可设计：平行、平行四边形、扇形图案都能生成，并用角度统计量化图案精度。</span></div>
+          <div><b>b</b><span>展示微电子集成：纤维可以连接微 LED 触点，证明它能作为低力、低材料量的导电互连。</span></div>
+          <div><b>c</b><span>展示植物叶片上的分布式传感：叶面纤维连接 LED，氨气喷雾改变 PEDOT:PSS 电阻并触发光学警示。</span></div>
+          <div><b>d</b><span>展示可回收：LED 等硬件可清洁复用，纤维可研磨、混合成导电墨水，强调生命周期优势。</span></div>
+          <div><b>e</b><span>展示可重构电路：纤维阵列能写入、擦除、覆盖和重写，局部更新后电阻水平仍接近原状态。</span></div>
+          <div><b>f</b><span>展示与电子织物耦合：在手套/织物上沉积纤维后，接触阻抗显著降低，ECG 监测在多次触碰后仍可读。</span></div>
+        </div>
       </div>
       <dl class="read-card">
         <dt>Look here first</dt>
