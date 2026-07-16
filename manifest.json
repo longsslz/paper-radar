@@ -1,6 +1,7 @@
 {
   "latest": "latest/",
   "archive": "issues/",
+  "paper_lens": "papers/",
   "current_issue": "issues/2026-07-16/",
   "issue_date": "2026-07-16"
 }
