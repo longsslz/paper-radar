@@ -1,0 +1,348 @@
+[
+  {
+    "title": "Interactively addressable organic metadevices",
+    "authors": [
+      "Xiangyu Huang",
+      "Benjamin Renz",
+      "Yueqiang Hu",
+      "Na Liu"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2026-07-16",
+    "paper_type": "direct",
+    "robot_type_tags": [
+      "terahertz_microwave"
+    ],
+    "score": 0.95,
+    "url": "https://openalex.org/W7168517694",
+    "pdf_url": "https://www.nature.com/articles/s41467-026-75757-4.pdf",
+    "analysis": {
+      "core_insight": "这篇 2026 Nature Communications 论文是本期最贴近 OECT/OMIEC × reconfigurable metasurface 主线的结果之一：它把可电化学调制的有机导电聚合物 PANI conformally 集成到 plasmonic nanoantenna 上，实现二维、逐像素、可交互寻址的有机 metadevice。核心不是又做了一个可调 hologram，而是把“有机氧化还原态”推进到 visible metasurface 的独立像素控制层。",
+      "problem_frame": "主动超表面长期卡在两个约束之间：光学单元越小，二维电互连、像素隔离和局部调制越难；而很多可调方案要么只是一维寻址，要么依赖外部 SLM/液晶等笨重平台。作者要解决的是在可见光尺度下，把每个 metasurface pixel 做成可独立驱动、低压、低串扰、能进入实时控制回路的器件。",
+      "first_principles": "第一性原理上，PB-phase nanoantenna 决定局部反射波前相位，PANI 的电化学氧化还原改变吸收/折射响应，从而把每个像素在 on/off 状态之间切换。若每个像素可被独立电极寻址，整个二维阵列就从静态相位板变成可写入的波前状态机；低电压和毫秒响应来自电化学薄层与局域 plasmonic near-field 的耦合。",
+      "mechanism": "全文证据显示，器件采用 Au nanorods 编码 holographic phase profile，并在其表面生长 ultrathin PANI；planar ITO fan-out network 将 4 × 4 metasurface pixel 独立接出。用户输入经控制电子学转为像素级电压模式，输出 alphanumeric hologram 和 interactive gaming 场景。全文明确报告 sub-volt 驱动、millisecond-scale switching、negligible electrical crosstalk、uniform electrochemical behavior 与 dynamically evolving holographic scenes。",
+      "boundary_advanced": "它推进的是有机可重构 meta-optics 的“可寻址系统边界”：从单通道/少通道电化学调谐，推进到二维独立像素和闭环交互控制。边界仍然有限：阵列是 4 × 4 级别，任务是显示/交互全息，不是 neuromorphic learning；PANI 是导电聚合物但不是完整 OECT/OMIEC transistor 架构。",
+      "old_problem": "老问题是有机导电聚合物能强烈调制光学常数，但一旦进入可见光 metasurface，像素缩小后互连、串扰、封装电解质和稳定切换都会变成系统瓶颈。过去的结果多证明材料可调，较少证明可逐像素编程。",
+      "why_it_works": "它有效是因为 PANI 的氧化还原吸收变化直接加载在 nanoantenna near-field 上，局部小体积材料态就足以显著改变 holographic segment 的反射贡献；ITO fan-out 又把电寻址从光学功能区拆出来，降低像素间串扰。换句话说，材料态不是外部调光层，而是每个 meta-atom/pixel 的可写入门控层。",
+      "true_novelty": "真实新意在于把 organic conducting polymer metasurface 做成 interactive, pixel-level addressable 2D metadevice，并用实时人机输入证明系统级可编程，而不仅是单点光谱调制。对本研究方向最重要的是：OMIEC/OECT 像素未来可以沿这个路线从“可调材料”变成“可寻址物理权重/显示/计算单元”。",
+      "evidence_summary": "证据等级高：本地取得 Nature Communications PDF 全文、摘要和关键图。全文给出 PANI-coated AuNR、4 × 4 array、350 μm pixel pitch、planar ITO fan-out、sub-volt operation、millisecond switching、negligible crosstalk、alphanumeric hologram 与 interactive gaming。限制是阵列规模小，且尚未展示学习、存储权重或 OECT 通道集成。",
+      "email_summary": "Nat Commun 2026：PANI-coated plasmonic nanoantenna 实现二维逐像素可寻址有机 metadevice，sub-volt/毫秒级切换，可实时生成交互式 hologram。是本期最接近“有机电化学材料 × 可重构超表面”的实证论文。",
+      "importance_reason": "它给 OECT/OMIEC metasurface 方向提供了直接器件参照：低压电化学态、像素级互连、低串扰和实时控制是未来 neuromorphic physical computing 超表面必须同时解决的硬条件。"
+    }
+  },
+  {
+    "title": "Spatiotemporally modulated full-polarized light emission for multiplexed optical encryption",
+    "authors": [
+      "Jiawei Lv",
+      "Jeong Hyun Han",
+      "Geonho Han",
+      "Seongmin An",
+      "Seung Ju Kim",
+      "Ryeong Myeong Kim",
+      "Jung‐El Ryu",
+      "Rena Oh",
+      "Hyuckjin Choi",
+      "In Han Ha",
+      "Yoon Ho Lee",
+      "Minje Kim",
+      "Gyeong‐Su Park",
+      "Ho Won Jang",
+      "Junsang Doh",
+      "Junil Choi",
+      "Ki Tae Nam"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-09-27",
+    "paper_type": "transferable",
+    "robot_type_tags": [],
+    "score": 0.6769,
+    "url": "https://openalex.org/W4402927086",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-52358-7.pdf",
+    "analysis": {
+      "core_insight": "这篇论文用 3D printing 对 nanowire/quantum nanorod 发光材料进行可编程排列，并结合 LED 像素时序控制和 chiral plasmonic film，实现全偏振自由度的时空调制，用于 multiplexed optical encryption。它不是 OMIEC 器件，但提供了“材料排列 + 像素驱动 + 光学物理层安全”的可迁移系统思路。",
+      "problem_frame": "偏振光发射在 optical computing、encryption 和 communication 中很有价值，但传统 active emission 或 passive metasurface conversion 常受限于偏振度低、光利用效率低、偏振态数量有限以及缺少时空可编程控制。作者要解决的是让发光器件本身输出可动态编码的全偏振态，而不是只靠外部偏振片或静态超表面转换。",
+      "first_principles": "第一性原理上，发光纳米材料的取向分布决定线偏振发射，手性/等离激元膜可进一步选择和编码圆偏振或复杂偏振态；LED 像素 on/off 时序提供时间维度，3D printing 提供空间定位与取向维度。把这些自由度叠加，就可以在 Poincare sphere 上进行时空编码。",
+      "mechanism": "官方摘要证据显示，作者将 LED device 的 spatiotemporal modulation、nanomaterial assembly 的高效偏振发射控制，以及 3D printing 的 programmable patterning/positioning 集成起来。shear-force-induced alignment 使 ultrathin inorganic nanowires 和 quantum nanorods 获得高线偏振/圆偏振发射；LED 像素状态编程可实现覆盖 entire Poincare sphere 的实时偏振调制，ordered chiral plasmonic film 进一步编码输出偏振态。",
+      "boundary_advanced": "它推进的是偏振发光和物理层加密边界，而不是 OECT/OMIEC 或可重构 metasurface 材料边界。对本方向的迁移价值在于：未来 OMIEC/metasurface 阵列若能同时调制振幅、相位、偏振和时间状态，也可形成类似的高维物理编码前端。",
+      "old_problem": "老问题是偏振复用通常依赖分立光学元件或静态结构，难以兼顾高偏振度、动态调制、空间图案化和高安全通信/显示。单一自由度的调制也容易被解码或复制。",
+      "why_it_works": "它有效是因为把偏振态的生成放到材料取向和器件发光过程中，而不是事后滤波；同时把空间图案、时间开关和手性光学编码组合为多维密钥空间。多自由度耦合让同一显示/通信像素承载更高维的信息状态。",
+      "true_novelty": "真实新意是把 3D-printed aligned emissive nanomaterials、LED pixel programming 和 chiral plasmonic encoding 合成一个全偏振时空调制平台。对 OMIEC/OECT 超表面而言，它提示“可重构”不应只限于强度或相位，还可以把偏振与时间编码纳入物理计算任务。",
+      "evidence_summary": "证据等级中等：本地包有官方摘要、DOI/PDF URL 和关键图文件，但未取得可解析 PDF 全文；因此机制判断主要来自摘要。摘要明确给出 full Poincare sphere real-time polarization modulation、ultrathin inorganic nanowires、quantum nanorods、3D printing、ordered chiral plasmonic film、visible light communication 和 encrypted displays。",
+      "email_summary": "Nat Commun：3D-printed nanowire/quantum-nanorod 发光像素实现全偏振时空调制和光学加密。与 OMIEC 的关系是系统启发：可重构前端可以把偏振、空间、时间都作为物理编码维度。",
+      "importance_reason": "它为“metasurface/材料前端如何承载高维信息”提供了参考，尤其适合启发 OECT/OMIEC 可重构像素从单一电导调制走向多自由度编码。"
+    }
+  },
+  {
+    "title": "Reconfiguration of organic electrochemical transistors for high-accuracy potentiometric sensing",
+    "authors": [
+      "Luca Salvigni",
+      "Prem D. Nayak",
+      "Anil Koklu",
+      "Danilo Arcangeli",
+      "Johana Uribe",
+      "Adel Hama",
+      "Raphaela Silva",
+      "Tania Cecilia Hidalgo Castillo",
+      "Sophie Griggs",
+      "Adam Marks",
+      "Iain McCulloch",
+      "Sahika Inal"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-08-01",
+    "paper_type": "transferable",
+    "robot_type_tags": [
+      "oect_omiec"
+    ],
+    "score": 0.7994,
+    "url": "https://openalex.org/W4401211303",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-50792-1.pdf",
+    "analysis": {
+      "core_insight": "这篇论文重新定义 OECT 传感接口：不是把 OECT 直接当三端放大器压在 sensing electrode 上，而是提出 potentiometric-OECT（pOECT），让 sensing electrode 保持 open-circuit potential 条件。核心洞见是，OECT 的放大能力必须服从 potentiometric sensing 的热力学条件，否则会把测量本身变成扰动。",
+      "problem_frame": "传统 OECT 很适合离子/生化传感，因为有 in-situ transduction、电化学放大和低噪声优势；但 potentiometric sensing 原则上要求开路、热力学平衡，而常规 OECT 会在 gate/sensing interface 施加电压或电流，破坏这一条件。作者要解决的是高增益 OECT 与真实 potentiometric 读出之间的架构冲突。",
+      "first_principles": "第一性原理上，potentiometric ion sensing 由 Nernst-like equilibrium potential 决定，传感电极应尽量不被外部电流极化；OECT 通道则通过离子-电子耦合把 gate potential 转换为 channel current。pOECT 的关键是把热力学平衡界面和晶体管放大界面解耦，让电势被读出而不是被强行驱动。",
+      "mechanism": "全文证据显示，pOECT 配置保持 sensing electrode under open circuit potential conditions，并利用 OECT 通道进行转导和放大。作者以离子目标为模型，因为离子传感可由 Nernst 方程清晰描述；全文还讨论稳定 reference electrode、potential drift、fouling resistance 和 bio-compatibility 等实际传感问题。结果声称 pOECT 相比 2-electrode setup 和 conventional OECT 具有更高响应，并保持 potentiometric 正确性。",
+      "boundary_advanced": "它推进的是 OECT sensing 的测量学边界：从“能放大”推进到“在正确热力学边界条件下放大”。它不是 metasurface 论文，但对 OMIEC physical computing 很关键，因为未来把 OECT/OMIEC 像素耦合到光学或射频结构时，也必须区分控制端、读出端和被测界面的边界条件。",
+      "old_problem": "老问题是 OECT 传感器常把高 transconductance 视为全部优势，却忽略被测界面的开路平衡要求，导致响应增强和测量扰动混在一起。这样的器件很难建立可比较、可校准、长期稳定的传感基准。",
+      "why_it_works": "它有效是因为让 sensing electrode 不承载驱动电流，避免界面极化，同时保留 OECT 通道对电势变化的高增益转导。换句话说，pOECT 把传感热力学和晶体管动力学分层，减少了读出动作对被测平衡的破坏。",
+      "true_novelty": "真实新意不是提出新的 OMIEC 材料，而是提出 pOECT sensing configuration，并用 open-circuit potential 条件重新校正 OECT potentiometric sensing 的设计逻辑。对本方向的启发是：未来 OECT/metasurface 一体化前端也需要这种“物理边界条件优先”的架构思维。",
+      "evidence_summary": "证据等级高：本地取得 Nature Communications PDF 全文、摘要和关键图。全文包含 pOECT、open circuit potential、Nernst equation、reference electrode、potential drift、noise reduction 与 high-accuracy potentiometric sensing 等证据。限制是研究对象是化学/离子传感 OECT，不涉及超表面或神经形态任务。",
+      "email_summary": "Nat Commun：pOECT 让 sensing electrode 保持 open-circuit potential，同时用 OECT 放大电势信号。它为 OECT/OMIEC 传感-计算前端提供了关键测量学约束：高增益不能牺牲热力学正确性。",
+      "importance_reason": "OECT/OMIEC × metasurface 若要做 sensing-computing integration，必须知道哪些界面可驱动、哪些界面只能读出。pOECT 给了这个边界的强证据。"
+    }
+  },
+  {
+    "title": "Tunable anti-ambipolar vertical bilayer organic electrochemical transistor enable neuromorphic retinal pathway",
+    "authors": [
+      "Zachary Laswick",
+      "Xihu Wu",
+      "Abhijith Surendran",
+      "Zhongliang Zhou",
+      "Xudong Ji",
+      "Giovanni Maria Matrone",
+      "Wei Lin Leong",
+      "Jonathan Rivnay"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-07-26",
+    "paper_type": "transferable",
+    "robot_type_tags": [
+      "oect_omiec"
+    ],
+    "score": 0.7987,
+    "url": "https://openalex.org/W4401055917",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-50496-6.pdf",
+    "analysis": {
+      "core_insight": "这篇论文用 vertical bilayer OECT 架构调控 anti-ambipolar OFF-ON-OFF 特性，并把它用于 tunable threshold spiking neurons、logic gates 和类视网膜通路。核心洞见是，OECT 的离子-电子耦合不仅能做连续电导调制，还能通过 p-n bilayer 形成可设计的非单调响应，直接压缩神经形态电路复杂度。",
+      "problem_frame": "类生物接口和神经形态电子学需要小尺寸、可调、可集成器件。Anti-ambipolar OECT 可把 Hodgkin-Huxley spiking circuits 和逻辑电路做得更紧凑，但稳定 anti-ambipolar organic materials 有限，阈值、峰位和开关窗口难调。作者要解决的是材料受限下如何系统性获得可调 anti-ambipolar 行为。",
+      "first_principles": "第一性原理上，anti-ambipolar 响应来自 p-type 与 n-type transport/ion penetration 的耦合：随着 gate bias 改变，电流先打开再关闭，形成非单调转移曲线。垂直 OECT 缩短离子/电荷传输路径并减小 footprint；bilayer 材料组合则调节 on/off threshold voltages 和 peak position。",
+      "mechanism": "官方摘要证据显示，作者通过 p-n bilayer assembly in a vertical OECT architecture 提出通用调控方法。vertical OECT 减小器件尺寸；bilayer material tuning 控制 anti-ambipolarity characteristics，包括 on/off threshold voltages 和 peak position；进一步构建 tunable threshold spiking neurons、logic gates，并组合模拟 retinal pathway，复现 horizontal cells 到 spiking retinal ganglion cells 的 wavelength 与 light intensity encoding。",
+      "boundary_advanced": "它推进的是 OECT neuromorphic device 的功能密度边界：单器件从普通电导调制走向可调非单调神经元/逻辑单元。它尚未连接 metasurface，但如果 OMIEC metasurface pixel 需要局部非线性或阈值动态，这类 anti-ambipolar OECT 可作为像素内计算单元。",
+      "old_problem": "老问题是神经形态 OECT 常需要多个器件和外围电路才能模拟阈值、spiking 或逻辑；材料可调范围不足又限制了电路级设计自由度。Anti-ambipolar 行为虽有用，但过去缺少稳定、可调、可集成方案。",
+      "why_it_works": "它有效是因为 p-n bilayer 把两类有机半导体/离子耦合过程叠在同一垂直通道里，gate bias 扫描时形成可控的电流峰。这个非单调 transfer curve 自然适合阈值选择、脉冲触发和逻辑映射，比线性/单调 OECT 更接近神经元门控。",
+      "true_novelty": "真实新意是用 vertical bilayer OECT 作为可调 anti-ambipolar 平台，并把材料调控直接落到 neuromorphic retinal pathway，而不是只展示单器件曲线。对本方向的启发是：OMIEC 超表面像素可以内嵌阈值和非线性，而不只是被动相位/振幅调制。",
+      "evidence_summary": "证据等级中等：本地包有官方摘要、DOI/PDF URL 和关键图文件，但 PDF 全文未成功解析。摘要明确给出 p-n bilayer、vertical OECT、OFF-ON-OFF anti-ambipolarity、threshold/peak tuning、spiking neurons、logic gates 和 retinal pathway encoding。缺口是无法从本地全文核验具体材料、器件尺寸、循环稳定性和定量性能。",
+      "email_summary": "Nat Commun：vertical bilayer OECT 通过 p-n 材料组合调控 anti-ambipolar OFF-ON-OFF 响应，用于阈值 spiking neuron、logic gate 和类视网膜编码。对 OMIEC metasurface 的启发是像素内非线性计算。",
+      "importance_reason": "这篇补上了 OECT neuromorphic physical computing 的器件非线性模块；如果未来要做可训练/可感知超表面，局部阈值和非单调响应会很有用。"
+    }
+  },
+  {
+    "title": "Reconfigurable image processing metasurfaces with phase-change materials",
+    "authors": [
+      "Michele Cotrufo",
+      "Shaban B. Sulejman",
+      "Lukas Wesemann",
+      "Md. Ataur Rahman",
+      "Madhu Bhaskaran",
+      "Ann Roberts",
+      "Andrea Alù"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-05-27",
+    "paper_type": "transferable",
+    "robot_type_tags": [],
+    "score": 0.6433,
+    "url": "https://openalex.org/W4399046486",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-48783-3.pdf",
+    "analysis": {
+      "core_insight": "这篇论文用 VO2 phase-change layer 让近红外 edge-detection metasurface 在小于 10 °C 的温度变化内大幅改变响应，展示了 reconfigurable analog image processing metasurface。它不是有机材料路线，但直接回答了一个系统问题：超表面模拟计算必须从静态算子走向可切换算子。",
+      "problem_frame": "光学 metasurface 已经能在亚波长厚度内做 analog computing 和 image processing，但多数器件是静态设计，只能执行固定滤波/边缘检测。实际计算系统需要根据场景切换处理操作，同时还要保持效率、数值孔径、各向同性和偏振无关性。作者要解决的是“可重构”和“高质量图像处理”之间的兼容性。",
+      "first_principles": "第一性原理上，边缘检测等空间微分操作来自 metasurface 的 nonlocal optical response：不同横向波矢分量被选择性传输/相移。VO2 的 insulator-to-metal phase transition 会显著改变介电函数和损耗，从而重塑 metasurface 对空间频率的传递函数；温度成为可切换计算算子的控制变量。",
+      "mechanism": "官方摘要证据显示，作者展示 passive edge-detection metasurface operating in the near-infrared regime，其响应可由围绕 CMOS-compatible 65 °C 的小于 10 °C 温度变化强烈改变。机制是薄 VO2 层的 insulator-to-metal phase transition 强烈改变 metasurface nonlocal response；同时性能指标包括 numerical aperture、efficiency、isotropy 和 polarization-independence 接近最优，并采用简单几何以兼容大规模制造。",
+      "boundary_advanced": "它推进的是 reconfigurable optical computing metasurface 的任务边界：从固定空间滤波器变成可动态改变响应的模拟处理器。与 OECT/OMIEC 的直接材料关系弱，但机制非常可迁移：把 VO2 换成低压 OMIEC/电化学可调层，可能得到更低功耗、更局部可寻址的图像处理超表面。",
+      "old_problem": "老问题是 analog metasurface computing 很漂亮但常是一次性光学元件；静态器件无法适应不同任务，也难融入真实成像系统。可调材料又常引入效率下降、偏振依赖或制造复杂度。",
+      "why_it_works": "它有效是因为计算操作被编码在空间频率传递函数里，而 VO2 相变能显著改变该传递函数。只要结构设计保持对称和非局域耦合质量，切换材料态就能改变图像处理功能，而不必机械更换光学元件。",
+      "true_novelty": "真实新意是将 phase-change material 的窄温区相变与高质量非局域 metasurface edge detection 结合，展示可重构而非静态的 all-optical computation。对 OMIEC/OECT 方向的启发是：材料态切换应直接对应可解释的计算算子，而不是只展示光谱调谐。",
+      "evidence_summary": "证据等级中等：本地包有官方摘要、DOI/PDF URL 和关键图文件，但 PDF 全文未解析。摘要明确给出 VO2、near-infrared edge detection、<10 °C tuning around 65 °C、nonlocal response、NA/efficiency/isotropy/polarization-independence 和 large-scale manufacturing compatibility。缺口是缺少本地全文中的实验图细节和定量曲线核验。",
+      "email_summary": "Nat Commun：VO2 相变层让近红外 edge-detection metasurface 可在小温度窗口内重构响应。它为 OMIEC 可重构超表面提供了“材料态 = 光学计算算子”的清晰类比。",
+      "importance_reason": "OECT/OMIEC metasurface 要走向 physical computing，必须把材料调谐与具体计算任务绑定；这篇是任务绑定非常清楚的可重构模拟计算参照。"
+    }
+  },
+  {
+    "title": "Reconfigurable optoelectronic transistors for multimodal recognition",
+    "authors": [
+      "Pengzhan Li",
+      "Mingzhen Zhang",
+      "Qingli Zhou",
+      "Qinghua Zhang",
+      "Donggang Xie",
+      "Ge Li",
+      "Zhuohui Liu",
+      "Zheng Wang",
+      "Er‐Jia Guo",
+      "Meng He",
+      "Can Wang",
+      "Lin Gu",
+      "Guozhen Yang",
+      "Kuijuan Jin",
+      "Chen Ge"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-04-16",
+    "paper_type": "direct",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "score": 0.7104,
+    "url": "https://openalex.org/W4394845403",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-47580-2.pdf",
+    "analysis": {
+      "core_insight": "这篇论文提出可重构 electrolyte-gated neuromorphic optoelectronic transistor，使同一器件可在 physical reservoir 和 synaptic function 之间切换。核心洞见是，光/电刺激下的可调时间尺度、volatile nonlinear dynamics 与 ion insertion/extraction 造成的 nonvolatile programmability，可以在一个器件内服务动态和静态多模态识别。",
+      "problem_frame": "生物神经系统把感知、记忆和处理耦合在一起，能同时处理动态和静态信息；人工 neuromorphic transistor 通常只能模拟某一类功能。Reservoir computing 需要易衰减、非线性、短时记忆，synapse 又需要可编程非易失权重，这两种物理机制往往相互矛盾。作者要解决的是单器件如何兼容这两套动力学。",
+      "first_principles": "第一性原理上，electrolyte gating 通过离子插入/抽出调制通道电导，能产生慢变量和非易失态；光刺激又引入载流子生成、复合和短时响应。若偏置/刺激条件可切换，器件可在 volatile reservoir state 和 nonvolatile synaptic state 之间重构，从而把时间特征和静态多感官特征映射到同一物理基底。",
+      "mechanism": "官方摘要证据显示，器件在 optical and electrical stimuli 下表现出 tunable time-scales；nonlinear volatile property 适合 reservoir computing，可用于 multimodal pre-processing；通过 electrolyte gating 实现的 ion insertion/extraction 验证了 nonvolatility and programmability，满足 synaptic functions。作者还展示了基于 reconfigurable neuromorphic functions 模拟人类对动态与静态 multisensory information 的 perception。",
+      "boundary_advanced": "它推进的是 neuromorphic transistor 的功能复用边界：同一器件不再固定为 reservoir 或 synapse，而是按刺激/门控模式重构。它与 OECT/OMIEC 主线高度相邻，因为 electrolyte gating 和 ion insertion/extraction 是 OMIEC 物理计算的核心，但本文不涉及 metasurface。",
+      "old_problem": "老问题是 reservoir 和 synapse 的物理需求相反：一个需要易失和丰富瞬态，一个需要可保持的权重状态。传统方案通常用不同器件或复杂外围电路拼接，牺牲面积、能耗和系统简洁性。",
+      "why_it_works": "它有效是因为电解质门控同时提供快慢两个时间尺度：短时非线性响应用于 reservoir，高保持离子态用于 synaptic memory。光刺激和电刺激进一步提供多模态输入，使器件天然适合作为感知-记忆-预处理一体化节点。",
+      "true_novelty": "真实新意是把可重构 optoelectronic/electrolyte-gated transistor 定位为 reservoir-synapse 双功能物理节点，并用于 multimodal recognition，而不是只展示单一突触曲线。对 OMIEC metasurface 的启发是：未来超表面像素也可以在 sensing、reservoir preprocessing 和 synaptic storage 之间切换。",
+      "evidence_summary": "证据等级中等：本地包有官方摘要、DOI/PDF URL 和关键图文件，但未取得可解析全文。摘要明确给出 electrolyte-gated transistor、optical/electrical stimuli、tunable time-scales、volatile reservoir computing、ion insertion/extraction、nonvolatile programmability、synaptic functions 和 multimodal recognition。缺口是缺少本地全文定量准确率、材料栈和循环稳定性细节。",
+      "email_summary": "Nat Commun：electrolyte-gated optoelectronic transistor 可在 reservoir 与 synapse 功能间重构，用于动态/静态多模态识别。它是 OMIEC 物理计算像素的强器件范式。",
+      "importance_reason": "这篇把 OMIEC/OECT 关注的离子门控动力学直接连接到 reservoir computing 和 synaptic storage，是 neuromorphic physical computing 方向的核心参考。"
+    }
+  },
+  {
+    "title": "Intelligent wireless power transfer via a 2-bit compact reconfigurable transmissive-metasurface-based router",
+    "authors": [
+      "Wenzhi Li",
+      "Qi‐Yue Yu",
+      "Jing Qiu",
+      "Jiaran Qi"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-04-01",
+    "paper_type": "transferable",
+    "robot_type_tags": [
+      "tunable_metasurface"
+    ],
+    "score": 0.5985,
+    "url": "https://openalex.org/W4393381737",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-46984-4.pdf",
+    "analysis": {
+      "core_insight": "这篇论文提出 2-bit compact reconfigurable transmissive-metasurface-based router，用于 intelligent wireless power transfer。它和 OECT/OMIEC 没有材料直接关系，但展示了“环境感知 + 深度学习定位 + 可重构超表面路由”的 sensing-computing-actuation 闭环。",
+      "problem_frame": "IoT 设备在复杂环境中部署后，供电从固定线路转向灵活无线传能，但动态多目标场景需要知道目标位置并把能量定向送达。传统无线供电难以兼顾紧凑性、方向可调和环境自适应；超表面能路由波束，但如果没有传感和决策闭环，就仍只是人工设定的波束发生器。",
+      "first_principles": "第一性原理上，transmissive metasurface 的 2-bit 单元通过离散相位状态合成出目标波前；plane-wave feeder 提供入射能量，超表面相位分布决定透射波束方向和焦点。深度学习环境传感器负责从场景信息估计目标位置，再把目标位置映射为 metasurface coding pattern。",
+      "mechanism": "本地全文显示，核心组件是 plane-wave feeder 和 transmissive 2-bit reconfigurable metasurface-based beam generator，组合 profile 仅 0.8 wavelengths。系统与 deep-learning-driven environment sensor 协同，实现 object detection and localization，并在 dynamic multitarget environments 中把无线功率路由到耗能目标。",
+      "boundary_advanced": "它推进的是可重构超表面的系统闭环边界：从单纯 beam steering 走向感知驱动的智能能量路由。对 OMIEC/OECT 的关系是间接的：如果低压 OMIEC metasurface 能提供可写相位/幅度状态，就可以替代传统射频可调单元，形成更柔性或低功耗的智能物理前端。",
+      "old_problem": "老问题是无线传能系统要么方向固定，要么依赖复杂机械/阵列馈电；在多目标和遮挡环境中，能量投送缺少与环境感知联动的快速决策机制。",
+      "why_it_works": "它有效是因为把任务拆成两个耦合层：深度学习模块负责从环境中提取目标位置，2-bit metasurface 负责把电磁波前离散重构为对应路由。这样数字智能只决定编码，能量传输本身仍在波域完成。",
+      "true_novelty": "真实新意是将 compact 2-bit transmissive metasurface router 与 deep-learning-driven environment sensing 组合为 intelligent wireless power transfer 框架。对本方向启发是，reconfigurable metasurface 的价值在闭环任务，而不仅在可调谱线。",
+      "evidence_summary": "证据等级高：本地取得 Nature Communications PDF 全文、摘要和关键图。全文证据包含 2-bit reconfigurable transmissive metasurface、plane-wave feeder、0.8 wavelengths compact profile、deep-learning-driven environment sensor、object detection/localization 和 dynamic multitarget wireless power transfer。限制是非 OMIEC/OECT，且任务为无线供能而非神经形态计算。",
+      "email_summary": "Nat Commun：2-bit transmissive metasurface router 结合深度学习环境传感，实现智能无线传能。对 OECT/OMIEC metasurface 的启发是闭环：感知决定编码，超表面执行物理路由。",
+      "importance_reason": "它提供 sensing-computing-actuation integration 的系统模板；未来 OMIEC 可重构超表面若进入 IoT/生物接口，也需要类似闭环架构。"
+    }
+  },
+  {
+    "title": "Radar near-field sensing using metasurface for biomedical applications",
+    "authors": [
+      "Mohammad Omid Bagheri",
+      "Ali Gharamohammadi",
+      "Serene Abu-Sardanah",
+      "Omar M. Ramahi",
+      "George Shaker"
+    ],
+    "venue": "Communications Engineering",
+    "published_at": "2024-03-19",
+    "paper_type": "transferable",
+    "robot_type_tags": [],
+    "score": 0.5717,
+    "url": "https://openalex.org/W4392939242",
+    "pdf_url": "https://www.nature.com/articles/s44172-024-00194-4.pdf",
+    "analysis": {
+      "core_insight": "这篇 Communications Engineering 论文把 metasurface 集成到毫米波 radar 近场生物传感中，用 phase-synthesized array 改善 skin-device interface 的能量耦合和接收信噪比。它对本方向的价值在于展示“超表面作为生物界面阻抗/场分布工程层”，而不只是自由空间波束器件。",
+      "problem_frame": "非侵入式生物雷达传感需要在皮肤附近获得足够高的局部场强和回波信噪比，但人体组织高损耗、近场耦合复杂、天线与皮肤阻抗不匹配。没有场工程层时，雷达系统对微弱生理信号的灵敏度和诊断稳定性受限。",
+      "first_principles": "第一性原理上，毫米波近场传感取决于天线、皮肤等效介质和局部电磁场之间的阻抗匹配。metasurface 可通过相位合成改变近场传播和 absorbed power density，把更多能量集中到目标皮肤区域，同时提升接收功率，从而改善 sensor SNR。",
+      "mechanism": "本地全文证据显示，系统使用 low-profile planar metasurface，包含 phase-synthesized array，用于 near-field impedance matching；它与 radar antennas 集成后在 skin medium 内集中 absorbed power density，同时提升 received power level。实验验证使用 58-63 GHz 雷达频段下具有类皮肤材料性质的 phantom；全文还把应用背景连接到 non-invasive glucose sensing、sweat monitoring、vital sign tracking、gait/fall detection 等。",
+      "boundary_advanced": "它推进的是 metasurface-enhanced bio-sensing 的界面边界：把超表面从远场波前控制器转为贴近皮肤的近场阻抗匹配和灵敏度增强层。与 OECT/OMIEC 的直接关系是间接的，但未来柔性 OMIEC metasurface 若能贴合皮肤并电调阻抗，将更接近真实 bioelectronic sensing-computing interface。",
+      "old_problem": "老问题是毫米波/雷达生物传感信号弱、近场耦合受皮肤介质和佩戴状态影响大，单靠天线或后端 AI 难以补偿物理层低 SNR。",
+      "why_it_works": "它有效是因为先在物理层提高能量耦合和回波强度，再让传感系统读出更高质量的信号。相比只做算法降噪，metasurface 在采样前改变了皮肤附近的场分布和阻抗匹配条件。",
+      "true_novelty": "真实新意是把 phase-synthesized metasurface 作为毫米波 radar bio-sensing 的近场增强层，并用皮肤 phantom 做 measurement verification。对 OMIEC/OECT 方向的启发是：有机软材料可重构超表面可以成为生物界面上的可调场匹配层。",
+      "evidence_summary": "证据等级高：本地取得 Communications Engineering PDF 全文、摘要和关键图。全文给出 metasurface-enhanced millimeter-wave radar、skin-device interface、phase-synthesized array、absorbed power density、received power level、sensor SNR、58-63 GHz skin-like phantom 等证据。限制是非有机材料、非 OECT，且主要是传感增强而非计算闭环。",
+      "email_summary": "Commun Eng：metasurface 增强毫米波 radar 近场生物传感，通过皮肤界面阻抗/场分布工程提升 SNR。它给柔性 OMIEC metasurface bio-sensing 提供了清楚的物理层模板。",
+      "importance_reason": "本方向强调 sensing-computing integration；这篇提醒我们，生物界面场耦合本身就是计算/传感前端的第一层，不能只关注后端识别。"
+    }
+  },
+  {
+    "title": "Emerging opportunities and challenges for the future of reservoir computing",
+    "authors": [
+      "Min Yan",
+      "Can Huang",
+      "Peter Bienstman",
+      "Peter Tiňo",
+      "Wei Lin",
+      "Jie Sun"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-03-06",
+    "paper_type": "direct",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "score": 0.4825,
+    "url": "https://openalex.org/W4392498941",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-45187-1.pdf",
+    "analysis": {
+      "core_insight": "这篇 Perspective 梳理 reservoir computing 的数学理论、算法设计和实验实现机会。它不是单篇器件突破，但对 OECT/OMIEC neuromorphic physical computing 很重要：它把 reservoir 从“一个好用的动态系统”重新放回可解释、可扩展、可工业化的学习框架中。",
+      "problem_frame": "Reservoir computing 早期证明了动态系统可作为非线性基函数库，用简单读出学习复杂时序；但要进入工业和大规模应用，还需要更强的理论解释、任务匹配、硬件实现标准和跨学科设计。对于 OECT/OMIEC 器件，问题不是能否展示短时记忆，而是如何证明动态材料态对真实时序任务有可控优势。",
+      "first_principles": "第一性原理上，reservoir 把输入时间序列映射到高维非线性状态空间，读出层只需学习线性或低复杂度权重。有效 reservoir 需要非线性、 fading memory、足够状态维度和可分离性；物理 reservoir 则把这些性质交给材料、器件、光场或电磁传播的自然动力学。",
+      "mechanism": "官方摘要证据显示，该 Perspective 旨在阐明 reservoir computing 在 mathematical theory、algorithm design 和 experimental realizations 上的并行进展，并识别 large-scale industrial adoption 的机会与挑战。它强调 reservoir computing 可用于 adaptive learning of spatiotemporal features and hidden patterns in complex time series，并指出需要更 fast、lightweight、interpretable 的 temporal dynamical systems 学习框架。",
+      "boundary_advanced": "它推进的是研究路线图边界，而不是某个 OMIEC 器件边界。对本方向的价值在于提供评价框架：OECT/OMIEC reservoir 不能只展示材料有迟滞或短时记忆，还要说明状态空间、可分离性、可训练读出、可解释性和可扩展制造。",
+      "old_problem": "老问题是物理 reservoir computing 论文常以漂亮的动态曲线和小数据集分类为终点，但缺乏理论约束、标准任务、长期稳定性和工程可扩展路线。材料端和算法端经常各说各话。",
+      "why_it_works": "Reservoir computing 有效是因为把难以手工设计的时序特征展开交给动态系统，训练只集中在读出层，降低学习复杂度。OECT/OMIEC 的离子迁移、掺杂迟滞和多时间尺度响应天然适合做这种状态展开，但也必须控制漂移和非重复性。",
+      "true_novelty": "这篇的真实价值不是新器件，而是对 future reservoir computing opportunities and challenges 的综合框架。对 OMIEC metasurface 的新启发是：可重构超表面若要做 reservoir，应同时定义物理状态、输入编码、读出策略和可解释性能，而不是只说“类脑”。",
+      "evidence_summary": "证据等级中等：本地包有官方摘要、DOI/PDF URL 和关键图文件，但未取得可解析全文；因此只采用摘要层级判断。摘要明确覆盖 mathematical theory、algorithm design、experimental realizations、large-scale industrial adoption、fast/lightweight/interpretable learning 和 temporal dynamical systems。缺口是缺少全文中的具体分类、材料硬件案例和路线图细节。",
+      "email_summary": "Nat Commun Perspective：总结 reservoir computing 的理论、算法和实验机会。它为 OECT/OMIEC 物理 reservoir 提供评价框架：非线性和记忆只是起点，关键是可解释、可扩展和任务级验证。",
+      "importance_reason": "本方向要避免把 OECT 迟滞简单包装成 reservoir；这篇提供了更严格的算法-物理共同语言，适合指导后续选题和实验设计。"
+    }
+  },
+  {
+    "title": "Diffractive optical computing in free space",
+    "authors": [
+      "Jingtian Hu",
+      "Deniz Mengü",
+      "Dimitrios C. Tzarouchis",
+      "Brian Edwards",
+      "Nader Engheta",
+      "Aydogan Özcan"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-02-20",
+    "paper_type": "transferable",
+    "robot_type_tags": [],
+    "score": 0.4881,
+    "url": "https://openalex.org/W4391970400",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-45982-w.pdf",
+    "analysis": {
+      "core_insight": "这篇 Perspective 系统讨论 free-space diffractive optical computing，强调 engineered surfaces/metasurfaces 如何把 machine learning、imaging、telecommunication 和 sensing 的部分计算前移到光传播过程。它是本方向的物理计算总框架参考：超表面不仅调光，还能实现可设计的模拟算子和深度衍射网络。",
+      "problem_frame": "电子计算在高带宽视觉、成像和通信中面临数据搬运、延迟和能耗瓶颈；光学系统天然并行，但要把光传播变成可靠计算，需要可制造的 diffractive surfaces、metasurfaces、级联设计、准确训练和系统集成。作者关注的是 free-space optical computing 从演示走向可用平台的条件。",
+      "first_principles": "第一性原理上，入射光场经过相位/振幅调制面和自由空间传播，相当于执行线性变换、卷积、傅里叶传播或更复杂的多层衍射映射；若把每个 diffractive/metasurface 单元作为可训练参数，就能把深度学习原则落到光场传播中。非线性、误差校正和可重构性则决定它能否超越固定线性算子。",
+      "mechanism": "本地全文显示，文章明确把 structured optical materials 与 photons-based computing 联系到 machine learning、computer vision、imaging、telecommunications 和 sensing；指出 emerging structured surfaces enable all-optical implementation of mathematical functions and machine learning tasks；并强调 diffractive surfaces 与 metasurfaces 需要在 3D fabrication/integration、cascadability、computing accuracy 等方面 co-evolve，服务 next-generation machine vision、computational imaging、mathematical computing 和 telecommunication。",
+      "boundary_advanced": "它推进的是概念和路线图边界，而不是单一器件性能。对 OECT/OMIEC 的关联在于：OMIEC 可重构/可记忆材料若能集成到 metasurface 单元，可补上 free-space optical computing 当前最需要的动态权重、在线校准或环境适应能力。",
+      "old_problem": "老问题是 diffractive optical computing 很容易停留在固定、离线训练、一次制造的线性系统；真实任务需要可重构、可校准、可级联、可容错，并且要与电子读出和传感任务相匹配。",
+      "why_it_works": "它有效是因为光传播本身以近乎零边际延迟并行执行场变换，metasurface/diffractive layer 只需在空间上编码传递函数。对于高维图像和波前任务，采样前的模拟计算可以减少后端数据量和功耗。",
+      "true_novelty": "这篇的真实价值是把 free-space optical computing 的关键组件、机会和瓶颈整合为 Perspective，并明确 metasurfaces 与 diffractive networks 的协同演进方向。对本研究方向的启发是：OECT/OMIEC 不应孤立做材料调谐，而应嵌入可训练光学计算栈。",
+      "evidence_summary": "证据等级高：本地取得 Nature Communications PDF 全文、摘要和关键图。全文证据包括 free-space optical systems、engineered surfaces、all-optical mathematical functions、machine learning tasks、diffractive networks、metasurfaces、3D fabrication/integration、cascadability 和 computing accuracy。限制是 Perspective 文章，不提供新的 OMIEC/OECT 实验。",
+      "email_summary": "Nat Commun Perspective：free-space diffractive optical computing 的总路线图，强调 metasurfaces/diffractive surfaces 要与训练、级联、制造和精度共同演进。它给 OMIEC 可重构光学计算栈提供框架。",
+      "importance_reason": "OECT/OMIEC × metasurface 的长期目标是 neuromorphic physical computing；这篇帮助把材料创新放进光学计算系统需求中，避免只追逐单点调谐指标。"
+    }
+  }
+]
