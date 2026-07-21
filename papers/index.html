@@ -21,6 +21,12 @@
       font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",serif;
     }
     main { width:min(1120px,calc(100vw - 40px)); margin:0 auto; padding:44px 0 72px; }
+    .topbar { display:flex; justify-content:space-between; gap:16px; align-items:center; padding-bottom:14px; margin-bottom:30px; border-bottom:1px solid var(--line-soft); }
+    .brand { font-weight:800; }
+    .brand small { color:var(--muted); font-weight:600; }
+    .nav { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+    .nav a { color:var(--ink); text-decoration:none; border:1px solid var(--line-soft); background:rgba(255,255,255,.24); padding:8px 10px; font-size:13px; }
+    .nav a.primary { background:var(--ink); border-color:var(--ink); color:var(--paper-strong); }
     .masthead { display:grid; grid-template-columns:minmax(0,1fr) 260px; gap:36px; padding-bottom:26px; border-bottom:2px solid var(--line); }
     .eyebrow { color:var(--accent); font-size:13px; font-weight:800; text-transform:uppercase; }
     h1 { margin:10px 0 16px; font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; font-size:76px; line-height:.93; letter-spacing:0; }
@@ -35,9 +41,13 @@
     h2 a { color:var(--ink); text-decoration:none; }
     h2 a:hover { color:var(--accent); }
     p { margin:9px 0 0; color:var(--ink-soft); line-height:1.65; }
-    span { display:block; margin-top:8px; color:var(--signal); font-size:13px; }
+    .paper span { display:block; margin-top:8px; color:var(--signal); font-size:13px; }
+    .paper-action { display:inline-block; margin-top:12px; color:var(--paper-strong); background:var(--ink); border:1px solid var(--ink); padding:8px 11px; font-size:13px; text-decoration:none; }
+    .paper-action:hover { background:var(--accent); border-color:var(--accent); }
     @media (max-width:680px) {
       main { width:auto; margin:0 24px 0 42px; padding-top:28px; }
+      .topbar { align-items:flex-start; flex-direction:column; }
+      .nav { justify-content:flex-start; }
       .masthead, .paper { grid-template-columns:1fr; }
       h1 { font-size:44px; }
     }
@@ -45,6 +55,14 @@
 </head>
 <body>
   <main>
+    <nav class="topbar" aria-label="Paper Lens navigation">
+      <div class="brand">Paper Lens <small>Library</small></div>
+      <div class="nav">
+        <a href="../latest/index.html">返回最新一期</a>
+        <a href="../issues/index.html">历史推荐</a>
+        <a class="primary" href="../index.html">Paper Radar 首页</a>
+      </div>
+    </nav>
     <section class="masthead">
       <div>
         <div class="eyebrow">Paper Lens · Library</div>
@@ -60,6 +78,7 @@
             <h2><a href="00-imperceptible-bioelectronic-fibres/index.html">把 PEDOT:PSS 纤维直接“织”到活体表面</a></h2>
             <p>Imperceptible augmentation of living systems with organic bioelectronic fibres</p>
             <span>Nature Electronics</span>
+            <a class="paper-action" href="00-imperceptible-bioelectronic-fibres/index.html">打开细读</a>
           </div>
         </article>
         <article class="paper">
@@ -68,6 +87,7 @@
             <h2><a href="oect-microwave-metadevices/index.html">用 OECT 给微波超器件加一个低压可调旋钮</a></h2>
             <p>Reconfigurable microwave metadevices based on organic electrochemical transistors</p>
             <span>Nature Electronics</span>
+            <a class="paper-action" href="oect-microwave-metadevices/index.html">打开细读</a>
           </div>
         </article>
     </section>
