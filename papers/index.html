@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Paper Lens · Library</title>
+  <title>Paper Lens · 图解细读书架</title>
   <style>
     :root {
       color-scheme: light;
@@ -20,24 +20,24 @@
       color:var(--ink);
       font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",serif;
     }
-    main { width:min(1120px,calc(100vw - 40px)); margin:0 auto; padding:44px 0 72px; }
-    .topbar { display:flex; justify-content:space-between; gap:16px; align-items:center; padding-bottom:14px; margin-bottom:30px; border-bottom:1px solid var(--line-soft); }
-    .brand { font-weight:800; }
-    .brand small { color:var(--muted); font-weight:600; }
-    .nav { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
-    .nav a { color:var(--ink); text-decoration:none; border:1px solid var(--line-soft); background:rgba(255,255,255,.24); padding:8px 10px; font-size:13px; }
-    .nav a.primary { background:var(--ink); border-color:var(--ink); color:var(--paper-strong); }
-    .masthead { display:grid; grid-template-columns:minmax(0,1fr) 260px; gap:36px; padding-bottom:26px; border-bottom:2px solid var(--line); }
+    main { width:min(1120px,calc(100vw - 40px)); margin:0 auto; padding:36px 0 72px; }
+    .site-nav { display:flex; justify-content:space-between; gap:16px; align-items:center; padding:12px 0 16px; margin-bottom:30px; border-bottom:1px solid var(--line-soft); }
+    .site-brand { color:var(--ink); text-decoration:none; font-weight:800; line-height:1.1; }
+    .site-brand small { display:block; margin-top:4px; color:var(--muted); font-weight:600; font-size:12px; }
+    .site-links { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+    .site-link { color:var(--ink); text-decoration:none; border:1px solid var(--line-soft); background:rgba(255,255,255,.24); padding:9px 11px; font-size:13px; }
+    .site-link.active { background:var(--ink); border-color:var(--ink); color:var(--paper-strong); }
+    .masthead { display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:30px; align-items:end; padding:18px 0 24px; border-bottom:2px solid var(--line); }
     .eyebrow { color:var(--accent); font-size:13px; font-weight:800; text-transform:uppercase; }
-    h1 { margin:10px 0 16px; font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; font-size:76px; line-height:.93; letter-spacing:0; }
-    .lede { margin:0; max-width:720px; color:var(--ink-soft); line-height:1.8; font-size:19px; }
-    .stat { align-self:end; border:1px solid var(--line); background:rgba(255,255,255,.22); padding:18px 15px; min-height:104px; }
-    .stat strong { display:block; font-size:34px; line-height:1; }
-    .stat span { display:block; margin-top:14px; color:var(--muted); font-size:12px; text-transform:uppercase; }
-    .list { margin-top:28px; }
-    .paper { display:grid; grid-template-columns:190px minmax(0,1fr); gap:18px; padding:18px 0 20px; border-top:1px solid var(--rule); }
-    .paper-id { color:var(--accent); font-family:"SF Mono","Menlo",monospace; font-size:12px; padding-top:8px; }
-    h2 { margin:0; font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; font-size:29px; line-height:1.18; letter-spacing:0; }
+    h1 { margin:8px 0 10px; font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; font-size:clamp(44px,5vw,64px); line-height:1.02; letter-spacing:0; }
+    .lede { margin:0; max-width:780px; color:var(--ink-soft); line-height:1.75; font-size:17px; }
+    .stat { align-self:stretch; display:flex; flex-direction:column; justify-content:center; border:1px solid var(--line); background:rgba(255,255,255,.22); padding:16px 15px; min-height:92px; }
+    .stat strong { display:block; font-size:32px; line-height:1; }
+    .stat span { display:block; margin-top:12px; color:var(--muted); font-size:12px; text-transform:uppercase; }
+    .list { margin-top:24px; }
+    .paper { display:grid; grid-template-columns:210px minmax(0,1fr); gap:20px; padding:18px 0 20px; border-top:1px solid var(--rule); }
+    .paper-id { color:var(--accent); font-family:"SF Mono","Menlo",monospace; font-size:12px; padding-top:7px; word-break:break-word; }
+    h2 { margin:0; font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; font-size:28px; line-height:1.18; letter-spacing:0; }
     h2 a { color:var(--ink); text-decoration:none; }
     h2 a:hover { color:var(--accent); }
     p { margin:9px 0 0; color:var(--ink-soft); line-height:1.65; }
@@ -46,29 +46,31 @@
     .paper-action:hover { background:var(--accent); border-color:var(--accent); }
     @media (max-width:680px) {
       main { width:auto; margin:0 24px 0 42px; padding-top:28px; }
-      .topbar { align-items:flex-start; flex-direction:column; }
-      .nav { justify-content:flex-start; }
+      .site-nav { align-items:flex-start; flex-direction:column; }
+      .site-links { justify-content:flex-start; }
       .masthead, .paper { grid-template-columns:1fr; }
-      h1 { font-size:44px; }
+      .masthead { padding-top:8px; }
+      h1 { font-size:42px; }
     }
   </style>
 </head>
 <body>
   <main>
-    <nav class="topbar" aria-label="Paper Lens navigation">
-      <div class="brand">Paper Lens <small>Library</small></div>
-      <div class="nav">
-        <a class="primary" href="../latest/index.html">返回最新一期</a>
-        <a href="../issues/index.html">历史推荐</a>
+    <nav class="site-nav" aria-label="Paper Radar navigation">
+      <a class="site-brand" href="../latest/index.html">Paper Radar <small>OECT/OMIEC literature system</small></a>
+      <div class="site-links">
+        <a class="site-link" href="../latest/index.html">最新一期</a>
+        <a class="site-link" href="../issues/index.html">历史推荐</a>
+        <a class="site-link active" href="./index.html">论文细读书架</a>
       </div>
     </nav>
     <section class="masthead">
       <div>
-        <div class="eyebrow">Paper Lens · Library</div>
-        <h1>论文细读<br>书架</h1>
-        <p class="lede">这里集中保存本地生成的 Paper Lens 页面，方便回看、检索和准备讲解。</p>
+        <div class="eyebrow">Paper Lens · Figure-led reading</div>
+        <h1>图解细读书架</h1>
+        <p class="lede">从 Paper Radar 里挑出的关键论文，会在这里按原图重读：先讲清“做了什么”，再逐图拆证据、子图逻辑、局限和组会可复用讲法。</p>
       </div>
-      <div class="stat"><strong>2</strong><span>paper lenses</span></div>
+      <div class="stat"><strong>2</strong><span>deep reads</span></div>
     </section>
     <section class="list">
         <article class="paper">
@@ -77,7 +79,7 @@
             <h2><a href="00-imperceptible-bioelectronic-fibres/index.html">把 PEDOT:PSS 纤维直接“织”到活体表面</a></h2>
             <p>Imperceptible augmentation of living systems with organic bioelectronic fibres</p>
             <span>Nature Electronics</span>
-            <a class="paper-action" href="00-imperceptible-bioelectronic-fibres/index.html">打开细读</a>
+            <a class="paper-action" href="00-imperceptible-bioelectronic-fibres/index.html">查看图解细读</a>
           </div>
         </article>
         <article class="paper">
@@ -86,7 +88,7 @@
             <h2><a href="oect-microwave-metadevices/index.html">用 OECT 给微波超器件加一个低压可调旋钮</a></h2>
             <p>Reconfigurable microwave metadevices based on organic electrochemical transistors</p>
             <span>Nature Electronics</span>
-            <a class="paper-action" href="oect-microwave-metadevices/index.html">打开细读</a>
+            <a class="paper-action" href="oect-microwave-metadevices/index.html">查看图解细读</a>
           </div>
         </article>
     </section>

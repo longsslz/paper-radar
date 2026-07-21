@@ -31,6 +31,12 @@
     }
     .wrap { width: min(1150px, calc(100vw - 40px)); margin: 0 auto; }
     header { padding: 44px 0 26px; }
+    .site-nav { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 12px 0 16px; margin-bottom: 30px; border-bottom: 1px solid var(--line-soft); }
+    .site-brand { color: var(--ink); text-decoration: none; font-weight: 800; line-height: 1.1; }
+    .site-brand small { display: block; margin-top: 4px; color: var(--muted); font-weight: 600; font-size: 12px; }
+    .site-links { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    .site-link { color: var(--ink); text-decoration: none; border: 1px solid var(--line-soft); background: rgba(255,255,255,.24); padding: 9px 11px; font-size: 13px; }
+    .site-link.active { background: var(--ink); border-color: var(--ink); color: var(--paper-strong); }
     .masthead {
       display: grid;
       grid-template-columns: minmax(0, 1.04fr) minmax(280px, .96fr);
@@ -63,9 +69,6 @@
     .stat { min-height: 104px; border: 1px solid var(--line); background: rgba(255,255,255,.22); padding: 18px 15px; }
     .stat strong { display: block; font-size: 34px; line-height: 1; font-weight: 800; }
     .stat span { display: block; margin-top: 14px; color: var(--muted); font-size: 12px; letter-spacing: 0; text-transform: uppercase; }
-    nav { margin-top: 18px; display: flex; gap: 8px; flex-wrap: wrap; }
-    nav a { color: var(--ink); text-decoration: none; border: 1px solid var(--line-soft); background: rgba(255,255,255,.24); padding: 8px 10px; font-size: 13px; }
-    nav a.primary { background: var(--ink); border-color: var(--ink); color: var(--paper-strong); }
     main { padding: 0 0 58px; }
     .archive-layout { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 28px; align-items: start; margin-top: 26px; }
     .issue { border-top: 1px solid var(--rule); padding: 18px 0 20px; }
@@ -102,6 +105,8 @@
     @media (max-width: 680px) {
       .wrap { width: auto; margin: 0 24px 0 42px; }
       header { padding-top: 28px; }
+      .site-nav { align-items: flex-start; flex-direction: column; }
+      .site-links { justify-content: flex-start; }
       .masthead { grid-template-columns: 1fr; gap: 20px; }
       h1 { font-size: 40px; line-height: 1; }
       .sub { font-size: 16px; }
@@ -118,6 +123,14 @@
 <body>
   <header>
     <div class="wrap">
+      <nav class="site-nav" aria-label="Paper Radar navigation">
+        <a class="site-brand" href="../latest/index.html">Paper Radar <small>OECT/OMIEC literature system</small></a>
+        <div class="site-links">
+          <a class="site-link" href="../latest/index.html">最新一期</a>
+          <a class="site-link active" href="./index.html">历史推荐</a>
+          <a class="site-link" href="../papers/index.html">论文细读书架</a>
+        </div>
+      </nav>
       <section class="masthead">
         <div>
           <div class="eyebrow">Paper Radar · Archive</div>
@@ -130,10 +143,6 @@
           <div class="stat"><strong>51</strong><span>figures</span></div>
         </div>
       </section>
-      <nav>
-        <a class="primary" href="../latest/">最新一期</a>
-        <a href="../papers/index.html">论文细读书架</a>
-      </nav>
     </div>
   </header>
   <main>
