@@ -1,0 +1,289 @@
+[
+  {
+    "paper_id": "arxiv:2605.02400v1",
+    "title": "2D Waveguide-Fed Metasurfaces: Physically Consistent Modeling, Validation, and Optimization",
+    "authors": [
+      "Panagiotis Gavriilidis",
+      "George C. Alexandropoulos"
+    ],
+    "venue": "arXiv",
+    "published_at": "2026-05-04",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2605.02400v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.02400v1",
+    "robot_type_tags": [
+      "tunable_metasurface"
+    ],
+    "paper_type": "direct",
+    "score": 0.71,
+    "abstract": "Antenna array architectures based on programmable metasurfaces are emerging as a promising solution for scalable implementations of the eXtremely Large Multiple-Input Multiple-Output (XL-MIMO) systems paradigm, envisioned for 6-th Generation (6G), and beyond, wireless networks. However, their accurate modeling, quantifying the role of key structural features, such as strong mutual coupling and guided-wave excitation, remains challenging, amplifying the need for physically consistent representations of the constituent metamaterial elements. In this paper, capitalizing on the coupled dipole formulation, we develop a comprehensive electromagnetics-compliant framework for 2-Dimensional (2D) waveguide-fed metasurface antennas. The proposed model extends relevant existing modeling approaches by incorporating both electric and magnetic dipoles' responses, accounting for multiple excitation feeds, and enabling accurate characterization in both the near- and far-field regimes. Radiation-reaction corrections based on passivity constraints are derived and shown to ensure the passivity of the overall dipole system. In addition, we present a novel input impedance model for the considered architecture enabling explicit computation of the accepted power, and facilitating efficient beamforming design under realistic power constraints. All modeling components developed in this paper are validated against full-wave electromagnetic simulations. Furthermore, the analytical structure of the proposed model enables the formulation of a differentiable beamforming design optimization problem over both the considered metasurface geometry and its feed excitations. The presented numerical results demonstrate the effectiveness of the proposed modeling framework in achieving both directive beamforming and sector-wide coverage.",
+    "key_figure_path": "output/figures/arxiv_2605_02400v1_caption_p3.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "arxiv:2604.25830v1",
+    "title": "Universal material basis for biocompatible printed electrolytes in Organic Electrochemical Transistors",
+    "authors": [
+      "Moritz Flemming",
+      "Paul Zechel",
+      "Rakesh R. Nair",
+      "Emil Mahnke",
+      "Markus Löffler",
+      "Alyna Ong",
+      "Bernd Rellinghaus",
+      "Lukas M. Eng",
+      "Karl Leo",
+      "Hans Kleemann"
+    ],
+    "venue": "arXiv",
+    "published_at": "2026-04-28",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2604.25830v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.25830v1",
+    "robot_type_tags": [
+      "oect_omiec",
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.78,
+    "abstract": "Organic Electrochemical Transistors (OECTs) stand out for their interplay between ionic and electronic conduction, making them ideal analogues to biological synapses for neuromorphic computing and biosensing applications. Furthermore, they can be printed into integrated circuits on flexible substrates, enabling low-cost and high-throughput fabrication of complete electronic systems. However, most OECT electrolytes for integrated circuits still lack biocompatibility and suffer from rheology-related printing challenges. This paper presents a novel material basis that can be combined with an ionic liquid to fabricate an electrolyte for OECTs that only contains biocompatible materials. It allows rheological adjustments to enable the use of electrolyte in both inkjet and screen printing. Furthermore, the electrolyte is UV-curable, enabling it to transition into solid-state structures after printing. Extended ink and device lifetimes for screen-printed structures enable the fabrication of advanced OECTs that can operate in ambient air for over 30 days after fabrication. Ultimately, a fully screen-printed transistor using only biocompatible materials on a leaf substrate is shown",
+    "key_figure_path": "output/figures/arxiv_2604_25830v1_caption_p5.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4405894884",
+    "title": "Ultrafast silicon photonic reservoir computing engine delivering over 200 TOPS",
+    "authors": [
+      "Dongliang Wang",
+      "Yikun Nie",
+      "Gaolei Hu",
+      "Hon Ki Tsang",
+      "Chaoran Huang"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-12-30",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-024-55172-3",
+    "url": "https://openalex.org/W4405894884",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-55172-3.pdf",
+    "robot_type_tags": [
+      "metasurface_computing",
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.7461,
+    "abstract": "Reservoir computing (RC) is a powerful machine learning algorithm for information processing. Despite numerous optical implementations, its speed and scalability remain limited by the need to establish recurrent connections and achieve efficient optical nonlinearities. This work proposes a streamlined photonic RC design based on a new paradigm, called next-generation RC, which overcomes these limitations. Our design leads to a compact silicon photonic computing engine with an experimentally demonstrated processing speed of over 60 GHz. Experimental results demonstrate state-of-the-art performance in prediction, emulation, and classification tasks across various machine learning applications. Compared to traditional RC systems, our silicon photonic RC engine offers several key advantages, including no speed limitations, a compact footprint, and a high tolerance to fabrication errors. This work lays the foundation for ultrafast on-chip photonic RC, representing significant progress toward developing next-generation high-speed photonic computing and signal processing.",
+    "key_figure_path": "output/figures/openalex_W4405894884_caption_p1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4405124182",
+    "title": "Photonic diffractive generators through sampling noises from scattering media",
+    "authors": [
+      "Ziyu Zhan",
+      "Hao Wang",
+      "Qiang Liu",
+      "Xing Fu"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-12-06",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-024-55058-4",
+    "url": "https://openalex.org/W4405124182",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-55058-4.pdf",
+    "robot_type_tags": [
+      "metasurface_computing"
+    ],
+    "paper_type": "direct",
+    "score": 0.4904,
+    "abstract": "Photonic computing, with potentials of high parallelism, low latency and high energy efficiency, have gained progressive interest at the forefront of neural network (NN) accelerators. However, most existing photonic computing accelerators concentrate on discriminative NNs. Large-scale generative photonic computing machines remain largely unexplored, partly due to poor data accessibility, accuracy and hardware feasibility. Here, we harness random light scattering in disordered media as a native noise source and leverage large-scale diffractive optical computing to generate images from above noise, thereby achieving hardware consistency by solely pursuing the spatial parallelism of light. To realize experimental data accessibility, we design two encoding strategies between images and optical noise latent space that effectively solves the training problem. Furthermore, we utilize advanced photonic NN architectures including cascaded and parallel configurations of diffraction layers to enhance the image generation performance. Our results show that the photonic generator is capable of producing clear and meaningful synthesized images across several standard public datasets. As a photonic generative machine, this work makes an important contribution to photonic computing and paves the way for more sophisticated applications such as real world data augmentation and multi modal generation. Large-scale generative photonic computing suffers from poor data accessibility, accuracy and hardware feasibility. Here, authors harness random light scattering in disordered media as a native noise source and leverage large-scale diffractive optical computing to generate images from above noise.",
+    "key_figure_path": "output/figures/openalex_W4405124182_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4405018059",
+    "title": "Fully printed zero-static power MoS2 switch coded reconfigurable graphene metasurface for RF/microwave electromagnetic wave manipulation and control",
+    "authors": [
+      "Xiao-Yu Xiao",
+      "Zixing Peng",
+      "Zirui Zhang",
+      "Xinyao Zhou",
+      "Xuzhao Liu",
+      "Yang Liu",
+      "Jingjing Wang",
+      "Haiyu Li",
+      "Kostya S. Novoselov",
+      "Cinzia Casiraghi",
+      "Zhirun Hu"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-12-04",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-024-54900-z",
+    "url": "https://openalex.org/W4405018059",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-54900-z.pdf",
+    "robot_type_tags": [
+      "tunable_metasurface",
+      "terahertz_microwave"
+    ],
+    "paper_type": "transferable",
+    "score": 0.6952,
+    "abstract": "Abstract Reduction of power consumption is the key target for modern electronic devices. To this end, a lot of attention is paid to zero-static power switches, being able to change their state between highly resistive and highly conductive and remain in this state even in the absence of external voltage. Still, the implementation of such switches is slow because of compatibility issues of new materials with CMOS technology. At the same time, printable technology enables low-cost processes at ambient temperature and integration of devices onto flexible substrates. Here we demonstrate that printed Ag/MoS 2 /Ag heterostructures can be used as zero-static power switches in radiofrequency/microwave spectrum and fully-integrated reconfigurable metasurfaces. Combined with graphene, our printed platform enables reconfigurable metasurface for electromagnetic wave manipulation and control for wireless communications, sensing, and holography. In addition, it is also demonstrated that the localised MoS 2 phase change may have promoted Ag diffusion in forming conductive filaments.",
+    "key_figure_path": "output/figures/openalex_W4405018059_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4404539053",
+    "title": "Trapping light in air with membrane metasurfaces for vibrational strong coupling",
+    "authors": [
+      "Wihan Adi",
+      "Samir Rosas",
+      "Aidana Beisenova",
+      "Shovasis Kumar Biswas",
+      "Hongyan Mei",
+      "David A. Czaplewski",
+      "Filiz Yesilköy"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-11-20",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-024-54284-0",
+    "url": "https://openalex.org/W4404539053",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-54284-0.pdf",
+    "robot_type_tags": [
+      "bio_sensing"
+    ],
+    "paper_type": "direct",
+    "score": 0.7558,
+    "abstract": "Optical metasurfaces can manipulate electromagnetic waves in unprecedented ways at ultra-thin engineered interfaces. Specifically, in the mid-infrared (mid-IR) region, metasurfaces have enabled numerous biochemical sensing, spectroscopy, and vibrational strong coupling (VSC) applications via enhanced light-matter interactions in resonant cavities. However, mid-IR metasurfaces are usually fabricated on solid supporting substrates, which degrade resonance quality factors (Q) and hinder efficient sample access to the near-field electromagnetic hotspots. Besides, typical IR-transparent substrate materials with low refractive indices, such as CaF2, NaCl, KBr, and ZnSe, are usually either water-soluble, expensive, or not compatible with low-cost mass manufacturing processes. Here, we present novel free-standing Si-membrane mid-IR metasurfaces with strong light-trapping capabilities in accessible air voids. We employ the Brillouin zone folding technique to excite tunable, high-Q quasi-bound states in the continuum (qBIC) resonances with our highest measured Q-factor of 722. Leveraging the strong field localizations in accessible air cavities, we demonstrate VSC with multiple quantities of PMMA molecules and the qBIC modes at various detuning frequencies. Our new approach of fabricating mid-IR metasurfaces into semiconductor membranes enables scalable manufacturing of mid-IR photonic devices and provides exciting opportunities for quantum-coherent light-matter interactions, biochemical sensing, and polaritonic chemistry. The authors introduce a mid-IR metasurface fabricated by decorating a free-standing Si-membrane with air holes. The enhanced light-matter interactions in such air cavities enable vibrational strong coupling and advanced biochemical sensing.",
+    "key_figure_path": "output/figures/openalex_W4404539053_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s41467-024-53372-5",
+    "title": "Tuning direct-written terahertz metadevices with organic mixed ion-electron conductors",
+    "authors": [
+      "Cristiano Bortolotti",
+      "Federico Grandi",
+      "Matteo Butti",
+      "Lorenzo Gatto",
+      "Francesco Modena",
+      "Christina Kousseff",
+      "Iain McCulloch",
+      "Caterina Vozzi",
+      "Mario Caironi",
+      "Eugenio Cinquanta",
+      "Giorgio Ernesto Bonacchini"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-11-07",
+    "source": "crossref",
+    "doi": "10.1038/s41467-024-53372-5",
+    "url": "https://doi.org/10.1038/s41467-024-53372-5",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-53372-5.pdf",
+    "robot_type_tags": [
+      "oect_omiec",
+      "tunable_metasurface",
+      "bio_sensing",
+      "terahertz_microwave"
+    ],
+    "paper_type": "transferable",
+    "score": 0.8941,
+    "abstract": "Abstract In the past decade, organic mixed ion-electron conductors have been successfully adopted in innovative bioelectronic, neuromorphic, and electro-optical technologies, as well as in multiple energy harvesting and printed electronics applications. However, despite the intense research efforts devoted to these materials, organic mixed conductors have not yet found application in electronic/photonic devices operating in key regions of the electromagnetic spectrum, such as the microwave (>5 GHz) and terahertz (0.1-10 THz) ranges. A possible reason for this technological gap is the widespread notion that organic electronic materials are unsuitable for high-frequency applications. In this work, we demonstrate for the first time the utility of high-performance polymer mixed conductors as electro-active tuning layers in reconfigurable terahertz metasurfaces, achieving modulation performances comparable with state-of-the-art inorganic and 2D semiconductors. Through time-domain terahertz spectroscopy, we show that the large conductivity modulations of these polymers, until now probed only at very low frequencies, are effectively preserved in the terahertz range, leading to optimal metadevice reconfigurability. Finally, we leverage the unique processability of organic materials to develop fully direct-written electrically tuneable metasurfaces onto both rigid and flexible substrates, opening new opportunities for the mass-scale realization of flexible and light-weight terahertz optics with unique mechanical characteristics and environmental footprint.",
+    "key_figure_path": "output/figures/crossref_10_1038_s41467-024-53372-5_caption_p4.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4396732497",
+    "title": "Full-colour 3D holographic augmented-reality displays with metasurface waveguides",
+    "authors": [
+      "Manu Gopakumar",
+      "Gun‐Yeal Lee",
+      "Suyeon Choi",
+      "B. T. Chao",
+      "Yifan Peng",
+      "Jonghyun Kim",
+      "Gordon Wetzstein"
+    ],
+    "venue": "Nature",
+    "published_at": "2024-05-08",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41586-024-07386-0",
+    "url": "https://openalex.org/W4396732497",
+    "pdf_url": "https://www.nature.com/articles/s41586-024-07386-0.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.5176,
+    "abstract": "Abstract Emerging spatial computing systems seamlessly superimpose digital information on the physical environment observed by a user, enabling transformative experiences across various domains, such as entertainment, education, communication and training 1–3 . However, the widespread adoption of augmented-reality (AR) displays has been limited due to the bulky projection optics of their light engines and their inability to accurately portray three-dimensional (3D) depth cues for virtual content, among other factors 4,5 . Here we introduce a holographic AR system that overcomes these challenges using a unique combination of inverse-designed full-colour metasurface gratings, a compact dispersion-compensating waveguide geometry and artificial-intelligence-driven holography algorithms. These elements are co-designed to eliminate the need for bulky collimation optics between the spatial light modulator and the waveguide and to present vibrant, full-colour, 3D AR content in a compact device form factor. To deliver unprecedented visual quality with our prototype, we develop an innovative image formation model that combines a physically accurate waveguide model with learned components that are automatically calibrated using camera feedback. Our unique co-design of a nanophotonic metasurface waveguide and artificial-intelligence-driven holographic algorithms represents a significant advancement in creating visually compelling 3D AR experiences in a compact wearable device.",
+    "key_figure_path": "output/figures/openalex_W4396732497_caption_p1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s41578-023-00622-5",
+    "title": "Organic mixed conductors for bioinspired electronics",
+    "authors": [
+      "P. Gkoupidenis",
+      "Y. Zhang",
+      "H. Kleemann",
+      "H. Ling",
+      "F. Santoro",
+      "S. Fabiano",
+      "A. Salleo",
+      "Y. van de Burgt"
+    ],
+    "venue": "Nature Reviews Materials",
+    "published_at": "2023-12-22",
+    "source": "crossref",
+    "doi": "10.1038/s41578-023-00622-5",
+    "url": "https://doi.org/10.1038/s41578-023-00622-5",
+    "pdf_url": "https://www.nature.com/articles/s41578-023-00622-5.pdf",
+    "robot_type_tags": [
+      "oect_omiec"
+    ],
+    "paper_type": "transferable",
+    "score": 0.507,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s41578-023-00622-5_publisher_fig1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4385726846",
+    "title": "Bioadhesive polymer semiconductors and transistors for intimate biointerfaces",
+    "authors": [
+      "Nan Li",
+      "Yang Li",
+      "Zhe Cheng",
+      "Youdi Liu",
+      "Yahao Dai",
+      "Seounghun Kang",
+      "Songsong Li",
+      "Naisong Shan",
+      "Shinya Wai",
+      "Aidan Ziaja",
+      "Yunfei Wang",
+      "Joseph Strzalka",
+      "Wei Liu",
+      "Cheng Zhang",
+      "Xiaodan Gu",
+      "Jeffrey A. Hubbell",
+      "Bozhi Tian",
+      "Sihong Wang"
+    ],
+    "venue": "Science",
+    "published_at": "2023-08-10",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1126/science.adg8758",
+    "url": "https://openalex.org/W4385726846",
+    "pdf_url": "https://www.osti.gov/servlets/purl/2404843",
+    "robot_type_tags": [
+      "bio_sensing"
+    ],
+    "paper_type": "transferable",
+    "score": 0.507,
+    "abstract": "The use of bioelectronic devices relies on direct contact with soft biotissues. For transistor-type bioelectronic devices, the semiconductors that need to have direct interfacing with biotissues for effective signal transduction do not adhere well with wet tissues, thereby limiting the stability and conformability at the interface. We report a bioadhesive polymer semiconductor through a double-network structure formed by a bioadhesive brush polymer and a redox-active semiconducting polymer. The resulting semiconducting film can form rapid and strong adhesion with wet tissue surfaces together with high charge-carrier mobility of ~1 square centimeter per volt per second, high stretchability, and good biocompatibility. Further fabrication of a fully bioadhesive transistor sensor enabled us to produce high-quality and stable electrophysiological recordings on an isolated rat heart and in vivo rat muscles.",
+    "key_figure_path": "output/figures/openalex_W4385726846_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  }
+]
