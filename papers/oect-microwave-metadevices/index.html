@@ -24,13 +24,13 @@
       color:var(--ink);
       font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",serif;
     }
-    main { width:min(1180px,calc(100vw - 40px)); margin:0 auto; padding:42px 0 78px; }
-    .topbar { display:flex; justify-content:space-between; gap:16px; padding-bottom:16px; border-bottom:2px solid var(--line); }
-    .brand { font-weight:800; }
-    .brand small { color:var(--muted); font-weight:600; }
-    .nav { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
-    .nav a { color:var(--ink); text-decoration:none; border:1px solid var(--line-soft); background:rgba(255,255,255,.24); padding:8px 10px; font-size:13px; }
-    .nav a.primary { background:var(--ink); border-color:var(--ink); color:var(--paper-strong); }
+    main { width:min(1150px,calc(100vw - 40px)); margin:0 auto; padding:44px 0 78px; }
+    .site-nav { display:flex; justify-content:space-between; gap:16px; align-items:center; padding:12px 0 16px; margin-bottom:30px; border-bottom:1px solid var(--line-soft); }
+    .site-brand { color:var(--ink); text-decoration:none; font-weight:800; line-height:1.1; }
+    .site-brand small { display:block; margin-top:4px; color:var(--muted); font-weight:600; font-size:12px; }
+    .site-links { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+    .site-link { color:var(--ink); text-decoration:none; border:1px solid var(--line-soft); background:rgba(255,255,255,.24); padding:9px 11px; font-size:13px; }
+    .site-link.active { background:var(--ink); border-color:var(--ink); color:var(--paper-strong); }
     .masthead { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr); gap:38px; align-items:end; padding:38px 0 28px; border-bottom:2px solid var(--line); }
     .eyebrow,.section-kicker { color:var(--accent); font-size:13px; font-weight:800; text-transform:uppercase; }
     h1,h2,h3 { font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; letter-spacing:0; }
@@ -61,6 +61,8 @@
     a { color:var(--accent); }
     @media (max-width:760px) {
       main { width:auto; margin:0 24px 0 42px; }
+      .site-nav { align-items:flex-start; flex-direction:column; }
+      .site-links { justify-content:flex-start; }
       .masthead,.answer-grid,.story,.stat-grid,.glossary,.meta-grid { grid-template-columns:1fr; }
       .read-card { position:static; }
     }
@@ -68,12 +70,12 @@
 </head>
 <body>
   <main>
-    <nav class="topbar">
-      <div class="brand">Paper Lens <small>Figure-led reading note</small></div>
-      <div class="nav">
-        <a href="../index.html">返回书架</a>
-        <a href="../../latest/">Paper Radar</a>
-        <a class="primary" href="https://www.nature.com/articles/s41928-021-00590-0">官方论文</a>
+    <nav class="site-nav" aria-label="Paper Radar navigation">
+      <a class="site-brand" href="../../latest/index.html">Paper Radar <small>OECT/OMIEC literature system</small></a>
+      <div class="site-links">
+        <a class="site-link" href="../../latest/index.html">最新一期</a>
+        <a class="site-link" href="../../issues/index.html">历史推荐</a>
+        <a class="site-link active" href="../index.html">论文细读书架</a>
       </div>
     </nav>
 
