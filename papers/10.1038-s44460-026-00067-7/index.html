@@ -17,7 +17,7 @@
 
 <header class="hero"><div><div class="eyebrow">Paper Lens · Nature Sensors · 2026</div><h1>用两类忆阻器把传感、脉冲编码和无监督学习接成一条全模拟链路</h1><p class="dek">这篇论文的核心不是再做一个数字神经网络，而是让器件物理本身承担计算：diffusive memristor 把光和压力这类自供能传感电压转换成 spike timing，drift memristor 把 spike 的时间相关性存成非易失电导权重。作者在 PCB 上完成光-压力融合硬件演示，并用雷电定位和人体动作识别模拟展示扩展潜力。</p></div><aside class="meta-card"><b>Formal paper</b><p><i>Self-powered analogue neuromorphic system for multimodal sensing, encoding and learning with diffusive and drift memristors</i></p><p>Seung Ju Kim, Ruoyu Zhao, Piyush Sud, Yichun Xu, Jian Zhao, Han-Ting Liao, Serena Zhang, Rivu Midya, Qinru Qiu &amp; J. Joshua Yang</p><p><strong>Nature Sensors 1, 535-544 (2026)</strong><br>DOI <a href="https://doi.org/10.1038/s44460-026-00067-7">10.1038/s44460-026-00067-7</a></p></aside></header>
 
-<p class="notice">证据边界：下列图片由用户本地 PDF 高分辨率裁出，仅用于本地个人研究解读；若要公开发布含原论文图体的页面，应先确认版权/授权。本文主实验是光伏传感器 + PVDF 压电传感器 + 忆阻器 PCB 的实验演示；雷电定位和人体活动识别部分主要是概念扩展与数据模拟，不是端到端大规模硬件部署。</p>
+<p class="notice">证据边界：下列图片由论文 PDF 高分辨率裁出，用于 Paper Lens 逐图研究解读；页面不附原始出版商 PDF。本文主实验是光伏传感器 + PVDF 压电传感器 + 忆阻器 PCB 的实验演示；雷电定位和人体活动识别部分主要是概念扩展与数据模拟，不是端到端大规模硬件部署。</p>
 
 <section class="takeaway"><div><div class="section-kicker">One-sentence answer</div><h2>它解决了什么？</h2></div><div><p>传统多模态传感系统通常需要传感器输出、放大/整形、ADC、数字处理器和外部存储；这篇论文尝试把这些环节压缩成“自供能传感器 + diffusive memristor + drift memristor”的模拟硬件链路，让刺激强度先变成发放时间，再让多模态时间相关性变成可保存的权重。</p><div class="quick-grid"><div class="quick"><strong>作者做了什么</strong><span>做出光/压力两种自供能 spike encoder、STDP/ITDP 忆阻器学习电路，以及一块集成光-压力 sensor fusion unit 的 PCB。</span></div><div class="quick"><strong>最关键证据</strong><span>光强和压力越大，spiking time 越短；两个输入 timing 越匹配，drift memristor 电导变化越大。</span></div><div class="quick"><strong>计算读者为何关心</strong><span>它把 feature encoding 和 associative learning 前移到传感器附近，展示一种绕开 ADC/MCU 的物理计算范式。</span></div></div></div></section>
 
@@ -33,4 +33,5 @@
 
 <p class="notice">读这篇论文时最重要的分寸：它很好地证明了一个忆阻器物理计算原型，但还没有证明可直接替代完整数字边缘 AI 系统。它的价值在于把“传感即编码、相关即记忆”的硬件路径打通，而不是宣称所有多模态学习都能免去数字电路。</p>
 <a class="back" href="../index.html">← 返回论文细读书架</a>
+<p class="notice"><strong>Full paper citation:</strong> Kim, S. J., Zhao, R., Sud, P., Xu, Y., Zhao, J., Liao, H.-T., Zhang, S., Midya, R., Qiu, Q. &amp; Yang, J. J. Self-powered analogue neuromorphic system for multimodal sensing, encoding and learning with diffusive and drift memristors. <i>Nature Sensors</i> 1, 535-544 (2026). <a href="https://doi.org/10.1038/s44460-026-00067-7">https://doi.org/10.1038/s44460-026-00067-7</a>.</p>
 </main></body></html>
