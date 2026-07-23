@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paper Radar · 2026-07-06</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper:#f4f1e8;
+      --paper-strong:#fbfaf4;
+      --ink:#181410;
+      --ink-soft:#4a4037;
+      --muted:#73695f;
+      --line:#2a2119;
+      --line-soft:rgba(42,33,25,.24);
+      --rule:rgba(42,33,25,.44);
+      --accent:#a93522;
+      --accent-dark:#401d15;
+      --signal:#2d6d65;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      background:
+        linear-gradient(90deg, var(--accent) 0 18px, transparent 18px),
+        repeating-linear-gradient(0deg, rgba(42,33,25,.026), rgba(42,33,25,.026) 1px, transparent 1px, transparent 8px),
+        var(--paper);
+      color:var(--ink);
+      font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",serif;
+    }
+    main {
+      width:min(1150px, calc(100vw - 40px));
+      margin:0 auto;
+      padding:44px 0 78px;
+    }
+    .masthead {
+      display:grid;
+      grid-template-columns:minmax(0, 1.06fr) minmax(280px, .94fr);
+      gap:42px;
+      padding-bottom:26px;
+      border-bottom:2px solid var(--line);
+    }
+    .eyebrow {
+      color:var(--accent);
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:0;
+      text-transform:uppercase;
+    }
+    h1 {
+      max-width:620px;
+      margin:10px 0 16px;
+      font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif;
+      font-size:74px;
+      font-weight:700;
+      line-height:.93;
+      letter-spacing:0;
+    }
+    .lede {
+      max-width:680px;
+      color:var(--ink-soft);
+      line-height:1.8;
+      font-size:19px;
+    }
+    .issue-stats {
+      align-self:end;
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:10px;
+    }
+    .stat {
+      min-height:104px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.22);
+      padding:18px 15px;
+    }
+    .stat strong {
+      display:block;
+      font-size:34px;
+      line-height:1;
+      font-weight:800;
+    }
+    .stat span {
+      display:block;
+      margin-top:14px;
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:0;
+      text-transform:uppercase;
+    }
+    .issue-meta {
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .site-nav {
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:center;
+      padding:12px 0 16px;
+      margin-bottom:30px;
+      border-bottom:1px solid var(--line-soft);
+    }
+    .site-brand {
+      color:var(--ink);
+      text-decoration:none;
+      font-weight:800;
+      line-height:1.1;
+    }
+    .site-brand small {
+      display:block;
+      margin-top:4px;
+      color:var(--muted);
+      font-weight:600;
+      font-size:12px;
+    }
+    .site-links {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      justify-content:flex-end;
+    }
+    .site-link {
+      color:var(--ink);
+      text-decoration:none;
+      border:1px solid var(--line-soft);
+      background:rgba(255,255,255,.24);
+      padding:9px 11px;
+      font-size:13px;
+    }
+    .site-link.active {
+      background:var(--ink);
+      border-color:var(--ink);
+      color:var(--paper-strong);
+    }
+    .layout {
+      display:grid;
+      grid-template-columns:minmax(0, 1fr) 360px;
+      gap:28px;
+      align-items:start;
+      margin-top:26px;
+    }
+    .research-route {
+      margin-top:26px;
+      padding:24px 0 22px;
+      border-top:1px solid var(--rule);
+      border-bottom:1px solid var(--rule);
+    }
+    .route-kicker {
+      color:var(--accent);
+      font-size:13px;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+    .route-head {
+      display:grid;
+      grid-template-columns:minmax(0, .9fr) minmax(0, 1.1fr);
+      gap:28px;
+      align-items:start;
+      margin-bottom:18px;
+    }
+    .route-head h2 {
+      font-size:38px;
+      line-height:1.08;
+    }
+    .route-thesis {
+      color:var(--ink-soft);
+      line-height:1.8;
+      font-size:17px;
+      margin:0;
+    }
+    .route-grid {
+      display:grid;
+      grid-template-columns:repeat(5, minmax(0, 1fr));
+      gap:10px;
+    }
+    .route-step {
+      border:1px solid var(--line-soft);
+      background:rgba(255,255,255,.24);
+      min-height:228px;
+      padding:14px 13px 13px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .route-step-num {
+      color:var(--accent);
+      font-family:"SF Mono","Menlo",monospace;
+      font-size:12px;
+      font-weight:800;
+    }
+    .route-step h3 {
+      margin:0;
+      font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif;
+      font-size:20px;
+      line-height:1.25;
+      letter-spacing:0;
+    }
+    .route-step p {
+      margin:0;
+      color:var(--ink-soft);
+      line-height:1.66;
+      font-size:14px;
+    }
+    .route-papers {
+      margin-top:auto;
+      display:grid;
+      gap:6px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.45;
+    }
+    .route-papers span {
+      display:block;
+      border-top:1px solid rgba(42,33,25,.16);
+      padding-top:6px;
+    }
+    .filters {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0 0 16px;
+      padding-bottom:14px;
+      border-bottom:1px solid var(--rule);
+    }
+    button.filter {
+      border:1px solid var(--line-soft);
+      background:rgba(255,255,255,.28);
+      color:var(--ink);
+      padding:8px 11px;
+      cursor:pointer;
+      font-size:13px;
+    }
+    button.filter.active {
+      background:var(--ink);
+      border-color:var(--ink);
+      color:var(--paper-strong);
+    }
+    .grid { display:grid; gap:0; }
+    .card {
+      position:relative;
+      display:grid;
+      grid-template-columns:48px minmax(0, 1fr) 70px;
+      gap:12px;
+      border-top:1px solid var(--rule);
+      padding:15px 0;
+      transition:background .16s ease;
+    }
+    .card:hover {
+      background:rgba(255,255,255,.22);
+    }
+    .rank {
+      color:var(--accent);
+      font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif;
+      font-size:26px;
+      line-height:1.05;
+    }
+    .paper-main { min-width:0; }
+    .venue {
+      color:var(--muted);
+      font-size:13px;
+      margin:0 0 7px;
+    }
+    h2 {
+      margin:0;
+      font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif;
+      font-size:23px;
+      line-height:1.25;
+      letter-spacing:0;
+    }
+    .score {
+      justify-self:end;
+      align-self:start;
+      border:1px solid var(--accent);
+      color:var(--accent);
+      min-width:44px;
+      padding:5px 7px;
+      text-align:center;
+      font-family:"SF Mono","Menlo",monospace;
+      font-size:12px;
+    }
+    .tags {
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+      margin:12px 0;
+    }
+    .tag {
+      font-size:12px;
+      color:var(--accent-dark);
+      background:rgba(169,53,34,.08);
+      border:1px solid rgba(169,53,34,.2);
+      padding:5px 8px;
+    }
+    .tag.source {
+      color:var(--signal);
+      background:rgba(45,109,101,.09);
+      border-color:rgba(45,109,101,.22);
+    }
+    .insight {
+      max-width:780px;
+      color:var(--ink-soft);
+      line-height:1.76;
+      font-size:16px;
+    }
+    .actions {
+      display:flex;
+      gap:8px;
+      margin-top:13px;
+      flex-wrap:wrap;
+    }
+    .link, .toggle {
+      color:var(--ink);
+      text-decoration:none;
+      border:1px solid var(--line-soft);
+      background:rgba(255,255,255,.24);
+      padding:8px 10px;
+      cursor:pointer;
+      font-size:13px;
+    }
+    .toggle {
+      background:var(--ink);
+      border-color:var(--ink);
+      color:var(--paper-strong);
+    }
+    .details {
+      display:none;
+      grid-column:2 / 4;
+      margin-top:16px;
+      padding:18px 0 2px;
+      border-top:1px solid var(--line-soft);
+      color:var(--muted);
+    }
+    .details.open { display:block; }
+    .detail-layout {
+      display:grid;
+      grid-template-columns:minmax(260px, .78fr) minmax(0, 1fr);
+      gap:20px;
+      align-items:start;
+    }
+    .figure-panel {
+      position:sticky;
+      top:16px;
+    }
+    .analysis-panel {
+      display:grid;
+      gap:8px;
+    }
+    .detail-block {
+      padding:12px 0;
+      border-top:1px solid rgba(42,33,25,.18);
+      color:var(--ink-soft);
+      line-height:1.74;
+      font-size:15px;
+    }
+    .detail-block:first-child { border-top:0; padding-top:0; }
+    .detail-block strong {
+      color:var(--ink);
+      font-weight:800;
+    }
+    .key-figure {
+      margin:0;
+      padding:12px;
+      background:#fff;
+      border:1px solid var(--line);
+    }
+    .figure-label {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      color:var(--accent);
+      font-size:12px;
+      letter-spacing:0;
+      text-transform:uppercase;
+      margin-bottom:10px;
+      font-weight:800;
+    }
+    .figure-label span:last-child {
+      color:var(--muted);
+      letter-spacing:0;
+      text-transform:none;
+      font-weight:400;
+    }
+    .key-figure img {
+      display:block;
+      width:100%;
+      max-height:520px;
+      object-fit:contain;
+      background:#ffffff;
+      border:1px solid rgba(42,33,25,.16);
+    }
+    .key-figure figcaption {
+      margin-top:8px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+      padding:0 2px;
+    }
+    .no-figure {
+      min-height:180px;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      color:var(--muted);
+      border:1px dashed var(--line-soft);
+      padding:22px;
+      background:rgba(255,255,255,.18);
+    }
+    .editorial-panel {
+      position:sticky;
+      top:18px;
+      min-height:520px;
+      background:linear-gradient(180deg, var(--accent-dark), #17130f);
+      color:var(--paper-strong);
+      padding:26px;
+      overflow:hidden;
+    }
+    .editorial-panel::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(145deg, rgba(169,53,34,.5), transparent 38%);
+      pointer-events:none;
+    }
+    .editorial-panel > * { position:relative; }
+    .panel-label {
+      color:#d2c5b4;
+      font-size:12px;
+      letter-spacing:0;
+      text-transform:uppercase;
+    }
+    .panel-title {
+      margin:10px 0 18px;
+      font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif;
+      font-size:38px;
+      line-height:1;
+    }
+    .panel-tags {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:34px;
+    }
+    .panel-tag {
+      border:1px solid rgba(244,241,232,.38);
+      color:var(--paper-strong);
+      padding:7px 9px;
+      font-size:13px;
+    }
+    .panel-quote {
+      margin:0;
+      max-width:300px;
+      font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif;
+      font-size:20px;
+      line-height:1.7;
+    }
+    .panel-note {
+      position:absolute;
+      left:26px;
+      right:26px;
+      bottom:24px;
+      color:#d2c5b4;
+      font-size:13px;
+      line-height:1.7;
+    }
+    @media (max-width:700px) {
+      main { width:auto; margin:0 24px 0 42px; padding-top:28px; }
+      .site-nav { align-items:flex-start; flex-direction:column; }
+      .site-links { justify-content:flex-start; }
+      .masthead { grid-template-columns:1fr; gap:20px; }
+      h1 { font-size:40px; line-height:1; }
+      .lede { font-size:16px; }
+      .issue-stats { grid-template-columns:repeat(3, 1fr); }
+      .stat { min-height:82px; padding:12px 10px; }
+      .layout { grid-template-columns:1fr; }
+      .route-head { grid-template-columns:1fr; gap:12px; }
+      .route-head h2 { font-size:30px; }
+      .route-grid { grid-template-columns:1fr; }
+      .route-step { min-height:0; }
+      .editorial-panel { display:none; }
+      .card { grid-template-columns:40px minmax(0, 1fr); padding-right:54px; }
+      .score { position:absolute; right:0; top:16px; }
+      .details { grid-column:1 / 3; }
+      .detail-layout { grid-template-columns:1fr; }
+      .figure-panel { position:static; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="site-nav" aria-label="Paper Radar navigation">
+      <a class="site-brand" href="../../latest/index.html">Paper Radar <small>OECT/OMIEC literature system</small></a>
+      <div class="site-links">
+        <a class="site-link" href="../../latest/index.html">最新一期</a>
+        <a class="site-link active" href="../index.html">历史推荐</a>
+        <a class="site-link" href="../../papers/index.html">论文细读书架</a>
+      </div>
+    </nav>
+    <section class="masthead">
+      <div>
+      <div class="eyebrow">Paper Radar · Weekly Digest</div>
+      <h1>感传算<br>超表面精选</h1>
+      <div class="lede">
+        超表面不只是操控波前的薄片，它正在变成可编程、可学习的物理计算层。
+      </div>
+      <div class="issue-meta">Issue 2026-07-06 · OECT/OMIEC, tunable metasurfaces, neuromorphic physical computing</div>
+      </div>
+      <div class="issue-stats">
+        <div class="stat"><strong>10</strong><span>papers</span></div>
+        <div class="stat"><strong>3</strong><span>tier 1</span></div>
+        <div class="stat"><strong>5</strong><span>tier 2</span></div>
+      </div>
+    </section>
+
+    
+    <section class="research-route" aria-label="Research roadmap">
+      <div class="route-kicker">Research Route</div>
+      <div class="route-head">
+        <h2>这 10 篇论文<br>真正拼成什么路线</h2>
+        <p class="route-thesis">OECT/OMIEC 提供离子-电子耦合和生物接口；柔性、像素化、时空编码超表面提供可重构波前平台；in-sensor 与 photonic computing 给出任务级物理计算范式。真正值得追的问题，是如何把材料状态可写入、器件动态可训练、波场输出可编码、真实任务可验证这四件事连成闭环。</p>
+      </div>
+      <div class="route-grid">
+        
+        <article class="route-step">
+          <div class="route-step-num">01</div>
+          <h3>OECT/OMIEC 神经形态感知</h3>
+          <p>先锁定离子-电子耦合如何变成神经元/突触动力学，以及这种湿态器件如何进入真实生物界面。</p>
+          <div class="route-papers"><span>Organic electrochemical neurons for neuromorphic perception</span><span>Imperceptible augmentation of living systems with organic bioelectronic fibres</span></div>
+        </article>
+            
+        <article class="route-step">
+          <div class="route-step-num">02</div>
+          <h3>器件到可训练任务</h3>
+          <p>单器件曲线不够，关键是传感、存储、权重更新和任务验证能否在同一物理前端闭合。</p>
+          <div class="route-papers"><span>In situ training of an in-sensor artificial neural network</span><span>Partial coherence enhances parallelized photonic computing</span></div>
+        </article>
+            
+        <article class="route-step">
+          <div class="route-step-num">03</div>
+          <h3>可重构超表面状态编码</h3>
+          <p>柔性形变、像素寻址、热/电/机械串扰都要进入波前编码模型，而不能只当作噪声处理。</p>
+          <div class="route-papers"><span>Flexible intelligent microwave metasurface</span><span>Kirigami reconfigurable metasurfaces</span><span>Electrically programmable mid-infrared thermal emission</span></div>
+        </article>
+            
+        <article class="route-step">
+          <div class="route-step-num">04</div>
+          <h3>感知-通信-计算融合</h3>
+          <p>超表面开始从调相薄片变成多任务物理接口：同一硬件可分配频率、谐波、相位和信息流。</p>
+          <div class="route-papers"><span>Integrated sensing and communication based on STC metasurfaces</span><span>Non-linear active metasurface for coherent wave down-conversion</span></div>
+        </article>
+            
+        <article class="route-step">
+          <div class="route-step-num">05</div>
+          <h3>概念框架与判据</h3>
+          <p>区分 AI 控制材料和材料/波场本身执行计算，避免把控制算法误当成物理智能。</p>
+          <div class="route-papers"><span>A guidance to intelligent metamaterials and metamaterials intelligence</span></div>
+        </article>
+            
+      </div>
+    </section>
+    
+
+    <section class="layout">
+      <div>
+        <section class="filters" id="filters"></section>
+        <section class="grid" id="paper-grid"></section>
+      </div>
+      <aside class="editorial-panel">
+        <div class="panel-label">Paper Radar · Journal Edition</div>
+        <h2 class="panel-title">本期研究<br>线索</h2>
+        <div class="panel-tags" id="panel-tags"></div>
+        <p class="panel-quote">“导读：从微波到太赫兹再到可见光，超表面的可重构性正在被材料化。”</p>
+        <div class="panel-note">10 篇论文 · 3 篇旗舰正式论文 · 5 篇高质量正式论文 · 2 篇 arXiv/preprint；5 篇直接命中，5 篇可迁移。</div>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    const papers = [{"title": "Full-colour 3D holographic augmented-reality displays with metasurface waveguides", "authors": ["Manu Gopakumar", "Gun‐Yeal Lee", "Suyeon Choi", "B. T. Chao", "Yifan Peng", "Jonghyun Kim", "Gordon Wetzstein"], "venue": "Nature", "published_at": "2024-05-08", "paper_type": "transferable", "source_kind": "official", "robot_type_tags": ["other"], "tier": "tier1", "tier_label": "Tier 1 旗舰正式论文", "score": 0.5176, "url": "https://openalex.org/W4396732497", "pdf_url": "https://www.nature.com/articles/s41586-024-07386-0.pdf", "key_figure_path": "figures/openalex_W4396732497_caption_p1.png", "key_figure_caption": "Cached key figure", "quick_take": "针对AR 眼镜的核心矛盾是形态要接近普通眼镜，论文通过本地全文显示系统结合 inverse-designed full-colour metasurface gratings、compact dispersion-compensating waveguide geometry 和 AI-driven holography algorithms，并验证证据等级高：本地取得 Nature PDF 全文和关键图。", "analysis": {"core_insight": "这篇 Nature 把 inverse-designed full-colour metasurface gratings、紧凑 dispersion-compensating waveguide 和 AI-driven holography 联合设计成 3D AR display。对本方向的启发不是 AR 应用本身，而是“nanophotonic metasurface + learned calibration/model”的软硬件共设计范式。", "problem_frame": "AR 眼镜的核心矛盾是形态要接近普通眼镜，但传统投影光学厚重，且 2D 固定焦平面内容不能提供真实 3D 深度线索。波导 combiner 虽紧凑，却仍需要准直/投影光学并受色散和成像误差限制。", "first_principles": "holography 通过控制波前相位重建三维光场；metasurface grating 可在亚波长尺度控制耦入/耦出和色散；AI-driven holography 则用可微图像形成模型和相机反馈校准真实系统误差，把纳米光学结构和计算成像一起优化。", "mechanism": "本地全文显示系统结合 inverse-designed full-colour metasurface gratings、compact dispersion-compensating waveguide geometry 和 AI-driven holography algorithms，目标是去除 SLM 与 waveguide 之间的 bulky collimation optics，并显示 full-colour 3D AR content。作者还建立了 physically accurate waveguide model + learned components 的 image formation model，并用 camera feedback 自动校准。", "boundary_advanced": "它推进的是显示/空间计算边界，不是 OECT/OMIEC 边界。可迁移之处在于：复杂 metasurface 系统很难只靠解析设计，必须把物理模型、可制造结构和学习式校准合在一起。未来自适应 OMIEC 超表面也可能需要相机/传感反馈和 learned surrogate。", "old_problem": "老问题是 metasurface 结构、波导传播和实际显示图像之间误差链很长，单独优化光栅或单独优化算法都难以得到高质量系统。", "why_it_works": "它有效的原因是 co-design：metasurface grating 负责薄型耦合和色彩/角度控制，波导几何补偿色散，AI holography 根据实测相机反馈修正残余模型误差。", "true_novelty": "真正的新意是把 full-colour metasurface waveguide 和 AI-driven holographic image formation 作为一个闭环系统来设计，而不是把 metasurface 当作被动光学附件。", "evidence_summary": "证据等级高：本地取得 Nature PDF 全文和关键图。全文提供系统目标、三元 co-design、物理+学习图像形成模型、camera feedback 校准和紧凑 wearable form factor 论证。与主线关联为 metasurface physical computing / learned calibration，材料上不涉及 OECT/OMIEC。", "email_summary": "Nature：full-colour 3D holographic AR display，核心是 metasurface waveguide 与 AI holography 共设计。它给自适应超表面一个系统启发：物理结构和学习式校准要一起设计。", "importance_reason": "本方向的最终系统很可能不是单材料论文，而是材料、超表面、传感反馈和学习控制的组合。这篇是高质量共设计案例。"}}, {"title": "Organic mixed conductors for bioinspired electronics", "authors": ["P. Gkoupidenis", "Y. Zhang", "H. Kleemann", "H. Ling", "F. Santoro", "S. Fabiano", "A. Salleo", "Y. van de Burgt"], "venue": "Nature Reviews Materials", "published_at": "2023-12-22", "paper_type": "transferable", "source_kind": "official", "robot_type_tags": ["oect_omiec"], "tier": "tier1", "tier_label": "Tier 1 旗舰正式论文", "score": 0.507, "url": "https://doi.org/10.1038/s41578-023-00622-5", "pdf_url": "https://www.nature.com/articles/s41578-023-00622-5.pdf", "key_figure_path": "figures/crossref_10_1038_s41578-023-00622-5_publisher_fig1.png", "key_figure_caption": "Cached key figure", "quick_take": "针对OMIEC 的价值常被分散在 biosensing、OECT、synapse、neuron、memory 等子领域，论文通过官方 Nature 页面显示该文讨论 soft matter 尤其是 OMIEC 在 OECT、electrochemical memory、artificial synapses and neurons 中的特性，并验证证据等级中等：本地只有 publisher Fig. 1 和元数据，未取得全文。", "analysis": {"core_insight": "这篇 Nature Reviews Materials 综述把 organic mixed ionic-electronic conductors 放在 bioinspired electronics、OECT、electrochemical memory、artificial synapses/neurons、in-sensor/edge computing 和 robotics 的统一框架中。它不是新实验论文，但为 OECT/OMIEC × neuromorphic physical computing 提供了路线图级背景。", "problem_frame": "OMIEC 的价值常被分散在 biosensing、OECT、synapse、neuron、memory 等子领域；如果没有统一框架，很难判断哪些材料特性是面向生物接口、哪些是面向计算状态、哪些能迁移到智能体和机器人。", "first_principles": "OMIEC 同时传输离子和电子，能够把离子/神经递质/化学信号转为电子电流放大，也能通过离子调控稳定电导态来模拟突触权重。因为其操作介质和生物神经网络一样涉及离子信号，它天然适合 spiking neuron、event-driven circuit 和 biohybrid interface。", "mechanism": "官方 Nature 页面显示该文讨论 soft matter 尤其是 OMIEC 在 OECT、electrochemical memory、artificial synapses and neurons 中的特性，并强调 low power、conformability、tunability 对 smart/adaptive biosensors、low-power in-sensor and edge computing、intelligent agents、robotics、event-driven systems 和 biohybrid spiking circuits 的重要性。页面列出 Fig. 1 organic biomimetic/bioinspired systems、Fig. 2 organic neuromorphic devices、Fig. 3 devices-to-networks、Fig. 4 biohybrid devices。", "boundary_advanced": "它推进的是概念整合和领域边界，不提供新的器件数据。对本雷达而言，它用于校准重要性：哪些 OMIEC 论文是单点材料优化，哪些真正接近“感知-计算-动作”的系统目标。与 metasurface 的连接需要我们额外完成：把 OMIEC 的离子可写状态接入电磁波前控制。", "old_problem": "老问题是 OECT/OMIEC 文献与机器人、边缘计算、物理计算常各说各话；材料论文很强，但系统路线不清。", "why_it_works": "这类综述有效的原因是从材料物理出发连接功能：mixed conduction 带来信号放大和状态可塑性，软材料带来贴合和生物兼容，低电压离子调控带来低功耗和类生物动态。", "true_novelty": "作为 Perspective，其新意在于把 OMIEC 视为生物启发智能系统的材料平台，而不仅是 OECT 通道材料。对本方向的启发是：OMIEC metasurface 应被设计成可感知、可记忆、可计算的物理层，而不只是可调 THz 元件。", "evidence_summary": "证据等级中等：本地只有 publisher Fig. 1 和元数据，未取得全文；官方 Nature HTML 提供摘要、图列表、发表信息和 citation metrics。由于是综述/观点文，分析限定在路线图和概念框架，不引用未读全文中的细节。", "email_summary": "Nature Reviews Materials：OMIEC for bioinspired electronics 综述，系统梳理 OECT、人工突触/神经元、in-sensor/edge computing、robotics 与 biohybrid circuits。它是本方向的背景锚点。", "importance_reason": "OECT/OMIEC × metasurface 的长期目标是物理智能界面，不只是电磁调制。这篇帮助定义 OMIEC 在智能感知和神经形态系统中的材料角色。"}}, {"title": "Bioadhesive polymer semiconductors and transistors for intimate biointerfaces", "authors": ["Nan Li", "Yang Li", "Zhe Cheng", "Youdi Liu", "Yahao Dai", "Seounghun Kang", "Songsong Li", "Naisong Shan", "Shinya Wai", "Aidan Ziaja", "Yunfei Wang", "Joseph Strzalka", "Wei Liu", "Cheng Zhang", "Xiaodan Gu", "Jeffrey A. Hubbell", "Bozhi Tian", "Sihong Wang"], "venue": "Science", "published_at": "2023-08-10", "paper_type": "transferable", "source_kind": "official", "robot_type_tags": ["bio_sensing"], "tier": "tier1", "tier_label": "Tier 1 旗舰正式论文", "score": 0.507, "url": "https://openalex.org/W4385726846", "pdf_url": "https://www.osti.gov/servlets/purl/2404843", "key_figure_path": "figures/openalex_W4385726846_caption_p2.png", "key_figure_caption": "Cached key figure", "quick_take": "针对软组织表面的生物信号需要稳定、贴合、低距离的电子界面，论文通过全文显示 BASC 在湿猪肌肉上 interfacial toughness 约 24 J m-2、shear strength 约 7 kPa、tensile strength 约 4.4 kPa，并验证证据等级高：本地取得 Science PDF 全文和关键图。", "analysis": {"core_insight": "这篇 Science 解决 transistor biointerface 的关键界面问题：把 bioadhesive brush polymer 与 redox-active semiconducting polymer 做成 double-network BASC，使 OECT 通道本身直接黏附湿组织，同时保留约 1 cm2 V-1 s-1 的载流子迁移率、拉伸性和生物相容性。它不是 metasurface，但对 OECT 生物感知前端非常关键。", "problem_frame": "软组织表面的生物信号需要稳定、贴合、低距离的电子界面。传统固定方式如缝合或外围夹持会造成局部脱离；另加绝缘/非电活性胶层又会增加信号源到 OECT 通道的距离，削弱幅度。对主动传感器而言，最理想的是半导体通道自己就是湿组织 adhesive。", "first_principles": "OECT 的信号转导依赖组织电位/离子事件通过界面耦合到有机半导体通道；界面距离、阻抗、机械漂移和组织运动都会影响信号。BASC 用 NHS ester 形成共价黏附，COOH 组分帮助吸水和电荷相互作用，p(g2T-T) 纳米纤维维持电子/离子传输通路。", "mechanism": "全文显示 BASC 在湿猪肌肉上 interfacial toughness 约 24 J m-2、shear strength 约 7 kPa、tensile strength 约 4.4 kPa，较 neat p(g2T-T) 明显提高；OECT on/off ratio 达 1e4，迁移率接近 1 cm2 V-1 s-1。BASC 可 100% strain 且 100 次循环后性能稳定，1 kPa 表面摩擦 1000 次后仍基本保持。器件用于离体 rat heart ECG 和在体 rat GM muscle EMG，bioadhesive OECT 在机械扰动下保持稳定接触，而非黏附 OECT 会漂移/脱落。", "boundary_advanced": "它推进的是 OECT 与生物组织的界面边界。对于 OECT/OMIEC × metasurface，直接意义在于前端 bioelectronic sensing；间接意义是提醒我们，软材料系统的性能常由界面力学和电化学耦合决定。若未来做贴肤/植入式感传算超表面，adhesive semiconductor 概念可能比外加胶层更可靠。", "old_problem": "老问题是高性能有机半导体不天然黏湿组织，而好用的 wet adhesive 往往不导电/不半导体，导致传感和黏附功能分离。", "why_it_works": "它有效的原因是双网络把两类功能空间上互穿：BAP 提供湿组织黏附和柔软吸水界面，p(g2T-T) 形成连续 charge transport pathway。界面没有厚胶层隔开，OECT 的 built-in amplification 可以直接作用于组织信号。", "true_novelty": "真正的新意是半导体通道本身 bioadhesive，而不是在器件外面贴胶。它把 adhesion、stretchability、OECT amplification 和生物相容性放进同一材料层。", "evidence_summary": "证据等级高：本地取得 Science PDF 全文和关键图。全文包含材料设计、黏附力学、OECT 电学、GIXD/UV-vis、100% strain、abrasion、生物相容性、离体 ECG 和在体 EMG 对照。与 metasurface 无直接关系，但与 OECT bioelectronic sensing 和柔性界面高度相关。", "email_summary": "Science：bioadhesive polymer semiconductor 让 OECT 通道直接黏附湿组织，保留约 1 cm2 V-1 s-1 mobility、1e4 on/off，并实现稳定 ECG/EMG。它是 OECT 感知前端的重要界面突破。", "importance_reason": "真正可用的 OECT 感传算系统必须在湿、软、运动组织上稳定工作。这篇把界面黏附和晶体管放进同一功能材料，是系统落地的关键拼图。"}}, {"title": "Ultrafast silicon photonic reservoir computing engine delivering over 200 TOPS", "authors": ["Dongliang Wang", "Yikun Nie", "Gaolei Hu", "Hon Ki Tsang", "Chaoran Huang"], "venue": "Nature Communications", "published_at": "2024-12-30", "paper_type": "direct", "source_kind": "official", "robot_type_tags": ["metasurface_computing", "neuromorphic_oect"], "tier": "tier2", "tier_label": "Tier 2 高质量正式论文", "score": 0.7461, "url": "https://openalex.org/W4405894884", "pdf_url": "https://www.nature.com/articles/s41467-024-55172-3.pdf", "key_figure_path": "figures/openalex_W4405894884_caption_p1.png", "key_figure_caption": "Cached key figure", "quick_take": "针对光学 RC 的吸引力是低延迟和高带宽，论文通过官方摘要显示该设计基于 next-generation RC，实验处理速度超过 60 GHz，并验证证据等级中等：本地有摘要、官方 PDF URL 和关键图，但 PDF 全文未解析。", "analysis": {"core_insight": "这篇 Nature Communications 展示了 next-generation reservoir computing 的硅光实现：通过消除传统 RC 对显式循环连接和强非线性的依赖，把 photonic RC 做成紧凑、高速、可容忍制造误差的 on-chip engine，实验处理速度超过 60 GHz，题名强调超过 200 TOPS。", "problem_frame": "光学 RC 的吸引力是低延迟和高带宽，但传统 reservoir 往往需要延迟线、反馈回路或难以集成的光学非线性，速度和可扩展性被系统架构拖住。对物理计算来说，问题不是能否在光里做一次映射，而是能否把映射变成可集成、可高速运行、可训练的计算引擎。", "first_principles": "reservoir computing 的本质是把输入投影到高维动态特征空间，再用简单读出层完成任务。next-generation RC 将显式递归动态转化为构造出的非线性/时延特征，降低对物理反馈腔的依赖；硅光平台利用高速调制、波导传播和并行模拟计算来实现高吞吐特征生成。", "mechanism": "官方摘要显示该设计基于 next-generation RC，实验处理速度超过 60 GHz，并在 prediction、emulation、classification 任务上达到 state-of-the-art 表现；本地包保留了官方 PDF URL 和关键图，但全文未能解析。因此这里不推断具体芯片版图或每个任务指标，只把可核实证据限定在摘要、题名和关键图层面。", "boundary_advanced": "它推进的是光子物理计算的速度/集成边界。和 OECT/OMIEC 的直接材料交集低，但对“物理 reservoir”路线非常有参考价值：OECT 适合慢变量、离子记忆和生物信号，硅光适合超高速信号；二者可能在多时间尺度 reservoir 或传感前端+高速光学读出中互补。", "old_problem": "老问题是 reservoir computing 常在演示层面有效，却难以同时满足速度、面积、可扩展连接和低训练复杂度。传统光学实现尤其容易被反馈和非线性元件限制。", "why_it_works": "它有效的原因是把计算负担从复杂循环物理网络转移到 next-generation RC 的特征构造，并用硅光硬件承担高速模拟映射。这样可以保留 RC 的训练简单性，同时避免传统光学反馈结构的速度瓶颈。", "true_novelty": "真正的新意是把 next-generation RC 范式和硅光硬件结合，给出超过 60 GHz 的实验处理速度和高吞吐计算声明。对本方向的启发是：neuromorphic physical computing 不一定都靠慢材料记忆，也可以把材料态感知与高速光学 reservoir 分层组合。", "evidence_summary": "证据等级中等：本地有摘要、官方 PDF URL 和关键图，但 PDF 全文未解析；官方 Nature 页面核对了 2024-12-30 发表、Nature Communications Article 10841、摘要中的 >60 GHz 和多任务验证。缺口是无法从本地全文复核具体架构图、任务数据和 TOPS 计算口径。", "email_summary": "Nature Communications：硅光 next-generation reservoir computing engine，官方摘要报告 >60 GHz 实验处理速度，题名声明 >200 TOPS。对本方向的价值是提供高速物理 reservoir 的系统参照，而非 OECT/OMIEC 材料贡献。", "importance_reason": "OECT/OMIEC 更擅长软、生物、离子记忆；光子 RC 更擅长高速。把两类物理计算放在同一雷达中，有助于判断未来混合 neuromorphic sensor-compute 系统的分工。"}}, {"title": "Photonic diffractive generators through sampling noises from scattering media", "authors": ["Ziyu Zhan", "Hao Wang", "Qiang Liu", "Xing Fu"], "venue": "Nature Communications", "published_at": "2024-12-06", "paper_type": "direct", "source_kind": "official", "robot_type_tags": ["metasurface_computing"], "tier": "tier2", "tier_label": "Tier 2 高质量正式论文", "score": 0.4904, "url": "https://openalex.org/W4405124182", "pdf_url": "https://www.nature.com/articles/s41467-024-55058-4.pdf", "key_figure_path": "figures/openalex_W4405124182_caption_p2.png", "key_figure_caption": "Cached key figure", "quick_take": "针对多数光子神经网络演示集中在判别任务，论文通过全文显示系统包含 photonic noise sampler、photonic diffractive generator 和 digital discriminator，并验证证据等级高：本地取得 Nature Communications PDF 全文和关键图。", "analysis": {"core_insight": "这篇 Nature Communications 把随机散射介质从“成像噪声源”转化为 photonic generative model 的物理 latent sampler，再用大规模 diffractive optical computing 做生成器。核心不是又做一个光学分类器，而是把物理光场用于生成式任务，拓展了 diffractive neural network 的应用边界。", "problem_frame": "多数光子神经网络演示集中在判别任务，如分类或矩阵乘；生成模型需要可控随机输入、训练数据到 latent space 的绑定，以及足够表达力的生成器。真实光学系统还要面对相位校准、实验噪声、读出精度和硬件一致性问题。", "first_principles": "散射介质把入射位置映射为 speckle pattern，其统计分布近似随机噪声；衍射层和自由空间传播实现线性光场变换，SLM 提供可编程相位/幅度。GAN 的生成器可看成从 latent noise 到图像分布的函数，这里把 latent noise 的采样和部分生成计算交给物理光路。", "mechanism": "全文显示系统包含 photonic noise sampler、photonic diffractive generator 和 digital discriminator。作者提出 random position encoding 与 physics-aware position encoding，后者用 VAE encoder 把图像映射到散射介质照明位置，平均 PCC 提升约 0.151。PDG 使用 100 x 100 programmable weights，实验生成 MNIST 数字；比较 cascaded/parallel、optical/digital readout 架构，图 3 给出 200 个实验样本统计；仿真扩展到 Fashion-MNIST 与 EMNIST，并可通过扫描散射介质位置实现图像插值。", "boundary_advanced": "它推进的是物理生成模型边界，但仍是混合光电系统：训练、判别器、部分读出和控制仍依赖数字硬件，SLM/相机限制速度。对 OECT/OMIEC 路线的启发在于：有机/离子材料的随机性、漂移和历史依赖不一定只是噪声，也可被设计为可采样的物理 latent source。", "old_problem": "老问题是光子 AI 常停留在 discriminative NN，缺少对生成、采样和数据增强类任务的硬件路径。随机散射过去多被视为需要校正的扰动。", "why_it_works": "它有效的原因是生成模型本来需要随机 latent input，而散射 speckle 天然提供高维随机模式；physics-aware encoding 又把随机输入和目标图像分布建立可训练对应关系，减少纯随机绑定带来的学习困难。", "true_novelty": "真正的新意是把散射介质作为物理噪声采样器，并与可编程 diffractive generator 组合完成生成式任务；不是简单把数字 GAN 搬到光学，而是利用光学系统原生随机性和空间并行性。", "evidence_summary": "证据等级高：本地取得 Nature Communications PDF 全文和关键图。全文提供总体框架、两种 encoding、PCC 改善、MNIST 实验、Fashion-MNIST/EMNIST 仿真、图像插值、代码/数据可用性。与 OECT/OMIEC 直接无关，但与 neuromorphic physical computing 高相关。", "email_summary": "Nature Communications：用散射介质采样噪声 + 衍射光学生成器做 photonic generative model。它提示我们，物理系统的随机性和漂移可被编入计算，而不只是需要消除的误差。", "importance_reason": "本方向若要从传感器走向物理智能，必须学会利用材料和波场的自然动态。这篇提供了“把物理噪声变成可训练资源”的清晰范例。"}}, {"title": "Fully printed zero-static power MoS2 switch coded reconfigurable graphene metasurface for RF/microwave electromagnetic wave manipulation and control", "authors": ["Xiao-Yu Xiao", "Zixing Peng", "Zirui Zhang", "Xinyao Zhou", "Xuzhao Liu", "Yang Liu", "Jingjing Wang", "Haiyu Li", "Kostya S. Novoselov", "Cinzia Casiraghi", "Zhirun Hu"], "venue": "Nature Communications", "published_at": "2024-12-04", "paper_type": "transferable", "source_kind": "official", "robot_type_tags": ["tunable_metasurface", "terahertz_microwave"], "tier": "tier2", "tier_label": "Tier 2 高质量正式论文", "score": 0.6952, "url": "https://openalex.org/W4405018059", "pdf_url": "https://www.nature.com/articles/s41467-024-54900-z.pdf", "key_figure_path": "figures/openalex_W4405018059_caption_p2.png", "key_figure_caption": "Cached key figure", "quick_take": "针对电可重构超表面通常依赖 PIN diode、晶体管、液晶或相变材料，论文通过全文证据显示 crossbar Ag/MoS2/Ag 开关可 300 次 DC 循环，on-resistance 平均约 10 ohm，并验证证据等级高：本地取得 Nature Communications PDF 全文和关键图。", "analysis": {"core_insight": "这篇 Nature Communications 是本期最接近“可制造可重构微波超表面”的硬件工作之一：用 inkjet-printed Ag/MoS2/Ag 零静态功耗开关控制 screen-printed graphene metasurface，实现 1-bit 编码的 RF/microwave 波前重构。它不是 OMIEC，但在“低功耗、柔性、可印刷、非易失调控超表面”上与 OECT/OMIEC 路线高度相邻。", "problem_frame": "电可重构超表面通常依赖 PIN diode、晶体管、液晶或相变材料，其中许多方案需要保持偏置或工艺不够柔性/可降解。大规模 IRS、无线感知或微波 holography 需要大量开关，如果每个像素都有静态功耗，系统能耗和布线会迅速失控。", "first_principles": "meta-atom 的反射相位由局部电流路径和等效阻抗决定；MoS2 memristive switch 通过 Ag 离子迁移/导电细丝和局域相变在高阻/低阻态间非易失切换。将开关嵌入 graphene patch 后，on/off 改变电流路径，产生约 180 度相位差；不同编码序列叠加成不同远场反射波束。", "mechanism": "全文证据显示 crossbar Ag/MoS2/Ag 开关可 300 次 DC 循环，on-resistance 平均约 10 ohm；保持测试持续约 1.8e7 s，外推 10 年 on/off ratio 仍约 6e5。RF microstrip 开关提取 Ron=8.9 ohm、Roff=1.4 Mohm、Coff=31.92 fF、FoM=0.56 THz，on-state 插损 <0.7 dB，off-state 隔离 >10 dB（DC-12 GHz）。超表面由 36 个 MoS2 开关和 6 x 6 graphene patches 组成，3.54 GHz 设计 180 度相移，实测不同编码把主反射方向调到约 41、45、52 度或展开多波束。", "boundary_advanced": "它推进了 printed reconfigurable metasurface 的能耗和制造边界。限制是 6 x 6 原型、GHz 微波、手动/低速切换和 MoS2/Ag 体系；还没有 OMIEC 的连续模拟调谐，也没有神经形态学习。但它证明了“非易失材料开关 + 可印刷超表面”的系统路线可行。", "old_problem": "老问题是可重构超表面能调，但调控元件常带来持续功耗、刚性工艺或不可持续制造；柔性印刷 graphene 超表面过去又多是被动结构。", "why_it_works": "它有效的原因是把非易失电阻态直接映射为 meta-atom 的二进制电磁状态。开关只在写入时耗能，保持态不需要 DC bias，因此像素数增加时静态功耗不随规模线性爆炸。", "true_novelty": "真正的新意是全印刷 MoS2 zero-static-power switch 与 screen-printed graphene metasurface 的集成，而不是单独的 memristor 或单独的 graphene antenna。对 OECT/OMIEC 的启发是：离子/混合导体若能提供非易失或准非易失电导态，也可成为低功耗超表面像素的状态存储层。", "evidence_summary": "证据等级高：本地取得 Nature Communications PDF 全文和关键图。全文包含开关 DC/RF 参数、HAADF/Raman/EDX 机理证据、6 x 6 metasurface 制造流程、3.54 GHz 相位设计和远场实测。与 OECT/OMIEC 材料不同，但与可印刷、柔性、低功耗 reconfigurable metasurface 高相关。", "email_summary": "Nature Communications：全印刷 MoS2 非易失开关编码 graphene 微波超表面，36 个开关、3.54 GHz、约 180 度单元相移、远场主瓣可编程转向，核心优势是 zero-static-power。", "importance_reason": "这是 OMIEC/OECT 超表面可对标的系统样机：材料调控必须服务于像素能耗、保持态、布线和可印刷制造，而不只是证明单个材料电导可变。"}}, {"title": "Trapping light in air with membrane metasurfaces for vibrational strong coupling", "authors": ["Wihan Adi", "Samir Rosas", "Aidana Beisenova", "Shovasis Kumar Biswas", "Hongyan Mei", "David A. Czaplewski", "Filiz Yesilköy"], "venue": "Nature Communications", "published_at": "2024-11-20", "paper_type": "direct", "source_kind": "official", "robot_type_tags": ["bio_sensing"], "tier": "tier2", "tier_label": "Tier 2 高质量正式论文", "score": 0.7558, "url": "https://openalex.org/W4404539053", "pdf_url": "https://www.nature.com/articles/s41467-024-54284-0.pdf", "key_figure_path": "figures/openalex_W4404539053_caption_p2.png", "key_figure_caption": "Cached key figure", "quick_take": "针对中红外 metasurface 适合分子振动增强、光谱和 biochemical sensing，论文通过官方 Nature 页面显示作者使用 Brillouin zone folding 激发 tunable high-Q qBIC，最高实测 Q=722，并验证证据等级中等：本地有摘要、官方 PDF URL 和关键图。", "analysis": {"core_insight": "这篇 Nature Communications 用 free-standing Si membrane mid-IR metasurface 把高 Q qBIC 模式的热点放到空气孔中，解决传统基底型中红外超表面对分子可接近性和 Q 因子的双重限制。对本方向的价值在于它提供了“开放热点 + 高 Q 共振 + 分子耦合”的光学感知平台范式。", "problem_frame": "中红外 metasurface 适合分子振动增强、光谱和 biochemical sensing，但常见固体基底会降低 Q、改变模场并阻碍分子进入近场热点；很多 IR 透明基底还昂贵、易溶或不利于规模制造。若热点被埋在固体/界面附近，传感和强耦合都受限。", "first_principles": "qBIC 通过弱破缺对称性打开辐射通道，在高 Q 和可外部激发之间折中；把模式局域到空气孔，能让待测分子直接占据最大电场区域。分子振动与 qBIC 模式谱线接近时会发生振动强耦合，表现为反交叉和 Rabi splitting。", "mechanism": "官方 Nature 页面显示作者使用 Brillouin zone folding 激发 tunable high-Q qBIC，最高实测 Q=722；器件为 1 um thick Si membrane，调节半径扰动参数控制 qBIC 辐射通道，并将 qBIC 调到 PMMA C=O 振动峰约 1730 cm-1 附近，展示多个 detuning 下的 VSC。全文本地未解析，但本地保留官方 PDF URL 和关键图。", "boundary_advanced": "它推进的是 mid-IR sensing/metasurface 模式工程边界，而不是 OECT/OMIEC 材料边界。若未来把 OMIEC 或电化学可调层接入类似开放热点结构，可探索离子/化学状态对 qBIC 或强耦合的可逆调制；但当前论文没有电化学调控或神经形态计算。", "old_problem": "老问题是高 Q metasurface 往往牺牲样品可接近性，开放传感结构又容易降低 Q。中红外分子 sensing 需要两者同时成立。", "why_it_works": "它有效的原因是用 free-standing membrane 移除低质量基底，并通过 qBIC 的辐射通道工程保持高 Q；空气孔让分子进入强场位置，从而增强光-物质相互作用。", "true_novelty": "真正的新意是把 qBIC 高 Q 模式放进可访问空气空腔的 membrane metasurface，并用 PMMA 振动强耦合验证热点可用性。对本方向的启发是：可调材料层不应遮蔽热点，结构必须同时考虑调控和被测物进入。", "evidence_summary": "证据等级中等：本地有摘要、官方 PDF URL 和关键图，官方 Nature HTML 核对了发表信息、free-standing Si-membrane、qBIC、最高 Q=722、PMMA VSC 和 1730 cm-1 C=O 振动目标。缺口是本地没有解析全文，不能独立复核所有图中数值。", "email_summary": "Nature Communications：free-standing Si membrane 中红外 metasurface，在空气孔中实现高 Q qBIC，最高实测 Q=722，并与 PMMA C=O 振动强耦合。它是高灵敏分子感知超表面的结构参照。", "importance_reason": "OECT/OMIEC 与 metasurface 结合时，电化学材料、 analyte 和光/电磁热点的空间关系会决定灵敏度。这篇强调了开放热点设计的重要性。"}}, {"title": "Tuning direct-written terahertz metadevices with organic mixed ion-electron conductors", "authors": ["Cristiano Bortolotti", "Federico Grandi", "Matteo Butti", "Lorenzo Gatto", "Francesco Modena", "Christina Kousseff", "Iain McCulloch", "Caterina Vozzi", "Mario Caironi", "Eugenio Cinquanta", "Giorgio Ernesto Bonacchini"], "venue": "Nature Communications", "published_at": "2024-11-07", "paper_type": "transferable", "source_kind": "official", "robot_type_tags": ["oect_omiec", "tunable_metasurface", "bio_sensing", "terahertz_microwave"], "tier": "tier2", "tier_label": "Tier 2 高质量正式论文", "score": 0.8941, "url": "https://doi.org/10.1038/s41467-024-53372-5", "pdf_url": "https://www.nature.com/articles/s41467-024-53372-5.pdf", "key_figure_path": "figures/crossref_10_1038_s41467-024-53372-5_caption_p4.png", "key_figure_caption": "Cached key figure", "quick_take": "针对OMIEC 已在 bioelectronics、neuromorphic、electro-optical 和 printed electronics 中成熟，论文通过官方摘要和本地包显示作者采用 high-performance polymer mixed conductors 作为电活性调谐层，并验证证据等级中等偏高：本地有 Crossref/Nature 元数据、摘要、官方 PDF URL 和关键图。", "analysis": {"core_insight": "这是本轮与研究主线最直接相关的论文：Nature Communications 首次把高性能 organic mixed ion-electron conductor 作为 electro-active tuning layer 用在 reconfigurable terahertz metasurface 中，证明 OMIEC 的大电导调制并不只存在于低频 OECT/神经形态器件，在 0.1-10 THz 关键频段也能转化为有效 metadevice reconfigurability。", "problem_frame": "OMIEC 已在 bioelectronics、neuromorphic、electro-optical 和 printed electronics 中成熟，但微波/THz 社群通常认为有机半导体迁移率低、注入差、速度慢，不适合高频电磁器件。结果是 OMIEC 的可印刷、柔性、离子调控优势没有进入 THz metaoptics。", "first_principles": "THz metasurface 的共振透射/反射取决于金属单元附近的复电导和屏蔽效应。OMIEC 通过电化学掺杂改变载流子浓度和电导；如果这种电导变化在 THz 频率仍表现为有效屏蔽变化，就可以调制 resonant metasurface 的振幅/频谱响应。", "mechanism": "官方摘要和本地包显示作者采用 high-performance polymer mixed conductors 作为电活性调谐层，通过 time-domain terahertz spectroscopy 证明低频已知的大电导调制可保留到 THz；Nature 页面进一步说明其目标 resonances 位于约 0.5-0.75 THz，并使用 p(g2T-TT) 这类 glycolated side-chain OMIEC，通过 inkjet printing 沉积，最后实现 rigid 和 flexible substrates 上 direct-written electrically tunable metasurfaces。", "boundary_advanced": "它推进的是 OMIEC 从低频电化学/神经形态器件进入 THz metaoptics 的频率边界和工艺边界。局限是本地未解析 PDF 全文，不能复核每个器件结构、调制深度和循环稳定数据；此外电化学调制速度、滞后、空间分辨和阵列寻址仍是未来 OECT-gated metasurface 的关键问题。", "old_problem": "老问题是 OMIEC 社群和 THz metasurface 社群之间存在频率认知断层：前者重低电压离子调控，后者担心有机材料高频响应不够快或损耗过大。", "why_it_works": "它有效的原因是 THz 调制并不要求离子在 THz 周期内移动；离子只需慢速写入一个稳定电化学掺杂态，THz 波看到的是被写入后的电子电导/屏蔽状态。因此慢离子写入和快电磁读出可以分离。", "true_novelty": "真正的新意是把 OMIEC 的电化学可写电导态直接接入 THz metasurface 功能层，并用直接书写工艺做出刚性/柔性电可调 metadevice。它是 OECT/OMIEC × reconfigurable metasurface 方向的核心支撑文献。", "evidence_summary": "证据等级中等偏高：本地有 Crossref/Nature 元数据、摘要、官方 PDF URL 和关键图，官方 Nature HTML 核对了 2024-11-07 发表、OMIEC、0.1-10 THz 背景、0.5-0.75 THz resonances、p(g2T-TT)、time-domain THz spectroscopy 和 rigid/flexible direct-written metasurfaces。缺口是本地全文未解析，具体调制深度、循环和图中细节未逐项复核。", "email_summary": "Nature Communications：OMIEC 直接写入 THz metasurface 作为电活性调谐层，证明有机混合导体的电导调制可服务 0.5-0.75 THz reconfigurable metadevices。这是本期最贴近主线的论文。", "importance_reason": "它把 OMIEC 从 OECT/神经形态低频器件带到 THz 超表面，直接证明“离子写入、THz 读出”的物理路径可行，是后续 OECT-gated metasurface 的关键依据。"}}, {"title": "2D Waveguide-Fed Metasurfaces: Physically Consistent Modeling, Validation, and Optimization", "authors": ["Panagiotis Gavriilidis", "George C. Alexandropoulos"], "venue": "arXiv", "published_at": "2026-05-04", "paper_type": "direct", "source_kind": "preprint", "robot_type_tags": ["tunable_metasurface"], "tier": "preprint", "tier_label": "arXiv / preprint", "score": 0.71, "url": "http://arxiv.org/abs/2605.02400v1", "pdf_url": "https://arxiv.org/pdf/2605.02400v1", "key_figure_path": "figures/arxiv_2605_02400v1_caption_p3.png", "key_figure_caption": "Cached key figure", "quick_take": "针对传统动态超表面天线常把 meta-atom 当作近似独立的可调相位点，论文通过模型从磁偶极扩展到电偶极+磁偶极，支持多馈源、近场和远场计算，并验证证据等级中高：本地取得 arXiv PDF 全文和关键图。", "analysis": {"core_insight": "这篇 arXiv 预印本的核心价值在于把 2D waveguide-fed programmable metasurface antenna 从经验性阵列/传输线模型，推进到带能量守恒约束的耦合偶极模型。它不是 OECT 论文，但对“可重构超表面作为物理计算孔径”很关键：如果单元间强耦合、馈电波导和近场/远场都不能物理一致地建模，后续用材料态或神经网络优化波前就容易得到不可实现的解。", "problem_frame": "传统动态超表面天线常把 meta-atom 当作近似独立的可调相位点，或沿用 1D 微带/传输线描述。2D 平行板波导馈电结构能用少数 RF chain 激励大孔径，但径向导波、自由空间辐射、单元互耦和馈端接受功率纠缠在一起；若模型不显式满足无源性，优化可能预测出辐射功率超过输入功率的非物理解。", "first_principles": "第一性原理上，每个亚波长单元由电/磁极化率决定散射响应；导波场先在平行板中传播并激发单元，单元之间再通过导波 Green 函数和自由空间 Green 函数互相耦合。作者把这些相互作用写成耦合偶极系统，并用 radiation-reaction / passivity correction 约束极化率，使输入阻抗、接受功率和辐射场在同一个能量账本里闭合。", "mechanism": "模型从磁偶极扩展到电偶极+磁偶极，支持多馈源、近场和远场计算；再引入输入阻抗模型，用于显式计算 accepted power。由于极化率表达可微，作者把几何设计参数和馈电激励一起放进梯度优化，用于 directive beamforming 和 sector-wide coverage。全文图 1 给出了 PPW-fed metasurface 结构和导波电场分布，后续章节用 full-wave EM 仿真校验远场、近场、馈端阻抗和功率一致性。", "boundary_advanced": "它推进的是“可重构超表面建模边界”，不是材料边界。对 OECT/OMIEC 超表面而言，真正可迁移的是方法论：把有机/离子材料的可调电导、介电响应或极化率嵌入物理一致模型，再做任务级优化。当前证据仍是理论与仿真验证，预印本未经过同行评审，也未展示真实 OMIEC/软材料器件。", "old_problem": "老问题是大孔径可重构超表面系统的电磁模型常在工程上够用、但在优化和功率估计上不够守恒；尤其对少馈源 2D 波导结构，单元耦合不能被简单忽略。", "why_it_works": "它有效的原因是把 meta-atom 看成有物理极化率和无源约束的散射体，而不是抽象相位像素。这样一来，梯度优化不能任意借能量，馈端功率、单元响应和目标波束之间的关系更接近真实硬件。", "true_novelty": "真正的新意是多馈源 2D PPW-fed metasurface 的电/磁耦合偶极统一框架，以及把输入阻抗和功率约束纳入可微优化。对本方向的启发是：未来 OECT/OMIEC × metasurface 不应只做材料调谐展示，还要给出材料态到系统波前的可微、守恒映射。", "evidence_summary": "证据等级中高：本地取得 arXiv PDF 全文和关键图。全文明确提出 electric/magnetic dipoles、多馈源、near/far-field、passivity、input impedance、accepted power 和 full-wave validation；图 1 展示 PPW-fed metasurface 与导波场。限制是预印本、无实验样机，且与 OECT/OMIEC 只有“可重构超表面建模”层面的间接关联。", "email_summary": "arXiv：2D 波导馈电可重构超表面的物理一致耦合偶极模型。它给 OMIEC/OECT 超表面一个重要提醒：先把材料可调态写进守恒的电磁模型，再谈物理神经网络或波前优化。", "importance_reason": "OECT/OMIEC 超表面若要进入感传算系统，必须跨越材料调制和系统级波束/计算之间的模型鸿沟。这篇提供了可微、守恒的电磁建模骨架。"}}, {"title": "Universal material basis for biocompatible printed electrolytes in Organic Electrochemical Transistors", "authors": ["Moritz Flemming", "Paul Zechel", "Rakesh R. Nair", "Emil Mahnke", "Markus Löffler", "Alyna Ong", "Bernd Rellinghaus", "Lukas M. Eng", "Karl Leo", "Hans Kleemann"], "venue": "arXiv", "published_at": "2026-04-28", "paper_type": "direct", "source_kind": "preprint", "robot_type_tags": ["oect_omiec", "neuromorphic_oect"], "tier": "preprint", "tier_label": "arXiv / preprint", "score": 0.78, "url": "http://arxiv.org/abs/2604.25830v1", "pdf_url": "https://arxiv.org/pdf/2604.25830v1", "key_figure_path": "figures/arxiv_2604_25830v1_caption_p5.png", "key_figure_caption": "Cached key figure", "quick_take": "针对OECT 的高增益来自离子进入 OMIEC 通道的体掺杂/去掺杂，论文通过全文显示作者用 PVA/DMSO/PEGDA/photoinitiator 与 [MTEOA][MeOSO3] 等 IL 形成 IGI，并验证证据等级中高：本地取得 arXiv PDF 全文和关键图。", "analysis": {"core_insight": "这篇预印本提出一种面向 printed OECT 的通用生物相容 ionic gel ink：同一 PVA/PEGDA/ionic liquid 材料基底可通过流变调节适配 screen printing 与 inkjet printing，并在 UV 固化后形成稳定固态电解质。它直接解决 OECT 阵列走向柔性、生物界面和可规模制造时最容易被低估的瓶颈：电解质既要可印刷、可图案化、低电压工作，又要长期稳定和生物相容。", "problem_frame": "OECT 的高增益来自离子进入 OMIEC 通道的体掺杂/去掺杂，但电解质常决定速度、阈值、漏电、稳定性和工艺窗口。很多高性能电解质不适合生物环境或长期空气存放；很多可印刷配方又难以同时兼容丝网印刷和喷墨印刷，导致集成阵列和柔性基底制造受限。", "first_principles": "第一性原理上，电解质需要提供足够离子电导来驱动 PEDOT:PSS 去掺杂，同时在器件尺度保持空间图案、低寄生离子电流和机械稳定。PVA 提供生物相容和成膜，ionic liquid 提供可迁移离子，PEGDA 在 UV 下交联形成网络，流变参数决定墨水能否通过丝网或喷头沉积。", "mechanism": "全文显示作者用 PVA/DMSO/PEGDA/photoinitiator 与 [MTEOA][MeOSO3] 等 IL 形成 IGI；丝网配方在 230 s-1 剪切速率下约 3500 mPa s，喷墨配方保持在 10-100 mPa s。UV 365 nm 2 min 固化后，FTIR 中 C=C 峰显著衰减，说明 PEGDA 聚合。器件层面，screen-printed IGI OECT 的最大 transconductance 约 1.3 mS、on/off 约 2600；inkjet IGI on/off 提升到约 23000；80 次循环无明显退化，30 天空气存放后仍保持相近转移曲线，并展示了全生物相容材料在 leaf substrate 上的丝网印刷 OECT。", "boundary_advanced": "它推进的是 OECT 工艺和封装边界，而不是单个通道材料性能上限。对 OECT/OMIEC × metasurface 路线，意义在于让离子调控层具备可印刷、可图案化和长期稳定的基础；但它还没有做高频/THz 调制，也没有展示电解质进入超表面单元后的速度、空间串扰和滞后控制。", "old_problem": "老问题是 OECT 文献常把电解质当作辅助材料，但真正做大面积阵列时，电解质的黏度、固化、分辨率、漏电和 shelf life 会决定能不能制造。", "why_it_works": "它有效的原因是把离子传输和印刷流变拆开调参：离子液体决定电化学门控能力，PVA/PEGDA 网络决定成膜、固化和机械稳定。UV 交联减少结构流动和寄生离子通路，使 gate-channel 耦合更可控。", "true_novelty": "真正的新意不在“又一个 OECT 电解质”，而在同一生物相容材料基底横跨丝网和喷墨两种印刷窗口，并同时给出器件性能、30 天稳定性和全印刷生物基底示范。对本方向的迁移点是：OMIEC metasurface 的离子调控层需要类似的工艺通用性。", "evidence_summary": "证据等级中高：本地取得 arXiv PDF 全文和关键图。全文含材料组成、流变、UV 固化、阻抗、OECT transfer/output、循环和 30 天稳定性，以及 leaf substrate 全印刷示范。限制是预印本、未见同行评审；与 metasurface 的关联仍需通过后续把该电解质集成到电磁可调单元来验证。", "email_summary": "arXiv：通用生物相容印刷 OECT 电解质，支持丝网/喷墨、UV 固化、1.3 mS transconductance、30 天空气稳定和 leaf substrate 全印刷器件。它补上 OMIEC/OECT 超表面的“可制造离子门控层”基础。", "importance_reason": "如果未来要做大面积 OECT-gated metasurface 或 neuromorphic sensing array，材料必须能印刷、稳定、图案化并兼容软基底。这篇给出了可直接借鉴的工艺平台。"}}];
+    const tagLabels = {
+      all: "全部",
+      oect_omiec: "OECT/OMIEC",
+      tunable_metasurface: "可调超表面",
+      metasurface_computing: "超表面计算",
+      neuromorphic_oect: "神经形态",
+      bio_sensing: "生物传感",
+      terahertz_microwave: "THz/微波",
+      integrated_system: "感传算系统",
+      other: "其他"
+    };
+    const sourceLabels = {
+      official: "正式发表",
+      preprint: "预印本"
+    };
+    const tierLabels = {
+      tier1: "Tier 1 旗舰正式论文",
+      tier2: "Tier 2 高质量正式论文",
+      preprint: "arXiv / preprint",
+      other: "其他"
+    };
+    const filtersEl = document.getElementById("filters");
+    const gridEl = document.getElementById("paper-grid");
+    const panelTagsEl = document.getElementById("panel-tags");
+    const archiveLink = null;
+    const tags = ["all", ...new Set(papers.flatMap(p => p.robot_type_tags))];
+    let active = "all";
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[char]));
+    }
+
+    function renderFilters() {
+      filtersEl.innerHTML = tags.map(tag => `
+        <button class="filter ${tag === active ? "active" : ""}" data-tag="${tag}">
+          ${escapeHtml(tagLabels[tag] || tag)}
+        </button>
+      `).join("");
+      filtersEl.querySelectorAll("button").forEach(btn => {
+        btn.addEventListener("click", () => {
+          active = btn.dataset.tag;
+          renderFilters();
+          renderCards();
+        });
+      });
+    }
+
+    function configureNavigation() {
+    }
+
+    function renderPanelTags() {
+      panelTagsEl.innerHTML = tags
+        .filter(tag => tag !== "all")
+        .slice(0, 8)
+        .map(tag => `<span class="panel-tag">${escapeHtml(tagLabels[tag] || tag)}</span>`)
+        .join("");
+    }
+
+    function renderCards() {
+      const visible = papers
+        .map((paper, originalIdx) => ({ ...paper, originalIdx }))
+        .filter(p => active === "all" || p.robot_type_tags.includes(active));
+      gridEl.innerHTML = visible.map((paper) => `
+        <article class="card">
+          <div class="rank">${String(paper.originalIdx + 1).padStart(2, "0")}</div>
+          <div class="paper-main">
+            <div class="venue">${escapeHtml(tierLabels[paper.tier] || paper.tier_label || paper.tier)} · ${escapeHtml(paper.venue)} · ${escapeHtml(paper.published_at)} · ${paper.paper_type === "direct" ? "直接命中" : "可迁移"}</div>
+            <h2>${escapeHtml(paper.title)}</h2>
+            <div class="tags">
+              <span class="tag source">${escapeHtml(sourceLabels[paper.source_kind] || paper.source_kind)}</span>
+              ${paper.robot_type_tags.map(tag => `<span class="tag">${escapeHtml(tagLabels[tag] || tag)}</span>`).join("")}
+            </div>
+            <div class="insight">${escapeHtml(paper.quick_take || paper.analysis.core_insight)}</div>
+            <div class="actions">
+              <button class="toggle">展开深读</button>
+              ${paper.url ? `<a class="link" href="${escapeHtml(paper.url)}" target="_blank" rel="noreferrer">原文</a>` : ""}
+              ${paper.pdf_url ? `<a class="link" href="${escapeHtml(paper.pdf_url)}" target="_blank" rel="noreferrer">PDF</a>` : ""}
+            </div>
+          </div>
+          <div class="score">${Math.round(paper.score * 100)}</div>
+          <div class="details">
+            <div class="detail-layout">
+              <aside class="figure-panel">
+                ${paper.key_figure_path ? `
+                  <figure class="key-figure">
+                    <div class="figure-label"><span>Key Figure</span><span>用于快速抓核心机制</span></div>
+                    <img src="${escapeHtml(paper.key_figure_path)}" alt="key figure">
+                    <figcaption>${escapeHtml(paper.key_figure_caption || "关键图")}</figcaption>
+                  </figure>
+                ` : `
+                  <div class="no-figure">暂无可抽取关键图<br>通常是正式出版页面未开放 PDF 或文本层不可检索。</div>
+                `}
+              </aside>
+              <div class="analysis-panel">
+                <div class="detail-block"><strong>问题重述：</strong>${escapeHtml(paper.analysis.problem_frame)}</div>
+                <div class="detail-block"><strong>第一性原理：</strong>${escapeHtml(paper.analysis.first_principles)}</div>
+                <div class="detail-block"><strong>生效机制：</strong>${escapeHtml(paper.analysis.mechanism)}</div>
+                <div class="detail-block"><strong>推进的边界：</strong>${escapeHtml(paper.analysis.boundary_advanced)}</div>
+                <div class="detail-block"><strong>解决的老问题：</strong>${escapeHtml(paper.analysis.old_problem)}</div>
+                <div class="detail-block"><strong>为什么成立：</strong>${escapeHtml(paper.analysis.why_it_works)}</div>
+                <div class="detail-block"><strong>真正新意：</strong>${escapeHtml(paper.analysis.true_novelty)}</div>
+                <div class="detail-block"><strong>证据：</strong>${escapeHtml(paper.analysis.evidence_summary)}</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      `).join("");
+      gridEl.querySelectorAll(".toggle").forEach(button => {
+        button.addEventListener("click", () => {
+          const details = button.closest(".card").querySelector(".details");
+          details.classList.toggle("open");
+          button.textContent = details.classList.contains("open") ? "收起" : "展开深读";
+        });
+      });
+    }
+
+    configureNavigation();
+    renderPanelTags();
+    renderFilters();
+    renderCards();
+  </script>
+</body>
+</html>
