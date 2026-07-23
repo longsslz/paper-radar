@@ -1,58 +1,82 @@
 [
   {
-    "id": "00-imperceptible-bioelectronic-fibres",
-    "title": "Imperceptible augmentation of living systems with organic bioelectronic fibres",
-    "headline": "把 PEDOT:PSS 纤维直接“织”到活体表面",
-    "venue": "Nature Electronics",
-    "href": "00-imperceptible-bioelectronic-fibres/index.html"
-  },
-  {
-    "id": "10.1002-adma.202300576",
-    "title": "Fiber Crossbars: An Emerging Architecture of Smart Electronic Textiles",
-    "headline": "把经纬纤维的每个交叉点，都变成一个可寻址器件",
-    "venue": "Paper Lens",
-    "href": "10.1002-adma.202300576/index.html"
-  },
-  {
-    "id": "10.1038-s41467-025-60630-7",
-    "title": "Low-noise frequency synthesis and terahertz wireless communication driven by compact turnkey Kerr combs",
-    "headline": "用“即开即用”Kerr 光梳合成低噪声太赫兹，并跑通 240 Gbps 链路",
-    "venue": "Nature Communications",
-    "href": "10.1038-s41467-025-60630-7/index.html"
-  },
-  {
-    "id": "10.1038-s41565-026-02129-w",
-    "title": "A CMOS-compatible, scalable and compact magnetoelectric spin-torque microwave detector",
-    "headline": "把磁电天线和 MTJ 贴在一起：亚微瓦无线微波直接变直流",
-    "venue": "Nature Nanotechnology",
-    "href": "10.1038-s41565-026-02129-w/index.html"
-  },
-  {
-    "id": "10.1038-s41586-023-06946-0",
-    "title": "High-quality semiconductor fibres via mechanical design",
-    "headline": "用“机械匹配”把半导体纤维从易碎样品变成百米连续材料",
-    "venue": "Paper Lens",
-    "href": "10.1038-s41586-023-06946-0/index.html"
+    "id": "10.1038-s44460-026-00067-7",
+    "title": "Self-powered analogue neuromorphic system for multimodal sensing, encoding and learning with diffusive and drift memristors",
+    "headline": "用两类忆阻器把传感、脉冲编码和无监督学习接成一条全模拟链路",
+    "venue": "Nature Sensors",
+    "added_at": "2026-07-23T08:26:21Z",
+    "added_date": "2026-07-23",
+    "publication_date": "2026-04-30",
+    "href": "10.1038-s44460-026-00067-7/index.html"
   },
   {
     "id": "10.1038-s44172-024-00194-4",
     "title": "Radar near-field sensing using metasurface for biomedical applications",
     "headline": "给 60 GHz 雷达加一层“阻抗变换 + 近场聚焦”皮肤接口",
     "venue": "Communications Engineering",
+    "added_at": "2026-07-23T08:03:10Z",
+    "added_date": "2026-07-23",
+    "publication_date": "2024-03-19",
     "href": "10.1038-s44172-024-00194-4/index.html"
   },
   {
-    "id": "10.1038-s44460-026-00067-7",
-    "title": "Self-powered analogue neuromorphic system for multimodal sensing, encoding and learning with diffusive and drift memristors",
-    "headline": "用两类忆阻器把传感、脉冲编码和无监督学习接成一条全模拟链路",
-    "venue": "Nature Sensors",
-    "href": "10.1038-s44460-026-00067-7/index.html"
+    "id": "10.1038-s41586-023-06946-0",
+    "title": "High-quality semiconductor fibres via mechanical design",
+    "headline": "用“机械匹配”把半导体纤维从易碎样品变成百米连续材料",
+    "venue": "Nature",
+    "added_at": "2026-07-23T05:25:07Z",
+    "added_date": "2026-07-23",
+    "publication_date": "2024-01-31",
+    "href": "10.1038-s41586-023-06946-0/index.html"
+  },
+  {
+    "id": "10.1038-s41565-026-02129-w",
+    "title": "A CMOS-compatible, scalable and compact magnetoelectric spin-torque microwave detector",
+    "headline": "把磁电天线和 MTJ 贴在一起：亚微瓦无线微波直接变直流",
+    "venue": "Nature Nanotechnology",
+    "added_at": "2026-07-23T05:24:51Z",
+    "added_date": "2026-07-23",
+    "publication_date": "2026-03-02",
+    "href": "10.1038-s41565-026-02129-w/index.html"
+  },
+  {
+    "id": "10.1038-s41467-025-60630-7",
+    "title": "Low-noise frequency synthesis and terahertz wireless communication driven by compact turnkey Kerr combs",
+    "headline": "用“即开即用”Kerr 光梳合成低噪声太赫兹，并跑通 240 Gbps 链路",
+    "venue": "Nature Communications",
+    "added_at": "2026-07-23T05:24:38Z",
+    "added_date": "2026-07-23",
+    "publication_date": "2025-07-07",
+    "href": "10.1038-s41467-025-60630-7/index.html"
+  },
+  {
+    "id": "10.1002-adma.202300576",
+    "title": "Fiber Crossbars: An Emerging Architecture of Smart Electronic Textiles",
+    "headline": "把经纬纤维的每个交叉点，都变成一个可寻址器件",
+    "venue": "Advanced Materials",
+    "added_at": "2026-07-23T05:24:25Z",
+    "added_date": "2026-07-23",
+    "publication_date": "2023-10-19",
+    "href": "10.1002-adma.202300576/index.html"
+  },
+  {
+    "id": "00-imperceptible-bioelectronic-fibres",
+    "title": "Imperceptible augmentation of living systems with organic bioelectronic fibres",
+    "headline": "把 PEDOT:PSS 纤维直接“织”到活体表面",
+    "venue": "Nature Electronics",
+    "added_at": "2026-07-16T06:32:32Z",
+    "added_date": "2026-07-16",
+    "publication_date": "2024-05-24",
+    "href": "00-imperceptible-bioelectronic-fibres/index.html"
   },
   {
     "id": "oect-microwave-metadevices",
     "title": "Reconfigurable microwave metadevices based on organic electrochemical transistors",
     "headline": "用 OECT 给微波超器件加一个低压可调旋钮",
     "venue": "Nature Electronics",
+    "added_at": "2026-07-16T06:32:32Z",
+    "added_date": "2026-07-16",
+    "publication_date": "2021-06-21",
     "href": "oect-microwave-metadevices/index.html"
   }
 ]
