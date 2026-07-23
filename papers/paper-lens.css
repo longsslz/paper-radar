@@ -53,7 +53,7 @@ h1 { margin:9px 0 14px; max-width:880px; font-size:clamp(38px,5vw,63px); line-he
 .read-card p { margin:0; color:var(--ink-soft); font-size:13px; line-height:1.65; }
 .read-card .talk { padding:10px 11px; border-left:3px solid var(--signal); background:rgba(45,109,101,.08); color:var(--ink); }
 .panel-guide { margin:7px 0 0; padding:0; list-style:none; }
-.panel-guide li { display:grid; grid-template-columns:28px minmax(0,1fr); gap:6px; padding:6px 0; border-top:1px dotted var(--line-soft); color:var(--ink-soft); font-size:12px; line-height:1.5; }
+.panel-guide li { display:grid; grid-template-columns:46px minmax(0,1fr); gap:8px; padding:8px 0; border-top:1px dotted var(--line-soft); color:var(--ink-soft); font-size:12.5px; line-height:1.62; }
 .panel-guide b { color:var(--signal); font-family:"SF Mono","Menlo",monospace; }
 .closing { display:grid; grid-template-columns:1fr 1fr; gap:20px; padding:38px 0 4px; }
 .box { border:1px solid var(--line); background:rgba(255,255,255,.25); padding:19px; }
