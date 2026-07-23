@@ -64,6 +64,9 @@ h1 { margin:9px 0 14px; max-width:880px; font-size:clamp(38px,5vw,63px); line-he
 .term { border-top:1px solid var(--line-soft); padding-top:9px; color:var(--ink-soft); font-size:13px; line-height:1.55; }
 .term b { color:var(--ink); }
 .back { display:inline-block; margin-top:24px; padding:10px 12px; background:var(--ink); color:var(--paper-strong); text-decoration:none; font-size:13px; }
+.paper-citation { margin-top:24px; padding-top:20px; border-top:1px solid var(--rule); color:var(--ink-soft); }
+.paper-citation h2 { margin:5px 0 8px; color:var(--ink); font-size:22px; }
+.paper-citation p { margin:0; line-height:1.72; }
 @media (max-width:860px) {
   .hero,.takeaway,.story-grid,.closing { grid-template-columns:1fr; }
   .quick-grid,.terms { grid-template-columns:1fr 1fr; }

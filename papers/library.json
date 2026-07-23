@@ -42,6 +42,13 @@
     "href": "10.1038-s44172-024-00194-4/index.html"
   },
   {
+    "id": "10.1038-s44460-026-00067-7",
+    "title": "Self-powered analogue neuromorphic system for multimodal sensing, encoding and learning with diffusive and drift memristors",
+    "headline": "用两类忆阻器把传感、脉冲编码和无监督学习接成一条全模拟链路",
+    "venue": "Nature Sensors",
+    "href": "10.1038-s44460-026-00067-7/index.html"
+  },
+  {
     "id": "oect-microwave-metadevices",
     "title": "Reconfigurable microwave metadevices based on organic electrochemical transistors",
     "headline": "用 OECT 给微波超器件加一个低压可调旋钮",
