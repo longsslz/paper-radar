@@ -95,21 +95,43 @@
       font-size:13px;
       line-height:1.7;
     }
-    .issue-links {
+    .site-nav {
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:center;
+      padding:12px 0 16px;
+      margin-bottom:30px;
+      border-bottom:1px solid var(--line-soft);
+    }
+    .site-brand {
+      color:var(--ink);
+      text-decoration:none;
+      font-weight:800;
+      line-height:1.1;
+    }
+    .site-brand small {
+      display:block;
+      margin-top:4px;
+      color:var(--muted);
+      font-weight:600;
+      font-size:12px;
+    }
+    .site-links {
       display:flex;
       flex-wrap:wrap;
       gap:8px;
-      margin-top:16px;
+      justify-content:flex-end;
     }
-    .issue-link {
+    .site-link {
       color:var(--ink);
       text-decoration:none;
       border:1px solid var(--line-soft);
       background:rgba(255,255,255,.24);
-      padding:8px 10px;
+      padding:9px 11px;
       font-size:13px;
     }
-    .issue-link.primary {
+    .site-link.active {
       background:var(--ink);
       border-color:var(--ink);
       color:var(--paper-strong);
@@ -447,6 +469,8 @@
     }
     @media (max-width:700px) {
       main { width:auto; margin:0 24px 0 42px; padding-top:28px; }
+      .site-nav { align-items:flex-start; flex-direction:column; }
+      .site-links { justify-content:flex-start; }
       .masthead { grid-template-columns:1fr; gap:20px; }
       h1 { font-size:40px; line-height:1; }
       .lede { font-size:16px; }
@@ -468,6 +492,14 @@
 </head>
 <body>
   <main>
+    <nav class="site-nav" aria-label="Paper Radar navigation">
+      <a class="site-brand" href="../../latest/index.html">Paper Radar <small>OECT/OMIEC literature system</small></a>
+      <div class="site-links">
+        <a class="site-link" href="../../latest/index.html">最新一期</a>
+        <a class="site-link active" href="../index.html">历史推荐</a>
+        <a class="site-link" href="../../papers/index.html">论文细读书架</a>
+      </div>
+    </nav>
     <section class="masthead">
       <div>
       <div class="eyebrow">Paper Radar · Weekly Digest</div>
@@ -476,9 +508,6 @@
         超表面不只是操控波前的薄片，它正在变成可编程、可学习的物理计算层。
       </div>
       <div class="issue-meta">Issue 2026-07-16 · OECT/OMIEC, tunable metasurfaces, neuromorphic physical computing</div>
-      <nav class="issue-links" aria-label="Paper Radar navigation">
-        <a class="issue-link primary" id="archive-link" href="../issues/">历史推荐</a>
-      </nav>
       </div>
       <div class="issue-stats">
         <div class="stat"><strong>10</strong><span>papers</span></div>
@@ -576,7 +605,7 @@
     const filtersEl = document.getElementById("filters");
     const gridEl = document.getElementById("paper-grid");
     const panelTagsEl = document.getElementById("panel-tags");
-    const archiveLink = document.getElementById("archive-link");
+    const archiveLink = null;
     const tags = ["all", ...new Set(papers.flatMap(p => p.robot_type_tags))];
     let active = "all";
 
@@ -606,8 +635,6 @@
     }
 
     function configureNavigation() {
-      const isPermanentIssue = /\/issues\/\d{4}-\d{2}-\d{2}\/(?:index\.html)?$/.test(window.location.pathname);
-      archiveLink.href = isPermanentIssue ? "../" : "../issues/";
     }
 
     function renderPanelTags() {
