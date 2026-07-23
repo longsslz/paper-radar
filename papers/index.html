@@ -36,13 +36,18 @@
     .stat strong { display:block; font-size:32px; line-height:1; }
     .stat span { display:block; margin-top:12px; color:var(--muted); font-size:12px; text-transform:uppercase; }
     .list { margin-top:24px; }
-    .paper { display:grid; grid-template-columns:210px minmax(0,1fr); gap:20px; padding:18px 0 20px; border-top:1px solid var(--rule); }
-    .paper-id { color:var(--accent); font-family:"SF Mono","Menlo",monospace; font-size:12px; padding-top:7px; word-break:break-word; }
+    .paper { display:grid; grid-template-columns:160px minmax(0,1fr); gap:20px; padding:18px 0 20px; border-top:1px solid var(--rule); }
+    .paper-added { padding-top:7px; font-family:"SF Mono","Menlo",monospace; }
+    .paper-added span { display:block; margin-bottom:7px; color:var(--muted); font-size:10px; font-weight:800; letter-spacing:.08em; }
+    .paper-added time { color:var(--accent); font-size:13px; font-weight:700; }
     h2 { margin:0; font-family:"Songti SC","STSong","Noto Serif CJK SC",Georgia,serif; font-size:28px; line-height:1.18; letter-spacing:0; }
     h2 a { color:var(--ink); text-decoration:none; }
     h2 a:hover { color:var(--accent); }
     p { margin:9px 0 0; color:var(--ink-soft); line-height:1.65; }
-    .paper span { display:block; margin-top:8px; color:var(--signal); font-size:13px; }
+    .paper-meta { display:flex; flex-wrap:wrap; gap:8px 20px; align-items:center; margin-top:8px; font-size:13px; }
+    .paper-venue { color:var(--signal); }
+    .paper-published { color:var(--muted); }
+    .paper-published time { color:var(--ink-soft); font-family:"SF Mono","Menlo",monospace; }
     .paper-action { display:inline-block; margin-top:12px; color:var(--paper-strong); background:var(--ink); border:1px solid var(--ink); padding:8px 11px; font-size:13px; text-decoration:none; }
     .paper-action:hover { background:var(--accent); border-color:var(--accent); }
     @media (max-width:680px) {
@@ -75,74 +80,74 @@
     </section>
     <section class="list">
         <article class="paper">
-          <div class="paper-id">00-imperceptible-bioelectronic-fibres</div>
-          <div>
-            <h2><a href="00-imperceptible-bioelectronic-fibres/index.html">把 PEDOT:PSS 纤维直接“织”到活体表面</a></h2>
-            <p>Imperceptible augmentation of living systems with organic bioelectronic fibres</p>
-            <span>Nature Electronics</span>
-            <a class="paper-action" href="00-imperceptible-bioelectronic-fibres/index.html">查看图解细读</a>
-          </div>
-        </article>
-        <article class="paper">
-          <div class="paper-id">10.1002-adma.202300576</div>
-          <div>
-            <h2><a href="10.1002-adma.202300576/index.html">把经纬纤维的每个交叉点，都变成一个可寻址器件</a></h2>
-            <p>Fiber Crossbars: An Emerging Architecture of Smart Electronic Textiles</p>
-            <span>Paper Lens</span>
-            <a class="paper-action" href="10.1002-adma.202300576/index.html">查看图解细读</a>
-          </div>
-        </article>
-        <article class="paper">
-          <div class="paper-id">10.1038-s41467-025-60630-7</div>
-          <div>
-            <h2><a href="10.1038-s41467-025-60630-7/index.html">用“即开即用”Kerr 光梳合成低噪声太赫兹，并跑通 240 Gbps 链路</a></h2>
-            <p>Low-noise frequency synthesis and terahertz wireless communication driven by compact turnkey Kerr combs</p>
-            <span>Nature Communications</span>
-            <a class="paper-action" href="10.1038-s41467-025-60630-7/index.html">查看图解细读</a>
-          </div>
-        </article>
-        <article class="paper">
-          <div class="paper-id">10.1038-s41565-026-02129-w</div>
-          <div>
-            <h2><a href="10.1038-s41565-026-02129-w/index.html">把磁电天线和 MTJ 贴在一起：亚微瓦无线微波直接变直流</a></h2>
-            <p>A CMOS-compatible, scalable and compact magnetoelectric spin-torque microwave detector</p>
-            <span>Nature Nanotechnology</span>
-            <a class="paper-action" href="10.1038-s41565-026-02129-w/index.html">查看图解细读</a>
-          </div>
-        </article>
-        <article class="paper">
-          <div class="paper-id">10.1038-s41586-023-06946-0</div>
-          <div>
-            <h2><a href="10.1038-s41586-023-06946-0/index.html">用“机械匹配”把半导体纤维从易碎样品变成百米连续材料</a></h2>
-            <p>High-quality semiconductor fibres via mechanical design</p>
-            <span>Paper Lens</span>
-            <a class="paper-action" href="10.1038-s41586-023-06946-0/index.html">查看图解细读</a>
-          </div>
-        </article>
-        <article class="paper">
-          <div class="paper-id">10.1038-s44172-024-00194-4</div>
-          <div>
-            <h2><a href="10.1038-s44172-024-00194-4/index.html">给 60 GHz 雷达加一层“阻抗变换 + 近场聚焦”皮肤接口</a></h2>
-            <p>Radar near-field sensing using metasurface for biomedical applications</p>
-            <span>Communications Engineering</span>
-            <a class="paper-action" href="10.1038-s44172-024-00194-4/index.html">查看图解细读</a>
-          </div>
-        </article>
-        <article class="paper">
-          <div class="paper-id">10.1038-s44460-026-00067-7</div>
+          <div class="paper-added"><span>加入日期</span><time datetime="2026-07-23T08:26:21Z">2026-07-23</time></div>
           <div>
             <h2><a href="10.1038-s44460-026-00067-7/index.html">用两类忆阻器把传感、脉冲编码和无监督学习接成一条全模拟链路</a></h2>
             <p>Self-powered analogue neuromorphic system for multimodal sensing, encoding and learning with diffusive and drift memristors</p>
-            <span>Nature Sensors</span>
+            <div class="paper-meta"><span class="paper-venue">Nature Sensors</span><span class="paper-published">发表 <time datetime="2026-04-30">2026-04-30</time></span></div>
             <a class="paper-action" href="10.1038-s44460-026-00067-7/index.html">查看图解细读</a>
           </div>
         </article>
         <article class="paper">
-          <div class="paper-id">oect-microwave-metadevices</div>
+          <div class="paper-added"><span>加入日期</span><time datetime="2026-07-23T08:03:10Z">2026-07-23</time></div>
+          <div>
+            <h2><a href="10.1038-s44172-024-00194-4/index.html">给 60 GHz 雷达加一层“阻抗变换 + 近场聚焦”皮肤接口</a></h2>
+            <p>Radar near-field sensing using metasurface for biomedical applications</p>
+            <div class="paper-meta"><span class="paper-venue">Communications Engineering</span><span class="paper-published">发表 <time datetime="2024-03-19">2024-03-19</time></span></div>
+            <a class="paper-action" href="10.1038-s44172-024-00194-4/index.html">查看图解细读</a>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-added"><span>加入日期</span><time datetime="2026-07-23T05:25:07Z">2026-07-23</time></div>
+          <div>
+            <h2><a href="10.1038-s41586-023-06946-0/index.html">用“机械匹配”把半导体纤维从易碎样品变成百米连续材料</a></h2>
+            <p>High-quality semiconductor fibres via mechanical design</p>
+            <div class="paper-meta"><span class="paper-venue">Nature</span><span class="paper-published">发表 <time datetime="2024-01-31">2024-01-31</time></span></div>
+            <a class="paper-action" href="10.1038-s41586-023-06946-0/index.html">查看图解细读</a>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-added"><span>加入日期</span><time datetime="2026-07-23T05:24:51Z">2026-07-23</time></div>
+          <div>
+            <h2><a href="10.1038-s41565-026-02129-w/index.html">把磁电天线和 MTJ 贴在一起：亚微瓦无线微波直接变直流</a></h2>
+            <p>A CMOS-compatible, scalable and compact magnetoelectric spin-torque microwave detector</p>
+            <div class="paper-meta"><span class="paper-venue">Nature Nanotechnology</span><span class="paper-published">发表 <time datetime="2026-03-02">2026-03-02</time></span></div>
+            <a class="paper-action" href="10.1038-s41565-026-02129-w/index.html">查看图解细读</a>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-added"><span>加入日期</span><time datetime="2026-07-23T05:24:38Z">2026-07-23</time></div>
+          <div>
+            <h2><a href="10.1038-s41467-025-60630-7/index.html">用“即开即用”Kerr 光梳合成低噪声太赫兹，并跑通 240 Gbps 链路</a></h2>
+            <p>Low-noise frequency synthesis and terahertz wireless communication driven by compact turnkey Kerr combs</p>
+            <div class="paper-meta"><span class="paper-venue">Nature Communications</span><span class="paper-published">发表 <time datetime="2025-07-07">2025-07-07</time></span></div>
+            <a class="paper-action" href="10.1038-s41467-025-60630-7/index.html">查看图解细读</a>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-added"><span>加入日期</span><time datetime="2026-07-23T05:24:25Z">2026-07-23</time></div>
+          <div>
+            <h2><a href="10.1002-adma.202300576/index.html">把经纬纤维的每个交叉点，都变成一个可寻址器件</a></h2>
+            <p>Fiber Crossbars: An Emerging Architecture of Smart Electronic Textiles</p>
+            <div class="paper-meta"><span class="paper-venue">Advanced Materials</span><span class="paper-published">发表 <time datetime="2023-10-19">2023-10-19</time></span></div>
+            <a class="paper-action" href="10.1002-adma.202300576/index.html">查看图解细读</a>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-added"><span>加入日期</span><time datetime="2026-07-16T06:32:32Z">2026-07-16</time></div>
+          <div>
+            <h2><a href="00-imperceptible-bioelectronic-fibres/index.html">把 PEDOT:PSS 纤维直接“织”到活体表面</a></h2>
+            <p>Imperceptible augmentation of living systems with organic bioelectronic fibres</p>
+            <div class="paper-meta"><span class="paper-venue">Nature Electronics</span><span class="paper-published">发表 <time datetime="2024-05-24">2024-05-24</time></span></div>
+            <a class="paper-action" href="00-imperceptible-bioelectronic-fibres/index.html">查看图解细读</a>
+          </div>
+        </article>
+        <article class="paper">
+          <div class="paper-added"><span>加入日期</span><time datetime="2026-07-16T06:32:32Z">2026-07-16</time></div>
           <div>
             <h2><a href="oect-microwave-metadevices/index.html">用 OECT 给微波超器件加一个低压可调旋钮</a></h2>
             <p>Reconfigurable microwave metadevices based on organic electrochemical transistors</p>
-            <span>Nature Electronics</span>
+            <div class="paper-meta"><span class="paper-venue">Nature Electronics</span><span class="paper-published">发表 <time datetime="2021-06-21">2021-06-21</time></span></div>
             <a class="paper-action" href="oect-microwave-metadevices/index.html">查看图解细读</a>
           </div>
         </article>
