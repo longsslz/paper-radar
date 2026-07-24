@@ -1,5 +1,35 @@
 [
   {
+    "id": "10.1038-s41467-023-39850-2",
+    "title": "Implant-to-implant wireless networking with metamaterial textiles",
+    "headline": "把衣服变成植入物之间的“无源信号高速路”",
+    "venue": "Nature Communications",
+    "added_at": "2026-07-24T09:23:15Z",
+    "added_date": "2026-07-24",
+    "publication_date": "2023-07-19",
+    "href": "10.1038-s41467-023-39850-2/index.html"
+  },
+  {
+    "id": "10.1038-s41928-019-0257-7",
+    "title": "Wireless body sensor networks based on metamaterial textiles",
+    "headline": "把衣服变成贴着身体走的“无线近场轨道”",
+    "venue": "Nature Electronics",
+    "added_at": "2026-07-24T09:21:42Z",
+    "added_date": "2026-07-24",
+    "publication_date": "2019-06-17",
+    "href": "10.1038-s41928-019-0257-7/index.html"
+  },
+  {
+    "id": "10.1038-s41928-024-01207-y",
+    "title": "Tension-driven three-dimensional printing of free-standing Field’s metal structures",
+    "headline": "把熔融金属“拉”成悬空三维导体",
+    "venue": "Nature Electronics",
+    "added_at": "2026-07-24T09:20:58Z",
+    "added_date": "2026-07-24",
+    "publication_date": "2024-07-25",
+    "href": "10.1038-s41928-024-01207-y/index.html"
+  },
+  {
     "id": "10.1038-s41928-024-01263-4",
     "title": "A digitally embroidered metamaterial biosensor for kinetic environments",
     "headline": "把安全带变成贴身的“表面波听诊器”",
