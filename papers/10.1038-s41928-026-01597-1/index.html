@@ -12,7 +12,8 @@
   <title>Paper Lens · A battery-free wireless epidermal sensor network for continuous systolic blood pressure monitoring</title>
   <meta name="description" content="Nature Electronics 2026：双频超材料织物、无电池皮肤传感器网络与连续收缩压估计的逐图中文解读">
   <link rel="stylesheet" href="../paper-lens.css">
-  <script src="../paper-lens.js" defer></script>
+  <script src="../paper-lens.js" defer>
+</script>
   <style>
     .stat-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:16px}
     .stat{border-top:2px solid var(--signal);padding:11px 10px;background:rgba(255,255,255,.2)}
@@ -27,31 +28,537 @@
     @media (max-width:600px){.stat-grid,.story-nav{grid-template-columns:1fr}}
   </style>
 </head>
-<body><main>
-<nav class="site-nav" aria-label="Paper Radar navigation"><a class="site-brand" href="../../latest/index.html">Paper Radar <small>OECT/OMIEC literature system</small></a><div class="site-links"><a class="site-link" href="../../latest/index.html">最新一期</a><a class="site-link" href="../../issues/index.html">历史推荐</a><a class="site-link active" href="../index.html">论文细读书架</a></div></nav>
+<body>
+<main>
+<nav class="site-nav" aria-label="Paper Radar navigation">
+<a class="site-brand" href="../../latest/index.html">Paper Radar <small>OECT/OMIEC literature system</small>
+</a>
+<div class="site-links">
+<a class="site-link" href="../../latest/index.html">最新一期</a>
+<a class="site-link" href="../../issues/index.html">历史推荐</a>
+<a class="site-link active" href="../index.html">论文细读书架</a>
+</div>
+</nav>
 
-<header class="hero"><div><div class="eyebrow">Paper Lens · Nature Electronics · 2026</div><h1>把衣服变成“供电总线 + 数据总线”，让无电池皮肤节点持续同步测压</h1><p class="dek">作者把 13.56 MHz NFC 供电与 2.4 GHz BLE 通信分配给同一件双模超材料织物中的两种传播机制，再把胸部 ECG 与腕部 PPG 两个柔性无电池节点同步到手机。真正的新意是<strong>网络物理层、软传感器与时间同步的系统协同设计</strong>；血压算法本身仍是需要个体校准的线性 PTT 模型。</p></div><aside class="meta-card"><b>Formal paper</b><p><i>A battery-free wireless epidermal sensor network for continuous systolic blood pressure monitoring</i></p><p>Selman A. Kurt, Kevin Albert Kasper, Qinghao Xu et al.</p><p><strong>Nature Electronics 9, 555–568 (2026)</strong><br>DOI <a href="https://doi.org/10.1038/s41928-026-01597-1">10.1038/s41928-026-01597-1</a></p></aside></header>
+<header class="hero">
+<div>
+<div class="eyebrow">Paper Lens · Nature Electronics · 2026</div>
+<h1>把衣服变成“供电总线 + 数据总线”，让无电池皮肤节点持续同步测压</h1>
+<p class="dek">作者把 13.56 MHz 近场通信（NFC）供电与 2.4 GHz 低功耗蓝牙（BLE）通信分配给同一件双模超材料织物中的两种传播机制，再把胸部心电（ECG）与腕部光电容积脉搏波（PPG）两个柔性无电池节点同步到手机。真正的新意是<strong>网络物理层、软传感器与时间同步的系统协同设计</strong>；血压算法本身仍是需要个体校准的线性脉搏传输时间（PTT）模型。</p>
+</div>
+<aside class="meta-card">
+<b>正式论文</b>
+<p>
+<i>A battery-free wireless epidermal sensor network for continuous systolic blood pressure monitoring</i>
+</p>
+<p>Selman A. Kurt, Kevin Albert Kasper, Qinghao Xu et al.</p>
+<p>
+<strong>Nature Electronics 9, 555–568 (2026)</strong>
+<br>DOI <a href="https://doi.org/10.1038/s41928-026-01597-1">10.1038/s41928-026-01597-1</a>
+</p>
+</aside>
+</header>
 
 <p class="notice">证据边界：下列图像来自用户提供的正式论文 PDF，按完整图体截取用于研究解读，不分发整篇 PDF。本文包含健康志愿者与台架实验，但不是高血压患者临床试验，也不等同于已获监管认可的无袖带血压设备。</p>
 
-<section class="takeaway"><div><div class="section-kicker">One-sentence answer</div><h2>它到底做了什么？</h2></div><div><p>传统无电池穿戴网络常在“高效率近场供电”和“高数据率远距离通信”之间二选一。这篇论文用双层导电织物同时形成<strong>互连平面线圈</strong>与<strong>人工表面等离激元（SSP）波导</strong>：前者把手机 NFC 能量送到衣服上的远端终端，后者沿身体附近引导 BLE 数据。两枚贴肤节点因而能持续、同步采集 ECG 与 PPG，再通过 <span class="equation">SBP = β<sub>0</sub> + β<sub>1</sub> × PTT</span> 估计逐搏收缩压。</p><div class="quick-grid"><div class="quick"><strong>解决的问题</strong><span>去掉每个节点的电池，同时保留多节点、高采样率、低丢包和运动中的连续记录。</span></div><div class="quick"><strong>核心贡献</strong><span>不是新型血压回归器，而是把供能、BLE、柔性传感器、时间同步和 PTT 融成一个可穿戴系统。</span></div><div class="quick"><strong>计算机读者为何该看</strong><span>这是“先修物理数据平面，再做数据融合”的案例：链路预算和同步误差直接决定算法输入是否可信。</span></div></div><div class="stat-grid"><div class="stat"><b>75 cm</b><span>双模织物长度</span></div><div class="stat"><b>16 mW</b><span>4 V、980 Ω 时峰值采能</span></div><div class="stat"><b>17%</b><span>理想对准下最大供电效率</span></div><div class="stat"><b>−40 dBm</b><span>织物辅助下仍可维持 BLE</span></div><div class="stat"><b>0.23 mmHg</b><span>5 人、103 次比较的平均差；s.d. 5.23 mmHg</span></div></div></div></section>
+<section class="takeaway">
+<div>
+<div class="section-kicker">一句话答案</div>
+<h2>它到底做了什么？</h2>
+</div>
+<div>
+<p>传统无电池穿戴网络常在“高效率近场供电”和“高数据率远距离通信”之间二选一。这篇论文用双层导电织物同时形成<strong>互连平面线圈</strong>与<strong>人工表面等离激元（SSP）波导</strong>：前者把手机 NFC 能量送到衣服上的远端终端，后者沿身体附近引导 BLE 数据。两枚贴肤节点因而能持续、同步采集 ECG 与 PPG，再通过 <span class="equation">SBP = β<sub>0</sub> + β<sub>1</sub> × PTT</span> 估计逐搏收缩压。</p>
+<div class="quick-grid">
+<div class="quick">
+<strong>解决的问题</strong>
+<span>去掉每个节点的电池，同时保留多节点、高采样率、低丢包和运动中的连续记录。</span>
+</div>
+<div class="quick">
+<strong>核心贡献</strong>
+<span>不是新型血压回归器，而是把供能、BLE、柔性传感器、时间同步和 PTT 融成一个可穿戴系统。</span>
+</div>
+<div class="quick">
+<strong>计算机读者为何该看</strong>
+<span>这是“先修物理数据平面，再做数据融合”的案例：链路预算和同步误差直接决定算法输入是否可信。</span>
+</div>
+</div>
+<div class="stat-grid">
+<div class="stat">
+<b>75 cm</b>
+<span>双模织物长度</span>
+</div>
+<div class="stat">
+<b>16 mW</b>
+<span>4 V、980 Ω 时峰值采能</span>
+</div>
+<div class="stat">
+<b>17%</b>
+<span>理想对准下最大供电效率</span>
+</div>
+<div class="stat">
+<b>−40 dBm</b>
+<span>织物辅助下仍可维持 BLE</span>
+</div>
+<div class="stat">
+<b>0.23 mmHg</b>
+<span>5 人、103 次比较的平均差；标准差 5.23 mmHg</span>
+</div>
+</div>
+</div>
+</section>
 
-<nav class="story-nav" aria-label="Figure story navigation"><a href="#fig1"><b>FIG. 1</b><span>双通道系统思想</span></a><a href="#fig2"><b>FIG. 2</b><span>供电与通信链路预算</span></a><a href="#fig3"><b>FIG. 3</b><span>柔性节点与抗运动伪影</span></a><a href="#fig4"><b>FIG. 4</b><span>生理信号与单人测压验证</span></a><a href="#fig5"><b>FIG. 5</b><span>日常场景与五人研究</span></a></nav>
+<nav class="story-nav" aria-label="Figure story navigation">
+<a href="#fig1">
+<b>FIG. 1</b>
+<span>双通道系统思想</span>
+</a>
+<a href="#fig2">
+<b>FIG. 2</b>
+<span>供电与通信链路预算</span>
+</a>
+<a href="#fig3">
+<b>FIG. 3</b>
+<span>柔性节点与抗运动伪影</span>
+</a>
+<a href="#fig4">
+<b>FIG. 4</b>
+<span>生理信号与单人测压验证</span>
+</a>
+<a href="#fig5">
+<b>FIG. 5</b>
+<span>日常场景与五人研究</span>
+</a>
+</nav>
 
-<section class="story" id="fig1"><div class="story-head"><div class="figure-no">FIG. 1</div><div><h2>系统总图：同一件衣服里，低频送电、高频送数据</h2><p class="story-intro">先抓住红、蓝两条虚线。红色 13.56 MHz 不是数据链，蓝色 2.4 GHz 也不承担主供电；把两项任务分开，才绕开传统单模织物的效率—带宽矛盾。</p></div></div><div class="story-grid"><figure class="figure-shell"><img src="assets/fig1-hires.png" alt="Figure 1，双模超材料织物连接无电池皮肤传感器和手机的系统架构"><figcaption>原论文 Fig. 1 完整图体。胸部与腕部节点分别采集 ECG、PPG，手机同时充当能量源、BLE 汇聚端和应用界面。</figcaption></figure><aside class="read-card"><h3>先把系统边界画清</h3><h4>Look here first</h4><p>先看 b 的两种传播机制，再回到 a、g 看两枚节点怎样经衣服汇入手机。</p><h4>Evidence</h4><p>这张图定义了架构和相对已有无线方法的位置；真正的效率、丢包与生理验证在 Fig. 2–5。</p><h4>Talk-ready</h4><p class="talk">“作者把衣服做成双平面网络：NFC 是电源总线，BLE 表面波是数据总线。”</p><h4>Panel guide</h4><ul class="panel-guide"><li><b>a</b><span>身体上分布多个无电池贴肤节点，手机位于衣服 hub 端。红线代表 NFC 供能、蓝线代表 BLE 数据；它给出“多节点—单手机”的系统目标，不是人体实验结果。</span></li><li><b>b</b><span>左侧在 13.56 MHz 下，SSP 金属结构作为导体把多个平面线圈互连，能量在终端处磁耦合进传感器；右侧在 2.4 GHz 下，同一梳齿结构支持贴近衣物传播的表面波。两种频率承担不同任务。</span></li><li><b>c</b><span>横轴是数据率、纵轴是供电效率，标出 NFC、体耦合、UHF、BLE 及不同生理信号的数据需求。“This work”处在较高数据率与较高效率区域，但它是跨文献系统级比较，距离、硬件和指标口径并不完全相同。</span></li><li><b>d</b><span>照片展示 75 cm 织物集成进棉—涤衬衫，肩部设手机 hub、袖口设终端。它证明电磁结构可沿服装走线，而不是一块贴在实验台上的短样片。</span></li><li><b>e</b><span>腕部无电池节点放在衣服终端附近，正文给出的工作距离为 1 cm 内。它展示终端—皮肤节点的近场供电几何，也预示对衣服位移和间隙的敏感性。</span></li><li><b>f</b><span>手机压在上臂 hub 区域，连续激活 NFC 并接收 BLE。所谓“无电池”只针对贴肤节点；读写器端仍由手机电池供能。</span></li><li><b>g</b><span>左侧节点完成生物接口、功率管理和 BLE，中央织物传输能量/数据，右侧手机做显示、分析和存储。PTT 血压需要多个节点的时间对齐，因此网络质量是测量链的一部分。</span></li></ul></aside></div></section>
+<section class="story" id="fig1">
+<div class="story-head">
+<div class="figure-no">FIG. 1</div>
+<div>
+<h2>系统总图：同一件衣服里，低频送电、高频送数据</h2>
+<p class="story-intro">先抓住红、蓝两条虚线。红色 13.56 MHz 不是数据链，蓝色 2.4 GHz 也不承担主供电；把两项任务分开，才绕开传统单模织物的效率—带宽矛盾。</p>
+</div>
+</div>
+<div class="story-grid">
+<figure class="figure-shell">
+<img src="assets/fig1-hires.png" alt="Figure 1，双模超材料织物连接无电池皮肤传感器和手机的系统架构">
+<figcaption>原论文 Fig. 1 完整图体。胸部与腕部节点分别采集 ECG、PPG，手机同时充当能量源、BLE 汇聚端和应用界面。</figcaption>
+</figure>
+<aside class="read-card">
+<h3>先把系统边界画清</h3>
+<h4>先看哪里</h4>
+<p>先看 b 的两种传播机制，再回到 a、g 看两枚节点怎样经衣服汇入手机。</p>
+<h4>证据</h4>
+<p>这张图定义了架构和相对已有无线方法的位置；真正的效率、丢包与生理验证在 Fig. 2–5。</p>
+<h4>可直接讲</h4>
+<p class="talk">“作者把衣服做成双平面网络：NFC 是电源总线，BLE 表面波是数据总线。”</p>
+<h4>子图导读</h4>
+<ul class="panel-guide">
+<li>
+<b>a</b>
+<span>身体上分布多个无电池贴肤节点，手机位于衣服的汇聚端（hub）。红线代表 NFC 供能、蓝线代表 BLE 数据；它给出“多节点—单手机”的系统目标，不是人体实验结果。</span>
+</li>
+<li>
+<b>b·供电</b>
+<span>先沿左侧红色箭头读：在 13.56 MHz 下，SSP 金属结构退化为导体，把多个平面线圈互连；远端线圈再通过近场磁耦合给皮肤节点供电。它支持“衣服能把手机能量搬到远端”，但实际功率和错位容差要到 Fig. 2d–f 判断。</span>
+</li>
+<li>
+<b>b·通信</b>
+<span>再看右侧蓝色箭头：在 2.4 GHz 下，同一梳齿结构支持贴近衣物传播的表面波，把 BLE 信号引回手机。这里说明的是任务分频原理，不表示两条链路完全无串扰或任意距离都能工作。</span>
+</li>
+<li>
+<b>c</b>
+<span>横轴是数据率、纵轴是供电效率，标出 NFC、体耦合、UHF、BLE 及不同生理信号的数据需求。“This work（本文）”处在较高数据率与较高效率区域，但它是跨文献系统级比较，距离、硬件和指标口径并不完全相同。</span>
+</li>
+<li>
+<b>d</b>
+<span>照片展示 75 cm 织物集成进棉—涤衬衫，肩部设手机汇聚端、袖口设终端。它证明电磁结构可沿服装走线，而不是一块贴在实验台上的短样片。</span>
+</li>
+<li>
+<b>e</b>
+<span>腕部无电池节点放在衣服终端附近，正文给出的工作距离为 1 cm 内。它展示终端—皮肤节点的近场供电几何，也预示对衣服位移和间隙的敏感性。</span>
+</li>
+<li>
+<b>f</b>
+<span>手机压在上臂汇聚端区域，连续激活 NFC 并接收 BLE。所谓“无电池”只针对贴肤节点；读写器端仍由手机电池供能。</span>
+</li>
+<li>
+<b>g·节点</b>
+<span>从左侧开始读：胸部与腕部节点分别完成生物接口、模拟前端、采样和 BLE 发射。它说明原始信号在贴肤端生成，但节点本身没有电池，必须依赖衣服终端持续供能。</span>
+</li>
+<li>
+<b>g·织物</b>
+<span>中央织物同时承载低频能量和高频数据，是两个节点共享的物理网络。它支持“单件衣服连接多节点”的系统构想；终端增多后的功率分配和并发上限并未在这张框图中得到验证。</span>
+</li>
+<li>
+<b>g·手机</b>
+<span>右侧手机负责供能、BLE 汇聚、显示、分析与存储。PTT 血压依赖胸腕节点时间对齐，因此手机与网络不是外围配件，而是测量链的一部分；“无电池”不包括手机。</span>
+</li>
+</ul>
+</aside>
+</div>
+</section>
 
-<section class="story" id="fig2"><div class="story-head"><div class="figure-no">FIG. 2</div><div><h2>链路预算：供电怕间隙，BLE 则把发射功率压到 −40 dBm</h2><p class="story-intro">这一图是论文最硬的物理层证据。供电端在理想对准时可达 17%，但横向错位和垂直距离会迅速吃掉余量；通信端则利用表面波把身体遮挡下的 BLE 从“断链”拉回稳定收包。</p></div></div><div class="story-grid"><figure class="figure-shell"><img src="assets/fig2-hires.png" alt="Figure 2，双模超材料织物的供能、通信、错位和距离表征"><figcaption>原论文 Fig. 2 完整图体；b、c 是场仿真，d–i 是采能或无线测量。水桶实验用于模拟人体的有损加载。</figcaption></figure><aside class="read-card"><h3>性能不是无条件的</h3><h4>Look here first</h4><p>先读 d 的可用功率，再读 e、f 的几何容差，最后看 g 中有/无织物的收包率分叉。</p><h4>Evidence</h4><p>专用 2 W RFID 台架测得峰值 16 mW、4 V；理想对准供电效率约 17%。无织物时 −10 dBm 以下断链，加入织物后 −40 dBm 仍可可靠通信。</p><h4>Talk-ready</h4><p class="talk">“双模织物并没有消除近场供电的贴合约束，但把数据链从高功率辐射变成了贴身低功率表面波。”</p><h4>Panel guide</h4><ul class="panel-guide"><li><b>a</b><span>三终端的 75 cm 曲线织物把读写器置于终端 (2)，接收节点置于终端 (1)。插图定义横向错位 w 与垂直间距 h，后续曲线都应按这两个几何变量读取。</span></li><li><b>b</b><span>13.56 MHz 归一化磁场在 hub 与远端线圈处集中，显示互连线圈把低频电流分发到 (1) 和 (3)。这是仿真场分布，不能单独代替实际采能效率。</span></li><li><b>c</b><span>2.45 GHz 归一化电场沿梳齿 SSP 结构传播，能量沿整段衣服分布。它支持 BLE 表面波通道与低频线圈通道可以共用物理织物。</span></li><li><b>d</b><span>横轴为负载 0–10 kΩ，黑线为整流电压、红线为采能功率；约 980 Ω 时功率峰值 16 mW、整流电压约 4 V。方法部分说明这项上限表征使用 2 W 长距离 RFID 读写器与专用主线圈，不是手机 100 mW NFC 直接输出下的峰值。</span></li><li><b>e</b><span>13.56 MHz 供电效率随横向错位 w 从约 17% 下滑；超过约 11 mm 后低于 5%。灰色“无织物”接近零，说明终端中继有效，也说明节点必须贴近图案。</span></li><li><b>f</b><span>供电效率随垂直间距 h 快速下降，超过约 6 mm 后低于 5%。衣服厚度、皱褶、皮肤曲率和动作都可能消耗这段余量。</span></li><li><b>g</b><span>横轴为 BLE 发射功率、纵轴为收包率；误差条为 5 次测量。该 30 cm、无视距链路测试使用两块 nRF52 DK：加入织物后 −40 dBm 仍保持高收包率，无织物在 −10 dBm 以下无法建立连接，0 dBm 以上才接近实用。</span></li><li><b>h</b><span>2.4–2.5 GHz 传输系数随横向错位 w 下降；小错位时比无织物基线高约 25 dB，至 12 mm 内仍至少保留约一个数量级的传输优势。小提琴图的 n=100 是测量次数，不是受试者数。</span></li><li><b>i</b><span>垂直间距 h 从 1 mm 增至 15 mm 时传输逐步变差，约 7 mm 内仍优于无织物基线一个数量级。系统实用边界仍由更严格的供电端 h&lt;6 mm 限制。</span></li></ul></aside></div></section>
+<section class="story" id="fig2">
+<div class="story-head">
+<div class="figure-no">FIG. 2</div>
+<div>
+<h2>链路预算：供电怕间隙，BLE 则把发射功率压到 −40 dBm</h2>
+<p class="story-intro">这一图是论文最硬的物理层证据。供电端在理想对准时可达 17%，但横向错位和垂直距离会迅速吃掉余量；通信端则利用表面波把身体遮挡下的 BLE 从“断链”拉回稳定收包。</p>
+</div>
+</div>
+<div class="story-grid">
+<figure class="figure-shell">
+<img src="assets/fig2-hires.png" alt="Figure 2，双模超材料织物的供能、通信、错位和距离表征">
+<figcaption>原论文 Fig. 2 完整图体；b、c 是场仿真，d–i 是采能或无线测量。水桶实验用于模拟人体的有损加载。</figcaption>
+</figure>
+<aside class="read-card">
+<h3>性能不是无条件的</h3>
+<h4>先看哪里</h4>
+<p>先读 d 的可用功率，再读 e、f 的几何容差，最后看 g 中有/无织物的收包率分叉。</p>
+<h4>证据</h4>
+<p>专用 2 W RFID 台架测得峰值 16 mW、4 V；理想对准供电效率约 17%。无织物时 −10 dBm 以下断链，加入织物后 −40 dBm 仍可可靠通信。</p>
+<h4>可直接讲</h4>
+<p class="talk">“双模织物并没有消除近场供电的贴合约束，但把数据链从高功率辐射变成了贴身低功率表面波。”</p>
+<h4>子图导读</h4>
+<ul class="panel-guide">
+<li>
+<b>a·w</b>
+<span>主图给出三终端的 75 cm 曲线织物：读写器放在终端 (2)，接收节点放在终端 (1)。插图中的 w 是接收线圈沿织物表面的横向偏移；读 e、h 时要把它理解为衣服滑动导致的“没对准”，不是传输距离。</span>
+</li>
+<li>
+<b>a·h</b>
+<span>插图中的 h 是节点线圈离开织物终端的垂直间隙；读 f、i 时对应衣服厚度、皱褶或皮肤—衣物分离。w 与 h 分开扫描，不能把两条容差曲线合成任意姿态下的保证。</span>
+</li>
+<li>
+<b>b</b>
+<span>13.56 MHz 归一化磁场在汇聚端与远端线圈处集中，显示互连线圈把低频电流分发到 (1) 和 (3)。这是仿真场分布，不能单独代替实际采能效率。</span>
+</li>
+<li>
+<b>c</b>
+<span>2.45 GHz 归一化电场沿梳齿 SSP 结构传播，能量沿整段衣服分布。它支持 BLE 表面波通道与低频线圈通道可以共用物理织物。</span>
+</li>
+<li>
+<b>d·黑线</b>
+<span>横轴是负载电阻，黑线读左侧纵轴的整流电压：负载增大时电压上升，在约 980 Ω 附近约为 4 V。它回答节点能得到多高电压，但高电压本身不等于最大可用功率。</span>
+</li>
+<li>
+<b>d·红线</b>
+<span>红线读右侧纵轴的采能功率，在约 980 Ω 达到约 16 mW 后下降，说明存在阻抗匹配点。该上限用 2 W 长距离 RFID 台架与专用主线圈测得，不是手机约 100 mW NFC 输出下的直接峰值。</span>
+</li>
+<li>
+<b>e</b>
+<span>13.56 MHz 供电效率随横向错位 w 从约 17% 下滑；超过约 11 mm 后低于 5%。灰色“无织物”接近零，说明终端中继有效，也说明节点必须贴近图案。</span>
+</li>
+<li>
+<b>f</b>
+<span>供电效率随垂直间距 h 快速下降，超过约 6 mm 后低于 5%。衣服厚度、皱褶、皮肤曲率和动作都可能消耗这段余量。</span>
+</li>
+<li>
+<b>g</b>
+<span>横轴为 BLE 发射功率、纵轴为收包率；误差条为 5 次测量。该 30 cm、无视距链路测试使用两块 nRF52 DK：加入织物后 −40 dBm 仍保持高收包率，无织物在 −10 dBm 以下无法建立连接，0 dBm 以上才接近实用。</span>
+</li>
+<li>
+<b>h</b>
+<span>2.4–2.5 GHz 传输系数随横向错位 w 下降；小错位时比无织物基线高约 25 dB，至 12 mm 内仍至少保留约一个数量级的传输优势。小提琴图的 n=100 是测量次数，不是受试者数。</span>
+</li>
+<li>
+<b>i</b>
+<span>垂直间距 h 从 1 mm 增至 15 mm 时传输逐步变差，约 7 mm 内仍优于无织物基线一个数量级。系统实用边界仍由更严格的供电端 h&lt;6 mm 限制。</span>
+</li>
+</ul>
+</aside>
+</div>
+</section>
 
-<section class="story" id="fig3"><div class="story-head"><div class="figure-no">FIG. 3</div><div><h2>节点不是普通手环：贴肤、蛇形互连与干电极一起压低运动伪影</h2><p class="story-intro">如果 ECG/PPG 在运动中先被机械惯性污染，后面的 PTT 再精确也没有意义。作者把器件岛、蛇形互连、干式铂电极和 BLE SoC 放进柔性 PCB，用贴肤性改善信号源头。</p></div></div><div class="story-grid"><figure class="figure-shell"><img src="assets/fig3-hires.png" alt="Figure 3，无电池柔性皮肤传感器的结构、电路、干电极和运动伪影表征"><figcaption>原论文 Fig. 3 完整图体。运动对比是受控动作下的器件级演示；BioZ 的 n=500 指重复读数，不是受试者数。</figcaption></figure><aside class="read-card"><h3>先修机械接口，再谈算法</h3><h4>Look here first</h4><p>看 f、g 的灰色运动区，再比较 i、j 上下两幅频谱：贴肤节点恢复更快、宽带伪影更弱。</p><h4>Evidence</h4><p>PPG 伪影/脉搏幅度比由常规腕带的 1.99 降至 0.75；干电极 150 h 内阻抗较稳定，湿凝胶电极则明显漂移。</p><h4>Talk-ready</h4><p class="talk">“这套系统的抗运动能力主要来自低惯性的贴肤机械设计，而不是事后用模型把伪影滤掉。”</p><h4>Panel guide</h4><ul class="panel-guide"><li><b>a</b><span>爆炸图显示两层铜、聚酰亚胺、阻焊层、主电子器件岛和 PPG/ECG 模拟前端；蛇形铜线把刚性器件岛隔开，使局部拉伸不直接作用在芯片焊点。</span></li><li><b>b</b><span>有限元图与实物侧视图对应 4 mm PPG 岛位移，变形主要由蛇形互连吸收。它支持结构可顺应皮肤曲率，但不是整机长期疲劳寿命测试。</span></li><li><b>c</b><span>左侧红/红外光电二极管或外接电极进入 AFE，中间 SoC 采样并发 BLE；13.56 MHz 能量经线圈、整流和 LDO 生成电源轨，右侧织物再连接手机。该图把供电链与数据链完整闭环。</span></li><li><b>d</b><span>依次展示台架器件、腕部 PPG 节点和胸部 ECG 节点。两处信号来自不同身体位置，这正是 PTT 需要网络同步而非单传感器的原因。</span></li><li><b>e</b><span>直径约 18 mm 的干式铂电极采用重复蛇形图案并接柔性引线，目标是保持贴合、透气和拉伸顺应性，避免凝胶随时间干燥。</span></li><li><b>f</b><span>灰色区是腕部冲击动作；紫色贴肤 PPG 在冲击后较快恢复并保留脉搏峰，黑色常规腕带因器件惯性产生更大漂移。论文给出的伪影/脉搏幅度比为 0.75 对 1.99。</span></li><li><b>g</b><span>胸部动作期间，贴肤 ECG 仍能连续辨认 QRS，长导线湿电极读出出现运动和环境耦合噪声。比较对象包含导线差异，因此不能把全部改善都归因于电极材料。</span></li><li><b>h</b><span>横轴跨 150 h，比较 125 Hz–2 kHz 的界面阻抗。湿凝胶平均从约 1.39 kΩ 升到 3.18 kΩ；干铂电极虽起始更高（约 8.05 kΩ），到 150 h 仍约 7.25 kΩ，依赖高输入阻抗 AFE 保持读出。</span></li><li><b>i</b><span>PPG 时频图中，常规腕带在加速度冲击后出现更强宽带亮区；贴肤节点仍有伪影，但强度和持续时间较小。它支持“减弱”而不是“消除”运动伪影。</span></li><li><b>j</b><span>ECG 时频图叠加计算心率；贴肤干电极的心动节律带更连续，常规湿电极/长引线背景更杂。该受控演示还不足以替代多受试者、跨汗液和长期运动统计。</span></li></ul></aside></div></section>
+<section class="story" id="fig3">
+<div class="story-head">
+<div class="figure-no">FIG. 3</div>
+<div>
+<h2>节点不是普通手环：贴肤、蛇形互连与干电极一起压低运动伪影</h2>
+<p class="story-intro">如果 ECG/PPG 在运动中先被机械惯性污染，后面的 PTT 再精确也没有意义。作者把器件岛、蛇形互连、干式铂电极和 BLE 片上系统（SoC）放进柔性印刷电路板（PCB），用贴肤性改善信号源头。</p>
+</div>
+</div>
+<div class="story-grid">
+<figure class="figure-shell">
+<img src="assets/fig3-hires.png" alt="Figure 3，无电池柔性皮肤传感器的结构、电路、干电极和运动伪影表征">
+<figcaption>原论文 Fig. 3 完整图体。运动对比是受控动作下的器件级演示；生物阻抗（BioZ）的 n=500 指重复读数，不是受试者数。</figcaption>
+</figure>
+<aside class="read-card">
+<h3>先修机械接口，再谈算法</h3>
+<h4>先看哪里</h4>
+<p>看 f、g 的灰色运动区，再比较 i、j 上下两幅频谱：贴肤节点恢复更快、宽带伪影更弱。</p>
+<h4>证据</h4>
+<p>PPG 伪影/脉搏幅度比由常规腕带的 1.99 降至 0.75；干电极 150 h 内阻抗较稳定，湿凝胶电极则明显漂移。</p>
+<h4>可直接讲</h4>
+<p class="talk">“这套系统的抗运动能力主要来自低惯性的贴肤机械设计，而不是事后用模型把伪影滤掉。”</p>
+<h4>子图导读</h4>
+<ul class="panel-guide">
+<li>
+<b>a</b>
+<span>爆炸图显示两层铜、聚酰亚胺、阻焊层、主电子器件岛和 PPG/ECG 模拟前端；蛇形铜线把刚性器件岛隔开，使局部拉伸不直接作用在芯片焊点。</span>
+</li>
+<li>
+<b>b</b>
+<span>有限元图与实物侧视图对应 4 mm PPG 岛位移，变形主要由蛇形互连吸收。它支持结构可顺应皮肤曲率，但不是整机长期疲劳寿命测试。</span>
+</li>
+<li>
+<b>c·采集</b>
+<span>先看左侧：红光/红外光电器件或外接电极把 PPG/ECG 送入模拟前端（AFE），再由片上系统（SoC）采样。它说明两类生理信号共用柔性节点平台，但传感接口与前端并不相同。</span>
+</li>
+<li>
+<b>c·供电</b>
+<span>沿下方电源路径读：13.56 MHz 能量经接收线圈、整流与低压差稳压器（LDO）生成稳定电源轨。这里是电路功能框图；每一级损耗和手机条件下的实际余量需结合 Fig. 2 判断。</span>
+</li>
+<li>
+<b>c·传输</b>
+<span>沿上方数据路径读：SoC 把数字化信号通过 BLE 发出，织物的 2.4 GHz 通道把数据引向手机。供电与数据最终在手机—织物—节点之间闭环，但它们工作在不同频率。</span>
+</li>
+<li>
+<b>d(i)</b>
+<span>左图是展开的节点与测试状态，用来辨认柔性电路、线圈和器件岛的相对位置；它是结构展示，不是人体佩戴性能数据。</span>
+</li>
+<li>
+<b>d(ii)</b>
+<span>中图把 PPG 节点贴在腕部，光学器件朝向皮肤以获得远端脉搏波。这个位置决定 PTT 的终点，也使读数对贴合和局部运动敏感。</span>
+</li>
+<li>
+<b>d(iii)</b>
+<span>右图把 ECG 节点和干电极贴在胸部，提供心电 R 峰作为 PTT 起点。胸、腕信号来自两个独立节点，所以网络时间同步是生理量计算的必要条件。</span>
+</li>
+<li>
+<b>e</b>
+<span>直径约 18 mm 的干式铂电极采用重复蛇形图案并接柔性引线，目标是保持贴合、透气和拉伸顺应性，避免凝胶随时间干燥。</span>
+</li>
+<li>
+<b>f</b>
+<span>灰色区是腕部冲击动作；紫色贴肤 PPG 在冲击后较快恢复并保留脉搏峰，黑色常规腕带因器件惯性产生更大漂移。论文给出的伪影/脉搏幅度比为 0.75 对 1.99。</span>
+</li>
+<li>
+<b>g</b>
+<span>胸部动作期间，贴肤 ECG 仍能连续辨认 QRS，长导线湿电极读出出现运动和环境耦合噪声。比较对象包含导线差异，因此不能把全部改善都归因于电极材料。</span>
+</li>
+<li>
+<b>h</b>
+<span>横轴跨 150 h，比较 125 Hz–2 kHz 的界面阻抗。湿凝胶平均从约 1.39 kΩ 升到 3.18 kΩ；干铂电极虽起始更高（约 8.05 kΩ），到 150 h 仍约 7.25 kΩ，依赖高输入阻抗模拟前端保持读出。</span>
+</li>
+<li>
+<b>i</b>
+<span>PPG 时频图中，常规腕带在加速度冲击后出现更强宽带亮区；贴肤节点仍有伪影，但强度和持续时间较小。它支持“减弱”而不是“消除”运动伪影。</span>
+</li>
+<li>
+<b>j</b>
+<span>ECG 时频图叠加计算心率；贴肤干电极的心动节律带更连续，常规湿电极/长引线背景更杂。该受控演示还不足以替代多受试者、跨汗液和长期运动统计。</span>
+</li>
+</ul>
+</aside>
+</div>
+</section>
 
-<section class="story" id="fig4"><div class="story-head"><div class="figure-no">FIG. 4</div><div><h2>从“信号像不像”走到“血压能不能对上”：先验证 ECG/PPG，再做 PTT 融合</h2><p class="story-intro">这张图的论证顺序很严谨：先与有线生理仪核对 ECG、心率、PPG 和 SpO₂，再把同步 ECG 峰与 PPG 导数最大斜率之间的延迟定义为 PTT，最后在单名健康成人上做 2 h 收缩压对比。</p></div></div><div class="story-grid"><figure class="figure-shell"><img src="assets/fig4-hires.png" alt="Figure 4，ECG、PPG、心率、血氧和基于PTT的两小时收缩压验证"><figcaption>原论文 Fig. 4 完整图体。h、i 的血压结果来自一名健康成人，采用 20 min、5 次袖带读数完成个体校准。</figcaption></figure><aside class="read-card"><h3>血压不是直接测出来的</h3><h4>Look here first</h4><p>先看 g 的 PTT 定义，再看 h 插图中的个人回归线，最后才读 i 的 Bland–Altman 误差。</p><h4>Evidence</h4><p>HR 平均差 −0.02 bpm、s.d. 0.50；SpO₂ 平均差 −0.07%、s.d. 0.80；单人 2 h SBP 平均差 0.86 mmHg、s.d. 3.80 mmHg。</p><h4>Talk-ready</h4><p class="talk">“硬件测的是同步 ECG 和 PPG，收缩压是个体标定后的 PTT 代理量，不是传感器直接读数。”</p><h4>Panel guide</h4><ul class="panel-guide"><li><b>a</b><span>10 s 归一化 ECG 中，贴肤无线节点与 BIOPAC 有线参考的 R 峰基本重合。它验证用于心率和 PTT 起点的峰时刻，而不是完整 12 导联诊断能力。</span></li><li><b>b</b><span>10 min 咖啡实验中，ECG 心率、PPG 脉率与参考在摄入后共同升高。横轴是时间、纵轴 bpm，重点是动态趋势一致而非只看静息平均值。</span></li><li><b>c</b><span>HR Bland–Altman 图以两设备均值为横轴、差值为纵轴；平均差 −0.02 bpm、s.d. 0.50 bpm，点云大多围绕零差线。样本是时间点而非独立受试者。</span></li><li><b>d</b><span>红光、红外 PPG 与有线参考在 10 s 内同步呈现脉搏形状，说明反射式光路能提供 SpO₂ 和脉搏波到达时刻。</span></li><li><b>e</b><span>屏息区间内 SpO₂ 下降再恢复，贴肤节点与脉搏氧仪趋势一致；灰色窗口标出屏息阶段。这里是受控短时去饱和，不是低氧患者验证。</span></li><li><b>f</b><span>SpO₂ Bland–Altman 平均差 −0.07%、s.d. 0.80%，论文另给 A<sub>r.m.s.</sub>=0.81%。达到文中引用的误差阈值不等于该系统已按完整监管方案获批。</span></li><li><b>g</b><span>蓝色 ECG 的 R 峰作为起点，橙色 PPG 导数最大斜率作为远端脉搏到达点，两者时间差为 PTT。无线流每 5 ms 用时间戳同步；补充材料与有线 PTT 对比的平均差 0.53 ms、s.d. 5.34 ms。</span></li><li><b>h</b><span>一名健康成人先用 20 min PTT 与 5 次 Omron 袖带读数拟合 β₀、β₁，然后静坐 2 h；绿色是逐搏估计，橙叉是每分钟袖带值。结果检验的是同日、同人、低运动条件下的标定稳定性。</span></li><li><b>i</b><span>2 h SBP Bland–Altman 平均差 0.86 mmHg、s.d. 3.80 mmHg；补充材料中每 30 min 重标可把 s.d. 降到 2.55 mmHg。重标能改善误差，也暴露模型随时间漂移。</span></li></ul></aside></div></section>
+<section class="story" id="fig4">
+<div class="story-head">
+<div class="figure-no">FIG. 4</div>
+<div>
+<h2>从“信号像不像”走到“血压能不能对上”：先验证 ECG/PPG，再做 PTT 融合</h2>
+<p class="story-intro">这张图的论证顺序很严谨：先与有线生理仪核对 ECG、心率、PPG 和 SpO₂，再把同步 ECG 峰与 PPG 导数最大斜率之间的延迟定义为 PTT，最后在单名健康成人上做 2 h 收缩压对比。</p>
+</div>
+</div>
+<div class="story-grid">
+<figure class="figure-shell">
+<img src="assets/fig4-hires.png" alt="Figure 4，ECG、PPG、心率、血氧和基于PTT的两小时收缩压验证">
+<figcaption>原论文 Fig. 4 完整图体。h、i 的血压结果来自一名健康成人，采用 20 min、5 次袖带读数完成个体校准。</figcaption>
+</figure>
+<aside class="read-card">
+<h3>血压不是直接测出来的</h3>
+<h4>先看哪里</h4>
+<p>先看 g 的 PTT 定义，再看 h 插图中的个人回归线，最后才读 i 的 Bland–Altman 一致性误差。</p>
+<h4>证据</h4>
+<p>心率（HR）平均差 −0.02 bpm、标准差 0.50；血氧饱和度（SpO₂）平均差 −0.07%、标准差 0.80；单人 2 h 收缩压（SBP）平均差 0.86 mmHg、标准差 3.80 mmHg。</p>
+<h4>可直接讲</h4>
+<p class="talk">“硬件测的是同步 ECG 和 PPG，收缩压是个体标定后的 PTT 代理量，不是传感器直接读数。”</p>
+<h4>子图导读</h4>
+<ul class="panel-guide">
+<li>
+<b>a</b>
+<span>10 s 归一化 ECG 中，贴肤无线节点与 BIOPAC 有线参考的 R 峰基本重合。它验证用于心率和 PTT 起点的峰时刻，而不是完整 12 导联诊断能力。</span>
+</li>
+<li>
+<b>b</b>
+<span>10 min 咖啡实验中，ECG 心率、PPG 脉率与参考在摄入后共同升高。横轴是时间、纵轴 bpm，重点是动态趋势一致而非只看静息平均值。</span>
+</li>
+<li>
+<b>c</b>
+<span>心率 Bland–Altman 图以两设备均值为横轴、差值为纵轴；平均差 −0.02 bpm、标准差 0.50 bpm，点云大多围绕零差线。样本是时间点而非独立受试者。</span>
+</li>
+<li>
+<b>d</b>
+<span>红光、红外 PPG 与有线参考在 10 s 内同步呈现脉搏形状，说明反射式光路能提供 SpO₂ 和脉搏波到达时刻。</span>
+</li>
+<li>
+<b>e</b>
+<span>屏息区间内 SpO₂ 下降再恢复，贴肤节点与脉搏氧仪趋势一致；灰色窗口标出屏息阶段。这里是受控短时去饱和，不是低氧患者验证。</span>
+</li>
+<li>
+<b>f</b>
+<span>SpO₂ Bland–Altman 一致性分析的平均差为 −0.07%、标准差为 0.80%，论文另给均方根误差 A<sub>r.m.s.</sub>=0.81%。达到文中引用的误差阈值不等于该系统已按完整监管方案获批。</span>
+</li>
+<li>
+<b>g·ECG</b>
+<span>先在蓝色心电曲线上找 R 峰，它代表心室电活动的清晰时间标志，被定义为 PTT 起点。这里用的是峰时刻，不是用 ECG 幅值直接推算血压。</span>
+</li>
+<li>
+<b>g·PPG</b>
+<span>再看橙色 PPG 的导数曲线，以最大上升斜率作为脉搏到达腕部的时间点。这个算法比直接取波峰更早，但仍会受光学接触和波形畸变影响。</span>
+</li>
+<li>
+<b>g·PTT</b>
+<span>两条竖线之间的时间差就是 PTT；无线流每 5 ms 用时间戳同步。补充材料与有线 PTT 对比的平均差为 0.53 ms、标准差为 5.34 ms，说明同步可用，但误差会直接传入血压模型。</span>
+</li>
+<li>
+<b>h·校准</b>
+<span>先读插图：一名健康成人用前 20 min 的 PTT 与 5 次 Omron 袖带读数拟合 β₀、β₁，得到只属于该人的线性关系。这里不是训练出可跨人通用的模型。</span>
+</li>
+<li>
+<b>h·验证</b>
+<span>再读 2 h 主曲线：绿色是逐搏 SBP 估计，橙叉是每分钟袖带值；二者接近说明同日、同人、静坐条件下校准较稳定。它没有检验跨日漂移、运动峰值或患者人群。</span>
+</li>
+<li>
+<b>i</b>
+<span>2 h SBP Bland–Altman 一致性分析的平均差为 0.86 mmHg、标准差为 3.80 mmHg；补充材料中每 30 min 重标可把标准差降到 2.55 mmHg。重标能改善误差，也暴露模型随时间漂移。</span>
+</li>
+</ul>
+</aside>
+</div>
+</section>
 
-<section class="story" id="fig5"><div class="story-head"><div class="figure-no">FIG. 5</div><div><h2>真实场景展示很吸引人，但要区分“连续曲线”与“同时真值”</h2><p class="story-intro">通勤、睡眠和跑步说明系统能不断流；五人骑行研究则给出跨个体对比。不过 Fig. 5a–c 的绿色 SBP 曲线大多是模型输出，尤其跑步峰值没有同时袖带真值，不能把 160 mmHg 当成已独立证实的实测血压。</p></div></div><div class="story-grid"><figure class="figure-shell"><img src="assets/fig5-hires.png" alt="Figure 5，通勤、睡眠、跑步和五名参与者中的连续收缩压估计"><figcaption>原论文 Fig. 5 完整图体。a–c 为单名受试者的日常活动演示；d、e 为 5 名健康成人的个体标定骑行研究。</figcaption></figure><aside class="read-card"><h3>最容易过度解读的一图</h3><h4>Look here first</h4><p>先把 a–c 的单人连续展示与 d–e 的五人袖带对比分开，再检查橙色参考条出现在哪些时间段。</p><h4>Evidence</h4><p>五名参与者、103 次成对比较：平均差 0.23 mmHg、s.d. 5.23 mmHg。个体化模型优于跨人平均模型。</p><h4>Talk-ready</h4><p class="talk">“论文证明了网络能在运动和长时佩戴中持续产出 PTT 血压估计，但还没有证明跑步瞬间的峰值绝对准确。”</p><h4>Panel guide</h4><ul class="panel-guide"><li><b>a</b><span>单名受试者 40 min 从家步行、乘地铁和接驳车到实验室，HR 与估计 SBP 随活动强度变化。没有连续袖带参考，因此它主要证明移动场景不断流和趋势响应。</span></li><li><b>b</b><span>同一系统记录 6.5 h 睡眠中的 HR、估计 SBP 与 SpO₂；睡眠阶段来自 Apple Watch S6 算法。深睡时 SBP 相对白天下降约 15%、晨起出现上升，但图中没有夜间袖带或临床睡眠分期同步验证。</span></li><li><b>c</b><span>跑步机速度从 4 升至 12 km h⁻¹，HR 与估计 SBP 上升后恢复；橙色 M1、M2、M3 只在静止/跑后窗口完成，跑步过程中无袖带真值。曲线约 160 mmHg 峰值是个体 PTT 模型推断。</span></li><li><b>d</b><span>P4、P5 骑行时的绿色连续估计与橙色袖带窗口较接近，插图分别给出个人回归式。不同参与者的斜率和截距差异明显，说明统一模型不能直接迁移。</span></li><li><b>e</b><span>五名健康成人共 103 次比较，横轴为两方法均值、纵轴为差值；平均差 0.23 mmHg、s.d. 5.23 mmHg。骑行期间为保证袖带可用，参与者需尽量固定测量臂；这比完全自由运动更受控。</span></li><li><b>边界</b><span>论文补充分析显示跨受试者平均回归模型的偏差更大，只有个体模型维持文中引用的 ANSI/AAMI 误差范围。样本小、均为健康成人，未覆盖高血压、心律失常、肤色/体型广泛差异或跨日长期漂移。</span></li></ul></aside></div></section>
+<section class="story" id="fig5">
+<div class="story-head">
+<div class="figure-no">FIG. 5</div>
+<div>
+<h2>真实场景展示很吸引人，但要区分“连续曲线”与“同时真值”</h2>
+<p class="story-intro">通勤、睡眠和跑步说明系统能不断流；五人骑行研究则给出跨个体对比。不过 Fig. 5a–c 的绿色 SBP 曲线大多是模型输出，尤其跑步峰值没有同时袖带真值，不能把 160 mmHg 当成已独立证实的实测血压。</p>
+</div>
+</div>
+<div class="story-grid">
+<figure class="figure-shell">
+<img src="assets/fig5-hires.png" alt="Figure 5，通勤、睡眠、跑步和五名参与者中的连续收缩压估计">
+<figcaption>原论文 Fig. 5 完整图体。a–c 为单名受试者的日常活动演示；d、e 为 5 名健康成人的个体标定骑行研究。</figcaption>
+</figure>
+<aside class="read-card">
+<h3>最容易过度解读的一图</h3>
+<h4>先看哪里</h4>
+<p>先把 a–c 的单人连续展示与 d–e 的五人袖带对比分开，再检查橙色参考条出现在哪些时间段。</p>
+<h4>证据</h4>
+<p>五名参与者、103 次成对比较：平均差 0.23 mmHg、标准差 5.23 mmHg。个体化模型优于跨人平均模型。</p>
+<h4>可直接讲</h4>
+<p class="talk">“论文证明了网络能在运动和长时佩戴中持续产出 PTT 血压估计，但还没有证明跑步瞬间的峰值绝对准确。”</p>
+<h4>子图导读</h4>
+<ul class="panel-guide">
+<li>
+<b>a·路线</b>
+<span>上方时间轴把单名受试者 40 min 通勤拆成步行、地铁和接驳车等阶段；先用这些背景色判断活动何时变化。它证明系统离开实验室后仍能连续记录，不代表每段活动都有血压真值。</span>
+</li>
+<li>
+<b>a·曲线</b>
+<span>下方心率与估计 SBP 随活动强度共同起伏，支持 PTT 模型对趋势有响应。图中没有连续袖带参考，因此不能由曲线相似就推出每一个绝对血压值准确。</span>
+</li>
+<li>
+<b>b·心率</b>
+<span>6.5 h 睡眠记录中，心率随睡眠阶段变化；阶段标签来自 Apple Watch S6 算法，而非多导睡眠监测。它提供佩戴连续性和生理趋势证据，不是睡眠医学分期验证。</span>
+</li>
+<li>
+<b>b·血压</b>
+<span>估计 SBP 在深睡时相对白天下降约 15%，晨起回升，符合常见昼夜模式。由于没有夜间袖带同步对照，这仍是个体 PTT 模型给出的趋势，不是独立血压真值。</span>
+</li>
+<li>
+<b>b·血氧</b>
+<span>SpO₂ 曲线展示光学节点可整夜不断流，并能与心率和 SBP 同屏分析。该健康受试者记录不能替代睡眠呼吸暂停或低氧事件的临床敏感性测试。</span>
+</li>
+<li>
+<b>c·心率</b>
+<span>跑步机速度从 4 升至 12 km h⁻¹，心率随强度上升并在结束后恢复；这条曲线主要验证运动中信号链仍能追踪快速生理变化。</span>
+</li>
+<li>
+<b>c·血压</b>
+<span>估计 SBP 峰值约 160 mmHg，但橙色 M1、M2、M3 袖带参考只在静止或跑后窗口完成，跑步过程中没有同时真值。因此峰值是个体 PTT 模型推断，不能称为已独立实测。</span>
+</li>
+<li>
+<b>d·P4</b>
+<span>参与者 P4 骑行时，绿色连续估计与橙色袖带窗口总体接近；插图给出其个人回归式。读这组数据时要把“连续模型输出”和“间歇参考点”分开。</span>
+</li>
+<li>
+<b>d·P5</b>
+<span>P5 也呈现相似吻合，但插图中的斜率和截距与 P4 不同。两人的差异直接支持必须个体校准，也反驳把单一 PTT—血压关系直接跨人迁移。</span>
+</li>
+<li>
+<b>e</b>
+<span>五名健康成人共 103 次比较，横轴为两方法均值、纵轴为差值；平均差为 0.23 mmHg、标准差为 5.23 mmHg。骑行期间为保证袖带可用，参与者需尽量固定测量臂；这比完全自由运动更受控。</span>
+</li>
+<li>
+<b>边界</b>
+<span>论文补充分析显示跨受试者平均回归模型的偏差更大，只有个体模型维持文中引用的 ANSI/AAMI 误差范围。样本小、均为健康成人，未覆盖高血压、心律失常、肤色/体型广泛差异或跨日长期漂移。</span>
+</li>
+</ul>
+</aside>
+</div>
+</section>
 
-<section class="closing"><div class="box"><h2>真正的新意</h2><ul><li><strong>频率分工：</strong>同一织物在 13.56 MHz 作为互连导体，在 2.4 GHz 作为 SSP 波导，避免单模方案在供电效率与数据率之间折中。</li><li><strong>端到端协同：</strong>从手机 NFC、衣服终端、柔性 ECG/PPG 节点、BLE 时间戳到 PTT 融合全部打通，而不是分别展示材料或单个传感器。</li><li><strong>运动场景：</strong>用低惯性贴肤机械设计减少源头伪影，并把系统推到通勤、睡眠、跑步和骑行，而非只停留在静坐波形。</li></ul></div><div class="box"><h2>必须保留的限制</h2><ul><li>“无电池”只描述贴肤节点；手机需持续发射约 100 mW NFC，并借助 dummy NFC tag 保持激活，系统总能量并非凭空产生。</li><li>Fig. 2d 的 16 mW 是 2 W RFID 台架的采能上限，不是手机 100 mW NFC 条件下的直接测值；手机场景能驱动节点，但不能把两组功率数字混用。</li><li>供电要求节点距衣服终端约 6 mm 内、横向错位约 11 mm 内；多终端增加时单节点耦合效率会下降。</li><li>血压只估计 SBP，不给 DBP/MAP；依赖每人 20 min、5 次袖带标定，平均跨人模型明显变差。</li><li>跑步中的峰值没有同时袖带真值；多受试者仅 5 名健康成人，不能视为高血压临床验证或监管级精度证明。</li><li>ECG/PPG 已实时处理，但论文明确把 PTT 血压算法的手机端实时集成列为未来工作。</li><li>耐久证据包括 150 h 电极、有限洗涤与热水浸泡等实验，尚未覆盖长期汗液、反复洗衣、连接疲劳与家庭依从性。</li></ul></div><div class="box"><h2>对你的研究最有价值的启发</h2><ul><li>对可重构超表面：不要只报告 S 参数峰值，可把“供能平面、数据平面、同步误差和任务精度”连成系统指标。</li><li>对 OECT/OMIEC 织物阵列：可借鉴任务分频，把低频供电/寻址与高频数据回传解耦；但电解质稳定性、行列串扰和湿态损耗仍需另建模型。</li><li>对智能感知算法：链路丢包、节点时钟与身体位置不是预处理细节，而是 PTT、相位差或时延特征的可辨识条件。</li><li>下一步最关键的实验不是再画更平滑的连续曲线，而是做跨日无重标、运动中独立参考、患者队列和多节点同时供电的压力测试。</li></ul></div><div class="box glossary"><h2>术语速查</h2><div class="terms"><div class="term"><b>SSP waveguide</b><br>人工表面等离激元波导；用周期金属结构把微波限制在衣服附近传播，并非光学等离激元。</div><div class="term"><b>PTT</b><br>脉搏传输时间；本文取 ECG R 峰到远端 PPG 上升沿最大斜率的延迟，通常与血压负相关。</div><div class="term"><b>Bland–Altman</b><br>比较两种测量方法的一致性：平均差看系统偏差，s.d. 与 95% 一致性界限看离散程度。</div></div></div></section>
+<section class="closing">
+<div class="box">
+<h2>真正的新意</h2>
+<ul>
+<li>
+<strong>频率分工：</strong>同一织物在 13.56 MHz 作为互连导体，在 2.4 GHz 作为 SSP 波导，避免单模方案在供电效率与数据率之间折中。</li>
+<li>
+<strong>端到端协同：</strong>从手机 NFC、衣服终端、柔性 ECG/PPG 节点、BLE 时间戳到 PTT 融合全部打通，而不是分别展示材料或单个传感器。</li>
+<li>
+<strong>运动场景：</strong>用低惯性贴肤机械设计减少源头伪影，并把系统推到通勤、睡眠、跑步和骑行，而非只停留在静坐波形。</li>
+</ul>
+</div>
+<div class="box">
+<h2>必须保留的限制</h2>
+<ul>
+<li>“无电池”只描述贴肤节点；手机需持续发射约 100 mW NFC，并借助占位 NFC 标签（dummy NFC tag）保持激活，系统总能量并非凭空产生。</li>
+<li>Fig. 2d 的 16 mW 是 2 W RFID 台架的采能上限，不是手机 100 mW NFC 条件下的直接测值；手机场景能驱动节点，但不能把两组功率数字混用。</li>
+<li>供电要求节点距衣服终端约 6 mm 内、横向错位约 11 mm 内；多终端增加时单节点耦合效率会下降。</li>
+<li>血压只估计 SBP，不给 DBP/MAP；依赖每人 20 min、5 次袖带标定，平均跨人模型明显变差。</li>
+<li>跑步中的峰值没有同时袖带真值；多受试者仅 5 名健康成人，不能视为高血压临床验证或监管级精度证明。</li>
+<li>ECG/PPG 已实时处理，但论文明确把 PTT 血压算法的手机端实时集成列为未来工作。</li>
+<li>耐久证据包括 150 h 电极、有限洗涤与热水浸泡等实验，尚未覆盖长期汗液、反复洗衣、连接疲劳与家庭依从性。</li>
+</ul>
+</div>
+<div class="box">
+<h2>对你的研究最有价值的启发</h2>
+<ul>
+<li>对可重构超表面：不要只报告 S 参数峰值，可把“供能平面、数据平面、同步误差和任务精度”连成系统指标。</li>
+<li>对 OECT/OMIEC 织物阵列：可借鉴任务分频，把低频供电/寻址与高频数据回传解耦；但电解质稳定性、行列串扰和湿态损耗仍需另建模型。</li>
+<li>对智能感知算法：链路丢包、节点时钟与身体位置不是预处理细节，而是 PTT、相位差或时延特征的可辨识条件。</li>
+<li>下一步最关键的实验不是再画更平滑的连续曲线，而是做跨日无重标、运动中独立参考、患者队列和多节点同时供电的压力测试。</li>
+</ul>
+</div>
+<div class="box glossary">
+<h2>术语速查</h2>
+<div class="terms">
+<div class="term">
+<b>人工表面等离激元波导（SSP waveguide）</b>
+<br>人工表面等离激元波导；用周期金属结构把微波限制在衣服附近传播，并非光学等离激元。</div>
+<div class="term">
+<b>脉搏传输时间（PTT）</b>
+<br>脉搏传输时间；本文取 ECG R 峰到远端 PPG 上升沿最大斜率的延迟，通常与血压负相关。</div>
+<div class="term">
+<b>Bland–Altman 一致性分析</b>
+<br>比较两种测量方法的一致性：平均差看系统偏差，标准差与 95% 一致性界限看离散程度。</div>
+</div>
+</div>
+</section>
 
 <p class="notice">阅读结论：这篇论文最可信的成就是<strong>可穿戴物理网络与柔性多节点的端到端实现</strong>；连续血压展示证明了该网络能为 PTT 提供长时同步数据，但其医学结论仍受个体校准、小样本和动态真值缺失限制。五幅主图已全部展开，无主图省略。</p>
 <a class="back" href="../index.html">← 返回论文细读书架</a>
-<footer class="paper-citation" aria-labelledby="paper-citation-title"><div class="section-kicker">Citation</div><h2 id="paper-citation-title">论文引用</h2><p>Kurt, S. A., Kasper, K. A., Xu, Q., Yang, X., Xiao, X., Zeng, Q., Stuart, T., Li, Z., Liu, Y., Song, J., Ding, W., Tian, X., Gutruf, P. &amp; Ho, J. S. “A battery-free wireless epidermal sensor network for continuous systolic blood pressure monitoring.” <i>Nature Electronics</i> <b>9</b>, 555–568 (2026). <a href="https://doi.org/10.1038/s41928-026-01597-1">https://doi.org/10.1038/s41928-026-01597-1</a></p></footer>
-</main></body>
+<footer class="paper-citation" aria-labelledby="paper-citation-title">
+<div class="section-kicker">引用</div>
+<h2 id="paper-citation-title">论文引用</h2>
+<p>Kurt, S. A., Kasper, K. A., Xu, Q., Yang, X., Xiao, X., Zeng, Q., Stuart, T., Li, Z., Liu, Y., Song, J., Ding, W., Tian, X., Gutruf, P. &amp; Ho, J. S. “A battery-free wireless epidermal sensor network for continuous systolic blood pressure monitoring.” <i>Nature Electronics</i> <b>9</b>, 555–568 (2026). <a href="https://doi.org/10.1038/s41928-026-01597-1">https://doi.org/10.1038/s41928-026-01597-1</a>
+</p>
+</footer>
+</main>
+</body>
 </html>
