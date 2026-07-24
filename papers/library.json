@@ -1,5 +1,15 @@
 [
   {
+    "id": "10.1038-s41928-026-01597-1",
+    "title": "A battery-free wireless epidermal sensor network for continuous systolic blood pressure monitoring",
+    "headline": "把衣服变成“供电总线 + 数据总线”，让无电池皮肤节点持续同步测压",
+    "venue": "Nature Electronics",
+    "added_at": "2026-07-24T04:57:10Z",
+    "added_date": "2026-07-24",
+    "publication_date": "2026-04-10",
+    "href": "10.1038-s41928-026-01597-1/index.html"
+  },
+  {
     "id": "10.1038-s44460-026-00067-7",
     "title": "Self-powered analogue neuromorphic system for multimodal sensing, encoding and learning with diffusive and drift memristors",
     "headline": "用两类忆阻器把传感、脉冲编码和无监督学习接成一条全模拟链路",
@@ -62,7 +72,7 @@
   {
     "id": "00-imperceptible-bioelectronic-fibres",
     "title": "Imperceptible augmentation of living systems with organic bioelectronic fibres",
-    "headline": "把 PEDOT:PSS 纤维直接“织”到活体表面",
+    "headline": "把电子界面从贴片变成可现场重写的开放纤维网络",
     "venue": "Nature Electronics",
     "added_at": "2026-07-16T06:32:32Z",
     "added_date": "2026-07-16",
