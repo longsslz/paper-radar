@@ -1,0 +1,281 @@
+[
+  {
+    "paper_id": "crossref:10.1038/s41566-026-01968-2",
+    "title": "Real-time optical signal equalization with a silicon photonic spatially distributed reservoir computer",
+    "authors": [
+      "Ruben Van Assche",
+      "Sarah Masaad",
+      "Emmanuel Gooskens",
+      "Stijn Sackesyn",
+      "Joris Van Kerrebrouck",
+      "Xin Yin",
+      "Peter Bienstman"
+    ],
+    "venue": "Nature Photonics",
+    "published_at": "2026-07-21",
+    "source": "crossref",
+    "doi": "10.1038/s41566-026-01968-2",
+    "url": "https://doi.org/10.1038/s41566-026-01968-2",
+    "pdf_url": "https://www.nature.com/articles/s41566-026-01968-2.pdf",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.7625,
+    "abstract": "Abstract Communication through optical fibres experiences limitations due to chromatic dispersion and nonlinear Kerr effects that degrade the signal. Mitigating these impairments is typically done using complex digital signal processing algorithms. However, these equalization methods require substantial power consumption and introduce high latencies. Photonic reservoir computing (a subfield of neural networks) offers an alternative solution—processing signals in the analogue optical domain. Here we present, to our knowledge, the first experimental demonstration of the real-time equalization of fibre distortions using a silicon photonics chip that combines the recurrent reservoir and the programmable read-out layer. We successfully equalize a 28-Gbps on–off keying signal across varying power levels and fibre lengths, even in the highly nonlinear regime. We obtain bit error rates that are orders of magnitude below previously reported optical equalization methods, reaching as low as 4 × 10 −7 , far below the generic forward error correction limit of 5.8 × 10 −5 used in commercial Ethernet interfaces.",
+    "key_figure_path": "output/figures/crossref_10_1038_s41566-026-01968-2_caption_p2.png",
+    "key_figure_caption": "Fig. 1 )"
+  },
+  {
+    "paper_id": "arxiv:2602.00830v2",
+    "title": "Efficient and tunable narrowband second-harmonic generation by a large-area etchless lithium niobate metasurface",
+    "authors": [
+      "Yaping Hou",
+      "Yigong Luan",
+      "Yu Fan",
+      "Alfonso Nardi",
+      "Attilio Zilli",
+      "Bobo Du",
+      "Jinyou Shao",
+      "Marco Finazzi",
+      "Chunhui Wang",
+      "Lei Zhang",
+      "Michele Celebrano"
+    ],
+    "venue": "arXiv",
+    "published_at": "2026-01-31",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2602.00830v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.00830v2",
+    "robot_type_tags": [
+      "terahertz_microwave"
+    ],
+    "paper_type": "transferable",
+    "score": 0.425,
+    "abstract": "Optical resonances in nanostructures enable strong enhancement of nonlinear processes at the nanoscale, such as second-harmonic generation (SHG), with high-$Q$ modes providing intensified light--matter interactions and sharp spectral selectivity for applications in filtering, sensing, and nonlinear spectroscopy. Thanks to the recent advances in thin-film lithium niobate (TFLN) technology, these key features can be now translated to lithium niobate for realizing novel nanoscale nonlinear optical platforms. Here, we demonstrate a large-area metasurface, realized by scalable nanoimprint lithography, comprising a slanted titanium dioxide (TiO$_2$) nanograting on etchless TFLN for efficient narrowband SHG. This is enabled by the optimal coupling of quasi-bound state in the continuum (q-BIC) modes with a narrowband pulsed laser pump. The demonstrated normalized SHG efficiency is $0.15\\%\\,\\mathrm{cm}^2/\\mathrm{GW}$, which is among the largest reported for LN metasurfaces. The low pump peak intensity ($3.64~\\mathrm{kW}/\\mathrm{cm}^2$) employed, which enables SHG even by continuous-wave pumping, allows envisioning integrated and portable photonic applications. SHG wavelength tuning from $870$ to $920~\\mathrm{nm}$ with stable output power as well as polarization control is also achieved by off-normal pump illumination. This versatile platform opens new opportunities for sensing, THz generation and detection, and ultrafast electro-optic modulation of nonlinear optical signals.",
+    "key_figure_path": "output/figures/arxiv_2602_00830v2_caption_p3.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "arxiv:2601.17749v2",
+    "title": "Over-The-Air Extreme Learning Machines with XL Reception via Nonlinear Cascaded Metasurfaces",
+    "authors": [
+      "Kyriakos Stylianopoulos",
+      "Mattia Fabiani",
+      "Giulia Torcolacci",
+      "Davide Dardari",
+      "George C. Alexandropoulos"
+    ],
+    "venue": "arXiv",
+    "published_at": "2026-01-25",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2601.17749v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.17749v2",
+    "robot_type_tags": [
+      "tunable_metasurface",
+      "terahertz_microwave"
+    ],
+    "paper_type": "direct",
+    "score": 0.5668,
+    "abstract": "The recently envisioned goal-oriented communications paradigm calls for the application of inference on wirelessly transferred data via Machine Learning (ML) tools. An emerging research direction deals with the realization of inference ML models directly in the physical layer of Multiple-Input Multiple-Output (MIMO) systems, which, however, entails certain significant challenges. In this paper, leveraging the technology of programmable MetaSurfaces (MSs), we present an eXtremely Large (XL) MIMO system that acts as an Extreme Learning Machine (ELM) performing binary classification tasks completely Over-The-Air (OTA), which can be trained in closed form. The proposed system comprises a receiver architecture consisting of densely parallel placed diffractive layers of XL MSs, also known as Stacked Intelligent Metasurfaces (SIM), followed by a single reception radio-frequency chain. The front layer facing the XL MIMO channel consists of identical unit cells of a fixed NonLinear (NL) response, whereas the remaining layers of elements of tunable linear responses are utilized to approximate OTA the trained ELM weights. Our numerical investigations showcase that, in the XL regime of MS elements, the proposed XL-MIMO-ELM system achieves performance comparable to that of digital and idealized ML models across diverse datasets and wireless scenarios, thereby demonstrating the feasibility of embedding OTA learning capabilities into future wireless systems.",
+    "key_figure_path": "output/figures/arxiv_2601_17749v2_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "arxiv:2601.13241v1",
+    "title": "Multilayer Q-BIC-like Optical Filters with High Throughput Direct-Write Multilayer Lithography",
+    "authors": [
+      "A. Bilgehan Baspinar",
+      "Phillippe Pearson",
+      "Andrei Faraon"
+    ],
+    "venue": "arXiv",
+    "published_at": "2026-01-19",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2601.13241v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.13241v1",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.4786,
+    "abstract": "Multilayer metasurfaces provide substantially greater spectral design freedom than single-layer devices, yet their implementation in the visible and near-infrared remains limited by the complexity, cost, and low throughput of conventional nanofabrication. Here, we establish a recently proposed direct-write electron-beam lithography approach as a high-throughput fabrication platform for multilayer resonant metasurfaces, based on an antimony precursor that decomposes in situ into high-index antimony sulfide. This method eliminates deposition-etch cycles and reduces each layer to only two fabrication steps, enabling efficient realization of multilayer architectures. Using this platform, we demonstrate multilayer q-BIC-derived metasurfaces with independently tunable resonance wavelengths and linewidths, allowing the construction of compact multi-resonant filters with spectrally decoupled layers. We experimentally demonstrate three-layer devices supporting three resonances and show independent control of resonance wavelength and Q factor across layers. Leveraging this capability, we generate decorrelated filter arrays for compressive sensing and hyperspectral reconstruction, achieving sets of 9 and 36 filters with average absolute Pearson correlation coefficients of 0.11 and 0.21, surpassing prior metasurface and photonic-crystal implementations. These results establish a practical route toward scalable multilayer resonant metasurfaces for spectral filtering, on-chip spectroscopy, and computational imaging.",
+    "key_figure_path": "output/figures/arxiv_2601_13241v1_p3_i1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4415221208",
+    "title": "Vector analog computing via on-demand metasurface dispersive polarization transformation",
+    "authors": [
+      "Hui Yang",
+      "Jie Xu",
+      "Meiyu Peng",
+      "Hairong He",
+      "Yuting Jiang",
+      "Dian Yu",
+      "Rui‐Bo Jin",
+      "Yingjie Gu",
+      "Yueqiang Hu",
+      "Huigao Duan",
+      "Hui Jing"
+    ],
+    "venue": "Science Advances",
+    "published_at": "2025-10-15",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1126/sciadv.adz5123",
+    "url": "https://openalex.org/W4415221208",
+    "pdf_url": "https://www.science.org/doi/pdf/10.1126/sciadv.adz5123?download=true",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.7885,
+    "abstract": "Optical analog computing can potentially feature high-throughput parallel processing with ultralow power and high speed and is promising for efficient signal processing. Previous platforms have mainly focused on scalar computing with optical intensities, which is highly sensitive to environmental disturbance and has been primarily restricted to single or basic computations because of intrinsic fixed correlation between the input and output signals. To our knowledge, for the first time, we use polarization vectors for optical analog computing with a single-layered metasurface to overcome these restrictions. The underlying mechanism is on-demand polarization transformation on the dispersive Poincaré spheres, constructing intrinsic variable correlations between the incident polarization vectors and output signals. We choose the universal logical gates and mathematical function operations as two specific examples. Experimental results of our vector computing metadevices exhibit minimal errors relative to the target values. Our work opens up an avenue for advanced optical signal processing across both classical and quantum domains.",
+    "key_figure_path": "output/figures/openalex_W4415221208_caption_p2.png",
+    "key_figure_caption": "Fig. 1. Metasurface- empowered vector analog computing with polarization. (A and B) comparison of scalar computing with optical intensities and vector comput-"
+  },
+  {
+    "paper_id": "openalex:W4407519858",
+    "title": "An optoelectrochemical synapse based on a single-component n-type mixed conductor",
+    "authors": [
+      "Yazhou Wang",
+      "Wentao Shan",
+      "Hanrui Li",
+      "Yizhou Zhong",
+      "Shofarul Wustoni",
+      "Johana Uribe",
+      "Tianrui Chang",
+      "Valentina Musteaţa",
+      "Tania Cecilia Hidalgo Castillo",
+      "Wan Yue",
+      "Haifeng Ling",
+      "Nazek El‐Atab",
+      "Sahika Inal"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2025-02-13",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-025-56814-w",
+    "url": "https://openalex.org/W4407519858",
+    "pdf_url": "https://www.nature.com/articles/s41467-025-56814-w.pdf",
+    "robot_type_tags": [
+      "oect_omiec"
+    ],
+    "paper_type": "transferable",
+    "score": 0.844,
+    "abstract": "Organic mixed ionic-electronic conductors (OMIECs) are materials that can be used to build bio-inspired electronic devices as they emulate ion-based cellular communication through doping with aqueous ionic charges. The integration of charge photogeneration and electrochemical doping processes in the polymer film enables optoelectronic applications that involve synaptic transistors. However, no OMIEC has yet been implemented to create a miniaturized photoactive platform capable of perceiving and processing multi-spectral visual information. Here, we present a materials and device design concept in which an n-type OMIEC film is incorporated into the micron-scale channel of an electrochemical transistor operating directly in an aqueous electrolyte under ambient conditions. The conjugated polymer channel, consisting of a fluorinated bisistain-lactone-bithiazole acceptor, has a current modulated in response to both electrical and optical stimuli, emulating the multimodal function of the visual nervous system. Our optoelectrochemical synapse achieves multilevel conductance states as well as transduction of visual information covering ultraviolet, visible, and near-infrared regions of the spectrum – a range beyond that of the human visual system’s perception. The resulting transistor active-matrix array is capable of adaptive sensing, memory, and pre-processing of visual information, demonstrating an efficient optoelectronic neuromorphic system with multi-task learning capability. Wang et al. present a single-component n-type optoelectrochemical synapse that enables current modulation in response to electrical and optical stimuli. This is used for multispectral sensing, synaptic plasticity, memory, image recognition, and motion detection, for bio-inspired optoelectronic applications.",
+    "key_figure_path": "output/figures/openalex_W4407519858_caption_p2.png",
+    "key_figure_caption": "Fig. 1 | Optoelectrochemical synapse based on an n-type organic electro-"
+  },
+  {
+    "paper_id": "openalex:W4391221518",
+    "title": "Toward grouped-reservoir computing: organic neuromorphic vertical transistor with distributed reservoir states for efficient recognition and prediction",
+    "authors": [
+      "Changsong Gao",
+      "Di Liu",
+      "Chenhui Xu",
+      "Weidong Xie",
+      "Xianghong Zhang",
+      "Junhua Bai",
+      "Zhixian Lin",
+      "Cheng Zhang",
+      "Yuanyuan Hu",
+      "Tailiang Guo",
+      "Huipeng Chen"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-01-25",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-024-44942-8",
+    "url": "https://openalex.org/W4391221518",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-44942-8.pdf",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.636,
+    "abstract": "Reservoir computing has attracted considerable attention due to its low training cost. However, existing neuromorphic hardware, focusing mainly on shallow-reservoir computing, faces challenges in providing adequate spatial and temporal scales characteristic for effective computing. Here, we report an ultra-short channel organic neuromorphic vertical transistor with distributed reservoir states. The carrier dynamics used to map signals are enriched by coupled multivariate physics mechanisms, while the vertical architecture employed greatly increases the feedback intensity of the device. Consequently, the device as a reservoir, effectively mapping sequential signals into distributed reservoir state space with 1152 reservoir states, and the range ratio of temporal and spatial characteristics can simultaneously reach 2640 and 650, respectively. The grouped-reservoir computing based on the device can simultaneously adapt to different spatiotemporal task, achieving recognition accuracy over 94% and prediction correlation over 95%. This work proposes a new strategy for developing high-performance reservoir computing networks.",
+    "key_figure_path": "output/figures/openalex_W4391221518_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4389481158",
+    "title": "Plasmonic metasurfaces of cellulose nanocrystal matrices with quadrants of aligned gold nanorods for photothermal anti-icing",
+    "authors": [
+      "Jeongsu Pyeon",
+      "Soon Mo Park",
+      "J. Kim",
+      "Jeong-Hwan Kim",
+      "Yong‐Jin Yoon",
+      "Dong Ki Yoon",
+      "Hyoungsoo Kim"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2023-12-08",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-023-43511-9",
+    "url": "https://openalex.org/W4389481158",
+    "pdf_url": "https://www.nature.com/articles/s41467-023-43511-9.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.5572,
+    "abstract": "Cellulose nanocrystals (CNCs) are intriguing as a matrix for plasmonic metasurfaces made of gold nanorods (GNRs) because of their distinctive properties, including renewability, biodegradability, non-toxicity, and low cost. Nevertheless, it is very difficult to precisely regulate the positioning and orientation of CNCs on the substrate in a consistent pattern. In this study, CNCs and GNRs, which exhibit tunable optical and anti-icing capabilities, are employed to manufacture a uniform plasmonic metasurface using a drop-casting technique. Two physical phenomena-(i) spontaneous and rapid self-dewetting and (ii) evaporation-induced self-assembly-are used to accomplish this. Additionally, we improve the CNC-GNR ink composition and determine the crucial coating parameters necessary to balance the two physical mechanisms in order to produce thin films without coffee rings. The final homogeneous CNC-GNR film has consistent annular ring patterns with plasmonic quadrant hues that are properly aligned, which enhances plasmonic photothermal effects. The CNC-GNR multi-array platform offers above-zero temperatures on a substrate that is subcooled below the freezing point. The current study presents a physicochemical approach for functional nanomaterial-based CNC control.",
+    "key_figure_path": "output/figures/openalex_W4389481158_caption_p1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4388339276",
+    "title": "Training large-scale optoelectronic neural networks with dual-neuron optical-artificial learning",
+    "authors": [
+      "Xiaoyun Yuan",
+      "Yong Wang",
+      "Zhihao Xu",
+      "Tiankuang Zhou",
+      "Lu Fang"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2023-11-04",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-023-42984-y",
+    "url": "https://openalex.org/W4388339276",
+    "pdf_url": "https://www.nature.com/articles/s41467-023-42984-y.pdf",
+    "robot_type_tags": [
+      "metasurface_computing"
+    ],
+    "paper_type": "direct",
+    "score": 0.5452,
+    "abstract": "Optoelectronic neural networks (ONN) are a promising avenue in AI computing due to their potential for parallelization, power efficiency, and speed. Diffractive neural networks, which process information by propagating encoded light through trained optical elements, have garnered interest. However, training large-scale diffractive networks faces challenges due to the computational and memory costs of optical diffraction modeling. Here, we present DANTE, a dual-neuron optical-artificial learning architecture. Optical neurons model the optical diffraction, while artificial neurons approximate the intensive optical-diffraction computations with lightweight functions. DANTE also improves convergence by employing iterative global artificial-learning steps and local optical-learning steps. In simulation experiments, DANTE successfully trains large-scale ONNs with 150 million neurons on ImageNet, previously unattainable, and accelerates training speeds significantly on the CIFAR-10 benchmark compared to single-neuron learning. In physical experiments, we develop a two-layer ONN system based on DANTE, which can effectively extract features to improve the classification of natural images.",
+    "key_figure_path": "output/figures/openalex_W4388339276_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4387569595",
+    "title": "Cascaded metasurfaces for high-purity vortex generation",
+    "authors": [
+      "Feng Mei",
+      "Geyang Qu",
+      "Xinbo Sha",
+      "Jing Han",
+      "Moxin Yu",
+      "Hao Li",
+      "Qinmiao Chen",
+      "Ziheng Ji",
+      "Jincheng Ni",
+      "Cheng‐Wei Qiu",
+      "Qinghai Song",
+      "Yuri S. Kivshar",
+      "Shumin Xiao"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2023-10-12",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-023-42137-1",
+    "url": "https://openalex.org/W4387569595",
+    "pdf_url": "https://www.nature.com/articles/s41467-023-42137-1.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.4697,
+    "abstract": "Abstract We introduce a new paradigm for generating high-purity vortex beams with metasurfaces. By applying optical neural networks to a system of cascaded phase-only metasurfaces, we demonstrate the efficient generation of high-quality Laguerre-Gaussian (LG) vortex modes. Our approach is based on two metasurfaces where one metasurface redistributes the intensity profile of light in accord with Rayleigh-Sommerfeld diffraction rules, and then the second metasurface matches the required phases for the vortex beams. Consequently, we generate high-purity LG p,l optical modes with record-high Laguerre polynomial orders p = 10 and l = 200, and with the purity in p , l and relative conversion efficiency as 96.71%, 85.47%, and 70.48%, respectively. Our engineered cascaded metasurfaces suppress greatly the backward reflection with a ratio exceeding −17 dB. Such higher-order optical vortices with multiple orthogonal states can revolutionize next-generation optical information processing.",
+    "key_figure_path": "output/figures/openalex_W4387569595_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  }
+]
