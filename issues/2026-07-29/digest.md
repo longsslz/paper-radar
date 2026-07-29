@@ -1,0 +1,161 @@
+# Paper Radar Digest
+
+## 1. Real-time optical signal equalization with a silicon photonic spatially distributed reservoir computer
+- Venue: Nature Photonics
+- Published: 2026-07-21
+- Type: direct
+- Tags: neuromorphic_oect
+- Score: 0.7625
+- Core insight: 这篇 Nature Photonics 论文把 reservoir computing 从离线光学演示推进到实时通信链路均衡：硅光子芯片同时集成 recurrent reservoir 和可编程光学读出层，在光域直接补偿光纤色散与 Kerr 非线性。对本方向的核心启发不是 OECT 材料本身，而是“物理传播介质 + 可训练读出”可以承担高速边缘计算任务。
+- Problem frame: 短距 IM/DD 光互连便宜、简单，但随着速率上升，色散和非线性失真会迫使系统依赖耗电、增延迟的 DSP 均衡。已有 photonic reservoir 多数需要 time multiplexing、离线多通道采样或外部数字读出，没真正闭合到实时系统。作者要解决的是：能否把 reservoir 和 read-out 都放在同一光子芯片里，以 line-rate 方式处理真实通信信号。
+- First principles: Reservoir computing 的第一性原理是把输入时间序列映射到高维、带记忆的非线性状态空间，训练只集中在读出层。这里的 reservoir 利用光在片上波导网络中的相位、延迟和干涉形成时序混合，光电探测提供必要非线性；可编程读出把这些状态加权组合，直接逼近光纤信道的反失真函数。
+- Mechanism: 全文证据显示，芯片采用 spatially distributed reservoir，避免 time-delay reservoir 在高速下计算容量和处理速率的折中；片上可编程 read-out 用复杂权重组合 reservoir 输出，实现 optical input/output 的单芯片均衡。实验处理 28-Gbps OOK 信号，在 10 dBm、最长 50 km 光纤和 17 dBm、25 km 条件下工作；文中报告最低 BER 达 4 × 10^-7，低于 GFEC 阈值 5.8 × 10^-5，并给出芯片内传播延迟约 243.32 ps。
+- Boundary advanced: 它推进的是 neuromorphic/physical computing 的系统边界：从“物理 reservoir 能算”推进到“能在真实高速链路实时工作”。边界也清楚：材料平台是 silicon photonics，不是 OMIEC/OECT；任务是通信均衡，不是生物传感；训练仍是 hardware-in-the-loop，片上权重功耗未来还要靠非易失相移/权重材料降低。
+- Old problem: 老问题是光学 reservoir 往往把高速光场变换和实际读出割裂开，最后还要顺序采集多通道再离线 DSP。这样无法证明低延迟、低功耗的系统价值，也难和商业通信链路比较。
+- Why it works: 它有效是因为光学网络天然以传播延迟完成并行时序混合，保留了信道失真的记忆结构；读出层只需训练线性/相干权重，把复杂补偿任务压缩到可调权重组合中。与全数字均衡相比，它把部分计算前移到采样前的物理域，减少电子后端负担。
+- True novelty: 真实新意是首次实验展示集成 reservoir 与可编程读出层的硅光 spatially distributed reservoir computer，用于实时光纤失真均衡，并在非线性链路上达到强 BER 结果。对 OECT/OMIEC × metasurface 的迁移价值在于：未来可重构有机/电化学超表面若要成为物理计算前端，也必须同时给出状态展开、可训练读出和实时任务闭环。
+- Evidence: 证据等级高：本地取得 Nature Photonics PDF 全文、摘要和关键图。可核验证据包括 integrated optical read-out、28-Gbps OOK、10 dBm/50 km、17 dBm/25 km、BER 4 × 10^-7、GFEC 5.8 × 10^-5、243.32 ps 片上传播延迟和 Fig. 1 芯片/系统图。置信缺口是与 OECT/OMIEC 材料无直接交集，属于 photonic physical computing 的强可迁移参考。
+
+## 2. Efficient and tunable narrowband second-harmonic generation by a large-area etchless lithium niobate metasurface
+- Venue: arXiv
+- Published: 2026-01-31
+- Type: transferable
+- Tags: terahertz_microwave
+- Score: 0.425
+- Core insight: 这篇 arXiv 预印本展示了大面积、etchless thin-film lithium niobate metasurface 的高效窄带二次谐波产生。它不是有机电化学路线，但对 reconfigurable metasurface 方向有用：q-BIC 可把光场强烈局域并提高非线性效率，适合作为低能耗 sensing、THz 或电光调制前端的物理增强层。
+- Problem frame: 集成非线性光子学需要小型、低泵浦强度、可调谐且可制造的二次谐波平台。传统 LN 纳米结构往往需要刻蚀 LN，本身工艺困难且可能损伤材料；高 Q 谐振又容易带来窄工作窗口和耦合敏感性。作者要解决的是在大面积、可扩展工艺下，把 TFLN 的强二阶非线性与 metasurface 谐振增强结合起来。
+- First principles: SHG 强度随局域泵浦场增强和二阶非线性系数提升；q-BIC 模式通过对称性破缺或斜入射把本来泄漏很弱的高 Q 模式耦合到外场，从而在纳米结构中积累光场。TFLN 提供 χ(2) 非线性，TiO2 slanted nanograting 提供 q-BIC/导模谐振，二者叠加形成窄带增强。
+- Mechanism: 全文/摘要证据显示，器件是 slanted TiO2 nanograting on etchless TFLN，通过 scalable nanoimprint lithography 制备；TE/TM q-BIC 模式与窄带泵浦耦合增强 SHG。文中报告 normalized SHG efficiency 为 0.15% cm^2/GW，泵浦峰值强度仅 3.64 kW/cm^2，并通过 off-normal pumping 实现 870-920 nm SHG 波长调谐和偏振控制。
+- Boundary advanced: 它推进的是 nonlinear metasurface 的工艺和效率边界，而不是 OMIEC/OECT 神经形态边界。与本研究方向的连接在于：若 OMIEC 或电化学可调层能调控 q-BIC 耦合/损耗/谐振位置，就可能把低压电化学门控接到非线性频率转换、THz 产生或窄带传感上。
+- Old problem: 老问题是 LN metasurface 的高效非线性常受限于复杂刻蚀、面积小、泵浦强度高或谐振不可调；实验平台难以转向便携/集成传感与片上调制。
+- Why it works: 它有效是因为 q-BIC 把入射泵浦能量集中到 TFLN 附近，同时 etchless 架构保护 LN 薄膜质量；斜角/偏振控制改变耦合条件，使窄带谐振和 SHG 输出可以被外部几何参数调谐。
+- True novelty: 真实新意是用可扩展 nanoimprint 的 TiO2-on-etchless-TFLN 大面积 metasurface 实现高效窄带 SHG，而不是小面积精细刻蚀 LN。对本方向的启发是：reconfigurable metasurface 可优先瞄准“调 q-BIC 耦合条件”这种高杠杆物理旋钮。
+- Evidence: 证据等级中高：本地有 arXiv PDF 全文和关键图。可核验证据包括 q-BIC、slanted TiO2 grating、etchless TFLN、nanoimprint lithography、0.15% cm^2/GW、3.64 kW/cm^2、870-920 nm tuning、polarization control。缺口是预印本未经同行评审，且与 OECT/OMIEC 只有物理机制迁移关系。
+
+## 3. Over-The-Air Extreme Learning Machines with XL Reception via Nonlinear Cascaded Metasurfaces
+- Venue: arXiv
+- Published: 2026-01-25
+- Type: direct
+- Tags: tunable_metasurface, terahertz_microwave
+- Score: 0.5668
+- Core insight: 这篇 arXiv 预印本把 stacked intelligent metasurfaces 用作 over-the-air extreme learning machine：无线传播、非线性 metasurface 前层和可调级联层共同完成分类推理。它对本方向的价值很直接：把 metasurface 从波束控制器提升为物理层机器学习算子。
+- Problem frame: Goal-oriented communications 想让无线系统传输任务结果而非原始数据，但把 ML 推理放进 MIMO 物理层会遇到通道变化、模拟权重实现、非线性激活和 RF 链数量等难题。作者要解决的是：能否用极大规模接收 metasurface 阵列和单个 RF chain，在空中完成 ELM 类二分类。
+- First principles: ELM 的思想是固定或随机非线性特征映射 + 闭式求解的线性读出。这里前层 nonlinear metasurface 和 MIMO channel 共同产生非线性随机特征，后续 tunable linear metasurface layers 近似训练得到的 ELM 权重；电磁波叠加本身执行矩阵乘法/加权求和。
+- Mechanism: 全文证据显示，系统由 XL MIMO receiver、front nonlinear metasurface、cascaded tunable linear metasurfaces 和 single reception RF chain 组成，执行 binary classification。训练可 closed form；数值实验在 Parkinson's、WBCD、MNIST 等数据集上比较 ideal weights 与 OTA weights，展示随 metasurface elements 增加分类准确率提升，并讨论 Ricean factor 等无线场景影响。
+- Boundary advanced: 它推进的是 RF/metasurface physical computing 的算法架构边界，但仍是数值研究/会议预印本，不是实物硬件验证。与 OECT/OMIEC 的连接在于：如果有机电化学可调单元能实现低功耗、可记忆的 RF/THz 权重，类似 OTA ELM 就可能从硅/二极管调谐转向柔性材料平台。
+- Old problem: 老问题是可编程超表面多用于 beam steering 或 channel shaping，真正的 ML 推理仍在数字后端完成；这样并没有减少采样、ADC 和基带计算负担。
+- Why it works: 它有效的前提是无线传播的线性叠加和 metasurface 的可调响应可以直接表示 ELM 的随机特征和读出权重。单 RF chain 只接收最终叠加结果，等于把高维前端计算压缩到物理场中完成。
+- True novelty: 真实新意是把 nonlinear cascaded metasurfaces 与 ELM 框架绑定，形成可闭式训练的 OTA inference 架构，而不是用 backprop 训练一个普通 SIM/DNN。对本方向的启发是：neuromorphic metasurface 可以选更适合物理实现的学习模型，不必硬搬深度网络。
+- Evidence: 证据等级中等：本地有 arXiv PDF 全文和关键图，但这是预印本/受邀会议稿，主要为数值实验。可核验证据包括 binary classification、single RF chain、nonlinear front MS、tunable cascaded MS weights、closed-form ELM training、Parkinson/WBCD/MNIST 图和 OTA vs ideal weights 对比。缺口是没有器件实测、功耗、可制造误差和动态通道闭环实验。
+
+## 4. Multilayer Q-BIC-like Optical Filters with High Throughput Direct-Write Multilayer Lithography
+- Venue: arXiv
+- Published: 2026-01-19
+- Type: transferable
+- Tags: none
+- Score: 0.4786
+- Core insight: 这篇 arXiv 预印本展示了 direct-write multilayer lithography 制备多层 q-BIC-like optical filters，并把三层解耦谐振用于压缩感知和高光谱重构。它对本方向的启发在制造和计算成像：多层 metasurface 可以提供更高维、更可解耦的光谱编码。
+- Problem frame: 单层 metasurface 的光谱设计自由度有限，多层结构可以叠加多个谐振，但传统多层纳米制造步骤多、成本高、通量低、层间对准困难。作者要解决的是如何在 visible/NIR 下快速制备多层 resonant metasurfaces，并让每层谐振波长和 Q factor 可独立调节。
+- First principles: q-BIC-like resonances 提供窄带、可设计的透射/反射滤波响应；多层结构把多个谱响应沿厚度方向叠加。若各层谐振足够解耦，就可以构造低相关性的滤波器集合，用少量测量进行 compressive sensing 和 hyperspectral reconstruction。
+- Mechanism: 全文证据显示，平台基于 antimony precursor 的 direct-write electron-beam lithography，原位分解成 high-index Sb2S3，省去 deposition-etch cycles，每层只有两步。作者实验展示 three-layer devices supporting three resonances，可独立控制 resonance wavelength 和 Q factor；进一步生成 9 和 36 个 filter 的 decorrelated arrays，平均绝对 Pearson correlation coefficients 为 0.11 和 0.21，用于 spectral reconstruction。
+- Boundary advanced: 它推进的是多层 metasurface 制造与 computational imaging 边界，而不是有机电化学或 neuromorphic 器件边界。它的可迁移点是“多层、低相关、可解耦编码”这套思想，可用于未来 OMIEC 可调层与静态光学层的混合集成。
+- Old problem: 老问题是高光谱/计算成像需要大量、低相关、稳定滤波响应，但传统滤波片阵列体积大；单层 metasurface 又常难以同时给出多峰、窄线宽和低相关响应。
+- Why it works: 它有效是因为 direct-write Sb2S3 让每层可以快速成形高折射率图案，多层 q-BIC-like resonances 在光谱上彼此解耦，滤波器集合的相关性降低，从而提升压缩重构的信息效率。
+- True novelty: 真实新意是把高通量 direct-write chalcogenide 工艺用于多层 resonant metasurface，并展示三层/多滤波器阵列的计算成像用途。对本方向的启发是：OMIEC 可重构材料可以作为多层编码栈中的动态层，而不是单独承担所有光学功能。
+- Evidence: 证据等级中高：本地有 arXiv PDF 全文和关键图。可核验证据包括 direct-write EBL、Sb2S3、eliminates deposition-etch cycles、three-layer devices、independent resonance wavelength/Q control、9/36 filters、Pearson correlation 0.11/0.21、compressive sensing/hyperspectral reconstruction。缺口是预印本，且不涉及 OECT/OMIEC 或在线可重构。
+
+## 5. Vector analog computing via on-demand metasurface dispersive polarization transformation
+- Venue: Science Advances
+- Published: 2025-10-15
+- Type: transferable
+- Tags: none
+- Score: 0.7885
+- Core insight: 这篇 Science Advances 论文把 optical analog computing 从强度标量计算推进到 polarization vector computing：单层 metasurface 通过 dispersive Poincare sphere 上的按需偏振变换，让入射偏振向量和输出之间形成可变相关。它是本期 metasurface physical computing 的强相关论文。
+- Problem frame: 传统光学模拟计算多用光强做标量运算，容易受环境扰动影响，而且输入输出相关常由固定结构锁死，难以扩展到多种逻辑和函数。作者要解决的是：能否利用偏振这个向量自由度，让单层 metasurface 同时承担更灵活、更稳健的模拟计算。
+- First principles: 偏振态是二维复向量，可在 Poincare sphere 上表示；metasurface 的各向异性与色散响应可以把入射偏振态映射到目标输出态。若结构设计能按需改变这种向量映射，就能把逻辑门和数学函数操作编码为偏振变换，而不是只依赖强度透过率。
+- Mechanism: 全文证据显示，作者使用 single-layered metasurface 进行 on-demand polarization transformation on dispersive Poincare spheres，构造 incident polarization vectors 与 output signals 的 variable correlations。实验选择 universal logical gates 和 mathematical function operations 作为示例，结果相对目标值具有 minimal errors；关键图 Fig. 1 直接展示 metasurface-empowered vector analog computing 与标量强度计算的差别。
+- Boundary advanced: 它推进的是 metasurface analog computing 的表示空间边界：从强度标量走向偏振向量。它不是 OECT/OMIEC 材料，但为有机可重构超表面指出一个重要方向：低压材料调制不应只改变亮暗，还可以动态改变偏振映射和计算相关性。
+- Old problem: 老问题是光学模拟计算容易被做成固定函数器件，输入和输出相关性一旦制造完成就难改；强度标量还牺牲了光场本来可用的偏振自由度。
+- Why it works: 它有效是因为偏振向量天然携带相干幅度和相位信息，metasurface 可以用亚波长各向异性单元对不同偏振分量施加不同相位/振幅响应。计算因此发生在偏振态空间，而不是只在光强空间做弱表达。
+- True novelty: 真实新意是提出并实验展示单层 metasurface 的 polarization-vector analog computing，并用逻辑门和数学函数验证可编程相关性。对本方向的启发是：OMIEC/OECT 可重构像素未来可以作为动态偏振计算权重，而不是传统调光层。
+- Evidence: 证据等级高：本地取得 Science Advances PDF 全文、摘要和关键图。可核验证据包括 polarization vectors、single-layer metasurface、dispersive Poincare spheres、variable correlations、universal logical gates、mathematical function operations、minimal errors 和 Fig. 1 机制图。限制是目前为静态/结构设计导向，未展示 OMIEC 低压在线重构或学习。
+
+## 6. An optoelectrochemical synapse based on a single-component n-type mixed conductor
+- Venue: Nature Communications
+- Published: 2025-02-13
+- Type: transferable
+- Tags: oect_omiec
+- Score: 0.844
+- Core insight: 这篇 Nature Communications 论文是本期最贴近 OMIEC/OECT 神经形态主线的器件论文：单组分 n-type OMIEC 被做进微米尺度 aqueous electrolyte-gated electrochemical transistor，同时响应光和电刺激，形成多光谱 optoelectrochemical synapse。核心不是普通光电晶体管，而是把光生电荷与电化学掺杂合并为水相可工作的突触器件。
+- Problem frame: OMIEC/OECT 很适合类生物电子，因为离子-电子耦合能直接模拟生物信号；但要做视觉神经形态，需要材料既能稳定混合导电，又能在水相中有效光响应，并支持多级电导、记忆和预处理。过去 n-type OMIEC 光活性平台不足，难覆盖 UV-visible-NIR 多光谱感知。
+- First principles: OMIEC 的电导由离子进入聚合物后调节电子载流子浓度；光刺激产生载流子或改变通道电荷状态，电刺激则通过电解质门控改变掺杂。若同一 n-type mixed conductor 能同时承受水相离子传输和光生电荷过程，就能把视觉输入直接转成可记忆的电导状态。
+- Mechanism: 全文证据显示，器件使用 fluorinated bisisatin-lactone-bithiazole acceptor/polymer channel，位于 micron-scale electrochemical transistor channel，直接在 aqueous electrolyte、ambient conditions 下工作。它对 electrical and optical stimuli 调制电流，模拟 visual nervous system 的 multimodal function；全文讨论 multilevel conductance states、9-bit conductance、UV/visible/NIR transduction、active-matrix array、adaptive sensing、memory 和 pre-processing。
+- Boundary advanced: 它推进的是 OMIEC neuromorphic sensing-computing 边界：从单一离子/电刺激 OECT 推进到多光谱光电化学突触和阵列预处理。它尚未集成 metasurface，但如果与可重构超表面耦合，可让光场调控、传感和突触存储在同一软材料平台上闭合。
+- Old problem: 老问题是光感知、离子门控和突触记忆常分布在不同材料或器件层，导致集成复杂、湿环境兼容性差、视觉信息预处理依赖外部电路。
+- Why it works: 它有效是因为 n-type OMIEC 的极性侧链允许离子进入并调节通道电导，受体骨架又支持光响应；光/电刺激共同写入多级电导状态，使单个晶体管既是传感器又是存储/预处理节点。
+- True novelty: 真实新意是单组分 n-type OMIEC optoelectrochemical synapse 在水相下实现 UV-visible-NIR 多光谱感知、记忆与预处理，并进入 active-matrix array。对 OECT/OMIEC × metasurface 方向，它是最值得深读的材料-器件基座。
+- Evidence: 证据等级高：本地取得 Nature Communications PDF 全文、摘要和关键图。可核验证据包括 n-type OMIEC、aqueous electrolyte-gated transistor、fluorinated bisisatin-lactone-bithiazole acceptor、multispectral visual information、UV/visible/NIR、9-bit conductance、active-matrix array、adaptive sensing/memory/pre-processing。置信缺口是没有 metasurface 耦合，光学前端仍是晶体管/阵列而非亚波长波前调控。
+
+## 7. Toward grouped-reservoir computing: organic neuromorphic vertical transistor with distributed reservoir states for efficient recognition and prediction
+- Venue: Nature Communications
+- Published: 2024-01-25
+- Type: direct
+- Tags: neuromorphic_oect
+- Score: 0.636
+- Core insight: 这篇 Nature Communications 论文用 ultra-short channel organic neuromorphic vertical transistor 构造 distributed reservoir states，并提出 grouped-reservoir computing。它对本方向很有价值：有机垂直晶体管的多物理耦合动态可以提供高维时空状态，而不只是一个迟滞电导元件。
+- Problem frame: Reservoir computing 低训练成本适合时序任务，但硬件 reservoir 往往状态维度不足、时间尺度单一、空间反馈弱。传统浅 reservoir 难以同时处理不同 spatiotemporal tasks。作者要解决的是如何在单器件/紧凑结构中产生足够丰富的空间和时间状态。
+- First principles: 有效 reservoir 需要非线性、短时记忆和高维可分状态。垂直有机晶体管缩短通道、增强反馈，载流子输运、陷阱、界面电荷和器件几何共同形成多变量动力学；把这些动态响应按组读出，就能构造更大的 reservoir state space。
+- Mechanism: 全文证据显示，器件是 ultra-short channel organic neuromorphic vertical transistor，carrier dynamics 由 coupled multivariate physics mechanisms 丰富，vertical architecture 增强 feedback intensity。作者报告 1152 reservoir states，temporal 和 spatial characteristics 的 range ratio 分别达到 2640 和 650；grouped-reservoir computing 在 recognition 和 prediction 任务上实现超过 94% accuracy 和超过 95% prediction correlation。
+- Boundary advanced: 它推进的是 organic neuromorphic physical reservoir 的状态维度边界。它不是 OECT/OMIEC 电解质门控结构，也不含 metasurface；但它说明有机器件的空间/时间分布状态可以成为可计算资源，这与 OMIEC 多时间尺度离子动力学高度相通。
+- Old problem: 老问题是有机神经形态器件经常只展示单点突触权重或简单短时记忆，状态数少、任务泛化弱，难说明为什么硬件 reservoir 比软件特征更有意义。
+- Why it works: 它有效是因为垂直结构强化内部反馈和多物理耦合，输入序列被映射到大量分布式状态；分组 reservoir 让不同时间/空间尺度的状态分别服务不同任务，减少单一浅 reservoir 的容量瓶颈。
+- True novelty: 真实新意是用 organic vertical transistor 产生 1152 个分布式 reservoir states，并提出 grouped-reservoir computing 来同时适配识别和预测。对 OMIEC metasurface 的启发是：可重构像素阵列可以把多时间尺度材料态当作 reservoir，而不是只做静态权重。
+- Evidence: 证据等级高：本地取得 Nature Communications PDF 全文、摘要和关键图。可核验证据包括 ultra-short channel organic neuromorphic vertical transistor、distributed reservoir states、1152 states、temporal/spatial range ratio 2640/650、recognition accuracy >94%、prediction correlation >95%。缺口是非 OMIEC/OECT、非 metasurface，需要谨慎迁移。
+
+## 8. Plasmonic metasurfaces of cellulose nanocrystal matrices with quadrants of aligned gold nanorods for photothermal anti-icing
+- Venue: Nature Communications
+- Published: 2023-12-08
+- Type: transferable
+- Tags: none
+- Score: 0.5572
+- Core insight: 这篇 Nature Communications 论文用 cellulose nanocrystal matrix 定向排列 gold nanorods，形成可见光 plasmonic metasurface 并用于 photothermal anti-icing。它与 OECT/neuromorphic 关系弱，但对软材料/生物基基底上的大面积功能纳米结构制造有迁移价值。
+- Problem frame: CNC 可再生、低毒、各向异性强，适合作为纳米材料取向矩阵；但 drop-casting 容易产生 coffee-ring、取向不均和批次不稳定。作者要解决的是如何用简单涂布过程让 CNC 与 GNR 形成均匀、定向、可功能化的 plasmonic metasurface。
+- First principles: 金纳米棒的等离激元吸收和偏振响应取决于取向；CNC 液晶/自组装可以作为取向模板。干燥过程中 Marangoni flow、self-dewetting 和 evaporation-induced self-assembly 决定颗粒迁移与沉积均匀性；如果两类流动平衡，就可抑制 coffee-ring 并保留定向结构。
+- Mechanism: 全文证据显示，作者调控 MeOH/水/CNC/GNR 墨水，利用 spontaneous rapid self-dewetting 与 evaporation-induced self-assembly 平衡，得到无 coffee-ring 的 homogeneous CNC-GNR film。最终薄膜具有 annular ring patterns 和 plasmonic quadrant hues，GNR 沿 CNC 定向；在可见光照射下，多阵列 CNC-GNR metasurface 能让底部 -8 °C 条件下表面维持约 5-8 °C，展示 anti-/de-icing 潜力。
+- Boundary advanced: 它推进的是软/生物基 plasmonic metasurface 的大面积涂布制造边界，而不是可重构计算边界。对 OMIEC/OECT 的连接在材料工程：未来有机混合导体、离子凝胶或柔性超表面也会遇到取向、咖啡环、均匀性和面积放大的问题。
+- Old problem: 老问题是功能纳米材料在柔性/生物基基底上的有序排列很难通过低成本工艺稳定获得；实验室纳米图案容易漂亮，但大面积涂布后性能不均。
+- Why it works: 它有效是因为把干燥流体力学当成工艺旋钮，而不是只调整材料配方。选择性 MeOH 蒸发诱导的流动、CNC 自组装和 GNR 取向共同形成均匀各向异性光热层。
+- True novelty: 真实新意是用 physicochemical drop-casting route 控制 CNC-GNR 定向，获得均匀 quadrant plasmonic metasurface 并验证光热防冰。对本方向的启发是：软材料超表面必须把溶液加工、取向和功能耦合起来设计。
+- Evidence: 证据等级高：本地取得 Nature Communications PDF 全文、摘要和关键图。可核验证据包括 CNC-GNR、quadrants of aligned gold nanorods、self-dewetting、evaporation-induced self-assembly、coffee-ring suppression、plasmonic photothermal effect、-8 °C 基底上表面约 5-8 °C。缺口是非可重构、非 OECT/OMIEC、非神经形态计算。
+
+## 9. Training large-scale optoelectronic neural networks with dual-neuron optical-artificial learning
+- Venue: Nature Communications
+- Published: 2023-11-04
+- Type: direct
+- Tags: metasurface_computing
+- Score: 0.5452
+- Core insight: 这篇 Nature Communications 论文提出 DANTE，即 dual-neuron optical-artificial learning，用人工神经元近似昂贵的光衍射建模，同时保留光学神经元的物理约束，从而训练大规模 optoelectronic neural networks。它对本方向的关键启发是：物理计算硬件要配套可训练、可扩展的算法代理。
+- Problem frame: Diffractive/ONN 系统能用光传播做并行线性计算，但训练大规模网络时，精确衍射建模的计算和显存成本很高，导致实验系统规模小、任务简单。作者要解决的是如何训练 1.5 亿神经元级别的光电网络，并把训练结果落到物理两层 ONN 中。
+- First principles: 光学层的传播/调制可视作复杂线性变换，但反向传播需要对每个光学神经元模拟衍射。DANTE 用 artificial-neuron layers 近似高成本光衍射计算，在 global artificial-learning 中快速优化，再用 local optical-learning 把参数转回物理光学层；相当于在准确物理模型和可训练代理之间来回校准。
+- Mechanism: 全文证据显示，DANTE 中 optical neurons model optical diffraction，artificial neurons approximate intensive optical-diffraction computations；训练由 iterative global artificial-learning 和 local optical-learning 组成。仿真实验可训练 150 million neurons 的 ONN，在 ImageNet 上达到与 VGG 类模型相当的表现；CIFAR-10 上相对 single-neuron learning 加速约 200 倍、准确率提升约 10%。物理实验构建 two-layer ONN，用于自然图像特征提取和分类提升。
+- Boundary advanced: 它推进的是 optical physical computing 的训练规模边界，而不是材料可重构边界。与 OMIEC/OECT metasurface 的联系在于：未来可调有机超表面若要训练，不能只靠全物理仿真或全黑箱优化，也需要类似 DANTE 的可微代理/局部校准策略。
+- Old problem: 老问题是光学神经网络硬件演示常受训练成本限制，只能处理小任务；硬件越物理真实，训练越贵，最终很难证明大规模 AI 任务价值。
+- Why it works: 它有效是因为把光学传播中最昂贵的部分用轻量人工神经元近似，先在代理模型中做全局学习，再局部更新物理层参数，降低了训练复杂度同时保留硬件可实现性。
+- True novelty: 真实新意是 dual-neuron optical-artificial learning 这套训练范式，而不只是一个新 ONN 结构。对本方向的启发是，OMIEC/metasurface 的材料物理复杂性可以通过算法代理吸收，而不是成为训练不可扩展的理由。
+- Evidence: 证据等级高：本地取得 Nature Communications PDF 全文、摘要和关键图。可核验证据包括 DANTE、optical/artificial neuron layers、iterative global/local learning、150 million neurons、ImageNet、CIFAR-10 约 200 倍加速和约 10% accuracy gain、two-layer physical ONN。缺口是非 OMIEC/OECT，且物理实验规模小于仿真规模。
+
+## 10. Cascaded metasurfaces for high-purity vortex generation
+- Venue: Nature Communications
+- Published: 2023-10-12
+- Type: transferable
+- Tags: none
+- Score: 0.4697
+- Core insight: 这篇 Nature Communications 论文用 cascaded phase-only metasurfaces 高效生成高纯度 Laguerre-Gaussian vortex modes，并用 optical-neural-network-style inverse design 同时优化强度重分布和相位匹配。它是多层 metasurface 光场计算/编码的经典可迁移参考。
+- Problem frame: 高阶 OAM/LG 模式对光通信和量子光学有价值，但单层 metasurface 同时控制强度与相位常要牺牲效率，传统 bulk 光学系统又大而复杂。作者要解决的是在紧凑 metasurface 系统中同时获得高阶、高纯度和较高效率的 vortex generation。
+- First principles: LG 模式不仅需要螺旋相位，还需要正确的径向强度分布。两层 phase-only metasurfaces 可以分工：第一层按 Rayleigh-Sommerfeld propagation 重新分布强度，第二层补足目标相位；反向传播/Adam 优化把两层相位当作可训练参数，类似光学神经网络训练。
+- Mechanism: 全文证据显示，设计以 LG10,200 为例，两片 metasurfaces face-to-back，中间包含 1.1 mm silica substrate 和 0.2 mm air gap；TiO2 nanorods 通过 EBL/RIE 制备。实验在 532 nm CW laser 下测得 p=10 和 l=200 模式，径向纯度 96.71%、方位纯度 85.47%、相对 conversion efficiency 70.48%，并展示 backward reflection suppression/隔离约 17.01 dB。
+- Boundary advanced: 它推进的是 cascaded metasurface 的光场自由度边界：两层相位板通过传播耦合实现近似 complex-field control。它不是可重构或有机材料，但对 neuromorphic physical computing 很重要，因为多层传播本身就是可训练光学网络。
+- Old problem: 老问题是单层超表面对高阶复杂模式的强度和相位控制不够，效率、纯度和紧凑性难以同时满足；bulk OAM 方案又难集成。
+- Why it works: 它有效是因为把 complex-amplitude control 拆成两次 phase-only modulation 加自由空间传播：第一层解决能量重分布，第二层解决相位，优化算法保证两层协同而不是独立设计。
+- True novelty: 真实新意是用 cascaded phase-only metasurfaces 和 ONN 式优化生成 record-order LG modes，并兼顾纯度、效率和反向反射抑制。对本方向的启发是：OMIEC 可调 metasurface 可以优先做成多层可训练传播网络中的动态层。
+- Evidence: 证据等级高：本地取得 Nature Communications PDF 全文、摘要和关键图。可核验证据包括 cascaded phase-only metasurfaces、Rayleigh-Sommerfeld propagation、Adam optimization、LG10,200、p/l purity 96.71%/85.47%、conversion efficiency 70.48%、17.01 dB backward suppression、TiO2 nanorods。缺口是静态器件、非 OECT/OMIEC、非实时学习。
