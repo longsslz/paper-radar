@@ -1,5 +1,35 @@
 [
   {
+    "id": "10.1039-d6mh00793g",
+    "title": "Body-templated printing of a large-area and imperceptible organic sensing interface for skin motion recognition",
+    "headline": "把皮肤当“模具”：三分钟打印一张几乎无感的动作传感网",
+    "venue": "Materials Horizons",
+    "added_at": "2026-07-30T09:39:00Z",
+    "added_date": "2026-07-30",
+    "publication_date": "2026-07-01",
+    "href": "10.1039-d6mh00793g/index.html"
+  },
+  {
+    "id": "10.1126-science.adx4514",
+    "title": "Increasing the dimensionality of transistors with hydrogels",
+    "headline": "不是把薄膜简单做厚，而是让整个 1 mm 水凝胶都能“开—关”",
+    "venue": "Science",
+    "added_at": "2026-07-30T09:35:14Z",
+    "added_date": "2026-07-30",
+    "publication_date": "2025-11-20",
+    "href": "10.1126-science.adx4514/index.html"
+  },
+  {
+    "id": "10.1038-s41467-026-68298-3",
+    "title": "Design framework for programmable three-dimensional woven metamaterials",
+    "headline": "把“编织”变成可计算、可编程的三维超材料",
+    "venue": "Nature Communications",
+    "added_at": "2026-07-29T14:31:14Z",
+    "added_date": "2026-07-29",
+    "publication_date": "2026-01-26",
+    "href": "10.1038-s41467-026-68298-3/index.html"
+  },
+  {
     "id": "10.1038-s41467-023-39850-2",
     "title": "Implant-to-implant wireless networking with metamaterial textiles",
     "headline": "把衣服变成植入物之间的“无源信号高速路”",
