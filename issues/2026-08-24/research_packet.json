@@ -1,0 +1,280 @@
+[
+  {
+    "paper_id": "crossref:10.1038/s44460-026-00102-7",
+    "title": "All-wave computational ultrasonic fingerprint identification with metasurface-driven loop-diffractive neural network",
+    "authors": [
+      "Seokho Lee",
+      "Beomseok Oh",
+      "Woongji Kim",
+      "Junsu Lee",
+      "Wonkyu Moon",
+      "Junsuk Rho"
+    ],
+    "venue": "Nature Sensors",
+    "published_at": "2026-07-31",
+    "source": "crossref",
+    "doi": "10.1038/s44460-026-00102-7",
+    "url": "https://doi.org/10.1038/s44460-026-00102-7",
+    "pdf_url": "https://www.nature.com/articles/s44460-026-00102-7.pdf",
+    "robot_type_tags": [
+      "metasurface_computing"
+    ],
+    "paper_type": "direct",
+    "score": 0.665,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44460-026-00102-7_publisher_fig1.png",
+    "key_figure_caption": "Fig. 1. Publisher-hosted key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44328-026-00112-y",
+    "title": "Opioid sensing at point-of-need",
+    "authors": [
+      "Thinh Q. Bui",
+      "Edward R. Sisco",
+      "Kyle D. Chapkin",
+      "Wenqi Zhu",
+      "Junyeob Song",
+      "Dhruv Forma",
+      "Anthony J. Kearsley",
+      "Henri J. Lezec"
+    ],
+    "venue": "npj Biosensing",
+    "published_at": "2026-07-29",
+    "source": "crossref",
+    "doi": "10.1038/s44328-026-00112-y",
+    "url": "https://doi.org/10.1038/s44328-026-00112-y",
+    "pdf_url": "https://www.nature.com/articles/s44328-026-00112-y.pdf",
+    "robot_type_tags": [
+      "tunable_metasurface"
+    ],
+    "paper_type": "transferable",
+    "score": 0.5425,
+    "abstract": "Abstract The opioid epidemic—headlined by synthetic fentanyl—is a growing international crisis. NIST has been tasked with leading the analytical effort to better understand the evolving illicit drug landscape. We describe initiatives to advance portable mass spectrometry and develop metamaterial-enhanced spectroscopy, integrated with advanced modeling. Together, these programs support a comprehensive strategy that emphasizes measurement science and data standardization as essential tools for combating the growing threat of synthetic opioids.",
+    "key_figure_path": "output/figures/crossref_10_1038_s44328-026-00112-y_caption_p2.png",
+    "key_figure_caption": "Fig. 1 | Mass spectrometry tools for analyzing drug mixtures. a Traditional gas"
+  },
+  {
+    "paper_id": "crossref:10.1038/s41528-026-00619-4",
+    "title": "Knitting RFID yarns towards smart fabrics for motion sensing and identification",
+    "authors": [
+      "Weijia Li",
+      "Fangli Chen",
+      "Lulu Xu",
+      "Rusong Yang",
+      "Zhengzheng Li",
+      "William Whittow",
+      "Simon Hodder",
+      "Terry Tao Ye"
+    ],
+    "venue": "npj Flexible Electronics",
+    "published_at": "2026-07-22",
+    "source": "crossref",
+    "doi": "10.1038/s41528-026-00619-4",
+    "url": "https://doi.org/10.1038/s41528-026-00619-4",
+    "pdf_url": "",
+    "robot_type_tags": [
+      "bio_sensing",
+      "terahertz_microwave"
+    ],
+    "paper_type": "transferable",
+    "score": 0.6825,
+    "abstract": "Abstract Smart textiles integrate fabric comfort and flexibility with electronic functionality, offering transformative potential in healthcare, sports monitoring, and human-machine interfaces. However, most existing wearable systems rely on external circuit boards that compromise comfort, washability, and mechanical robustness. Here, we present a scalable textile-electronics integration strategy based on custom-engineered ID-Yarns ( ~ 500 μm in diameter) that embed semiconductor Radio-Frequency Identification (RFID) chips and antennas and can be seamlessly incorporated into fabrics using standard knitting processes. Using parameterized knitting geometries, we demonstrate two functional fabrics: a stretchable, interference-resistant Sensing-Fabric for precise motion detection, and a stretchable, deformation-insensitive Identification-Fabric (ID-Fabric) for stable passive wireless communication. Both fabrics exhibit strong mechanical endurance, maintaining functionality after more than 10,000 stretching and twisting cycles and over 20 machine washes while preserving consistent wireless performance. This work establishes a passive, yarn-level fiber-chip integration framework and provides a scalable solution toward soft, durable, and high-performance e-textiles through the synergistic design of yarn architecture and knitting-based antenna engineering.",
+    "key_figure_path": "output/figures/crossref_10_1038_s41528-026-00619-4_publisher_fig1.png",
+    "key_figure_caption": "Fig. 1. Publisher-hosted key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44335-026-00081-5",
+    "title": "Delay-based photonic reservoir computing on thin-film lithium niobate with time–wavelength-coupled virtual nodes",
+    "authors": [
+      "Deyang Kong",
+      "Yuxuan Liao",
+      "Zhe Li",
+      "Yongzhuo Li",
+      "Xue Feng",
+      "Yidong Huang"
+    ],
+    "venue": "npj Unconventional Computing",
+    "published_at": "2026-07-21",
+    "source": "crossref",
+    "doi": "10.1038/s44335-026-00081-5",
+    "url": "https://doi.org/10.1038/s44335-026-00081-5",
+    "pdf_url": "https://www.nature.com/articles/s44335-026-00081-5.pdf",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.5725,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44335-026-00081-5_caption_p3.png",
+    "key_figure_caption": "Fig. 1 | Concept and implementation of the pro-"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44328-026-00108-8",
+    "title": "Optomechanical biosensor for cardiomyocyte contractility measurement: from single-cell to network activity",
+    "authors": [
+      "Julien Hurtaud",
+      "Giuseppina Iachetta",
+      "Alessio Boschi",
+      "Francesco Tantussi",
+      "Michele Dipalo",
+      "Francesco De Angelis"
+    ],
+    "venue": "npj Biosensing",
+    "published_at": "2026-06-26",
+    "source": "crossref",
+    "doi": "10.1038/s44328-026-00108-8",
+    "url": "https://doi.org/10.1038/s44328-026-00108-8",
+    "pdf_url": "https://www.nature.com/articles/s44328-026-00108-8.pdf",
+    "robot_type_tags": [
+      "bio_sensing"
+    ],
+    "paper_type": "transferable",
+    "score": 0.5425,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44328-026-00108-8_caption_p2.png",
+    "key_figure_caption": "Fig. 1). Using the ﬂuorescence intensity as an optical readout, the device"
+  },
+  {
+    "paper_id": "crossref:10.1038/s41528-026-00605-w",
+    "title": "Deterministic roll-contact printing of ultradense aligned nanowire arrays for high-performance flexible electronics",
+    "authors": [
+      "Adamos Christou",
+      "Abhishek Singh Dahiya",
+      "Ayoub Zumeit",
+      "Ravinder Dahiya"
+    ],
+    "venue": "npj Flexible Electronics",
+    "published_at": "2026-06-06",
+    "source": "crossref",
+    "doi": "10.1038/s41528-026-00605-w",
+    "url": "https://doi.org/10.1038/s41528-026-00605-w",
+    "pdf_url": "",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.6225,
+    "abstract": "Abstract Semiconducting nanowires (NWs) are versatile building blocks for mechanically compliant electronics, with applications spanning sensing, displays, and neuromorphic computing. However, translating their exceptional one-dimensional transport properties into large-area device arrays requires scalable assembly methods capable of simultaneously controlling NW density, alignment, and material purity - a combination that has remained elusive. Here we report a deterministic contact roll-printing approach that overcomes this barrier, enabling highly aligned ZnO NWs arrays at record densities of up to 14 NWs/µm on flexible substrates. Replacing conventional area contact with a travelling line contact reduces mechanical stress on individual NWs while enabling continuous, large-area transfer. Parametric studies reveal the governing mechanisms of high-fidelity NW assembly, including the roles of applied force and velocity ratio in controlling density, transfer length, alignment uniformity, and suppression of donor-derived contamination. Flexible ultraviolet photodetectors fabricated across a controlled range of NW densities show that performance scales systematically with printed density. Highest-density devices achieve responsivity of up to 4000 A W⁻¹ and retain full functionality after 5000 bending cycles at 10 mm radius and 5000 twisting cycles at ±25°. This work established both a fundamental understanding of roll-contact NW assembly mechanics and a manufacturable, resource-efficient route to high-performance large-area flexible electronics.",
+    "key_figure_path": "output/figures/crossref_10_1038_s41528-026-00605-w_publisher_fig1.png",
+    "key_figure_caption": "Fig. 1. Publisher-hosted key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44460-026-00083-7",
+    "title": "Multi-mode optoelectronic devices enable compact and versatile in-sensor computing",
+    "authors": [
+      "Guangdi Feng",
+      "Bobo Tian"
+    ],
+    "venue": "Nature Sensors",
+    "published_at": "2026-06-05",
+    "source": "crossref",
+    "doi": "10.1038/s44460-026-00083-7",
+    "url": "https://doi.org/10.1038/s44460-026-00083-7",
+    "pdf_url": "https://www.nature.com/articles/s44460-026-00083-7.pdf",
+    "robot_type_tags": [
+      "integrated_system"
+    ],
+    "paper_type": "transferable",
+    "score": 0.6825,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44460-026-00083-7_publisher_fig1.png",
+    "key_figure_caption": "Fig. 1. Publisher-hosted key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44460-025-00007-x",
+    "title": "High-frequency, low-energy organic event-based sensors for closed-loop neurostimulation",
+    "authors": [
+      "Chi-Yuan Yang",
+      "Zifang Zhao",
+      "Han-Yan Wu",
+      "Dace Gao",
+      "Jun-Da Huang",
+      "Junpeng Ji",
+      "Miao Xiong",
+      "Tiefeng Liu",
+      "Padinhare C. Harikesh",
+      "Adam Marks",
+      "Xin-Yi Wang",
+      "Matteo Massetti",
+      "Shan Shao",
+      "Jian Pei",
+      "Iain McCulloch",
+      "Magnus Berggren",
+      "Deyu Tu",
+      "Jennifer Gelinas",
+      "Dion Khodagholy",
+      "Simone Fabiano"
+    ],
+    "venue": "Nature Sensors",
+    "published_at": "2026-01-15",
+    "source": "crossref",
+    "doi": "10.1038/s44460-025-00007-x",
+    "url": "https://doi.org/10.1038/s44460-025-00007-x",
+    "pdf_url": "https://www.nature.com/articles/s44460-025-00007-x.pdf",
+    "robot_type_tags": [
+      "oect_omiec",
+      "neuromorphic_oect",
+      "bio_sensing"
+    ],
+    "paper_type": "direct",
+    "score": 0.7996,
+    "abstract": "Abstract Event-based bioelectronic sensors enable real-time detection and modulation of neural activity. However, conventional silicon interfaces are rigid and energy intensive, whereas organic electrochemical neuron (OECN)-based sensors, though promising, have been limited by slow firing rates, high energy use and scalability challenges. Here we present an OECN-based sensor capable of rapid, energy-efficient neural signal detection for closed-loop neurostimulation. These event-driven sensors respond within ~1 ms and generate voltage pulses up to 1.1 kHz, covering the full bandwidth of mammalian neuronal activity (0.5–1,000 Hz) while consuming only ~40 pJ per spike. Accurate detection of hippocampal interictal epileptiform discharges is demonstrated. Integrated with microelectrodes, these OECN-based sensors enable closed-loop neuromodulation by delivering real-time stimulation to suppress pathological sleep spindle oscillations in vivo. Combining biorealistic operation with ultra-low energy use, OECN-based sensors are good candidates for the next generation of implantable bioelectronics in energy-constrained environments.",
+    "key_figure_path": "output/figures/crossref_10_1038_s44460-025-00007-x_caption_p2.png",
+    "key_figure_caption": "Fig. 1 | OECNs and closed-loop neural stimulation. a, Typical firing frequency"
+  },
+  {
+    "paper_id": "arxiv:2507.09575v2",
+    "title": "Introducing Meta-Fiber into Stacked Intelligent Metasurfaces for MIMO Communications: A Low-Complexity Design with only Two Layers",
+    "authors": [
+      "Hong Niu",
+      "Jiancheng An",
+      "Tuo Wu",
+      "Jiangong Chen",
+      "Yufei Zhao",
+      "Yong Liang Guan",
+      "Marco Di Renzo",
+      "Merouane Debbah",
+      "George K. Karagiannidis",
+      "H. Vincent Poor",
+      "Chau Yuen"
+    ],
+    "venue": "arXiv",
+    "published_at": "2025-07-13",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2507.09575v2",
+    "pdf_url": "https://arxiv.org/pdf/2507.09575v2",
+    "robot_type_tags": [
+      "tunable_metasurface",
+      "terahertz_microwave"
+    ],
+    "paper_type": "direct",
+    "score": 0.6177,
+    "abstract": "Stacked intelligent metasurfaces (SIMs), which integrate multiple programmable metasurface layers, have recently emerged as a promising technology for advanced wave-domain signal processing. SIMs benefit from flexible spatial degree-of-freedom (DoF) while reducing the requirement for costly radio-frequency (RF) chains. However, current state-of-the-art SIM designs face challenges such as complex phase shift optimization and energy attenuation from multiple layers. To address these aspects, we propose incorporating meta-fibers into SIMs, with the aim of reducing the number of layers and enhancing the energy efficiency. First, we introduce a meta-fiber-connected 2-layer SIM that exhibits the same flexible signal processing capabilities as conventional multi-layer structures, and explains the operating principle. Subsequently, we formulate and solve the optimization problem of minimizing the mean square error (MSE) between the SIM channel and the desired channel matrices. Specifically, by designing the phase shifts of the meta-atoms associated with the transmitting-SIM and receiving-SIM, a non-interference system with parallel subchannels is established. In order to reduce the computational complexity, a closed-form expression for each phase shift at each iteration of an alternating optimization (AO) algorithm is proposed. We show that the proposed algorithm is applicable to conventional multi-layer SIMs. The channel capacity bound and computational complexity are analyzed to provide design insights. Finally, numerical results are illustrated, demonstrating that the proposed two-layer SIM with meta-fiber achieves over a 25% improvement in channel capacity while reducing the total number of meta-atoms by 59% as compared with a conventional seven-layer SIM.",
+    "key_figure_path": "output/figures/arxiv_2507_09575v2_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "arxiv:2506.04629v2",
+    "title": "Analog dual classifier via a time-modulated neuromorphic metasurface",
+    "authors": [
+      "M. Mousa",
+      "M. Moghaddaszadeh",
+      "M. Nouh"
+    ],
+    "venue": "arXiv",
+    "published_at": "2025-06-05",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2506.04629v2",
+    "pdf_url": "https://arxiv.org/pdf/2506.04629v2",
+    "robot_type_tags": [
+      "metasurface_computing"
+    ],
+    "paper_type": "transferable",
+    "score": 0.5477,
+    "abstract": "A neuromorphic metasurface embodies mechanical intelligence by realizing physical neural architectures. It exploits guided wave scattering to conduct computations in an analog manner. Through multiple tuned waveguides, the neuromorphic system recognizes the features of an input signal and self-identifies its classification label. The computational input is introduced to the system through mechanical excitations at one edge, generating elastic waves that traverse multiple layers of resonant metasurfaces. These metasurfaces possess a tunable phase akin to trainable parameters in deep learning algorithms. While early efforts have been promising, the well-established constraints on wave propagation in finite media limit such systems to single-task realizations. In this work, we devise a dual classifier neuromorphic metasurface and demonstrate its effectiveness in carrying out two completely independent classification problems that are concurrently carried out in parallel, thus addressing a major bottleneck in physical computing systems. Parallelization is achieved through smart multiplexing of the carrier computational frequency, enabled by prescribed temporal modulations of the embedded waveguides. The presented theory and results pave the way for new paradigms in wave-based computing systems, which have been elusive thus far.",
+    "key_figure_path": "output/figures/arxiv_2506_04629v2_caption_p1.png",
+    "key_figure_caption": "Cached key figure"
+  }
+]
