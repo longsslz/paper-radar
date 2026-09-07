@@ -1,161 +1,161 @@
 # Paper Radar Digest
 
-## 1. All-wave computational ultrasonic fingerprint identification with metasurface-driven loop-diffractive neural network
-- Venue: Nature Sensors
+## 1. Low-loss spatial phase modulation of mm-waves via optically-tunable coupling
+- Venue: Communications Engineering
+- Published: 2026-08-11
+- Type: transferable
+- Tags: terahertz_microwave
+- Score: 0.5425
+- Core insight: 这篇 Communications Engineering 论文把毫米波/太赫兹可调相位的问题从“移动谐振频率”改写为“调控谐振耦合强度”：用光选择性激活硅基谐振超表面，在 6 mm 波长下实现低损耗二进制空间相位调制，并展示聚焦、波束转向、多播和轨道角动量模式生成。
+- Problem frame: 动态超表面通常为了改变反射相位而推动谐振频率漂移，这会把调制深度、插入损耗和工作带宽绑在一起；对感传算一体化或物理前端计算而言，损耗会直接吃掉后端可用信噪比。
+- First principles: 相位调制本质上来自入射场与结构本征模之间的幅相耦合。若只改变耦合强度而不是把谐振点整体扫过工作频率，就有机会在固定载频附近切换相位状态，同时避免强吸收或大失配。
+- Mechanism: 作者使用硅基谐振单元并通过空间选择性光激发改变局域载流子分布，从而改变单元与毫米波场的耦合强度；多个像素组合为可编程相位图案后，可产生全息聚焦、扫描、多播和 OAM 波前。
+- Boundary advanced: 它先进在低损耗、空间可编程和高频可扩展性，而不是在 OECT/OMIEC 材料本身。对本方向的价值是给“柔性/电化学可调材料如何参与高频波前计算”提供设计参照，但论文证据目前不支持把它称为有机电化学超表面。
+- Old problem: 老问题是主动毫米波/THz 超表面常用电控、热控或强谐振漂移来换取相位可调，系统复杂或损耗较高，难以作为高效前端计算层。
+- Why it works: 光激发提供无接触、空间选择性的调制入口；耦合强度调控让相位切换绕开大幅频移带来的吸收惩罚，因此在固定 6 mm 工作波长下仍可编码复杂波前。
+- True novelty: 真正新意是把“低损耗二进制相位状态”建立在 optically tunable coupling 上，并用多个波前任务验证其可编程性；对 OECT/OMIEC 方向属于高频可重构超表面的机制参考。
+- Evidence: 证据来自官方 Nature 页面摘要、出版信息和本地 publisher Fig. 1。可确认 6 mm 工作波长、光激活硅基谐振超表面、聚焦/波束转向/多播/OAM 演示；本地没有解析到 PDF 全文，细节性能边界需以后用全文复核。
+
+## 2. Two-dimensional clay channels for tunable nanofluidic memristor
+- Venue: Communications Materials
 - Published: 2026-07-31
 - Type: direct
-- Tags: metasurface_computing
-- Score: 0.665
-- Core insight: 这篇 Nature Sensors 文章把超声指纹识别做成“波在硬件中先计算”的问题：metasurface-driven loop-diffractive neural network 在声场传播过程中完成空间解码，目标是用物理波计算替代存储模板后的数字比对。[官方页面明确] 对 OECT/OMIEC × metasurface 方向，它不是有机电化学器件，但很接近“传感前端即计算单元”的 metasurface physical computing 范式。
-- Problem frame: 传统生物识别依赖采集、存储模板、数字特征提取和后端分类，带来隐私泄露、能耗、延迟和系统复杂度。作者处理的问题是：能否让输入指纹调制的超声波通过已训练的 metasurface/DNN 结构后，直接在检测平面形成可判别的注册/非注册能量分布。
-- First principles: 指纹区域改变超声边界条件和散射场；可设计的声学超表面等价于一个空间传播算子，能把输入波场投影到预设输出通道。若训练目标把注册区域能量集中到一个检测区、非注册区域集中到另一区，传播本身就完成了分类前处理，数字端只需读出能量比较。
-- Mechanism: 官方 Nature Sensors 页面和索引将其概括为 in-sensor spatial decoding、single-step physical computation、fingerprint recognition、removing stored templates 和 wave-based biometric authentication；论文题名和 Fig. 1 表明核心器件为 metasurface-driven loop-diffractive neural network。补充视频说明 192 个验证数据集的实验读出流程：显示输入指纹区域、检测面声场以及注册/非注册区域能量柱状图。
-- Boundary advanced: 先进性在于把“传感-特征提取-分类”的链路压缩到波传播和检测区域读出中，且公开有实验数据和 metasurface 设计文件。边界是本地没有解析到正文/PDF，当前依据为官方 Nature 页面、Crossref 元数据、publisher Fig. 1 和 Zenodo 数据说明；不能细化其训练损失、声学材料参数或完整准确率曲线。
-- Old problem: 以往超表面/DNN 物理计算常停留在仿真或静态图像分类，生物识别还常需要保存模板并在数字域做匹配。声学/超声场景中，样品接触、波场噪声、制造误差和检测区域定义都会让端到端物理分类变难。
-- Why it works: 波动系统天然执行并行线性传播，超表面单元提供可训练的相位/幅度/开关状态调制；loop-diffractive 结构增加传播路径和有效自由度，使输入指纹散射场在目标检测区形成能量分离。数字端不需要重建完整图像，只比较少数空间积分信号。
-- True novelty: 真实新意是把 metasurface wave computing 放进可验证的超声指纹认证任务，并用物理读出逻辑减少模板存储需求。对本方向的启发是：OECT/OMIEC 或电化学可调 metasurface 也应从“可调光谱/波束”推进到“输入物理信号直接映射到任务输出”的系统演示。
-- Evidence: 证据等级：官方页面/图像级。本地保存 publisher Fig. 1：`output/figures/crossref_10_1038_s44460-026-00102-7_publisher_fig1.png`；官方页面显示 2026-07-31 Nature Sensors Article，Nature 索引概括为 in-sensor spatial decoding、single-step physical computation 和 wave-based biometric authentication；Zenodo 数据页说明包含实验数据表和 learned metasurface STL。缺口：本地 `fulltext` 与 `abstract` 均为空，正文细节未能本地解析。
+- Tags: neuromorphic_oect
+- Score: 0.7025
+- Core insight: 这篇 Communications Materials 论文用二维蛭石纳米流体通道实现可调离子忆阻：不改变电解质、表面化学或器件结构，仅通过电极构型和离子输运路径切换 crossing-1/crossing-2 记忆回线，并展示突触增强/抑制和可编程保持。
+- Problem frame: 离子忆阻器适合模拟生物记忆，但很多体系的记忆形态依赖材料改性或不可逆结构变化，难以把“机制可解释”和“器件可重构”同时保留下来。
+- First principles: 受限离子通道中，离子迁移、表面电荷和电场历史共同决定瞬时电阻；当几何非对称性改变局域电场和浓度极化，I-V 回线就会表现出路径依赖的忆阻响应。
+- Mechanism: 重堆叠蛭石膜形成二维纳米流体通道。作者比较面内/面外构型以及从厘米到微米、纳米尺度的通道长度，通过改变电极连接方式重分配离子通路，实现极性相关的记忆回线切换。
+- Boundary advanced: 它是纳米流体/离子忆阻器，不是 OMIEC 电子-离子混合导体；先进性在可重构离子通道和神经形态功能，而不是电磁超表面。将其映射到 OECT 时，需要重新验证有机半导体中的离子注入、体积电容和电荷迁移是否可产生同样可控的回线切换。
+- Old problem: 传统忆阻调控常依赖材料成分、缺陷迁移或电化学不可逆变化，导致器件间差异大、可调模式有限。
+- Why it works: 二维受限通道放大表面电荷与浓度极化效应；电极构型改变主要电压降和离子路径，因此能够在同一材料结构中切换记忆回线。
+- True novelty: 新意不是单纯做了离子忆阻，而是用可解释的通道路径重构来切换记忆回线，并把尺度从宏观膜推进到纳米级通道，同时保留神经形态功能演示。
+- Evidence: 证据来自官方 Communications Materials 摘要和本地 publisher Fig. 1。摘要明确给出面内/面外通道、厘米到微米/纳米通道长度、极性相关 crossing 回线和突触功能；本地未解析 PDF 全文，因此数值性能和循环稳定性未在本轮展开。
 
-## 2. Opioid sensing at point-of-need
-- Venue: npj Biosensing
-- Published: 2026-07-29
-- Type: transferable
-- Tags: tunable_metasurface
-- Score: 0.5425
-- Core insight: 这篇 npj Biosensing Perspective 把阿片类现场检测拆成便携质谱、metamaterial-enhanced spectroscopy 和标准化数据工作流三件事。它不是 OECT/OMIEC 论文，也不是神经形态计算论文；价值在于说明复杂化学样品的 point-of-need sensing 需要把前端增强、仪器小型化和模型/数据库一起设计。
-- Problem frame: 合成芬太尼、nitazenes 等非法药物变化快、样品复杂，传统实验室色谱/质谱流程慢且依赖中心化设施；现场方法又常在灵敏度、特异性、重复性和低操作复杂度之间冲突。作者关注的是 NIST 如何组织测量科学与标准化数据来支持可迁移的现场检测。
-- First principles: 化学检测的第一性约束是信号强度、分子选择性、样品基质干扰和校准可重复性。Metamaterial/metasurface 可通过局域电磁场增强 Raman/IR 等谱信号，便携质谱提供分子量/碎片证据，数据模型和标准物质则决定跨设备、跨批次结果能否比较。
-- Mechanism: 本地全文明确写到 NIST 推进 portable mass spectrometry、metamaterial-enhanced spectroscopy 和 advanced modeling；文中讨论 SERS/EC-SERS、工程化纳米结构、metamaterials 对幅度/相位/偏振/方向/谱的调控，以及现场检测对低成本、高特异性和低复杂度的要求。Fig. 1 聚焦 drug mixtures 的质谱分析工具。
-- Boundary advanced: 先进性是把单个增强传感器放回国家计量/标准化体系中，而不是只追求一个更高增强因子。边界很明显：这是一篇 Perspective，目标是 opioid/drug sensing；没有 OECT、OMIEC、可重构超表面硬件闭环，也没有神经形态物理计算实验。
-- Old problem: 老问题是纳米增强光谱或便携检测常能在干净样品中表现很好，但真实违禁药样品成分复杂、浓度跨度大、批间差异强，缺少统一数据标准会使模型和仪器很难跨场景复用。
-- Why it works: Metamaterial-enhanced spectroscopy 通过局域场增强提高弱分子振动信号，便携质谱提供互补的分子识别维度；当这些硬件输出被标准化数据和模型组织起来，现场检测就能从单次读数走向可比对、可追踪的测量流程。
-- True novelty: 对本方向的真实启发不是 opioid 应用本身，而是“感知硬件 + 增强结构 + 数据标准 + 模型”的共同设计。若未来 OECT/OMIEC metasurface 做化学/生物感知计算，也需要类似地证明复杂样品、校准、数据库和模型迁移，而非只报告单一 analyte 响应。
-- Evidence: 证据等级：本地 PDF/fulltext 级。本地 `fulltext_len=53093`，保存 Fig. 1：`output/figures/crossref_10_1038_s44328-026-00112-y_caption_p2.png`；全文明确包含 portable mass spectrometry、metamaterial-enhanced spectroscopy、advanced modeling、SERS/EC-SERS、drug mixtures 和 NIST measurement science。缺口：文章为 Perspective，缺少新器件性能表征。
-
-## 3. Knitting RFID yarns towards smart fabrics for motion sensing and identification
+## 3. Ultrathin multi-gate organic electrochemical transistors for insertable multianalyte biochemical sensing
 - Venue: npj Flexible Electronics
-- Published: 2026-07-22
-- Type: transferable
-- Tags: bio_sensing, terahertz_microwave
-- Score: 0.6825
-- Core insight: 这篇 npj Flexible Electronics 文章把 RFID 芯片和天线封装进约 500 微米直径的 ID-Yarn，并通过针织几何实现可拉伸 motion sensing fabric 与 deformation-insensitive identification fabric。它不是 OECT/metasurface，但对柔性、无源、可洗的感知系统集成很有参考价值。
-- Problem frame: 智能织物常依赖外挂电路板或贴片模块，影响舒适性、可洗性、机械稳健性和大面积制造。作者要解决的是：如何把无线识别和运动检测功能嵌入纱线/织物层级，而不是把电子系统附着在织物表面。
-- First principles: RFID 织物的关键不是单一芯片性能，而是天线几何、电磁耦合、机械应变和织物结构耦合。针织路径决定导电/天线结构在拉伸、扭转、洗涤后的形变模式；若把芯片-天线做成纱线级单元，就能用传统纺织工艺扩展到大面积。
-- Mechanism: 官方摘要说明 ID-Yarns 嵌入 RFID 芯片和天线，可用标准 knitting process 整合进织物；作者展示两类功能织物：interference-resistant Sensing-Fabric 用于精确运动检测，deformation-insensitive ID-Fabric 用于稳定无源无线通信。摘要还报告经过超过 10,000 次拉伸/扭转循环和 20 次以上机洗后仍保持功能。
-- Boundary advanced: 先进性在于 yarn-level fiber-chip integration 与 knitting-based antenna engineering 的系统实现。边界是本地没有解析到 PDF/fulltext，只有官方摘要和 publisher Fig. 1；论文主题是 RFID 智能织物，不涉及 OMIEC 离子-电子耦合、OECT 放大或神经形态物理计算。
-- Old problem: 老问题是柔性/可穿戴传感器常在材料层面可拉伸，但系统层面仍依赖刚性板、外接电源或不可洗封装；运动导致天线失配、信号漂移和识别不稳定。
-- Why it works: 把电子功能移到纱线尺度后，织物结构本身承担应变释放和天线形状管理；参数化针织几何让 sensing fabric 对运动敏感，而 ID fabric 对形变尽量不敏感，因此可在同一制造范式下实现两种电磁功能。
-- True novelty: 真实新意是把无线芯片-天线系统嵌入纺织工艺，并区分“要感知形变”和“要抵抗形变”的两类织物设计。对本方向的启发是，柔性 OECT/OMIEC 感知阵列若要走向穿戴系统，也需要类似的系统级封装、耐洗和机械-电学协同设计。
-- Evidence: 证据等级：摘要/官方图级。本地保存 Fig. 1：`output/figures/crossref_10_1038_s41528-026-00619-4_publisher_fig1.png`；摘要明确给出 ID-Yarns 约 500 μm、RFID chips and antennas、Sensing-Fabric、ID-Fabric、10,000 次拉伸/扭转和 20 次以上机洗。缺口：无本地全文，无法核查具体天线参数和识别误差分布。
+- Published: 2026-07-28
+- Type: direct
+- Tags: oect_omiec, bio_sensing
+- Score: 0.73
+- Core insight: 这篇 npj Flexible Electronics 论文把多分析物识别压缩进一个超薄多栅 OECT：在 4 μm parylene 基底上，用两个独立金栅分别功能化不同适配体，使同一 OECT 通道通过栅端结合事件读出两种目标并放大为沟道电流变化。
+- Problem frame: 柔性/植入式生化传感常在单分析物、高柔顺性和系统复杂度之间取舍；增加多路检测通常意味着更多通道、更多布线和更硬的封装。
+- First principles: OECT 的高跨导来自电解质离子调控 OMIEC 沟道掺杂。若多个栅电极在空间上独立功能化，目标分子结合可在不同栅端调制局域电势，再由同一沟道放大输出。
+- Mechanism: 器件采用超薄 parylene 支撑和双金栅结构，每个栅修饰特异适配体；靶标结合发生在栅端，被转换为 OECT 沟道电流调制。作者还把器件封装成胶囊/药丸形插入结构，并在猪小肠 ex vivo 环境验证可工作。
+- Boundary advanced: 这是一项多分析物 OECT 生化传感工作，尚未进入超表面或物理神经网络层面；它的先进性在柔顺封装、多栅复用和 ex vivo 插入验证。用于本方向时，应把它看作 OMIEC 多输入前端，而不是完整 sensing-computing metasurface。
+- Old problem: 旧方案通常为每个分析物配置独立传感单元，或者依赖刚性基底，导致体内贴合和小型化困难。
+- Why it works: 多栅结构把分子选择性放在栅端，OECT 沟道负责高增益放大；4 μm 级柔性基底降低机械失配，药丸式结构提供插入场景的系统证明。
+- True novelty: 真正新意是双适配体栅端复用同一 OECT 沟道并进入 insertable ex vivo 演示，证明 OECT 不只是单通道放大器，也可以成为多输入生化接口。
+- Evidence: 证据来自官方 npj Flexible Electronics 页面摘要和本地 publisher Fig. 1。可确认 4 μm parylene、两个独立金栅、适配体功能化、两分析物复用、猪小肠 ex vivo；本地包无全文，具体目标分子、响应曲线和抗干扰数据需后续全文复核。
 
-## 4. Delay-based photonic reservoir computing on thin-film lithium niobate with time–wavelength-coupled virtual nodes
+## 4. Fractional-order systems for neuromorphic computing: software and hardware opportunities and challenges
 - Venue: npj Unconventional Computing
-- Published: 2026-07-21
+- Published: 2026-06-01
 - Type: direct
 - Tags: neuromorphic_oect
-- Score: 0.5725
-- Core insight: 这篇 npj Unconventional Computing 文章提出基于薄膜铌酸锂的 delay-based photonic reservoir computing：用时间-波长耦合虚拟节点同时利用基频和二次谐波，提升 reservoir 维度并降低时间序列预测误差。它是 photonic physical computing 论文，和 OECT/OMIEC 的共同点在于用物理动力学承担计算。
-- Problem frame: 现有光子 reservoir computing 在可扩展性、非线性和集成度之间受限：延迟环结构可产生时间虚拟节点，但非线性和维度不足会限制复杂时序任务。作者要问的是，TFLN 平台能否把高速调制、微环、PPLN 二次谐波和探测集成为更高维的片上 reservoir。
-- First principles: Reservoir computing 依赖固定非线性高维动力系统把输入时序展开到可线性读出的状态空间。薄膜铌酸锂提供高速电光调制和强二阶非线性；基频与二次谐波同时传播时，相当于在时间节点之外再增加波长/频率维度，提高状态可分性。
-- Mechanism: 全文说明架构兼容 TFLN 集成，组合 high-speed modulators、cascaded microring resonators、periodically poled lithium niobate waveguides 和 photodetectors；利用 fundamental 与 second-harmonic components 同时构造 time-wavelength-coupled virtual nodes。作者在 Santa Fe chaotic dataset 与 NARMA-10 上评估，报告 NMSE 约 2.6e-3 和 3.9e-3，并称较单组件配置误差最多降低约一个数量级。
-- Boundary advanced: 先进性在于把非线性频率转换引入集成光 reservoir 的节点维度设计，而不是只增加延迟节点数量。边界是目前为 numerical investigation，尚非实物 OECT/OMIEC/超表面系统；任务是时序预测，不是闭环传感或生物接口。
-- Old problem: 老问题是光 reservoir 往往需要长延迟线或大量离散器件来获得足够维度，导致集成困难；非线性不足时，复杂时序任务只能依赖后端数字处理。
-- Why it works: TFLN 的电光和二阶非线性把同一输入复制到基频/二次谐波两个相关但不同的动力通道，微环与延迟反馈提供记忆，线性 readout 再从高维状态中提取预测结果。物理系统负责展开，训练只在读出层进行。
-- True novelty: 真实新意是 time-wavelength-coupled virtual nodes 的 reservoir 架构。对 OECT/OMIEC 方向的启发是：离子动力学、光学谐振或可调超表面也可通过“多物理维度耦合”增加计算状态，而不只是堆叠更多像素或通道。
-- Evidence: 证据等级：本地 PDF/fulltext 级。本地 `fulltext_len=59258`，保存 Fig. 1：`output/figures/crossref_10_1038_s44335-026-00081-5_caption_p3.png`；全文包含 TFLN、PPLN、microring resonators、fundamental/second-harmonic components、Santa Fe、NARMA-10、NMSE 2.6e-3/3.9e-3 和误差降低约一数量级。缺口：论文为数值研究，缺少实验芯片验证。
+- Score: 0.795
+- Core insight: 这篇 npj Unconventional Computing 论文把分数阶动力学引入 reservoir computing，把分数阶阶数 alpha 作为连续可调控制参数，用来重塑记忆容量、主动信息存储和信息传递之间的权衡，并在 spoken digit、cart-pole 和 diabetes prediction 上评估。
+- Problem frame: 储备池计算需要既保留过去输入又对新输入敏感，但传统整数阶神经元/节点通常把记忆时间常数固化在器件或网络参数里，缺少一个物理上可解释的连续调节旋钮。
+- First principles: 分数阶系统具有尺度自由记忆和非马尔可夫动力学，能够表示长时程依赖。储备池的计算能力来自高维瞬态轨迹；改变 alpha 就是在改变状态变量对历史输入的衰减核。
+- Mechanism: 作者扩展 RC 框架为分数阶神经元/储备池，理论分析 alpha 对信息处理的影响，并给出软件与硬件实现路径；不同任务中 alpha 改变记忆保持和新输入敏感性的平衡。
+- Boundary advanced: 它是通用神经形态计算理论/平台论文，未直接使用 OECT 或超表面硬件。对 OECT 方向的价值在于 OECT 的离子迁移和掺杂动力学天然可能表现长记忆核，但必须用具体器件拟合 alpha 后才能声称物理等价。
+- Old problem: 旧的 RC 优化常集中在谱半径、连接权重和泄漏率，物理器件端的记忆核设计不够统一。
+- Why it works: 分数阶动力学让每个节点的当前状态显式依赖一段历史，从而给储备池提供可调的长期记忆；alpha 的变化可以把系统推向更偏记忆保持或更偏即时响应的区域。
+- True novelty: 新意在于把 alpha 提升为储备池动态的核心控制变量，并用信息存储/传递指标解释性能差异，而不是只报告任务准确率。
+- Evidence: 证据来自官方摘要和本地 publisher Fig. 1。可确认分数阶 RC、alpha 调节、三个 benchmark 和软硬件实现讨论；本地无 PDF 全文，因此硬件实现细节和具体数值表未展开。
 
-## 5. Optomechanical biosensor for cardiomyocyte contractility measurement: from single-cell to network activity
+## 5. Organic electrochemical transistors for metabolite sensing across the transition from in vitro to in vivo
 - Venue: npj Biosensing
-- Published: 2026-06-26
+- Published: 2026-05-22
 - Type: transferable
-- Tags: bio_sensing
-- Score: 0.5425
-- Core insight: 这篇 npj Biosensing 文章用带 PDMS 微膜的氮化硅膜把 hiPSC-CM 心肌细胞收缩转成光学读出，实现从单细胞到网络活动的实时 contractility measurement。它不是 OECT/metasurface，但提供了 bio-sensing 中“机械-光学转导 + 多点并行读出”的系统范例。
-- Problem frame: 心肌药筛和毒性测试需要高通量、无标记、实时地量化收缩频率、持续时间、同步性、波传播和力学强度。传统方法要么空间分辨不足，要么难以同时覆盖单细胞和网络尺度，要么对细胞培养造成干扰。
-- First principles: 心肌细胞收缩产生局部力和位移；柔性微膜把这种机械扰动转为膜形变，膜下荧光染料密度变化再把形变转为光信号。通过阵列化微膜，可在不接触电极或侵入细胞层的情况下获得多点机械活动。
-- Mechanism: 全文说明器件为 silicon nitride membrane，上面图案化约 30 μm PDMS micromembranes；每个微膜作为 mechanical sensor，把 cell beating 转为 optical signal，读出来自与细胞培养隔离腔体中荧光染料密度的局部变化。平台可实时测量 beating frequency、contraction duration、synchronicity 和 wave propagation velocity，并用 isoprenaline/blebbistatin 做药理验证。
-- Boundary advanced: 先进性在于把细胞网络收缩映射成并行、非侵入、光学可读的机械信号，并同时覆盖单细胞/网络指标。边界是它没有神经形态计算、没有 OMIEC/OECT 放大，也没有可重构超表面；它更像 bio-sensing readout architecture。
-- Old problem: 老问题是心肌收缩测量常在高通量、空间分辨、非侵入性和力学估计之间取舍，且很多平台只能给出平均活动，难以解析网络传播和局部异质性。
-- Why it works: PDMS 微膜把细胞收缩的微小机械位移集中到可测形变；荧光密度变化提供隔离的光学读出，避免电极接触和染料进入细胞层。阵列化后，每个微膜都是一个局部传感像素，可重构细胞网络活动时空图。
-- True novelty: 真实新意是面向 hiPSC-CM 的 optomechanical pixel array，不是新材料本身。对 OECT/OMIEC 感知阵列的启发是：生物界面信号可先经机械/光学结构调制，再进入电子/计算层；多模态 transduction 可能比单纯追求 OECT 跨导更稳健。
-- Evidence: 证据等级：本地 PDF/fulltext 级。本地 `fulltext_len=42064`，保存 Fig. 1：`output/figures/crossref_10_1038_s44328-026-00108-8_caption_p2.png`；全文明确包含 hiPSC-CMs、silicon nitride membrane、PDMS micromembranes 约 30 μm、fluorescence dye density、real-time frequency/duration/synchronicity/wave propagation velocity、isoprenaline 和 blebbistatin。缺口：与 OECT/metasurface 仅为生物传感系统类比。
+- Tags: oect_omiec
+- Score: 0.6675
+- Core insight: 这篇 npj Biosensing 综述系统梳理 OECT 代谢物传感从体外走向体内的关键问题：OMIEC 沟道的离子-电子耦合给弱生化信号提供高增益，但真正进入活体需要同时解决选择性、漂移、污染、组织界面和长期稳定性。
+- Problem frame: 代谢物如 glucose、lactate、dopamine、uric acid 是连续健康监测的核心对象，但传统电化学电极在低浓度、复杂体液和植入环境中容易受噪声、污染和界面失稳限制。
+- First principles: OECT 是三端器件，栅压驱动离子进入或离开 OMIEC 沟道，改变体相掺杂和沟道电导；跨导与迁移率、体积电容、沟道几何和阈值共同决定放大能力。
+- Mechanism: 综述从 OECT 结构、耗尽/累积模式、极化/非极化栅、电路模型、跨导、响应时间、稳定性等参数出发，讨论不同代谢物检测策略，并把体内应用的瓶颈归结为生物污染、侵入性和组织-器件界面。
+- Boundary advanced: 它是综述，不提供新的器件实验；但比摘要级综述更有价值的是官方页面可见正文给出了 OECT 的等效电路、栅电容/沟道电容匹配、响应时间与几何关系等基础框架。不能把它当作可重构超表面证据。
+- Old problem: 旧问题是许多 OECT 传感论文停留在体外缓冲液和单指标性能，缺少面向体内应用的跨材料、结构和界面比较。
+- Why it works: OECT 将栅端生化事件放大为沟道电流变化，OMIEC 的体积电容提供高信号增益；但同一离子渗透机制也带来响应速度、漂移和疲劳问题。
+- True novelty: 本文的新意在于围绕 metabolite sensing 和 in vitro-to-in vivo transition 重组 OECT 文献，而不是泛泛综述所有生物传感器；它把材料、栅功能化、架构和体内障碍放在同一评价框架。
+- Evidence: 证据来自官方 npj Biosensing 页面摘要、可见正文和本地 publisher Fig. 1。可确认 OECT 原理、OMIEC 离子-电子耦合、代谢物类型、体内挑战；本轮没有本地 PDF 解析，引用和表格细节未逐项核验。
 
-## 6. Deterministic roll-contact printing of ultradense aligned nanowire arrays for high-performance flexible electronics
-- Venue: npj Flexible Electronics
-- Published: 2026-06-06
+## 6. HiAER-spike software-hardware reconfigurable platform for event-driven neuromorphic computing at scale
+- Venue: npj Unconventional Computing
+- Published: 2026-05-04
 - Type: direct
 - Tags: neuromorphic_oect
-- Score: 0.6225
-- Core insight: 这篇 npj Flexible Electronics 文章解决柔性纳米线阵列的可制造性：用 deterministic roll-contact printing 在柔性基底上形成超高密度、取向一致的 ZnO nanowire arrays，并展示高响应 UV photodetector。它不是 OECT/OMIEC，但对柔性高密度器件阵列制造有迁移价值。
-- Problem frame: 一维半导体纳米线适合柔性传感、显示和神经形态器件，但大面积阵列通常难以同时控制密度、排列、材料纯度和低损伤转移。作者要解决的是把纳米线优异的单体输运性质变成可规模化的阵列器件。
-- First principles: 阵列性能由单根纳米线迁移/光响应和阵列几何共同决定；如果转移过程造成断裂、污染或随机取向，器件一致性会崩溃。滚动线接触比面积接触更能降低局部机械应力，并通过力和速度比控制纳米线剥离、转移长度和排列密度。
-- Mechanism: 摘要说明 roll-contact printing 通过 travelling line contact 替代 conventional area contact，减少单根 NW 机械应力并支持连续大面积转移；ZnO NW 阵列密度最高达 14 NWs/μm。UV photodetectors 的性能随密度系统变化，最高密度器件 responsivity up to 4000 A W^-1，并在 10 mm 半径 5000 次弯折和 ±25° 5000 次扭转后保持功能。
-- Boundary advanced: 先进性在于给高密度柔性纳米线阵列提供可参数化的制造窗口。边界是本地无全文，只有摘要和 publisher Fig. 1；材料是 ZnO 纳米线，不是有机混合导体；器件是 UV 光电探测，不是 OECT 或超表面物理计算。
-- Old problem: 老问题是柔性纳米线器件常在小面积样品上证明高性能，但转移到大面积阵列时密度、对齐和污染不可控，弯折/扭转载荷下可靠性也不足。
-- Why it works: 线接触滚印把接触区域限制在移动前沿，降低剪切和压缩损伤；调节力和速度比可让纳米线有序脱附并定向沉积。更高且均匀的密度提高光吸收和载流通道数量，从而提升光电响应。
-- True novelty: 真实新意是制造方法和参数机制，而非某个新传感任务。对 OECT/OMIEC 阵列的启发是：如果要做高密度柔性感知/计算阵列，转印、排列、污染和疲劳可靠性必须和材料设计同等重要。
-- Evidence: 证据等级：摘要/官方图级。本地保存 Fig. 1：`output/figures/crossref_10_1038_s41528-026-00605-w_publisher_fig1.png`；摘要给出 ZnO NWs、14 NWs/μm、4000 A W^-1、5000 bending cycles、5000 twisting cycles、10 mm radius、±25° 等关键指标。缺口：无本地全文，不能审查工艺窗口和统计分布。
+- Score: 0.7025
+- Core insight: 这篇 npj Unconventional Computing 论文展示 HiAER-Spike：一个软件-硬件协同、可重构、事件驱动的神经形态计算平台，可执行最高 1.6 亿神经元和 400 亿突触规模的 SNN，并通过分层 address-event routing 支持稀疏连接和稀疏活动。
+- Problem frame: 神经形态硬件常在规模、可编程性、路由复杂度和用户可用性之间冲突；大规模 SNN 若缺少高层软件接口和事件路由，难以从实验平台变成可复用计算基础设施。
+- First principles: SNN 的能效来自事件稀疏性：只有 spike 事件需要被通信和处理。若硬件路由层能够按地址事件分层分发，就能避免密集矩阵计算的带宽和存储浪费。
+- Mechanism: 系统由硬件和软件栈共同设计，采用 hierarchical address-event routing，支持运行时并行处理、内存高效网络存储和低延迟推理；Python 接口屏蔽底层硬件细节，示例覆盖 CIFAR-10、DVS gesture、MNIST 和 Pong。
+- Boundary advanced: 它不是材料级 OECT/OMIEC 器件，也不是超表面；先进性在系统规模、事件路由和软硬件可重构。对本研究方向的作用是提供 neuromorphic backend/benchmark 参照，而不是直接证明有机物理计算。
+- Old problem: 旧平台往往需要用户理解硬件映射细节，或只能运行较小网络，难以支撑复杂传感前端接入后的端到端推理。
+- Why it works: 把稀疏活动作为一等公民，路由、存储和执行都围绕 spike 事件优化；Python 层降低建模到部署的摩擦，使平台可被更广泛社区使用。
+- True novelty: 新意在于把大规模可重构事件驱动硬件和可用软件接口打包成平台，并把规模指标推进到 mouse-brain 量级附近，同时保留多任务演示。
+- Evidence: 证据来自官方摘要和本地 publisher Fig. 1。摘要确认 1.6 亿神经元、400 亿突触、HiAER 路由、Python 接口和多 benchmark；本地无 PDF 全文，功耗、延迟和映射限制未在本轮核验。
 
-## 7. Multi-mode optoelectronic devices enable compact and versatile in-sensor computing
+## 7. Self-reconfigurable polarization perception in dual-anisotropy heterostructures for high-dimensional in-sensor computing
 - Venue: Nature Sensors
-- Published: 2026-06-05
+- Published: 2026-04-14
 - Type: transferable
 - Tags: integrated_system
-- Score: 0.6825
-- Core insight: 这篇 Nature Sensors News & Views 解读 multi-responsive retinomorphic sensor：同一个两端器件可在 linear sensing、optoelectronic synaptic plasticity 和 light-induced neuronal spiking 之间动态重构。它不是原始研究论文，但直接指向 compact, versatile in-sensor computing 的器件功能分层。
-- Problem frame: 视觉传感-计算通常把光探测、突触记忆和神经元脉冲放在不同器件或后端电路中，导致像素密度、连线复杂度和能耗受限。问题是能否在单个像素/两端器件内复用多种光电响应模式，从而减少外围电路并提高系统密度。
-- First principles: 同一光电材料/异质结在不同偏置、陷阱态或载流子动力学条件下可表现为线性探测、历史依赖突触权重或阈值式脉冲。若这些模式可动态切换，传感器像素就不只是采样器，而是可配置的前端计算节点。
-- Mechanism: 官方 Nature Sensors 页面说明该 News & Views 讨论的核心是 within a single two-terminal retinomorphic sensor 实现 linear sensing、optoelectronic synaptic plasticity 和 direct light-induced neuronal spiking 的动态重构；Fig. 1 题为 multi-responsive retinomorphic sensor 的多样光电响应。参考条目指向 2026 Nature Sensors 的 Multi-responsive retinomorphic sensor 原始研究。
-- Boundary advanced: 先进性在于把同一器件的多响应模式作为 in-sensor computing 的可配置资源，而非固定传感器。边界是这是 News & Views，非原始实验全文；本地没有正文/PDF，只有官方页面和 publisher Fig. 1，不能替代原始研究的性能审查。
-- Old problem: 老问题是 retinomorphic/in-sensor computing 常需要多器件堆叠：光电二极管采样、存储器保持权重、神经元电路产生 spike。器件多、连接多，会降低像素密度和可扩展性。
-- Why it works: 若一个两端器件能通过偏置或光响应动力学切换模式，线性光电流可承担感知，慢响应/陷阱可承担突触可塑性，阈值或再生动力学可承担 spike；系统就能按任务选择前端计算层级。
-- True novelty: 对本方向的真实启发是“多模式可重构像素”概念。OECT/OMIEC 材料也常具有离子滞后、可塑性和放大能力，未来可参考这种模式切换，把 sensing、memory 和 spiking 集成到同一物理像素。
-- Evidence: 证据等级：官方页面/图像级。本地保存 publisher Fig. 1：`output/figures/crossref_10_1038_s44460-026-00083-7_publisher_fig1.png`；官方页面显示 2026-06-05 Nature Sensors News & Views，并明确描述 linear sensing、optoelectronic synaptic plasticity、direct light-induced neuronal spiking、single two-terminal retinomorphic sensor。缺口：非原始论文且本地无全文。
+- Score: 0.6025
+- Core insight: 这篇 Nature Sensors 论文提出自重构偏振感知阵列：用二维 Te 与 ReS2 外延范德华异质结构的正交面内各向异性，结合光驱动界面载流子转移/俘获产生双极性光响应，实现无需电偏置的全光自重构偏振 in-sensor computing。
+- Problem frame: 偏振携带传统强度图像看不到的矢量信息，但阵列级偏振硬件通常缺少可重构性，导致传感和计算仍依赖外部算法或多器件固定编码。
+- First principles: 各向异性二维材料对不同偏振方向有不同光电响应；若两个材料轴正交且界面电荷转移可被光历史调节，同一像素就能在不同响应分支中呈现相反偏振灵敏度。
+- Mechanism: 作者通过 ALD 制备双各向异性 ReS2/Te 异质结构。光照诱导界面载流子转移和俘获，形成双极性 photoresponse；垂直晶格排列给两个响应分支提供相反偏振敏感性，阵列再被集成为处理时序多维光信息的 in-sensor 架构。
+- Boundary advanced: 这是二维光电异质结构偏振计算，不是 OECT/OMIEC；但它和 metasurface/前端物理计算高度相关，因为它把“传感参数自重构”和“阵列内计算”合并。不能把其 >95% 动态视觉准确率外推到化学或电磁可重构 OECT 系统。
+- Old problem: 旧偏振传感多依赖固定微偏振片、固定材料各向异性或外部电调，阵列无法根据场景自适应改变响应基。
+- Why it works: Te/ReS2 的正交各向异性提供偏振选择性，光诱导界面陷阱提供可写入状态，双极性响应让同一硬件拥有可切换的感知基底。
+- True novelty: 真正新意是阵列级全光自重构，而不仅是单像素偏振探测；作者把它放入 in-sensor computing 并展示动态视觉任务超过 95% 准确率。
+- Evidence: 证据来自官方 Nature Sensors 摘要、可见 Fig. 1/Fig. 2 标题和本地 publisher Fig. 1。可确认 Te/ReS2、光驱动载流子转移/俘获、无电偏置重构、动态视觉 >95%；全文需机构访问，具体网络结构和能耗未核验。
 
-## 8. High-frequency, low-energy organic event-based sensors for closed-loop neurostimulation
+## 8. Monolithic design of an organic electrochemical transistor array for multimodal bioelectronic interfacing
 - Venue: Nature Sensors
-- Published: 2026-01-15
-- Type: direct
-- Tags: oect_omiec, neuromorphic_oect, bio_sensing
-- Score: 0.7996
-- Core insight: 这篇 Nature Sensors 是本期最直接贴近 OECT/OMIEC neuromorphic bioelectronics 的论文：有机电化学神经元传感器实现高频、低能事件检测，并与微电极集成形成闭环神经刺激。它把 OECN 从“慢、耗能、难扩展”的概念器件推进到覆盖哺乳动物神经活动带宽的闭环系统。
-- Problem frame: 事件型 bioelectronic sensor 需要实时检测神经活动并触发调控；传统硅接口刚性且能耗高，有机电化学神经元虽柔软、仿生，但此前受限于 firing rate、能量和扩展性。作者的问题是 OECN 能否达到闭环神经调控所需速度、能耗和体内有效性。
-- First principles: OECN 利用离子进入/离开有机半导体引起电导调制和阈值式放电；如果离子动力学足够快、器件电容和通道设计足够低能，就能把连续生物电信号转为事件脉冲。事件编码只在检测到相关活动时消耗能量，适合植入式低功耗闭环。
-- Mechanism: 全文摘要报告 OECN-based sensor 响应约 1 ms，产生最高 1.1 kHz 电压脉冲，覆盖 0.5-1000 Hz 哺乳动物神经活动带宽，每 spike 约 40 pJ；可准确检测 hippocampal interictal epileptiform discharges，并与 microelectrodes 集成后实时刺激以抑制 in vivo pathological sleep spindle oscillations。Fig. 1 为 OECNs and closed-loop neural stimulation。
-- Boundary advanced: 先进性在于把有机电化学神经元的事件编码速度、能耗和闭环体内刺激连在一起，而不是只做单器件突触曲线。边界是它不涉及 metasurface；计算形式是事件检测/闭环控制，不是大规模物理神经网络训练。
-- Old problem: 老问题是 OECT/OECN 类器件常有良好生物相容性和低压操作，但离子迁移带来的慢响应限制高频神经信号；同时单器件演示难以证明闭环神经调控价值。
-- Why it works: 器件把神经信号的模拟波形转成阈值事件，避免持续高采样数字处理；有机电化学材料提供低电压、软界面和电化学增益。与微电极集成后，检测事件可直接触发刺激，形成传感-计算-调控闭环。
-- True novelty: 真实新意是 OECN 事件传感器的系统级闭环验证：速度、能耗、神经带宽、癫痫样放电检测和体内睡眠纺锤波抑制放在同一证据链中。对 OECT/OMIEC × metasurface 的启发是，有机电化学器件可以作为低能神经形态前端，未来可与波/光学 metasurface 前端耦合。
-- Evidence: 证据等级：本地 PDF/fulltext 级。本地 `fulltext_len=78222`，保存 Fig. 1：`output/figures/crossref_10_1038_s44460-025-00007-x_caption_p2.png`；全文给出 OECN、~1 ms、1.1 kHz、0.5-1000 Hz、~40 pJ per spike、hippocampal interictal epileptiform discharges、microelectrodes、closed-loop neurostimulation 和 in vivo sleep spindle suppression。主要缺口：无 metasurface 硬件。
-
-## 9. Introducing Meta-Fiber into Stacked Intelligent Metasurfaces for MIMO Communications: A Low-Complexity Design with only Two Layers
-- Venue: arXiv
-- Published: 2025-07-13
-- Type: direct
-- Tags: tunable_metasurface, terahertz_microwave
-- Score: 0.6177
-- Core insight: 这篇 arXiv 预印本提出在 stacked intelligent metasurfaces 中加入 meta-fiber，用两层结构逼近多层 SIM 的波域信号处理能力，目标是降低复杂相移优化和多层能量衰减。它不涉及 OECT/OMIEC，但属于可编程 metasurface 物理计算/通信方向。
-- Problem frame: SIM 用多层可编程超表面在波域完成 precoding、combining 或类 DNN 信号处理，但层数增加会带来能量衰减、硬件复杂度和优化难度。作者要解决的是如何减少层数而保留足够空间自由度。
-- First principles: 多层超表面本质上通过级联传播矩阵逐层调制波前；自由度来自像素相位、层间传播和空间耦合。Meta-fiber 连接相当于引入额外可控通道/耦合路径，用结构互联补偿减少层数后的表达能力。
-- Mechanism: 全文摘要说明提出 meta-fiber-connected 2-layer SIM，宣称具有类似 conventional multi-layer structures 的 flexible signal processing capabilities，并面向 MIMO communications。论文围绕 CSI、RIS/SIM、precoding/combining 和能效展开，Fig. 1/缓存图展示 stacked metasurface 结构概念。
-- Boundary advanced: 先进性在于从堆更多层转向用互联结构提高两层 SIM 表达能力。边界很大：这是 arXiv 预印本，应用是 MIMO 通信，主要是模型/优化与仿真；没有有机材料、离子调控、传感实验或神经形态训练闭环。
-- Old problem: 老问题是 RIS/SIM 的理论性能常依赖大量可编程单元和多层堆叠，但真实系统会遇到插入损耗、控制复杂度、CSI 获取和优化规模爆炸。
-- Why it works: Meta-fiber 通过改变层间耦合拓扑，把单纯自由空间传播扩展为更丰富的波域混合；在较少层数下仍可形成多输入多输出通道变换，从而减少硬件层数和相移变量。
-- True novelty: 真实新意是 meta-fiber-connected two-layer SIM 的低复杂度结构假设。对本方向的启发是：可重构 metasurface 物理计算不一定只靠堆叠更多层，也可通过层间耦合、互联和材料可调性提高有效维度。
-- Evidence: 证据等级：arXiv PDF/fulltext 级。本地 `fulltext_len=87377`，保存图像：`output/figures/arxiv_2507_09575v2_caption_p2.png`；全文包含 stacked intelligent metasurfaces、meta-fiber、two layers、MIMO communications、CSI、RIS-assisted transmissions、programmable diffractive DNN 等。缺口：预印本且非生物/有机/实验 metasurface。
-
-## 10. Analog dual classifier via a time-modulated neuromorphic metasurface
-- Venue: arXiv
-- Published: 2025-06-05
+- Published: 2026-03-31
 - Type: transferable
-- Tags: metasurface_computing
-- Score: 0.5477
-- Core insight: 这篇 arXiv 预印本提出 time-modulated neuromorphic metasurface dual classifier：用弹性/机械波在多层谐振超表面中的散射同时执行两个独立分类任务。它是机械/波动物理计算示例，不是 OECT/OMIEC，但直接对应 neuromorphic metasurface 关键词。
-- Problem frame: 有限介质中的波传播物理计算常受单一传播路径和固定频率限制，容易变成 single-task demonstration。作者要解决的是如何在同一 neuromorphic metasurface 中并行运行两个不同分类器，提高物理计算硬件复用度。
-- First principles: 弹性波穿过多层谐振超表面时，相位和幅度被各层可调参数改变；不同载频可在同一结构中走不同的有效计算路径。若用时间调制耦合频率通道，就可以把一个物理结构复用为多个分类任务的并行算子。
-- Mechanism: 全文说明输入由边界机械激励引入，弹性波穿过多层 resonant metasurfaces；metasurface 的 tunable phase 类似神经网络 trainable parameters。并行化通过 computational carrier frequency multiplexing 实现，文中展示 gesture detection 与 MNIST digit recognition 两条频率路径，并用检测平面波强度和 confusion matrices 评估分类。
-- Boundary advanced: 先进性是把单任务机械 neuromorphic metasurface 推向频率复用的双任务并行。边界是预印本，主要是物理设计/仿真框架；它不涉及有机电化学材料、真实传感样本阵列或可制造的电子写入方案。
-- Old problem: 老问题是物理神经网络常为一个任务定制一次结构；换任务需要重新设计或重新训练硬件，导致可复用性弱。有限介质中的波传播自由度也限制了多任务并行。
-- Why it works: 频率复用让不同任务占用不同载频路径，时间调制提供频率间转换和路由；谐振超表面对每条路径产生不同相位/幅度变换，因此同一结构可以在不同检测通道上输出不同分类结果。
-- True novelty: 真实新意是 dual classifier 的并行复用思想，而不是新的数字分类算法。对 OECT/OMIEC metasurface 的启发是：如果材料调控速度足够，时间调制和多频通道可能让同一可重构表面在感知、通信和计算任务间复用。
-- Evidence: 证据等级：arXiv PDF/fulltext 级。本地 `fulltext_len=56906`，保存图像：`output/figures/arxiv_2506_04629v2_caption_p1.png`；全文包含 time-modulated neuromorphic metasurface、guided wave scattering、multiple tuned waveguides、dual classifier、gesture detection、MNIST digit recognition、frequency paths、confusion matrices。缺口：预印本，未见本地证据表明其为实物实验。
+- Tags: oect_omiec, bio_sensing
+- Score: 0.7475
+- Core insight: 这篇 Nature Sensors 论文展示单片柔性 OECT 阵列如何在同一有机半导体平台上承担化学检测、电生理监测和片上神经形态分类：通过阵列内选择性图案化不同电解质区域，实现 dopamine 检测、EEG 记录和 seizure activity 分类。
+- Problem frame: 生物电子接口需要同时处理慢速化学信号、快速电生理信号和实时解释，但传统多模态平台往往把不同材料/器件拼接，增加封装体积和界面复杂度。
+- First principles: OECT 的输出取决于 OMIEC 沟道与电解质/栅端界面的离子-电子耦合。不同电解质改变离子迁移、门控速度和化学选择性，因此同一沟道材料可通过局域电解质工程分区获得不同功能。
+- Mechanism: 作者单片制备柔性 OECT 阵列，并在阵列区域选择性引入电解质：用于双尺度 dopamine 检测的区域、用离子凝胶提升带宽以记录 EEG 的区域、以及水凝胶门控神经形态计算区域。摘要报告 dopamine 检测达 picomolar sensitivity，seizure 分类准确率 87.8%。
+- Boundary advanced: 这是 OECT 多模态生物接口的直接强证据，但不是 reconfigurable metasurface。其计算是生物电信号分类，不等于高频电磁波前计算；此外全文为订阅预览，本轮只使用官方摘要与 Fig. 1。
+- Old problem: 旧 OECT 平台常优化单一功能：要么高灵敏化学检测，要么电生理放大，要么类突触计算，难以在同一柔性阵列内共存。
+- Why it works: 局域电解质图案化让同一 OECT 阵列获得不同离子时间常数和界面化学；单片结构减少互连复杂度，同时保留 OMIEC 的高增益和柔性优势。
+- True novelty: 新意是用“同一有机半导体 + 区域化电解质”完成三种模态的单片集成，而不是把独立传感器简单贴合；这为智能生物接口提供更高集成密度。
+- Evidence: 证据来自官方 Nature Sensors 摘要、本地 publisher Fig. 1 和同页 Research Briefing。可确认柔性 OECT 阵列、dopamine picomolar sensitivity、ion-gel EEG 高带宽、hydrogel-gated neuromorphic seizure 分类 87.8%；全文细节需机构访问。
+
+## 9. A multifunctional soft bioelectronic interface
+- Venue: Nature Sensors
+- Published: 2026-03-31
+- Type: transferable
+- Tags: bio_sensing
+- Score: 0.6225
+- Core insight: 这篇 Nature Sensors Research Briefing 是对 10.1038/s44460-026-00052-0 的短评，核心信息是：多功能软生物电子接口可以通过在 OECT 阵列中选择性引入不同电解质，把电化学传感、电生理监测和神经形态计算整合进单一器件。
+- Problem frame: 多模态 biointerface 的难点不只是单项性能，而是把不同时间尺度、不同信号源和不同处理方式放入一个柔软、可佩戴/贴附的系统。
+- First principles: OECT 阵列的同一沟道材料可通过电解质界面改变门控动力学和转导功能；电解质图案化相当于在阵列内写入不同功能区。
+- Mechanism: 短评总结的机制是：高密度 OECT 阵列作为共同底座，不同电解质区域分别支撑电化学 sensing、electrophysiological monitoring 和 neuromorphic computing。
+- Boundary advanced: 这是 Research Briefing，不是原始研究数据来源；它应作为 00052 原文的解释性入口，而不应在雷达中被当成独立技术突破与 00052 重复计数。由于包内把它作为单独条目收录，分析必须明确它的二级证据身份。
+- Old problem: 旧叙事容易把多功能集成说成多个模块叠加，而忽略真正困难在同一柔性阵列中保持界面兼容和功能差异。
+- Why it works: 选择性电解质图案化让一个 OECT 阵列内部产生不同转导/计算行为，避免完全依赖多材料异构拼装。
+- True novelty: 短评本身的新意是提炼和传播 00052 的系统意义；技术新意属于被总结的原始研究，而不是这篇 briefing。
+- Evidence: 证据来自官方 Nature Sensors Research Briefing 页面和本地 publisher Fig. 1。页面明确说明它总结 Zhong et al. 2026 的 OECT 阵列；没有独立全文实验数据，应低权重处理。
+
+## 10. A theoretical framework for reservoir computing on networks of organic electrochemical transistors
+- Venue: arXiv
+- Published: 2024-08-17
+- Type: direct
+- Tags: oect_omiec, neuromorphic_oect
+- Score: 0.571
+- Core insight: 这篇 arXiv 预印本建立 OECT 网络储备池计算的理论框架：把 OECT 的非线性瞬态特性作为固定 reservoir 单元，模拟物理 reservoir computer，并用 Lorenz attractor 预测展示概念验证；性能强依赖 pinch-off voltage 等操作参数。
+- Problem frame: OECT 被频繁称为适合物理神经形态计算，但从单器件非线性到网络级 reservoir 的设计规则并不清楚，尤其缺少可快速扫描器件参数的理论测试床。
+- First principles: Reservoir computing 利用固定非线性动态系统把输入映射到高维状态，再只训练读出层。OECT 的离子-电子耦合和瞬态响应天然提供非线性与记忆，是候选物理 reservoir 单元。
+- Mechanism: 作者用 OECT 模型构建网络节点，模拟输入驱动下的 reservoir 状态演化，并比较 Lorenz attractor 预测能力；通过扫描操作参数评估器件物理量对预测性能的影响。
+- Boundary advanced: 它是理论/仿真预印本，不是实验 OECT 阵列，也不涉及超表面。结论可作为设计假设，但在真实 OMIEC 器件中仍需验证噪声、漂移、器件离散性、电解质稳定性和互连读出。
+- Old problem: 旧工作常停留在单个 OECT 的突触或记忆特性展示，缺少把器件方程连接到 reservoir 网络任务表现的系统框架。
+- Why it works: OECT 的可调非线性瞬态提供高维动态映射；pinch-off voltage 等参数改变节点响应区间，因此会显著影响 reservoir 的记忆和可分性。
+- True novelty: 新意是把 OECT 作为网络级 reservoir 单元进行可设计仿真，而非只把 OECT 类比为突触；Lorenz attractor 预测给了物理 reservoir 的最小任务闭环。
+- Evidence: 证据来自 arXiv 摘要和本地 key figure。可确认 10 页 8 图、Lorenz attractor proof of concept、与标准 RC 相当的表现和 pinch-off voltage 依赖；未做同行评审，且本地没有解析全文。
