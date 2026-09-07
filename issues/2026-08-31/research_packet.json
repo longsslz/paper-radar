@@ -1,0 +1,282 @@
+[
+  {
+    "paper_id": "crossref:10.1038/s44172-026-00734-0",
+    "title": "Low-loss spatial phase modulation of mm-waves via optically-tunable coupling",
+    "authors": [
+      "G. Neville White",
+      "I. R. Hooper",
+      "H. Penketh",
+      "F. Burton",
+      "D. B. Phillips",
+      "E. Hendry"
+    ],
+    "venue": "Communications Engineering",
+    "published_at": "2026-08-11",
+    "source": "crossref",
+    "doi": "10.1038/s44172-026-00734-0",
+    "url": "https://doi.org/10.1038/s44172-026-00734-0",
+    "pdf_url": "",
+    "robot_type_tags": [
+      "terahertz_microwave"
+    ],
+    "paper_type": "transferable",
+    "score": 0.5425,
+    "abstract": "Abstract Efficient phase modulation at mm-wave and THz frequencies is an ongoing challenge. Here, we introduce a method for high-resolution dynamic spatial phase modulation of mm-waves, via selective photo-activation of a silicon-based resonant metasurface. In contrast to conventional methods of regulating the phase of reflected waves by shifting the resonance frequency of a modulator, we control the resonant coupling strength to realise low-loss binary phase modulation. We demonstrate a system operating at a wavelength of 6 mm, realising dynamically encoded holograms enabling focussing, beam steering, multi-casting and orbital angular momentum mode generation. Moreover, we show that optical losses scale favourably with frequency, making this approach highly promising for higher frequency applications.",
+    "key_figure_path": "output/figures/crossref_10_1038_s44172-026-00734-0_publisher_fig1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s43246-026-01307-6",
+    "title": "Two-dimensional clay channels for tunable nanofluidic memristor",
+    "authors": [
+      "Sangeeta Yadav",
+      "Raj Kumar Gogoi",
+      "Aziz Lokhandwala",
+      "Siddhi Vinayak Pandey",
+      "Ankit Bhardwaj",
+      "Sunando DasGupta",
+      "Radha Boya"
+    ],
+    "venue": "Communications Materials",
+    "published_at": "2026-07-31",
+    "source": "crossref",
+    "doi": "10.1038/s43246-026-01307-6",
+    "url": "https://doi.org/10.1038/s43246-026-01307-6",
+    "pdf_url": "",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.7025,
+    "abstract": "Abstract Dynamic reconfiguration of charge carriers in confined ion channels under electrical stimulation produces memory effects, where the internal resistance depends on the history of the electric field. Vermiculite nanofluidic devices harness this effect to store and process information within a single component. We report switching between distinct memory loops by tuning ion transport pathways, governed by asymmetrical device architecture and intrinsic surface charge. Polarity-dependent memory switching between crossing-1 and crossing-2 loops is achieved solely by altering electrode configurations, without modifying electrolyte, channel surface chemistry or device structure, providing mechanistic insights into ionic memristors through a straightforward, experimental strategy. The memristive characteristics are demonstrated in both in-plane and out-of-plane channel configurations with channel lengths spanning from centimetres to micrometres using re-stacked vermiculite membranes and further investigated for miniaturization with devices of nanometre-scale channel lengths, fabricated via the ultramicrotomy method. Furthermore, we demonstrate neuromorphic functionalities, including synaptic potentiation-depression and programmable memory retention, highlighting potential for bio-inspired computing systems. Cost-effective and scalable fabrication of solution-processed vermiculite membrane memristors is attractive for sustainable integration of nanofluidic memristors for neuromorphic computing applications.",
+    "key_figure_path": "output/figures/crossref_10_1038_s43246-026-01307-6_publisher_fig1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s41528-026-00624-7",
+    "title": "Ultrathin multi-gate organic electrochemical transistors for insertable multianalyte biochemical sensing",
+    "authors": [
+      "Tae Jin Mun",
+      "Kyung Yeun Kim",
+      "YouBin Choi",
+      "Heeju Son",
+      "Junghyun Cho",
+      "Seongchan Kim",
+      "Jayoung Kim",
+      "Hyojin Lee",
+      "Hyejeong Seong",
+      "Seung Hwan Ko",
+      "Hojeong Jeon",
+      "Wonryung Lee"
+    ],
+    "venue": "npj Flexible Electronics",
+    "published_at": "2026-07-28",
+    "source": "crossref",
+    "doi": "10.1038/s41528-026-00624-7",
+    "url": "https://doi.org/10.1038/s41528-026-00624-7",
+    "pdf_url": "",
+    "robot_type_tags": [
+      "oect_omiec",
+      "bio_sensing"
+    ],
+    "paper_type": "direct",
+    "score": 0.73,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s41528-026-00624-7_publisher_fig1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44335-026-00070-8",
+    "title": "Fractional-order systems for neuromorphic computing: software and hardware opportunities and challenges",
+    "authors": [
+      "Tucker Mastin",
+      "Niklas Anderson",
+      "Silas McNeal",
+      "Matthew Tubbin",
+      "Christof Teuscher"
+    ],
+    "venue": "npj Unconventional Computing",
+    "published_at": "2026-06-01",
+    "source": "crossref",
+    "doi": "10.1038/s44335-026-00070-8",
+    "url": "https://doi.org/10.1038/s44335-026-00070-8",
+    "pdf_url": "https://www.nature.com/articles/s44335-026-00070-8.pdf",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.795,
+    "abstract": "Abstract Fractional-order dynamics introduce scale-free memory and non-Markovian behavior into dynamical systems, offering a principled means of modeling long-term temporal dependencies. In this work, we extend the reservoir computing (RC) framework to include fractional-order neurons, yielding fractional-order reservoirs whose dynamics are continuously tunable through the fractional order α . We show that varying α systematically reshapes the reservoir’s information-processing regime: with memory capacity, active information storage, and information transfer each peaking at distinct values of α . This identifies α as a new control parameter of reservoir dynamics, governing a trade-off between memory retention and sensitivity to new inputs. We present a theoretical analysis of fractional-order reservoirs, provide practical software and hardware realizations, and evaluate performance across three benchmark domains: spoken-digit classification, cart-pole control, and diabetes prediction. Together, these results establish fractional-order reservoir computing as a general and effective extension of the RC paradigm.",
+    "key_figure_path": "output/figures/crossref_10_1038_s44335-026-00070-8_caption_p3.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44328-026-00096-9",
+    "title": "Organic electrochemical transistors for metabolite sensing across the transition from in vitro to in vivo",
+    "authors": [
+      "Jintao Zheng",
+      "Xiaohong Jiang",
+      "Jiacheng Yu",
+      "Runzhi Zhou",
+      "Haoyang Yan",
+      "Zheng Liang",
+      "Genquan Wu",
+      "Keying Guo"
+    ],
+    "venue": "npj Biosensing",
+    "published_at": "2026-05-22",
+    "source": "crossref",
+    "doi": "10.1038/s44328-026-00096-9",
+    "url": "https://doi.org/10.1038/s44328-026-00096-9",
+    "pdf_url": "https://www.nature.com/articles/s44328-026-00096-9.pdf",
+    "robot_type_tags": [
+      "oect_omiec"
+    ],
+    "paper_type": "transferable",
+    "score": 0.6675,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44328-026-00096-9_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44335-026-00062-8",
+    "title": "HiAER-spike software-hardware reconfigurable platform for event-driven neuromorphic computing at scale",
+    "authors": [
+      "Gwenevere Frank",
+      "Gopabandhu Hota",
+      "Keli Wang",
+      "Christopher Deng",
+      "Krish Arora",
+      "Diana Vins",
+      "Abhinav Uppal",
+      "Omowuyi Olajide",
+      "Kenneth Yoshimoto",
+      "Qingbo Wang",
+      "Mari Yamaoka",
+      "Johannes Leugering",
+      "Stephen Deiss",
+      "Leif Gibb",
+      "Gert Cauwenberghs"
+    ],
+    "venue": "npj Unconventional Computing",
+    "published_at": "2026-05-04",
+    "source": "crossref",
+    "doi": "10.1038/s44335-026-00062-8",
+    "url": "https://doi.org/10.1038/s44335-026-00062-8",
+    "pdf_url": "https://www.nature.com/articles/s44335-026-00062-8.pdf",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.7025,
+    "abstract": "Abstract In this work, we present HiAER-Spike, a modular, reconfigurable, event-driven neuromorphic computing platform designed to execute large spiking neural networks with up to 160 million neurons and 40 billion synapses - roughly twice the neurons of a mouse brain at faster than real time. This system, assembled at the UC San Diego Supercomputer Center, comprises a co-designed hard- and software stack that is optimized for run-time massively parallel processing and hierarchical address-event routing (HiAER) of spikes while promoting memory-efficient network storage and execution. The architecture efficiently handles both sparse connectivity and sparse activity for robust and low-latency event-driven inference for both edge and cloud computing. A Python programming interface to HiAER-Spike, agnostic to hardware-level detail, shields the user from complexity in the configuration and execution of general spiking neural networks with minimal constraints in topology. The system is made easily available over a web portal for use by the wider community. In the following, we provide an overview of the hard- and software stack, explain the underlying design principles, demonstrate some of the system’s capabilities, and solicit feedback from the broader neuromorphic community. Examples are shown demonstrating HiAER-Spike’s capabilities for event-driven vision on benchmark CIFAR-10, DVS event-based gesture, MNIST, and Pong tasks.",
+    "key_figure_path": "output/figures/crossref_10_1038_s44335-026-00062-8_caption_p1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44460-026-00057-9",
+    "title": "Self-reconfigurable polarization perception in dual-anisotropy heterostructures for high-dimensional in-sensor computing",
+    "authors": [
+      "Wenxuan Zhu",
+      "Changhwan Kim",
+      "Ruofan Zhang",
+      "Mingchun Lu",
+      "Namwook Hur",
+      "Hanbin Cho",
+      "Jihyun Kim",
+      "Jiacheng Sun",
+      "Joohoon Kang",
+      "Junchi Yan",
+      "Yuan Cheng",
+      "Joonki Suh"
+    ],
+    "venue": "Nature Sensors",
+    "published_at": "2026-04-14",
+    "source": "crossref",
+    "doi": "10.1038/s44460-026-00057-9",
+    "url": "https://doi.org/10.1038/s44460-026-00057-9",
+    "pdf_url": "https://www.nature.com/articles/s44460-026-00057-9.pdf",
+    "robot_type_tags": [
+      "integrated_system"
+    ],
+    "paper_type": "transferable",
+    "score": 0.6025,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44460-026-00057-9_publisher_fig1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44460-026-00052-0",
+    "title": "Monolithic design of an organic electrochemical transistor array for multimodal bioelectronic interfacing",
+    "authors": [
+      "Yizhou Zhong",
+      "Wentao Shan",
+      "Yazhou Wang",
+      "Haya Aldosari",
+      "Danilo Arcangeli",
+      "Naroa Lopez-Larrea",
+      "David Mecerreyes",
+      "Sahika Inal"
+    ],
+    "venue": "Nature Sensors",
+    "published_at": "2026-03-31",
+    "source": "crossref",
+    "doi": "10.1038/s44460-026-00052-0",
+    "url": "https://doi.org/10.1038/s44460-026-00052-0",
+    "pdf_url": "https://www.nature.com/articles/s44460-026-00052-0.pdf",
+    "robot_type_tags": [
+      "oect_omiec",
+      "bio_sensing"
+    ],
+    "paper_type": "transferable",
+    "score": 0.7475,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44460-026-00052-0_publisher_fig1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44460-026-00058-8",
+    "title": "A multifunctional soft bioelectronic interface",
+    "authors": [],
+    "venue": "Nature Sensors",
+    "published_at": "2026-03-31",
+    "source": "crossref",
+    "doi": "10.1038/s44460-026-00058-8",
+    "url": "https://doi.org/10.1038/s44460-026-00058-8",
+    "pdf_url": "https://www.nature.com/articles/s44460-026-00058-8.pdf",
+    "robot_type_tags": [
+      "bio_sensing"
+    ],
+    "paper_type": "transferable",
+    "score": 0.6225,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44460-026-00058-8_publisher_fig1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "arxiv:2408.09223v1",
+    "title": "A theoretical framework for reservoir computing on networks of organic electrochemical transistors",
+    "authors": [
+      "Nicholas W. Landry",
+      "Beckett R. Hyde",
+      "Jake C. Perez",
+      "Sean E. Shaheen",
+      "Juan G. Restrepo"
+    ],
+    "venue": "arXiv",
+    "published_at": "2024-08-17",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2408.09223v1",
+    "pdf_url": "https://arxiv.org/pdf/2408.09223v1",
+    "robot_type_tags": [
+      "oect_omiec",
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.571,
+    "abstract": "Efficient and accurate prediction of physical systems is important even when the rules of those systems cannot be easily learned. Reservoir computing, a type of recurrent neural network with fixed nonlinear units, is one such prediction method and is valued for its ease of training. Organic electrochemical transistors (OECTs) are physical devices with nonlinear transient properties that can be used as the nonlinear units of a reservoir computer. We present a theoretical framework for simulating reservoir computers using OECTs as the non-linear units as a test bed for designing physical reservoir computers. We present a proof of concept demonstrating that such an implementation can accurately predict the Lorenz attractor with comparable performance to standard reservoir computer implementations. We explore the effect of operating parameters and find that the prediction performance strongly depends on the pinch-off voltage of the OECTs.",
+    "key_figure_path": "output/figures/arxiv_2408_09223v1_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  }
+]
