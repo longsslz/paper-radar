@@ -1,5 +1,25 @@
 [
   {
+    "id": "arxiv-2607.12137v1",
+    "title": "WULPUS PRO: Multi-mode Ultra-Low-Power Wearable Ultrasound and Array Imaging with CMUT Support",
+    "headline": "把二维超声采集压进",
+    "venue": "arXiv",
+    "added_at": "2026-09-10T08:04:17Z",
+    "added_date": "2026-09-10",
+    "publication_date": "2026-07-13",
+    "href": "arxiv-2607.12137v1/index.html"
+  },
+  {
+    "id": "arxiv-2606.22800v1",
+    "title": "Machine-knittable, Magnetically-Plug-n-Play E-Textile Prototyping",
+    "headline": "把传感器换个位置，",
+    "venue": "arXiv",
+    "added_at": "2026-09-10T07:59:39Z",
+    "added_date": "2026-09-10",
+    "publication_date": "2026-06-22",
+    "href": "arxiv-2606.22800v1/index.html"
+  },
+  {
     "id": "10.1038-s44460-026-00128-x",
     "title": "Closed-loop in situ isolation of deep-sea extremophiles through sensor-driven microenvironment preservation",
     "headline": "把深海环境带进实验室",
