@@ -1,5 +1,25 @@
 [
   {
+    "id": "10.1038-s41928-025-01392-4",
+    "title": "Programmable threshold sensing in wireless devices using Ising dynamics",
+    "headline": "让无电池标签 自己判断温度越界",
+    "venue": "Nature Electronics",
+    "added_at": "2026-09-13T09:23:09Z",
+    "added_date": "2026-09-13",
+    "publication_date": "2025-06-02",
+    "href": "10.1038-s41928-025-01392-4/index.html"
+  },
+  {
+    "id": "10.1126-scirobotics.adz9609",
+    "title": "Saranga 毫瓦超声避障",
+    "headline": "在旋翼噪声里",
+    "venue": "Science Robotics",
+    "added_at": "2026-09-13T09:23:06Z",
+    "added_date": "2026-09-13",
+    "publication_date": "2026-03-25",
+    "href": "10.1126-scirobotics.adz9609/index.html"
+  },
+  {
     "id": "arxiv-2607.12137v1",
     "title": "WULPUS PRO: Multi-mode Ultra-Low-Power Wearable Ultrasound and Array Imaging with CMUT Support",
     "headline": "把二维超声采集压进",
