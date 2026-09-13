@@ -1,0 +1,32 @@
+{
+  "window": [
+    "2025-01-01",
+    "2026-09-11"
+  ],
+  "candidate_count": 431,
+  "key_cards": 86,
+  "body_sections_checked": 22,
+  "abstract_or_figures_key_cards": 64,
+  "reading_priority_count": 15,
+  "date_pending": [
+    "E0516",
+    "E0518",
+    "Y0508",
+    "Y0514"
+  ],
+  "checks": [
+    "DOI unique: 431",
+    "HTML filters: 431 / 86 / 15 / 22",
+    "ID search: X0545 -> 1 result",
+    "desktop horizontal overflow: false",
+    "XLSX three sheets: 432 / 87 / 44 rows including headers",
+    "XLSX error cells: 0",
+    "CJK and workbook/report previews visually inspected"
+  ],
+  "limitations": [
+    "Non-exhaustive cross-journal relevance-ranked retrieval",
+    "No code or hardware reproduction",
+    "Full text availability is not full-paper reading",
+    "Four exact online dates pending"
+  ]
+}
