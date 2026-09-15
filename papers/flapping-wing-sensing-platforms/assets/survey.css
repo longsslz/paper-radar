@@ -4,3 +4,9 @@
 @media print{body{background:#fff}.controls,.back-top,.section-links,.site-nav{display:none}.story-grid{display:block}.read-card{position:static;max-height:none!important;overflow:visible}.overview{grid-template-columns:repeat(4,1fr)}main{width:auto;margin:0}.paper-entry{break-before:page}.figure-shell{break-inside:avoid}.paper-entry[hidden]{display:block!important}}
 
 .takeaway h2{font-size:25px;line-height:1.35}
+.institution{font-size:13px;line-height:1.8;color:var(--ink-soft)}
+.figure-reading.story{margin:24px 0 0;padding:20px 0 0;border-top:1px solid var(--line-soft);border-bottom:0}
+.figure-reading>h3{font-size:23px;line-height:1.4;margin:0 0 18px}
+.figure-reading .story-grid{margin-top:0}
+.figure-reading .read-card{max-height:var(--read-card-max-height,calc(100vh - 32px));overflow:auto}
+@media(max-width:860px){.figure-reading .read-card{max-height:none;overflow:visible;position:static}}
