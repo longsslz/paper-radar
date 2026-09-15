@@ -1,8 +1,5 @@
 TY  - JOUR
-ID  - P01
 TI  - Wing-strain-based flight control of flapping-wing drones through reinforcement learning
-PY  - 2024
-T2  - Nature Machine Intelligence
 AU  - Taewi Kim
 AU  - Insic Hong
 AU  - Sunghoon Im
@@ -26,71 +23,62 @@ AU  - Young-Man Choi
 AU  - Je-sung Koh
 AU  - Seungyong Han
 AU  - Daeshik Kang
+JO  - Nature Machine Intelligence
+PY  - 2024
 DO  - 10.1038/s42256-024-00893-9
+UR  - https://doi.org/10.1038/s42256-024-00893-9
 VL  - 6
 IS  - 9
-SP  - 992-1005
-UR  - https://doi.org/10.1038/s42256-024-00893-9
-N1  - 2024-09-20；期刊论文；证据A；训练奖励来自动捕/编码器；路径飞行仍接8根铜线，采集与控制依赖外部系统。“free flight”不能改写为无系留、全机载自主飞行。不同实验的电机控制自由度也不同。
+SP  - 992
+EP  - 1005
 ER  - 
 
 TY  - JOUR
-ID  - P02
 TI  - Avian-inspired embodied perception in biohybrid flapping-wing robotics
-PY  - 2024
-T2  - Nature Communications
 AU  - Qian Li
 AU  - Ting Tan
 AU  - Benlong Wang
 AU  - Zhimiao Yan
+JO  - Nature Communications
+PY  - 2024
 DO  - 10.1038/s41467-024-53517-6
+UR  - https://doi.org/10.1038/s41467-024-53517-6
 VL  - 15
 IS  - 1
-SP  - 9099
-UR  - https://doi.org/10.1038/s41467-024-53517-6
-N1  - 2024-10-22；期刊论文；证据A；100%分类对应固定安装、离散类别实验。室内飞行报告的平均绝对误差为0.149 Hz、0.137 m/s、2.360°；不能外推为任意室外风场精度。未展示以该感知输出驱动的飞行闭环。
 ER  - 
 
 TY  - JOUR
-ID  - P03
 TI  - Embodied Flight Perception via Forewing‐Hindwing Integration in Lepidopteran‐Inspired Aerial Robotics
-PY  - 2026
-T2  - Advanced Functional Materials
 AU  - Ting Tan
 AU  - Kaiyu Hou
 AU  - Yuming Xu
 AU  - Yuzhe Zhang
 AU  - Boyuan Tian
 AU  - Zhimiao Yan
+JO  - Advanced Functional Materials
+PY  - 2026
 DO  - 10.1002/adfm.202521940
+UR  - https://doi.org/10.1002/adfm.202521940
 VL  - 36
 IS  - 28
-SP  - e21940
-UR  - https://doi.org/10.1002/adfm.202521940
-N1  - 在线2025-11-28；编入2026年36卷e21940；期刊论文；证据B；本轮取得出版商摘要、参考文献和补充材料入口，未审读全部正文与SI；“完美分类”的划分方式及泛化范围待查。摘要支持感知部署，不支持已完成感知驱动闭环控制。
 ER  - 
 
 TY  - JOUR
-ID  - P04
 TI  - Collision perception for flapping-wing robots inspired by the rhinoceros beetle
-PY  - 2026
-T2  - Device
 AU  - Yuming Xu
 AU  - Ting Tan
 AU  - Zhimiao Yan
+JO  - Device
+PY  - 2026
 DO  - 10.1016/j.device.2026.101066
+UR  - https://doi.org/10.1016/j.device.2026.101066
 VL  - 4
 IS  - 4
 SP  - 101066
-UR  - https://doi.org/10.1016/j.device.2026.101066
-N1  - 2026年4卷4期；期次日期04-17，首发日未独立确认；期刊论文；证据B；已核对出版商摘要和引言；“促进碰后策略调整/触觉建图”是意义与潜力，不能据此认定机器人已自主完成碰后恢复、栖停或空间建图。
 ER  - 
 
 TY  - JOUR
-ID  - P05
 TI  - A triboelectric airflow field sensor enables cross-scale multi-parameter sensing in meter-scale flapping-wing aircrafts
-PY  - 2026
-T2  - Science Advances
 AU  - Wenyu Zhao
 AU  - Jiaze Li
 AU  - Waner Lin
@@ -102,19 +90,16 @@ AU  - Yu Chen
 AU  - Erzhen Pan
 AU  - Zhenglong Sun
 AU  - Ziya Wang
+JO  - Science Advances
+PY  - 2026
 DO  - 10.1126/sciadv.aee7066
+UR  - https://doi.org/10.1126/sciadv.aee7066
 VL  - 12
 IS  - 34
-SP  - eaee7066
-UR  - https://doi.org/10.1126/sciadv.aee7066
-N1  - 2026-08-21；期刊论文；证据A；0.04 m/s、0.07°、0.06 Hz是迁移后全尺寸风洞MAE，不能写成户外真值误差。飞行展示趋势和动作关联，采用1 kHz机载采集、4G传输、云端推理；0.5 s输入窗也应计入响应分析。尚未展示该输出驱动飞控闭环。
 ER  - 
 
 TY  - JOUR
-ID  - P06
 TI  - Bioinspired Graded-Stiffness Strain Sensors for a Broad-Range and Ultra-Sensitive Aerodynamic Perception of Flapping-Wing UAVs
-PY  - 2026
-T2  - ACS Applied Materials & Interfaces
 AU  - Bo Li
 AU  - You Pan
 AU  - Lijuan Xie
@@ -126,75 +111,70 @@ AU  - Junqiu Zhang
 AU  - Shichao Niu
 AU  - Zhiwu Han
 AU  - Luquan Ren
+JO  - ACS Applied Materials & Interfaces
+PY  - 2026
 DO  - 10.1021/acsami.6c14444
 UR  - https://doi.org/10.1021/acsami.6c14444
-N1  - 2026-09-11在线，卷页待定；期刊论文；证据B；Crossref与Europe PMC/PubMed交叉核对元数据；结论依据作者摘要。摘要描述proof of concept，不足以认定完成多参数解耦、自由飞行定量感知或强化学习控制。
 ER  - 
 
 TY  - UNPB
-ID  - P07
 TI  - Towards insect-like distributed proprioception in actuators and appendages for flapping-wing insect-scale aerial robots
-PY  - 2026
-T2  - arXiv
 AU  - Alexander Hedrick
 AU  - Arvind Gupta
 AU  - Kaushik Jayaram
+JO  - arXiv
+PY  - 2026
 DO  - 10.48550/arXiv.2608.21699
 UR  - https://arxiv.org/abs/2608.21699
-N1  - 2026-08-22，arXiv v1；预印本；证据A；0.44°/2.44°对应文中工作频段下的角幅值误差，不能当作所有瞬时时序误差。放大电路和实时计算仍外置；正文明确尚非闭环飞行控制。仅确认预印本。
 ER  - 
 
 TY  - JOUR
-ID  - P08
 TI  - Control of moth flight posture is mediated by wing mechanosensory feedback
-PY  - 2014
-T2  - Journal of Experimental Biology
 AU  - Bradley H. Dickerson
 AU  - Zane N. Aldworth
-AU  - Tom L. Daniel
+AU  - Thomas L. Daniel
+JO  - Journal of Experimental Biology
+PY  - 2014
 DO  - 10.1242/jeb.103770
-SP  - jeb.103770
 UR  - https://doi.org/10.1242/jeb.103770
-N1  - 2014，217：2301–2308；期刊论文；证据B；生物机制证据不等于机器人工程性能，也不说明只靠翼感知即可恢复任意六自由度状态。
+VL  - 217
+IS  - 13
+SP  - 2301
+EP  - 2308
 ER  - 
 
 TY  - JOUR
-ID  - P09
 TI  - Environment identification in flight using sparse approximation of wing strain
-PY  - 2017
-T2  - Journal of Fluids and Structures
 AU  - Krithika Manohar
 AU  - Steven L. Brunton
 AU  - J. Nathan Kutz
+JO  - Journal of Fluids and Structures
+PY  - 2017
 DO  - 10.1016/j.jfluidstructs.2017.01.008
-VL  - 70
-SP  - 162-180
 UR  - https://doi.org/10.1016/j.jfluidstructs.2017.01.008
-N1  - 2017，70：162–180；期刊论文；证据B；核心是模拟应变数据上的识别，不能引用成真实飞行试验。
+VL  - 70
+SP  - 162
+EP  - 180
 ER  - 
 
 TY  - JOUR
-ID  - P10
 TI  - Neural-inspired sensors enable sparse, efficient classification of spatiotemporal data
-PY  - 2018
-T2  - Proceedings of the National Academy of Sciences
 AU  - Thomas L. Mohren
 AU  - Thomas L. Daniel
 AU  - Steven L. Brunton
 AU  - Bingni W. Brunton
+JO  - Proceedings of the National Academy of Sciences
+PY  - 2018
 DO  - 10.1073/pnas.1808909115
+UR  - https://doi.org/10.1073/pnas.1808909115
 VL  - 115
 IS  - 42
-SP  - 10564-10569
-UR  - https://doi.org/10.1073/pnas.1808909115
-N1  - 在线2018-09-13；PNAS 115：10564–10569；期刊论文；证据B；是稀疏感知与神经编码研究，非完整机载系统；少量传感器的优势取决于任务和训练环境。
+SP  - 10564
+EP  - 10569
 ER  - 
 
 TY  - JOUR
-ID  - P11
 TI  - Self-powered hybrid flexible nanogenerator and its application in bionic micro aerial vehicles
-PY  - 2018
-T2  - Nano Energy
 AU  - Guowu Wei
 AU  - Yaqi Bi
 AU  - Xiuhan Li
@@ -206,52 +186,47 @@ AU  - Haiyang Guo
 AU  - Xuejun Zhao
 AU  - Xiangyu Chen
 AU  - Limin Jia
+JO  - Nano Energy
+PY  - 2018
 DO  - 10.1016/j.nanoen.2018.09.050
-VL  - 54
-SP  - 10-16
 UR  - https://doi.org/10.1016/j.nanoen.2018.09.050
-N1  - 2018，54：10–16；期刊论文；证据B；电容充电和小负载驱动不等于为飞行推进或整套无线系统持续供能；环境敏感性同时可能造成状态识别混淆。
+VL  - 54
+SP  - 10
+EP  - 16
 ER  - 
 
 TY  - JOUR
-ID  - P12
 TI  - Piezoelectric actuators with on-board sensing for micro-robotic applications
-PY  - 2019
-T2  - Smart Materials and Structures
 AU  - Shivam Chopra
 AU  - Nick Gravish
+JO  - Smart Materials and Structures
+PY  - 2019
 DO  - 10.1088/1361-665x/ab43fe
+UR  - https://doi.org/10.1088/1361-665x/ab43fe
 VL  - 28
 IS  - 11
 SP  - 115036
-UR  - https://doi.org/10.1088/1361-665x/ab43fe
-N1  - 在线2019-10-22；28：115036；期刊论文；证据A；验证集中于驱动器和局部机制，不是自主导航飞行。
 ER  - 
 
 TY  - JOUR
-ID  - P13
 TI  - Piezoelectric Energy Harvesting for Flapping Wing Micro Air Vehicle and Flapping Wing Sensing Based on Flexible Polyvinylidene Fluoride
-PY  - 2021
-T2  - Applied Sciences
 AU  - Qiang Liu
 AU  - Qiang Li
 AU  - Zhifei Fang
 AU  - Xiaoqin Zhou
 AU  - Rongqi Wang
 AU  - Chengming Zuo
+JO  - Applied Sciences
+PY  - 2021
 DO  - 10.3390/app11031166
+UR  - https://doi.org/10.3390/app11031166
 VL  - 11
 IS  - 3
 SP  - 1166
-UR  - https://doi.org/10.3390/app11031166
-N1  - 2021-01-27；11：1166；期刊论文；证据B；是台架上的机电响应和气动力关联；不能等同于复杂自由飞行状态解码。
 ER  - 
 
 TY  - JOUR
-ID  - P14
 TI  - Nanogenerators integrated self-powered multi-functional wings for biomimetic micro flying robots
-PY  - 2022
-T2  - Nano Energy
 AU  - Hao Zheng
 AU  - Liangyuan Li
 AU  - Muhammad Husnain Haider
@@ -262,90 +237,80 @@ AU  - Xingguang Ma
 AU  - Jing Xu
 AU  - Zhonglai Wang
 AU  - Xiaosheng Zhang
+JO  - Nano Energy
+PY  - 2022
 DO  - 10.1016/j.nanoen.2022.107627
+UR  - https://doi.org/10.1016/j.nanoen.2022.107627
 VL  - 101
 SP  - 107627
-UR  - https://doi.org/10.1016/j.nanoen.2022.107627
-N1  - 2022，101：107627；期刊论文；证据B；核对到摘要/引言和结论片段；风洞“飞行模拟”不能写成自主自由飞行，采能也不意味着整机能源自持。
 ER  - 
 
-TY  - CONF
-ID  - P15
+TY  - CPAPER
 TI  - A Low-cost Fabrication Approach to Embody Flexible and Lightweight Strain Sensing on Flapping Wings
-PY  - 2024
-T2  - Bioinspired, soft and other novel design paradigms for aerial robotics (ICRA workshop)
 AU  - Sunyi Wang
 AU  - Martijn den Hoed
 AU  - Salua Hamaza
+JO  - Bioinspired, soft and other novel design paradigms for aerial robotics (ICRA workshop)
+PY  - 2024
+DO  - 
 UR  - https://repository.tudelft.nl/record/uuid%3Acdeff09d-cd00-48b7-b12f-16a07f6d2751
-N1  - 2024-05-13，ICRA相关workshop；Workshop论文；证据B；属于workshop成果，不能混列为ICRA主会完整论文；没有据此确认自主闭环飞行。
 ER  - 
 
 TY  - JOUR
-ID  - P16
 TI  - Integrated proprioceptive piezoelectric actuators for miniature robots and devices
-PY  - 2025
-T2  - Smart Materials and Structures
 AU  - Heiko Kabutz
 AU  - Kaushik Jayaram
+JO  - Smart Materials and Structures
+PY  - 2025
 DO  - 10.1088/1361-665x/adac1b
+UR  - https://doi.org/10.1088/1361-665x/adac1b
 VL  - 34
 IS  - 3
 SP  - 035004
-UR  - https://doi.org/10.1088/1361-665x/adac1b
-N1  - 在线2025-02-05；34：035004；期刊论文；证据B；该篇演示对象主要是腿机构，不应写成已在扑翼机完成飞行感知；作为P07的器件技术前序。
 ER  - 
 
-TY  - CONF
-ID  - P17
+TY  - CPAPER
 TI  - Flappy Hummingbird: An Open Source Dynamic Simulation of Flapping Wing Robots and Animals
-PY  - 2019
-T2  - ICRA 2019 / arXiv author version
 AU  - Fan Fei
 AU  - Zhan Tu
 AU  - Yilun Yang
 AU  - Jian Zhang
 AU  - Xinyan Deng
+JO  - ICRA 2019 / arXiv author version
+PY  - 2019
 DO  - 10.48550/arXiv.1902.09628
 UR  - https://arxiv.org/abs/1902.09628
-N1  - 2019，作者注明ICRA接收；链接为作者预印本；会议论文（作者版本）；证据B；没有把翼部柔性传感作为核心输入；本轮未完整审核其硬件迁移自由度与配置，不将其归为翼感知闭环。
 ER  - 
 
-TY  - CONF
-ID  - P18
+TY  - CPAPER
 TI  - Learning-based Trajectory Tracking for Bird-inspired Flapping-Wing Robots
-PY  - 2025
-T2  - 2025 American Control Conference (ACC)
 AU  - Jiaze Cai
 AU  - Vishnu Sangli
 AU  - Mintae Kim
 AU  - Koushil Sreenath
+JO  - 2025 American Control Conference (ACC)
+PY  - 2025
 DO  - 10.23919/ACC63710.2025.11107865
-SP  - 430-437
 UR  - https://doi.org/10.23919/ACC63710.2025.11107865
-N1  - 2025 ACC；预印本首发2024-11；会议论文；证据A；正文将核心结果标为simulation；不能与NMI真实传感器闭环放在同一实验等级。
+SP  - 430
+EP  - 437
 ER  - 
 
 TY  - UNPB
-ID  - P19
 TI  - Reinforcement Twinning for Hybrid Control of Flapping-Wing Drones
-PY  - 2026
-T2  - arXiv
 AU  - Romain Poletti
 AU  - Lorenzo Schena
 AU  - Lilla Koloszar
 AU  - Joris Degroote
 AU  - Miguel Alfonso Mendez
+JO  - arXiv
+PY  - 2026
 DO  - 10.48550/arXiv.2505.18201
 UR  - https://arxiv.org/abs/2505.18201
-N1  - 首发2025-05-21；v2更新2026-06-18；预印本；证据A；文中的real environment是相对于数字孪生的动力学环境，不能按字面认作已完成真实硬件飞行；仅确认预印本。
 ER  - 
 
 TY  - UNPB
-ID  - P20
 TI  - Controlled Flight of an Insect-Scale Flapping-Wing Robot via Integrated Onboard Sensing and Computation
-PY  - 2026
-T2  - arXiv
 AU  - Yi-Hsuan Hsiao
 AU  - Quang Phuc Kieu
 AU  - Zhongtao Guan
@@ -355,16 +320,14 @@ AU  - Owen Matteson
 AU  - Jonathan P. How
 AU  - Elizabeth Farrell Helbling
 AU  - YuFeng Chen
+JO  - arXiv
+PY  - 2026
 DO  - 10.48550/arXiv.2602.08328
 UR  - https://arxiv.org/abs/2602.08328
-N1  - 2026-02-09，arXiv v1；预印本；证据A；不是翼部应变/压电感知路线；需区分文中机外计算、机载计算两组实验。避障与落花演示使用人工高层指令，不能写成自主规划或已实现能源自持。仅确认预印本。
 ER  - 
 
 TY  - JOUR
-ID  - P21
 TI  - Digital mapping of surface turbulence status and aerodynamic stall on wings of a flying aircraft
-PY  - 2023
-T2  - Nature Communications
 AU  - Zijie Xu
 AU  - Leo N. Y. Cao
 AU  - Chengyu Li
@@ -374,19 +337,16 @@ AU  - Weizhe Wang
 AU  - Wei Tang
 AU  - Zhaohui Yao
 AU  - Zhong Lin Wang
+JO  - Nature Communications
+PY  - 2023
 DO  - 10.1038/s41467-023-38486-6
+UR  - https://doi.org/10.1038/s41467-023-38486-6
 VL  - 14
 IS  - 1
-SP  - 2792
-UR  - https://doi.org/10.1038/s41467-023-38486-6
-N1  - 2023-05-16；14：2792；期刊论文；证据B；固定翼证据不能直接替代扑翼强周期、柔性变形条件下的验证。
 ER  - 
 
 TY  - JOUR
-ID  - P22
 TI  - Flexible calorimetric flow sensor with unprecedented sensitivity and directional resolution for multiple flight parameter detection
-PY  - 2024
-T2  - Nature Communications
 AU  - Zheng Gong
 AU  - Weicheng Di
 AU  - Yonggang Jiang
@@ -402,19 +362,16 @@ AU  - Jinwu Xiang
 AU  - Xilun Ding
 AU  - Deyuan Zhang
 AU  - Huawei Chen
+JO  - Nature Communications
+PY  - 2024
 DO  - 10.1038/s41467-024-47284-7
+UR  - https://doi.org/10.1038/s41467-024-47284-7
 VL  - 15
 IS  - 1
-SP  - 3091
-UR  - https://doi.org/10.1038/s41467-024-47284-7
-N1  - 2024-04-10；15：3091；期刊论文；证据B；热式传感需功耗预算；在其他飞行平台的性能不能直接视作已解决扑翼非定常流解耦。
 ER  - 
 
 TY  - JOUR
-ID  - P23
 TI  - A review on flapping-wing robots: Recent progress and challenges
-PY  - 2025
-T2  - The International Journal of Robotics Research
 AU  - Saeed Rafee Nekoo
 AU  - Ramy Rashad
 AU  - Christophe De Wagter
@@ -422,10 +379,12 @@ AU  - Sawyer B Fuller
 AU  - Guido de Croon
 AU  - Stefano Stramigioli
 AU  - Anibal Ollero
+JO  - The International Journal of Robotics Research
+PY  - 2025
 DO  - 10.1177/02783649251343638
+UR  - https://doi.org/10.1177/02783649251343638
 VL  - 44
 IS  - 14
-SP  - 2305-2339
-UR  - https://doi.org/10.1177/02783649251343638
-N1  - 2025-05-28在线；44：2305–2339；期刊论文；证据A；综述发布日期早于本报告2026年的新作，不覆盖本次全部新进展。
+SP  - 2305
+EP  - 2339
 ER  - 
