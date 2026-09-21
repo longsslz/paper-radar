@@ -1,0 +1,294 @@
+[
+  {
+    "paper_id": "crossref:10.1038/s44328-025-00072-9",
+    "title": "Organic mixed ionic-electronic conductor device platforms for emerging biosensor application",
+    "authors": [
+      "Siyu Qin",
+      "Zeyuan Sun",
+      "Simiao Sun",
+      "Jeremy Wang",
+      "Charleen Rahman",
+      "Thomas E. Gartner",
+      "Xuanhong Cheng",
+      "Elsa Reichmanis"
+    ],
+    "venue": "npj Biosensing",
+    "published_at": "2026-02-19",
+    "source": "crossref",
+    "doi": "10.1038/s44328-025-00072-9",
+    "url": "https://doi.org/10.1038/s44328-025-00072-9",
+    "pdf_url": "https://www.nature.com/articles/s44328-025-00072-9.pdf",
+    "robot_type_tags": [
+      "bio_sensing"
+    ],
+    "paper_type": "transferable",
+    "score": 0.618,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44328-025-00072-9_caption_p1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W7118022173",
+    "title": "Nonlinear light conversion and infrared photodetection with laser-printed plasmonic metasurfaces supporting bound states in the continuum",
+    "authors": [
+      "Dmitrii V. Pavlov",
+      "Kseniia A. Sergeeva",
+      "Albert A. Seredin",
+      "Artem B. Cherepakhin",
+      "Aleksandr A. Sergeev",
+      "Anastasiia V. Sokolova",
+      "Y.N. Kulchin",
+      "Alexey Zhizhchenko",
+      "Mihail Petrov",
+      "Aleksandr A. Kuchmizhak",
+      "Andrey L. Rogach"
+    ],
+    "venue": "Light Science & Applications",
+    "published_at": "2026-01-02",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41377-025-02040-4",
+    "url": "https://openalex.org/W7118022173",
+    "pdf_url": "https://www.nature.com/articles/s41377-025-02040-4.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.7917,
+    "abstract": "Abstract Plasmonic metasurfaces supporting high-quality (Q) resonances offer unprecedented ways for controlling light-matter interaction at the nanoscale, yet scalable fabrication of such sophisticated nanostructures still relies on expensive and multi-step fabrication routes, hindering their practical application. Here, we produced plasmonic metasurfaces composed of the regular arrangement of hollow protruding nanobumps via direct femtosecond laser patterning of thin gold films. By using comprehensive optical modeling, infrared spectroscopy and angle-resolved third harmonic generation experiments, we justified that such laser-printed nanostructures support symmetry-protected plasmonic quasi-bound states in the continuum (qBIC) with a measured Q-factor up to 20. Moreover, under critical coupling conditions that match the radiative and nonradiative losses of the high-Q mode, the metasurfaces demonstrate the third harmonic generation enhanced by a factor of ≈10 5 as compared to the smooth Au film benchmark, proving structure efficiency for nonlinear conversion. Finally, by taking advantage of the simplicity and straightforward character of the laser printing process, we realized a field-effect transistor device with HgTe quantum dots as an active medium and qBIC-supporting plasmonic metasurface imprinted over drain and source electrodes. The resulting metasurface-empowered device operates at 200 K and 5 V bias voltage and demonstrates superior specific detectivity around 8.7 × 10 11 at the plasmonic-qBIC spectral region and fast response time, holding promise for the realization of advanced shortwave infrared photodetectors.",
+    "key_figure_path": "output/figures/openalex_W7118022173_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4416608880",
+    "title": "Metasurface-assisted bioelectronics: bridging photonic innovation with biomedical implants",
+    "authors": [
+      "Mohammad Mohammadi Aria",
+      "Shashi Bhushan Srivastava"
+    ],
+    "venue": "Light Science & Applications",
+    "published_at": "2025-11-24",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41377-025-02072-w",
+    "url": "https://openalex.org/W4416608880",
+    "pdf_url": "https://www.nature.com/articles/s41377-025-02072-w.pdf",
+    "robot_type_tags": [
+      "tunable_metasurface",
+      "bio_sensing",
+      "terahertz_microwave"
+    ],
+    "paper_type": "transferable",
+    "score": 0.7941,
+    "abstract": "Wireless cellular stimulation has been widely applied for bioengineering and bidirectional communication with the brain. Different technologies, such as photoelectrical stimulation as an alternative to optogenetics, have emerged for a wide range of remote therapeutic applications using light. Metasurfaces enable pixel-wise control of electric field distribution by engineering absorption and wavefront shaping, with responses tuned to incident light polarization, frequency, and phase, offering precise stimulation and wireless control in retinal, cochlear, and cardiac implants. Moreover, by leveraging terahertz (THz) band patches, reconfigurable metasurfaces controlled via FPGA and holography, and virtual reality-assisted designs, these interfaces can revolutionize bioelectronic medicine.",
+    "key_figure_path": "output/figures/openalex_W4416608880_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s41566-025-01781-3",
+    "title": "3R-stacked transition metal dichalcogenide non-local metasurface for efficient second-harmonic generation",
+    "authors": [
+      "Zhi Hao Peng",
+      "Michele Cotrufo",
+      "Ding Xu",
+      "Sander A. Mann",
+      "Siyuan Qiu",
+      "D. N. Basov",
+      "Milan Delor",
+      "Andrea Alú",
+      "P. James Schuck",
+      "Chiara Trovatello"
+    ],
+    "venue": "Nature Photonics",
+    "published_at": "2025-10-27",
+    "source": "crossref",
+    "doi": "10.1038/s41566-025-01781-3",
+    "url": "https://doi.org/10.1038/s41566-025-01781-3",
+    "pdf_url": "https://www.nature.com/articles/s41566-025-01781-3.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.498,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s41566-025-01781-3_publisher_fig1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "arxiv:2507.21535v1",
+    "title": "Revisiting THz absorption in GO and rGO liquid crystalline films",
+    "authors": [
+      "A. Vasilev",
+      "M. Zhezhu",
+      "H. Parsamyan",
+      "G. Baghdasaryan",
+      "M. Sargsyan",
+      "D. A. Ghazaryan",
+      "H. Gharagulyan"
+    ],
+    "venue": "arXiv",
+    "published_at": "2025-07-29",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2507.21535v1",
+    "pdf_url": "https://arxiv.org/pdf/2507.21535v1",
+    "robot_type_tags": [
+      "terahertz_microwave"
+    ],
+    "paper_type": "transferable",
+    "score": 0.3936,
+    "abstract": "With a swift progress in modern high-throughput communication systems, security, sensing and medicine utilizing THz range technologies, the demand for easy-to-fabricate, lightweight and high-performance absorbing materials has increased drastically. Notably, traditional approaches of eliminating unwanted radiation based on metasurfaces often face fabrication challenges limiting their practicality. In this study, we propose a straightforward approach for fabricating graphene oxide (GO) and reduced graphene oxide (rGO) liquid crystalline (LC) films via the vacuum filtration method and investigate their THz absorption characteristics. Here, the presence of LC phase in our electrochemically exfoliated GO and rGO LC films was confirmed by ellipsometric characterization. THz time-domain spectroscopy (TDS) measurements reveal that these films possess a low reflectance and transmittance confirming their strong absorptive properties within 0.4 - 1.6 THz frequency range for 2 micrometer thick GO and rGO LC films. Particularly, the GOLC film shows 37 % average absorption at a thickness of 2.12 micrometer, which is 221 times smaller than the central wavelength. Similarly, the rGOLC film reaches 50 % absorption with a 1.68 micrometer thickness, 279 times smaller than the central wavelength. These findings provide valuable insights for development of GO- and rGO-based LC THz absorbers with highly tunable properties due to the ordering of GO flakes. Specifically, the LC phase of GO contributes to the formation of more uniform films with enhanced absorption due to the compact stacking and denser packing, compared to conventional GO films with randomly oriented GO flakes.",
+    "key_figure_path": "output/figures/arxiv_2507_21535v1_caption_p3.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "arxiv:2506.18242v1",
+    "title": "Metasurface-empowered freely-arrangeable multi-task diffractive neural networks with weighted training",
+    "authors": [
+      "Yudong Tian",
+      "Haifeng Xu",
+      "Yuqing Liu",
+      "Xiangyu Zhao",
+      "Jingzhu Shao",
+      "Jierong Cheng",
+      "Chongzhao Wu"
+    ],
+    "venue": "arXiv",
+    "published_at": "2025-06-23",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2506.18242v1",
+    "pdf_url": "https://arxiv.org/pdf/2506.18242v1",
+    "robot_type_tags": [
+      "metasurface_computing",
+      "terahertz_microwave"
+    ],
+    "paper_type": "direct",
+    "score": 0.4039,
+    "abstract": "Recent advancements in optical computing have garnered considerable research interests owing to its ener-gy-efficient operation and ultralow latency characteristics. As an emerging framework in this domain, dif-fractive deep neural networks (D2NNs) integrate deep learning algorithms with optical diffraction principles to perform computational tasks at light speed without requiring additional energy consumption. Neverthe-less, conventional D2NN architectures face functional limitations and are typically constrained to single-task operations or necessitating additional costs and structures for functional reconfiguration. Here, an arrangea-ble diffractive neural network (A-DNN) that achieves low-cost reconfiguration and high operational versa-tility by means of diffractive layer rearrangement is presented. Our architecture enables dynamic reordering of pre-trained diffractive layers to accommodate diverse computational tasks. Additionally, we implement a weighted multi-task loss function that allows precise adjustment of task-specific performances. The efficacy of the system is demonstrated by both numerical simulations and experimental validations of recognizing handwritten digits and fashions at terahertz frequencies. Our proposed architecture can greatly expand the flexibility of D2NNs at a low cost, providing a new approach for realizing high-speed, energy-efficient ver-satile artificial intelligence systems.",
+    "key_figure_path": "output/figures/arxiv_2506_18242v1_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4402498997",
+    "title": "A low-voltage-driven MEMS ultrasonic phased-array transducer for fast 3D volumetric imaging",
+    "authors": [
+      "Yun Zhang",
+      "Tong Jin",
+      "Yining Deng",
+      "Zijie Zhao",
+      "Rui Wang",
+      "Qiong He",
+      "Jianwen Luo",
+      "Jiawei Li",
+      "Kang Du",
+      "Tao Wu",
+      "Chenfang Yan",
+      "Hao Zhang",
+      "Xinchao Lu",
+      "Chengjun Huang",
+      "Hang Gao"
+    ],
+    "venue": "Microsystems & Nanoengineering",
+    "published_at": "2024-09-11",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41378-024-00755-9",
+    "url": "https://openalex.org/W4402498997",
+    "pdf_url": "https://www.nature.com/articles/s41378-024-00755-9.pdf",
+    "robot_type_tags": [
+      "flexible_ultrasound"
+    ],
+    "paper_type": "direct",
+    "score": 0.7216,
+    "abstract": "Wearable ultrasound imaging technology has become an emerging modality for the continuous monitoring of deep-tissue physiology, providing crucial health and disease information. Fast volumetric imaging that can provide a full spatiotemporal view of intrinsic 3D targets is desirable for interpreting internal organ dynamics. However, existing 1D ultrasound transducer arrays provide 2D images, making it challenging to overcome the trade-off between the temporal resolution and volumetric coverage. In addition, the high driving voltage limits their implementation in wearable settings. With the use of microelectromechanical system (MEMS) technology, we report an ultrasonic phased-array transducer, i.e., a 2D piezoelectric micromachined ultrasound transducer (pMUT) array, which is driven by a low voltage and is chip-compatible for fast 3D volumetric imaging. By grouping multiple pMUT cells into one single drive channel/element, we propose an innovative cell-element-array design and operation of a pMUT array that can be used to quantitatively characterize the key coupling effects between each pMUT cell, allowing 3D imaging with 5-V actuation. The pMUT array demonstrates fast volumetric imaging covering a range of 40 mm × 40 mm × 70 mm in wire phantom and vascular phantom experiments, achieving a high temporal frame rate of 11 kHz. The proposed solution offers a full volumetric view of deep-tissue disorders in a fast manner, paving the way for long-term wearable imaging technology for various organs in deep tissues.",
+    "key_figure_path": "output/figures/openalex_W4402498997_caption_p3.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4393337759",
+    "title": "Flexible large-area ultrasound arrays for medical applications made using embossed polymer structures",
+    "authors": [
+      "P.L.M.J. van Neer",
+      "Laurens C. J. M. Peters",
+      "Roy Verbeek",
+      "Bart Peeters",
+      "Gerard de Haas",
+      "Lars Hörchens",
+      "Laurent Fillinger",
+      "Thijs Schrama",
+      "Egon J. W. Merks-Swolfs",
+      "Kaj Gijsbertse",
+      "Anne E. C. M. Saris",
+      "Moein Mozaffarzadeh",
+      "Jan M. Menssen",
+      "Chris L. de Korte",
+      "Jan‐Laurens P. J. van der Steen",
+      "Arno Volker",
+      "Gerwin H. Gelinck"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-03-30",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-024-47074-1",
+    "url": "https://openalex.org/W4393337759",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-47074-1.pdf",
+    "robot_type_tags": [
+      "flexible_ultrasound"
+    ],
+    "paper_type": "direct",
+    "score": 0.5274,
+    "abstract": "Abstract With the huge progress in micro-electronics and artificial intelligence, the ultrasound probe has become the bottleneck in further adoption of ultrasound beyond the clinical setting (e.g. home and monitoring applications). Today, ultrasound transducers have a small aperture, are bulky, contain lead and are expensive to fabricate. Furthermore, they are rigid, which limits their integration into flexible skin patches. New ways to fabricate flexible ultrasound patches have therefore attracted much attention recently. First prototypes typically use the same lead-containing piezo-electric materials, and are made using micro-assembly of rigid active components on plastic or rubber-like substrates. We present an ultrasound transducer-on-foil technology based on thermal embossing of a piezoelectric polymer. High-quality two-dimensional ultrasound images of a tissue mimicking phantom are obtained. Mechanical flexibility and effective area scalability of the transducer are demonstrated by functional integration into an endoscope probe with a small radius of 3 mm and a large area (91.2×14 mm 2 ) non-invasive blood pressure sensor.",
+    "key_figure_path": "output/figures/openalex_W4393337759_caption_p3.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4391358424",
+    "title": "Well-defined in-textile photolithography towards permeable textile electronics",
+    "authors": [
+      "Peng‐Wei Wang",
+      "Xiaohao Ma",
+      "Zhiqiang Lin",
+      "Fan Chen",
+      "Zijian Chen",
+      "Hong Hu",
+      "Hailong Xu",
+      "Xinyi Zhang",
+      "Yuqing Shi",
+      "Qiyao Huang",
+      "Yuanjing Lin",
+      "Zijian Zheng"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2024-01-30",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-024-45287-y",
+    "url": "https://openalex.org/W4391358424",
+    "pdf_url": "https://www.nature.com/articles/s41467-024-45287-y.pdf",
+    "robot_type_tags": [
+      "smart_fiber_textile"
+    ],
+    "paper_type": "transferable",
+    "score": 0.5196,
+    "abstract": "Textile-based wearable electronics have attracted intensive research interest due to their excellent flexibility and breathability inherent in the unique three-dimensional porous structures. However, one of the challenges lies in achieving highly conductive patterns with high precision and robustness without sacrificing the wearing comfort. Herein, we developed a universal and robust in-textile photolithography strategy for precise and uniform metal patterning on porous textile architectures. The as-fabricated metal patterns realized a high precision of sub-100 µm with desirable mechanical stability, washability, and permeability. Moreover, such controllable coating permeated inside the textile scaffold contributes to the significant performance enhancement of miniaturized devices and electronics integration through both sides of the textiles. As a proof-of-concept, a fully integrated in-textiles system for multiplexed sweat sensing was demonstrated. The proposed method opens up new possibilities for constructing multifunctional textile-based flexible electronics with reliable performance and wearing comfort.",
+    "key_figure_path": "output/figures/openalex_W4391358424_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4390050791",
+    "title": "A dual-mode fiber-shaped flexible capacitive strain sensor fabricated by direct ink writing technology for wearable and implantable health monitoring applications",
+    "authors": [
+      "Chi Zhang",
+      "Wenyu Ouyang",
+      "Lei Zhang",
+      "Dachao Li"
+    ],
+    "venue": "Microsystems & Nanoengineering",
+    "published_at": "2023-12-21",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41378-023-00634-9",
+    "url": "https://openalex.org/W4390050791",
+    "pdf_url": "https://www.nature.com/articles/s41378-023-00634-9.pdf",
+    "robot_type_tags": [
+      "smart_fiber_textile"
+    ],
+    "paper_type": "direct",
+    "score": 0.5743,
+    "abstract": "Abstract Flexible fiber-shaped strain sensors show tremendous potential in wearable health monitoring and human‒machine interactions due to their compatibility with everyday clothing. However, the conductive and sensitive materials generated by traditional manufacturing methods to fabricate fiber-shaped strain sensors, including sequential coating and solution extrusion, exhibit limited stretchability, resulting in a limited stretch range and potential interface delamination. To address this issue, we fabricate a fiber-shaped flexible capacitive strain sensor (FSFCSS) by direct ink writing technology. Through this technology, we print parallel helical Ag electrodes on the surface of TPU tube fibers and encapsulate them with a high dielectric material BTO@Ecoflex, endowing FSFCSS with excellent dual-mode sensing performance. The FSFCSS can sense dual-model strain, namely, axial tensile strain and radial expansion strain. For axial tensile strain sensing, FSFCSS exhibits a wide detection range of 178%, a significant sensitivity of 0.924, a low detection limit of 0.6%, a low hysteresis coefficient of 1.44%, and outstanding mechanical stability. For radial expansion strain sensing, FSFCSS demonstrates a sensitivity of 0.00086 mmHg −1 and exhibits excellent responsiveness to static and dynamic expansion strain. Furthermore, FSFCSS was combined with a portable data acquisition circuit board for the acquisition of physiological signals and human‒machine interaction in a wearable wireless sensing system. To measure blood pressure and heart rate, FSFCSS was combined with a printed RF coil in series to fabricate a wireless hemodynamic sensor. This work enables simultaneous application in wearable and implantable health monitoring, thereby advancing the development of smart textiles.",
+    "key_figure_path": "output/figures/openalex_W4390050791_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  }
+]
