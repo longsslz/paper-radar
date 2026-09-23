@@ -1,5 +1,15 @@
 [
   {
+    "id": "10.1126-scirobotics.ads6790",
+    "title": "Learning contact-rich whole-body manipulation with example-guided reinforcement learning",
+    "headline": "一条动作示例，怎样教软身体机器人抱箱、翻壶？",
+    "venue": "Science Robotics",
+    "added_at": "2026-09-23T04:43:43Z",
+    "added_date": "2026-09-23",
+    "publication_date": "2025-08-20",
+    "href": "10.1126-scirobotics.ads6790/index.html"
+  },
+  {
     "id": "10.1126-sciadv.aec4252",
     "title": "Insect-inspired micro-optical antenna enables ultrasensitive multisensory perception",
     "headline": "让扑翼机器人用一根光学触角，感受力、声音与氨气",
