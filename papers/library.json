@@ -1,5 +1,15 @@
 [
   {
+    "id": "arxiv-2605.07308v2",
+    "title": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models",
+    "headline": "接触发生时，",
+    "venue": "arXiv",
+    "added_at": "2026-09-23T05:51:02Z",
+    "added_date": "2026-09-23",
+    "publication_date": "2026-05-08",
+    "href": "arxiv-2605.07308v2/index.html"
+  },
+  {
     "id": "10.1126-scirobotics.ads6790",
     "title": "Learning contact-rich whole-body manipulation with example-guided reinforcement learning",
     "headline": "一条动作示例，怎样教软身体机器人抱箱、翻壶？",
