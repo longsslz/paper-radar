@@ -1,0 +1,254 @@
+[
+  {
+    "paper_id": "crossref:10.1038/s44310-025-00104-2",
+    "title": "Maximum Shannon capacity of photonic structures",
+    "authors": [
+      "Alessio Amaolo",
+      "Pengning Chao",
+      "Benjamin Strekha",
+      "Stefan Clarke",
+      "Jewel Mohajan",
+      "Francis J. Chen",
+      "Sean Molesky",
+      "Alejandro W. Rodriguez"
+    ],
+    "venue": "npj Nanophotonics",
+    "published_at": "2026-03-06",
+    "source": "crossref",
+    "doi": "10.1038/s44310-025-00104-2",
+    "url": "https://doi.org/10.1038/s44310-025-00104-2",
+    "pdf_url": "https://www.nature.com/articles/s44310-025-00104-2.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.6541,
+    "abstract": "Abstract Information transfer through electromagnetic waves is vital to computing, imaging, telecommunications, and power management. A central figure of merit is the Shannon capacity, the maximum error-free bit-rate over a noisy channel achievable via encoding. Prior works on optical information transfer have treated waves propagating through fixed photonic structures such as vacuum, where the communication channels are predetermined and the Shannon capacity can be evaluated via a convex “water-filling” procedure, or relied on simplifications of relevant physics via circuit theory and far-field assumptions. In this article, we present limits on the significantly more difficult problem of maximizing Shannon capacity given the freedom to structure the photonic environment, allowing for the optimization of optical communication channels subject to wave propagation constraints. By combining information theory, wave scattering, and convex relaxations, we formalize the relationship between electromagnetic and information-theoretic quantities, showing how device considerations such as material choice, system size, and geometry impact optimal channel power allocations and maximum bit-rates. Our results generalize prior attempts to interpret optical communication using the spectral decomposition of the electromagnetic Green’s function, and provide a foundation for furthering understanding of how to optimally engineer information-processing photonic devices such as antennas, MIMO space-division multiplexers, and metasurface imaging kernels.",
+    "key_figure_path": "output/figures/crossref_10_1038_s44310-025-00104-2_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44328-026-00080-3",
+    "title": "Surface Transmon Resonance (STR): a handheld nanogap biosensor for real-time, label-free molecular binding kinetics",
+    "authors": [
+      "Bryan K. Chantigian",
+      "Sang-Hyun Oh"
+    ],
+    "venue": "npj Biosensing",
+    "published_at": "2026-02-19",
+    "source": "crossref",
+    "doi": "10.1038/s44328-026-00080-3",
+    "url": "https://doi.org/10.1038/s44328-026-00080-3",
+    "pdf_url": "https://www.nature.com/articles/s44328-026-00080-3.pdf",
+    "robot_type_tags": [
+      "bio_sensing"
+    ],
+    "paper_type": "transferable",
+    "score": 0.6171,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44328-026-00080-3_caption_p1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44172-026-00593-9",
+    "title": "Cyber metasurface system for electromagnetic field closed-loop sensing and manipulation",
+    "authors": [
+      "Xingqi Xuan",
+      "Bincai Wu",
+      "Yuqi Chen",
+      "Wangjie Cen",
+      "Yulin Zhou",
+      "Shilie Zheng",
+      "Xiaonan Hui",
+      "Xianmin Zhang"
+    ],
+    "venue": "Communications Engineering",
+    "published_at": "2026-01-23",
+    "source": "crossref",
+    "doi": "10.1038/s44172-026-00593-9",
+    "url": "https://doi.org/10.1038/s44172-026-00593-9",
+    "pdf_url": "https://www.nature.com/articles/s44172-026-00593-9.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.5086,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44172-026-00593-9_caption_p1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44328-025-00068-5",
+    "title": "Label-free detection of cardiac troponin I and complex using surface plasmon resonance for assessing acute myocardial injuries",
+    "authors": [
+      "Siew J. Beh",
+      "Arnan Mitchell",
+      "César S. Huertas"
+    ],
+    "venue": "npj Biosensing",
+    "published_at": "2026-01-13",
+    "source": "crossref",
+    "doi": "10.1038/s44328-025-00068-5",
+    "url": "https://doi.org/10.1038/s44328-025-00068-5",
+    "pdf_url": "https://www.nature.com/articles/s44328-025-00068-5.pdf",
+    "robot_type_tags": [
+      "bio_sensing"
+    ],
+    "paper_type": "transferable",
+    "score": 0.6123,
+    "abstract": "Abstract Accurate diagnosis of myocardial injury is crucial in clinical practice, as it enables prompt treatment, reduces the risk of complications, and improves patient outcomes. Examining cardiac troponin composition offers distinct advantages as it provides valuable insights that help differentiate between ischaemic and non-ischaemic causes of cardiac injury, thereby directly enhancing clinical assay specificity. Current high-sensitivity troponin assays target all circulating forms of either troponin I or T but are unable to distinguish individual forms or specific combinations. This is an issue as troponin is also elevated in non-cardiac conditions, and emerging evidence suggests that the ratio between troponin I and TIC complex isoforms may serve as an indicator for differentiating acute from chronic myocardial injury. Here, we introduce a methodology utilising a label-free Surface Plasmon Resonance biosensor to detect and differentiate between troponin I and complex isoforms. Unlike traditional immunoassay, which requires indirect labelling with secondary antibodies to detect these biomarkers, this method provides a real-time detection of these isoforms, as each antibody interaction with the specific analytes provides a quantitative reading. We demonstrated that this method can detect complexed and free troponin I in varying ratios. This method has the potential to be developed into point-of-care testing and opens avenues for isoform-specific prognostic assays.",
+    "key_figure_path": "output/figures/crossref_10_1038_s44328-025-00068-5_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44328-025-00067-6",
+    "title": "Autocatalytic Cas13a biosensor enabled by RNA-nanocircles for ultrasensitive RNA detection",
+    "authors": [
+      "Fei Deng",
+      "Sneha Gulati",
+      "Rui Sang",
+      "Yi Li",
+      "Ewa M. Goldys"
+    ],
+    "venue": "npj Biosensing",
+    "published_at": "2026-01-13",
+    "source": "crossref",
+    "doi": "10.1038/s44328-025-00067-6",
+    "url": "https://doi.org/10.1038/s44328-025-00067-6",
+    "pdf_url": "https://www.nature.com/articles/s44328-025-00067-6.pdf",
+    "robot_type_tags": [
+      "bio_sensing"
+    ],
+    "paper_type": "transferable",
+    "score": 0.5323,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44328-025-00067-6_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44328-025-00071-w",
+    "title": "Disposable Point of Care multiplexed plasmonic biosensor for rapid and specific identification of respiratory viruses",
+    "authors": [
+      "Patricia Ramirez-Priego",
+      "Juliana F. Giarola",
+      "Cristina Andrés",
+      "Andrés Antón",
+      "M.-Carmen Estévez",
+      "Laura M. Lechuga"
+    ],
+    "venue": "npj Biosensing",
+    "published_at": "2026-01-13",
+    "source": "crossref",
+    "doi": "10.1038/s44328-025-00071-w",
+    "url": "https://doi.org/10.1038/s44328-025-00071-w",
+    "pdf_url": "https://www.nature.com/articles/s44328-025-00071-w.pdf",
+    "robot_type_tags": [
+      "bio_sensing"
+    ],
+    "paper_type": "transferable",
+    "score": 0.5323,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44328-025-00071-w_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44310-025-00098-x",
+    "title": "Spectral synthesis of temporal response of nonlinearity through tuneable electron and phonon dynamics in a metamaterial",
+    "authors": [
+      "Jingyi Wu",
+      "Anton Yu. Bykov",
+      "Anastasiia Zaleska",
+      "Anatoly V. Zayats"
+    ],
+    "venue": "npj Nanophotonics",
+    "published_at": "2026-01-08",
+    "source": "crossref",
+    "doi": "10.1038/s44310-025-00098-x",
+    "url": "https://doi.org/10.1038/s44310-025-00098-x",
+    "pdf_url": "https://www.nature.com/articles/s44310-025-00098-x.pdf",
+    "robot_type_tags": [
+      "tunable_metasurface"
+    ],
+    "paper_type": "transferable",
+    "score": 0.5316,
+    "abstract": "Abstract Manipulating intensity, phase and polarisation of the electromagnetic fields on ultrafast timescales is essential for all-optical switching, optical information processing and development of novel time-variant media. Noble metal based plasmonics has provided numerous platforms for optical switching and control, enabled by strong local field enhancement, artificially engineered dispersion and strong Kerr-type free-electron nonlinearities. However, achieving precise control over switching times and spectral response remains challenging, often limited by hot-electron gas relaxation on picosecond timescales and by the intrinsic band structure of the materials. Here, we experimentally demonstrate a strong and tunable nonlinearity in a metamaterial-on-a-mirror geometry, controlled by the wavelength of excitation, which imprints a specific, non-uniform hot-electron population distribution, driving targeted electron and lattice dynamics. The synergistic exchange of electromagnetic, electronic and mechanical energies enables reflection changes on sub-300 fs timescales in selected spectral ranges, surpassing the limitations imposed by the inherent material response of metamaterial constituents. The observed effect–present in reflection due to leaky guided modes of the metamaterial, but absent in transmission–is highly spectrally selective and sensitive to polarisation of light, opening a pathway to tailoring switching rates through the choice of operating wavelength and nanostructure design. The ability to manipulate temporal, spectral, and mechanical aspects of light-matter interactions underscores new opportunities for nonlinear optical applications where polarisation diversity, spectral selectivity, and ultrafast modulation are important.",
+    "key_figure_path": "output/figures/crossref_10_1038_s44310-025-00098-x_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4412510894",
+    "title": "Optical next generation reservoir computing",
+    "authors": [
+      "Hao Wang",
+      "Jianqi Hu",
+      "YoonSeok Baek",
+      "Kohei Tsuchiyama",
+      "Malo Joly",
+      "Qiang Liu",
+      "Sylvain Gigan"
+    ],
+    "venue": "Light Science & Applications",
+    "published_at": "2025-07-21",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41377-025-01927-6",
+    "url": "https://openalex.org/W4412510894",
+    "pdf_url": "https://www.nature.com/articles/s41377-025-01927-6.pdf",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.5692,
+    "abstract": "Artificial neural networks with internal dynamics exhibit remarkable capability in processing information. Reservoir computing (RC) is a canonical example that features rich computing expressivity and compatibility with physical implementations for enhanced efficiency. Recently, a new RC paradigm known as next generation reservoir computing (NGRC) further improves expressivity but compromises its physical openness, posing challenges for realizations in physical systems. Here we demonstrate optical NGRC with computations performed by light scattering through disordered media. In contrast to conventional optical RC implementations, we directly and solely drive our optical reservoir with time-delayed inputs. Much like digital NGRC that relies on polynomial features of delayed inputs, our optical reservoir also implicitly generates these polynomial features for desired functionalities. By leveraging the domain knowledge of the reservoir inputs, we show that the optical NGRC not only predicts the short-term dynamics of the low-dimensional Lorenz63 and large-scale Kuramoto-Sivashinsky chaotic time series, but also replicates their long-term ergodic properties. Optical NGRC shows superiority in shorter training length and fewer hyperparameters compared to conventional optical RC based on scattering media, while achieving better forecasting performance. Our optical NGRC framework may inspire the realization of NGRC in other physical RC systems, new applications beyond time-series processing, and the development of deep and parallel architectures broadly.",
+    "key_figure_path": "output/figures/openalex_W4412510894_caption_p1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4412078790",
+    "title": "Ultrafast switching of a metasurface quasi-bound state in the continuum via transient optical symmetry breaking",
+    "authors": [
+      "Giulia Crotti",
+      "Andrea Schirato",
+      "Olesiya Pashina",
+      "Olga N. Sergaeva",
+      "Mihail I. Petrov",
+      "Costantino De Angelis",
+      "Giuseppe Della Valle"
+    ],
+    "venue": "Light Science & Applications",
+    "published_at": "2025-07-07",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41377-025-01885-z",
+    "url": "https://openalex.org/W4412078790",
+    "pdf_url": "https://www.nature.com/articles/s41377-025-01885-z.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.6074,
+    "abstract": "In photonic structures, bound states in the continuum (BICs) have recently attracted huge interest in both fundamental and applied research. Quasi-BIC leaky modes resulting from in-plane symmetry breaking in metasurfaces are particularly relevant to applications, due to their high quality factor, which scales as the squared inverse of the asymmetry parameter. Here, we theoretically propose an innovative approach to switch on quasi-BICs on sub-picosecond timescales via optically induced symmetry breaking in semiconductor metasurfaces. The desired effect is granted by exploiting the spatial inhomogeneities in the distribution of photo-excited hot carriers at the single meta-atom nanometric scale. In our simulations, the quasi-BIC state manifests itself as an ultra-sharp dip in transmission, emerging upon pump arrival, and disappearing completely within the carriers' diffusion timescale. Our strategy allows to envision reconfigurable platforms with switchable high-Q resonances, with ultrafast recovery beyond the limits of carrier relaxation, typical of previous approaches.",
+    "key_figure_path": "output/figures/openalex_W4412078790_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4410445147",
+    "title": "Dispersion-engineered spin photonics based on folded-path metasurfaces",
+    "authors": [
+      "Fei Zhang",
+      "Hanlin Bao",
+      "Mingbo Pu",
+      "Yinghui Guo",
+      "Tongtong Kang",
+      "Xiong Li",
+      "Qiong He",
+      "Mingfeng Xu",
+      "Xiaoliang Ma",
+      "Xiangang Luo"
+    ],
+    "venue": "Light Science & Applications",
+    "published_at": "2025-05-16",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41377-025-01850-w",
+    "url": "https://openalex.org/W4410445147",
+    "pdf_url": "https://www.nature.com/articles/s41377-025-01850-w.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.538,
+    "abstract": "Spin photonics revolutionizes photonic technology by enabling precise manipulation of photon spin states, with spin-decoupled metasurfaces emerging as pivotal in complex optical field manipulation. Here, we propose a folded-path metasurface concept that enables independent dispersion and phase control of two opposite spin states, effectively overcoming the limitations of spin photonics in achieving broadband decoupling and higher integration levels. This advanced dispersion engineering is achieved by modifying the equivalent length of a folded path, generated by a virtual reflective surface, in contrast to previous methods that depended on effective refractive index control by altering structural geometries. Our approach unlocks previously unattainable capabilities, such as achieving achromatic focusing and achromatic spin Hall effect using the rotational degree of freedom, and generating spatiotemporal vector optical fields with only a single metasurface. This advancement substantially broadens the potential of metasurface-based spin photonics, extending its applications from the spatial domain to the spatiotemporal domain.",
+    "key_figure_path": "output/figures/openalex_W4410445147_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  }
+]
