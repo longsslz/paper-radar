@@ -1,5 +1,15 @@
 [
   {
+    "id": "10.1126-scirobotics.aal2505",
+    "title": "A biomimetic robotic platform to study flight specializations of bats",
+    "headline": "Bat Bot：把蝙蝠的复杂翼形，变成能闭环飞行的机器",
+    "venue": "Science Robotics",
+    "added_at": "2026-09-29T13:16:38Z",
+    "added_date": "2026-09-29",
+    "publication_date": "2017-02-01",
+    "href": "10.1126-scirobotics.aal2505/index.html"
+  },
+  {
     "id": "arxiv-2605.07308v2",
     "title": "AT-VLA: Adaptive Tactile Injection for Enhanced Feedback Reaction in Vision-Language-Action Models",
     "headline": "接触发生时，",
