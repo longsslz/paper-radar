@@ -1,0 +1,287 @@
+[
+  {
+    "paper_id": "openalex:W7165489507",
+    "title": "Flexible bioelectronic sensors promote the advancement of wearable ultrasound technology in the medicine",
+    "authors": [
+      "Jia Li",
+      "Gang Li",
+      "Chaoqiong Ma",
+      "Weiwei Li",
+      "Gui Yu",
+      "Linying Xiang",
+      "Guang Yao"
+    ],
+    "venue": "Microsystems & Nanoengineering",
+    "published_at": "2026-06-22",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41378-026-01308-y",
+    "url": "https://openalex.org/W7165489507",
+    "pdf_url": "https://www.nature.com/articles/s41378-026-01308-y.pdf",
+    "robot_type_tags": [
+      "bio_sensing",
+      "flexible_ultrasound"
+    ],
+    "paper_type": "direct",
+    "score": 0.81,
+    "abstract": "Continuous and real-time monitoring of the subtle spatio-temporal changes in human physiological states are essential for daily diagnosis and treatment. Additionally, the capacity for monitoring is frequently restricted by available materials and specific application contexts. Wearable Flexible Ultrasound Biosensors (WFUBs) can be comfortably applied to the human body and have the functions of continuous monitoring and interventional therapy. The review summarized recent advances in the way WFUBs acquire vital data from particular biological tissue, the structural design and material selection, including the substrate, electrical connection, electrode, and the material synthesis of biosensors. In addition, the aspects of performance improvement of WFUBs were summarized, and the applications of wearable ultrasound systems in health care, diagnostic imaging, and interventional therapy were further discussed. Finally, the challenges and future research directions in the field of next generation WFUBs were explored.",
+    "key_figure_path": "output/figures/openalex_W7165489507_caption_p2.png",
+    "key_figure_caption": "Fig. 1 The development history of wearable ultrasound transducers 16– 24. The schematic illustration of WFUBs showing: key stages including"
+  },
+  {
+    "paper_id": "openalex:W7165444748",
+    "title": "Creation of a computational space with model-free metasurface neural network",
+    "authors": [
+      "Mingfei Song",
+      "Chao Qian",
+      "G Greg Wang",
+      "Cheng Li",
+      "Yuan Fang",
+      "Ali Momeni",
+      "Romain Fleury",
+      "Hongsheng Chen"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2026-06-20",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-026-74554-3",
+    "url": "https://openalex.org/W7165444748",
+    "pdf_url": "https://www.nature.com/articles/s41467-026-74554-3_reference.pdf",
+    "robot_type_tags": [
+      "integrated_system"
+    ],
+    "paper_type": "direct",
+    "score": 0.7775,
+    "abstract": "Physical neural networks (PNNs) are neural-like computational frameworks that exploit the intrinsic dynamics of physical media to achieve ultrafast and energy-efficient information processing. However, the complex and strongly-coupled physical nature of PNNs in disordered environments makes them resistant to accurate differentiable modeling. Here, we propose a concept of computational space that empowers the chaotic environment itself with computational capabilities. This space constitutes a large-scale, model-agnostic PNN through distributed intelligent metasurfaces. To enable effective training, we develop a fully-forward learning framework that estimates zeroth-order gradients from in-situ measurable electromagnetic feedback, thereby circumventing the rigorous modeling requirements of conventional backpropagation. In experiments, we construct such computational space that achieves recognition accuracies of 97% for alphabetic characters and 99% for numeric patterns. Furthermore, the space exhibits the functionalities of enhanced focusing under disordered scattering conditions and reliable human position localization. This emerging paradigm of self-evolving physical intelligence holds potential for advancing embodied intelligence, autonomous cyber–physical systems, and next-generation human–machine interaction, marking a fundamental transition from computing the physics to computing with physics. Physical neural networks promise fast and energy-efficient computing but are difficult to train in complex environments. Here, the authors create a computational space that learns from electromagnetic interactions, enabling wave focusing, object recognition, and localization without digital models.",
+    "key_figure_path": "output/figures/openalex_W7165444748_caption_p5.png",
+    "key_figure_caption": "Fig. 1. Ambient electromagnetic waves act simultaneously as both information carriers and"
+  },
+  {
+    "paper_id": "openalex:W7131628072",
+    "title": "Multifunctional movable-type coding metasurface enabling reconfigurable diffractive neural networks",
+    "authors": [
+      "Zhicai Yu",
+      "Xinyu Li",
+      "Ze Gu",
+      "Long Chen",
+      "Jianlin Su",
+      "Zixuan Cai",
+      "Xinyi Yu",
+      "Shi Long Qin",
+      "Lei Zhang",
+      "Qian Ma",
+      "Jian Wei You",
+      "Tie Jun Cui"
+    ],
+    "venue": "Light Science & Applications",
+    "published_at": "2026-02-26",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41377-026-02216-6",
+    "url": "https://openalex.org/W7131628072",
+    "pdf_url": "https://www.nature.com/articles/s41377-026-02216-6.pdf",
+    "robot_type_tags": [
+      "metasurface_computing"
+    ],
+    "paper_type": "direct",
+    "score": 0.9246,
+    "abstract": "Optical computing holds significant promise across diverse applications due to its low latency, power efficiency, and multidimensional processing capabilities. However, current diffraction neural networks (DNNs) generally lack reconfigurability, limiting the scalability of the optical computing systems. Inspired by movable-type printing technology, here we propose a movable-type coding metasurface to enable multiple functionalities such as electromagnetic (EM) computing, holography, and sensing. By cascading multiple layers of the proposed metasurfaces, we further develop a movable-type reconfigurable DNN (MT-RDNN). It can be seamlessly adapted from handwritten digit to letter classification tasks by replacing the meta-atoms in the last hidden metasurface layer. Moreover, a single-layer movable-type coding metasurface can be reconfigured to perform EM holography and multi-person vital sign sensing through modular meta-atom rearrangement. Featuring simple reconfiguration, high flexibility, and modular scalability, the proposed movable-type coding metasurface enables versatile and reusable EM computing, holography, and sensing applications.",
+    "key_figure_path": "output/figures/openalex_W7131628072_caption_p2.png",
+    "key_figure_caption": "Fig. 1, the proposed movable-type coding"
+  },
+  {
+    "paper_id": "openalex:W7130328004",
+    "title": "Multidimensional and reconfigurable optical neuromorphic computing using perovskite-based all-photonic synapses",
+    "authors": [
+      "Jiangzhi Zi",
+      "Jie Sun",
+      "Bing Yang",
+      "Fangzhen Hu",
+      "Keer Zhang",
+      "Xi Chen"
+    ],
+    "venue": "Communications Materials",
+    "published_at": "2026-02-18",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s43246-026-01097-x",
+    "url": "https://openalex.org/W7130328004",
+    "pdf_url": "https://www.nature.com/articles/s43246-026-01097-x_reference.pdf",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.6786,
+    "abstract": "Optical neuromorphic computing utilizes light-based neural networks for efficient AI processing. Conventional optoelectronic synapses are limited by single-dimensional perception and electrical weight modulation. This study overcomes these constraints by developing all-photonic artificial synapses using water-mediated phase transitions in MAPbI₃ perovskite. These synapses exhibit reversible light-driven optical memory capabilities, achieving a broad transmittance modulation via precisely controlled crystal deformation mechanisms. The high-stability synapses successfully replicate neurobiological functions, including paired-pulse facilitation, short-term to long-term memory transition, and humidity-dependent plasticity. Implemented within a recurrent neural network, the synapses achieve 100% classification accuracy for multidimensional optical stimuli encompassing power, duration, and environmental humidity parameters. Furthermore, integration with a diffractive deep neural network enables reconfigurable computing with 80 distinct programmable transmittance states, achieving remarkable classification accuracies on the MNIST handwritten digits and Fashion-MNIST datasets without hardware modifications. This work establishes a paradigm for developing intelligent systems that adapt to complex environmental changes, demonstrating potential for applications in dynamic visual perception and multi-task processing environments. Optical neuromorphic computing faces challenges with single-dimensional perception and electrical weight modulation in traditional synapses. Here, the authors develop all-photonic artificial synapses using MAPbI₃ perovskites, achieving reversible optical memory and high classification accuracy, paving the way for adaptive intelligent systems in dynamic environments and enhancing multi-task processing capabilities.",
+    "key_figure_path": "output/figures/openalex_W7130328004_caption_p5.png",
+    "key_figure_caption": "Fig. 1). In addition, the (MA) 4PbI6·2H2O ﬁlms"
+  },
+  {
+    "paper_id": "openalex:W4416909094",
+    "title": "Superior lead-free piezoceramics for wearable multimodal ultrasound imaging arrays",
+    "authors": [
+      "Haoyue Xue",
+      "Xing Huang",
+      "Xin Shun Sun",
+      "Kai Wu",
+      "Zhi Tan",
+      "Hongsong Fan",
+      "Jing Sun",
+      "Laiming Jiang",
+      "Jiagang Wu"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2025-12-02",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-025-66913-3",
+    "url": "https://openalex.org/W4416909094",
+    "pdf_url": "https://www.nature.com/articles/s41467-025-66913-3_reference.pdf",
+    "robot_type_tags": [
+      "flexible_ultrasound"
+    ],
+    "paper_type": "direct",
+    "score": 0.7283,
+    "abstract": "Medical ultrasound technology provides zero-radiation, non-invasive, high-penetration and high-resolution evaluation of body organs for diagnosing various diseases. However, challenges remain for emerging ultrasonic bioelectronics in terms of novel material exploration, structural flexibility, wearable integration. Here, we present a 64-channel lead-free ultrasound line imaging array transducer developed from biofriendly potassium sodium niobate-based ceramics, which enables wearable multimodal imaging through the incorporation of multilevel material structure engineering and flexible device design. On the materials engineering aspect, the lead-free ceramics exhibits superior piezoelectricity (d33 ~ 630 pC N−1, k33 ~ 0.66) by restoring long range ferroelectric ordering and suppressing excessive polar nanoregions. In terms of device architecture, the miniaturized array integrates 64 lead-free 1-3 piezo-elements on a flexible printed circuit board and a bioadhesive hydrogel layer for acoustic coupling and robust adhesion to the skin, enabling portable, high-precision operation with a center frequency of 8.36 MHz and a −6 dB bandwidth of over 40%. In wearable applications for the human body, this array demonstrates real-time high-resolution vascular imaging, blood flow dynamics, and elastography of muscle dynamics, advancing the next generation of wearable ultrasound technologies. This study reports a flexible, lead-free ultrasound imaging array that enables real-time, high-resolution, and wearable imaging of human tissues, advancing safer and more portable ultrasound technology.",
+    "key_figure_path": "output/figures/openalex_W4416909094_caption_p4.png",
+    "key_figure_caption": "Fig. 1,2 and 70"
+  },
+  {
+    "paper_id": "openalex:W4414335708",
+    "title": "Dynamic holographic display with addressable on-chip metasurface network based on lithium niobate photonics",
+    "authors": [
+      "Jitao Ji",
+      "Zhilin Ye",
+      "Zhizhang Wang",
+      "Jiacheng Sun",
+      "Xueyun Li",
+      "Jian Li",
+      "Junyi Wang",
+      "Bin Fang",
+      "Zihan Gao",
+      "Shanshan Hu",
+      "Shining N. Zhu",
+      "Tao Li"
+    ],
+    "venue": "Light Science & Applications",
+    "published_at": "2025-09-18",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41377-025-02014-6",
+    "url": "https://openalex.org/W4414335708",
+    "pdf_url": "https://www.nature.com/articles/s41377-025-02014-6.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.6335,
+    "abstract": "On-chip metasurfaces have been exploited to manipulate guided waves into free space with desired wavefronts and bridge the gap between guided modes and free-space optical fields. However, existing on-chip metasurfaces for guided wave radiation typically lack dynamic tunability and high-capacity multiplexing for their practical applications. Here, we present a dynamic waveguide-based holographic display enabled by on-chip metasurface network on lithium niobate on insulator platform. Based on geometric phase and detour phase, an on-chip multiplexed metasurface network implemented on a 2 × 2 waveguide crossing array is incorporated with a two-stage lithium niobate (LN) switch to construct an addressable framework. Benefiting from the multiplexing capability of on-chip metasurface and the fast electro-optical response of LN modulators, guided wave radiation in the form of eight holographic images is tunable and addressable at high speeds. This work exemplifies a scalable approach for dynamic manipulation of guided signals and paves the way towards holographic displays, high-capacity optical communications and integrated photonic information processing.",
+    "key_figure_path": "output/figures/openalex_W4414335708_caption_p2.png",
+    "key_figure_caption": "Fig. 1, the proposed"
+  },
+  {
+    "paper_id": "openalex:W4413111083",
+    "title": "A dual-mode transparent device for 360° quasi-omnidirectional self-driven photodetection and efficient ultralow-power neuromorphic computing",
+    "authors": [
+      "Min Jiang",
+      "Yukun Zhao",
+      "Tong Liu",
+      "Yanyan Chang",
+      "Yuan Tang",
+      "Min Zhou",
+      "Yiping Shi",
+      "Jianya Zhang",
+      "Lifeng Bian",
+      "Shulong Lu"
+    ],
+    "venue": "Light Science & Applications",
+    "published_at": "2025-08-12",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41377-025-01991-y",
+    "url": "https://openalex.org/W4413111083",
+    "pdf_url": "https://www.nature.com/articles/s41377-025-01991-y.pdf",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.7937,
+    "abstract": "Abstract Due to the extremely high manufacturing standards, the integration of quasi-omnidirectional photodetectors and synaptic devices within a single device remains a long-standing challenge. In this work, we have designed a graphene/(Al,Ga)N nanowire heterojunction, demonstrating the monolithic integration of self-driven 360° photodetectors and artificial synapses in a dual-mode transparent device successfully. By manipulating the carrier transport dynamics through controlling the bias voltage, the degree of oxygen vacancy ionization can be precisely regulated, ultimately realizing the monolithic dual-mode device. At 0 V bias, the device functions as a fast-response self-driven photodetector with stable optical communication capabilities, achieving 360° quasi-omnidirectional photodetection. Upon applying a bias voltage, the operating mode switches to a synaptic device, which successfully simulates brain-like paired-pulse facilitation, short-/long-term plasticity processes, and learning/forgetting behaviors. The device demonstrates an exceptionally high UV/visible rejection ratio of 1.29 × 104, coupled with an ultra-low dark current of less than 1 pA. Furthermore, this device has a low power consumption of 2.5 × 10−14 J per synaptic event, indicating an energy efficiency comparable to synaptic processes in the human brain. Moreover, nonlinear photoconductivity lets the device become a neuromorphic sensor for preprocessing images, enhancing recognition accuracy. Importantly, by leveraging the long-memory characteristic of the devices in open-circuit voltage mode, the devices have been successfully applied to guide humanoid robots in performing direction distinguishing and motion learning. This work provides new insights into the integrated manufacturing of multifunctional monolithic devices and foresees their immense potential in upcoming advanced, low-power neuromorphic computing systems.",
+    "key_figure_path": "output/figures/openalex_W4413111083_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4413054197",
+    "title": "Smart fiber with overprinted patterns to function as chip-like multi-threshold logic switch circuit",
+    "authors": [
+      "Xiaofei Wei",
+      "Rui Li",
+      "Siwei Xiang",
+      "Long Qin",
+      "Xinxin Luo",
+      "Jie Xue",
+      "Xing He Fan"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2025-08-08",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-025-62648-3",
+    "url": "https://openalex.org/W4413054197",
+    "pdf_url": "https://www.nature.com/articles/s41467-025-62648-3.pdf",
+    "robot_type_tags": [
+      "smart_fiber_textile"
+    ],
+    "paper_type": "direct",
+    "score": 0.6506,
+    "abstract": "There is a growing demand for precise health management, capable of differentially caring every inch of skin as an on-body network. For which, each network node executes not only multi-physiological sensing, but also in-situ logic computing to save cloud computing power for massive data analysis. Herein, we present a smart fiber with multilayers of overprinted patterns, composed of many small units with 0.3 mm long to function as a one-dimension (1D) array of chip-like multi-threshold logic-switch circuit. Via soft contact of curved surfaces between fiber and ink-droplet, an overprinting method is developed for stacking different layers of patterns with a line width of 75 μm in a staggered way, enabling batch production of circuit units along one long fiber. A smart fiber with high density of >3000 circuit units per meter can be woven with fiber-type sensors to construct a textile-type body-covering network, where each node serves as a computing terminal. There is a growing demand for wearable electronics for sensing, but it is challenging to integrate in-situ logic computing methods. Here the authors report multi-layered printed fibers to integrate logic circuits for wearable sensors.",
+    "key_figure_path": "output/figures/openalex_W4413054197_caption_p2.png",
+    "key_figure_caption": "Fig. 1 | Structural design of smart ﬁbers to function as a 1D array of chip-like"
+  },
+  {
+    "paper_id": "arxiv:2502.05819v1",
+    "title": "Stacked Intelligent Metasurface Enabled Near-Field Multiuser Beamfocusing in the Wave Domain",
+    "authors": [
+      "Xing Jia",
+      "Jiancheng An",
+      "Hao Liu",
+      "Lu Gan",
+      "Marco Di Renzo",
+      "Mérouane Debbah",
+      "Chau Yuen"
+    ],
+    "venue": "arXiv",
+    "published_at": "2025-02-09",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2502.05819v1",
+    "pdf_url": "https://arxiv.org/pdf/2502.05819v1",
+    "robot_type_tags": [
+      "tunable_metasurface",
+      "terahertz_microwave"
+    ],
+    "paper_type": "direct",
+    "score": 0.592,
+    "abstract": "Intelligent surfaces represent a breakthrough technology capable of customizing the wireless channel cost-effectively. However, the existing works generally focus on planar wavefront, neglecting near-field spherical wavefront characteristics caused by large array aperture and high operation frequencies in the terahertz (THz). Additionally, the single-layer reconfigurable intelligent surface (RIS) lacks the signal processing ability to mitigate the computational complexity at the base station (BS). To address this issue, we introduce a novel stacked intelligent metasurfaces (SIM) comprised of an array of programmable metasurface layers. The SIM aims to substitute conventional digital baseband architecture to execute computing tasks with ultra-low processing delay, albeit with a reduced number of radio-frequency (RF) chains and low-resolution digital-to-analog converters. In this paper, we present a SIM-aided multiuser multiple-input single-output (MU-MISO) near-field system, where the SIM is integrated into the BS to perform beamfocusing in the wave domain and customize an end-to-end channel with minimized inter-user interference. Finally, the numerical results demonstrate that near-field communication achieves superior spatial gain over the far-field, and the SIM effectively suppresses inter-user interference as the wireless signals propagate through it.",
+    "key_figure_path": "output/figures/arxiv_2502_05819v1_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "arxiv:2409.07488v1",
+    "title": "Contrastive Learning-based User Identification with Limited Data on Smart Textiles",
+    "authors": [
+      "Yunkang Zhang",
+      "Ziyu Wu",
+      "Zhen Liang",
+      "Fangting Xie",
+      "Quan Wan",
+      "Mingjie Zhao",
+      "Xiaohui Cai"
+    ],
+    "venue": "arXiv",
+    "published_at": "2024-09-06",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2409.07488v1",
+    "pdf_url": "https://arxiv.org/pdf/2409.07488v1",
+    "robot_type_tags": [
+      "smart_fiber_textile"
+    ],
+    "paper_type": "direct",
+    "score": 0.4466,
+    "abstract": "Pressure-sensitive smart textiles are widely applied in the fields of healthcare, sports monitoring, and intelligent homes. The integration of devices embedded with pressure sensing arrays is expected to enable comprehensive scene coverage and multi-device integration. However, the implementation of identity recognition, a fundamental function in this context, relies on extensive device-specific datasets due to variations in pressure distribution across different devices. To address this challenge, we propose a novel user identification method based on contrastive learning. We design two parallel branches to facilitate user identification on both new and existing devices respectively, employing supervised contrastive learning in the feature space to promote domain unification. When encountering new devices, extensive data collection efforts are not required; instead, user identification can be achieved using limited data consisting of only a few simple postures. Through experimentation with two 8-subject pressure datasets (BedPressure and ChrPressure), our proposed method demonstrates the capability to achieve user identification across 12 sitting scenarios using only a dataset containing 2 postures. Our average recognition accuracy reaches 79.05%, representing an improvement of 2.62% over the best baseline model.",
+    "key_figure_path": "output/figures/arxiv_2409_07488v1_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  }
+]
