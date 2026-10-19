@@ -1,0 +1,284 @@
+[
+  {
+    "paper_id": "openalex:W7221602589",
+    "title": "Polymer-based metasurfaces for scalable, reconfigurable and multifunctional nanophotonics",
+    "authors": [
+      "Ramin Yazdaanpanah",
+      "Sachin Prashant Kulkarni",
+      "Yiming Yang",
+      "Koray Aydın"
+    ],
+    "venue": "npj Nanophotonics",
+    "published_at": "2026-10-13",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s44310-026-00150-4",
+    "url": "https://openalex.org/W7221602589",
+    "pdf_url": "https://www.nature.com/articles/s44310-026-00150-4.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.6425,
+    "abstract": "Abstract Optical metasurfaces have transformed nanoscale light control, but conventional platforms remain predominantly rigid and fabrication intensive. Polymer-based metasurfaces offer a complementary design space combining scalable manufacturing, mechanical compliance, chemical tunability, three-dimensional structuring, and functional molecular and nanoparticle incorporation. This Review examines polymer materials, fabrication strategies, and emerging applications in sensing, imaging, reconfigurable optics, light emission, and inverse-designed photonics, highlighting opportunities and challenges for scalable, adaptive, and multifunctional nanophotonic systems.",
+    "key_figure_path": "output/figures/openalex_W7221602589_caption_p2.png",
+    "key_figure_caption": "Fig. 1 | General overview of the polymer-based optical metasurfaces from materials, fabrication, and applications prospects. All images are reproduced with the"
+  },
+  {
+    "paper_id": "openalex:W4416986886",
+    "title": "Ad hoc manufactured OECT glucose sensor in capillary-driven microfluidic",
+    "authors": [
+      "Bernhard Burtscher",
+      "Chiara Diacci",
+      "Pooya Azizian",
+      "Marios Savvakis",
+      "Tobias Abrahamsson",
+      "Joan M. Cabot",
+      "Xenofon Strakosas",
+      "Daniel T. Simon"
+    ],
+    "venue": "npj Biosensing",
+    "published_at": "2025-12-04",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s44328-025-00063-w",
+    "url": "https://openalex.org/W4416986886",
+    "pdf_url": "https://www.nature.com/articles/s44328-025-00063-w.pdf",
+    "robot_type_tags": [
+      "oect_omiec"
+    ],
+    "paper_type": "transferable",
+    "score": 0.7918,
+    "abstract": "Abstract Glucose sensors are essential for managing diabetes, a metabolic disease affecting 1 in 10 adults globally. Enzyme-based biosensors, particularly those utilizing oxidoreductases, offer high specificity for glucose detection. This study explores the use of flavin-dependent glucose dehydrogenase from Aspergillus oryzae (AoGDH) in developing glucose sensors integrated into organic electrochemical transistors (OECTs) without mediators. We employed tri-thiophene monomer units to form conductive polymers interfacing with AoGDH, allowing sensing due to the proximity of the FAD cofactor. Despite AoGDH’s lower stability compared to glucose oxidase (GOx), its ability to function without oxygen sensitivity makes it advantageous. Using electropolymerization, we successfully incorporated AoGDH into the OECT gate electrode, demonstrating glucose detection in physiological ranges, albeit in buffer solutions. Furthermore, integrating this system into a 3D-printed capillary-driven microfluidic device facilitated on-demand sensor fabrication, enhancing portability and point-of-care application potential. This study underscores the viability of AoGDH-based, and ad hoc fabricated, OECT sensors for accurate and responsive glucose monitoring in biomedical applications.",
+    "key_figure_path": "output/figures/openalex_W4416986886_caption_p1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s44335-025-00043-3",
+    "title": "Electrically tunable physical reservoir computing on two-terminal devices",
+    "authors": [
+      "Soo Hyung Lee",
+      "Sungho Kim",
+      "Janguk Han",
+      "Sung Keun Shim",
+      "Kunhee Son",
+      "Dong Hoon Shin",
+      "Hanyong Jeong",
+      "Jinwoo Park",
+      "Seong Jae Shin",
+      "Yoon Ho Jang",
+      "Cheol Seong Hwang"
+    ],
+    "venue": "npj Unconventional Computing",
+    "published_at": "2025-11-27",
+    "source": "crossref",
+    "doi": "10.1038/s44335-025-00043-3",
+    "url": "https://doi.org/10.1038/s44335-025-00043-3",
+    "pdf_url": "https://www.nature.com/articles/s44335-025-00043-3.pdf",
+    "robot_type_tags": [
+      "neuromorphic_oect"
+    ],
+    "paper_type": "direct",
+    "score": 0.6333,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s44335-025-00043-3_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4416594670",
+    "title": "Multilayer nonlinear diffraction neural networks with programmable and fast ReLU activation function",
+    "authors": [
+      "Yu Ning",
+      "Qian Ma",
+      "Qiang Xiao",
+      "Xinxin Gao",
+      "Qian Wen Wu",
+      "Ze Gu",
+      "Rui Si Li",
+      "Long Chen",
+      "Jian Wei You",
+      "Tie Jun Cui"
+    ],
+    "venue": "Nature Communications",
+    "published_at": "2025-11-24",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41467-025-65275-0",
+    "url": "https://openalex.org/W4416594670",
+    "pdf_url": "https://www.nature.com/articles/s41467-025-65275-0.pdf",
+    "robot_type_tags": [
+      "tunable_metasurface",
+      "metasurface_computing",
+      "terahertz_microwave"
+    ],
+    "paper_type": "direct",
+    "score": 0.9605,
+    "abstract": "Optical diffractive neural networks are emerging for improving speed and energy efficiency in machine learning. However, the challenges of nonlinear activation functions (e.g., latency issues, high power consumption, and cascading complexity) impede their performance and practical deployment. Here, we propose a programmable multilayer full-space nonlinear neural network operating in the microwave frequency band. Its nonlinear layers are constructed using programmable metasurfaces integrated with RF components, implementing a ReLU-like activation function. The nonlinear architecture achieves a nanosecond-scale delay (17.7 ns), representing orders of magnitude improvement in speed over photoelectric conversion-based nonlinearities. Moreover, the nonlinearity is characterized by exceedingly low thresholds and reconfigurable nonlinear activation functions. The system demonstrates remarkable classification capability in image classification and real-time human posture recognition tasks. Characterized by low latency, high speed, low power consumption, and flexible nonlinear activation, this architecture holds great promise for applications in security screening, medical rehabilitation, human-computer interaction, and numerous other fields. To address the challenge of high-speed nonlinear activation in diffractive neural networks, the authors introduce a programmable, low-power, and fast nonlinear diffractive network that exhibits an activation latency of 17.7 ns, enabling tasks like real-time human posture recognition.",
+    "key_figure_path": "output/figures/openalex_W4416594670_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4415406154",
+    "title": "Review for optical metalens based on metasurfaces: fabrication and applications",
+    "authors": [
+      "Zhikai Hu",
+      "Manna Gu",
+      "Ying Tian",
+      "Chenxia Li",
+      "Mingmin Zhu",
+      "Haomiao Zhou",
+      "Bo Fang",
+      "Zhi Hong",
+      "X. M. Jing"
+    ],
+    "venue": "Microsystems & Nanoengineering",
+    "published_at": "2025-10-21",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41378-025-01064-5",
+    "url": "https://openalex.org/W4415406154",
+    "pdf_url": "https://www.nature.com/articles/s41378-025-01064-5.pdf",
+    "robot_type_tags": [],
+    "paper_type": "transferable",
+    "score": 0.6185,
+    "abstract": "Metalens is the next generation of optical metasurfaces for compact imaging, sensing, and display applications that allow the phase, polarization, frequency, amplitude, angular momentum, etc. of the incident light to be designed with high degrees of freedom to meet the application requirements, which has attracted broad interest in the field of planar optics. One significant challenge in implementing applications for metalens is the efficient fabrication of large-scale nanostructures with high resolution, robustness and uniform patterning. In this review, we first introduced the manufacturing techniques compatible with metasurfaces fabrication in detail, including masked lithography, maskless lithography, and additive manufacturing, discussed the limitations and provided some insights. Next, we introduced the applications of metalens from the perspective of non-imaging and imaging optics fields. Metalens can enhance the illumination effect, shape beams, and improve the energy conversion efficiency in non-imaging optics. In imaging optics, the role of metalens in replacing traditional optical components in lithography, astronomical observation, microscopic and endoscopic systems is demonstrated. Finally, the challenges that the metalens facing on the road to commercial application are discussed, and the field's future development is prospected.",
+    "key_figure_path": "output/figures/openalex_W4415406154_caption_p3.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "arxiv:2503.04581v1",
+    "title": "Maestro: A 302 GFLOPS/W and 19.8GFLOPS RISC-V Vector-Tensor Architecture for Wearable Ultrasound Edge Computing",
+    "authors": [
+      "Mattia Sinigaglia",
+      "Amirhossein Kiamarzi",
+      "Marco Bertuletti",
+      "Luigi Ghionda",
+      "Mattia Orlandi",
+      "Riccardo Tedeschi",
+      "Aurora Di Giampietro",
+      "Yvan Tortorella",
+      "Luca Bertaccini",
+      "Simone Benatti",
+      "Giuseppe Tagliavini",
+      "Luca Benini",
+      "Francesco Conti",
+      "Davide Rossi"
+    ],
+    "venue": "arXiv",
+    "published_at": "2025-03-06",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2503.04581v1",
+    "pdf_url": "https://arxiv.org/pdf/2503.04581v1",
+    "robot_type_tags": [
+      "flexible_ultrasound"
+    ],
+    "paper_type": "direct",
+    "score": 0.4685,
+    "abstract": "Most Wearable Ultrasound (WUS) devices lack the computational power to process signals at the edge, instead relying on remote offload, which introduces latency, high power consumption, and privacy concerns. We present Maestro, a RISC-V SoC with unified Vector-Tensor Unit (VTU) and memory-coupled Fast Fourier Transform (FFT) accelerators targeting edge processing for wearable ultrasound devices, fabricated using low-cost TSMC 65nm CMOS technology. The VTU achieves peak 302GFLOPS/W and 19.8GFLOPS at FP16, while the multi-precision 16/32-bit floating-point FFT accelerator delivers peak 60.6GFLOPS/W and 3.6GFLOPS at FP16, We evaluate Maestro on a US-based gesture recognition task, achieving 1.62GFLOPS in signal processing at 26.68GFLOPS/W, and 19.52GFLOPS in Convolutional Neural Network (CNN) workloads at 298.03GFLOPS/W. Compared to a state-of-the-art SoC with a similar mission profile, Maestro achieves a 5x speedup while consuming only 12mW, with an energy consumption of 2.5mJ in a wearable US channel preprocessing and ML-based postprocessing pipeline.",
+    "key_figure_path": "output/figures/arxiv_2503_04581v1_caption_p5.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "arxiv:2409.09915v1",
+    "title": "Forearm Ultrasound based Gesture Recognition on Edge",
+    "authors": [
+      "Keshav Bimbraw",
+      "Haichong K. Zhang",
+      "Bashima Islam"
+    ],
+    "venue": "arXiv",
+    "published_at": "2024-09-16",
+    "source": "arxiv",
+    "doi": null,
+    "url": "http://arxiv.org/abs/2409.09915v1",
+    "pdf_url": "https://arxiv.org/pdf/2409.09915v1",
+    "robot_type_tags": [
+      "flexible_ultrasound"
+    ],
+    "paper_type": "direct",
+    "score": 0.446,
+    "abstract": "Ultrasound imaging of the forearm has demonstrated significant potential for accurate hand gesture classification. Despite this progress, there has been limited focus on developing a stand-alone end- to-end gesture recognition system which makes it mobile, real-time and more user friendly. To bridge this gap, this paper explores the deployment of deep neural networks for forearm ultrasound-based hand gesture recognition on edge devices. Utilizing quantization techniques, we achieve substantial reductions in model size while maintaining high accuracy and low latency. Our best model, with Float16 quantization, achieves a test accuracy of 92% and an inference time of 0.31 seconds on a Raspberry Pi. These results demonstrate the feasibility of efficient, real-time gesture recognition on resource-limited edge devices, paving the way for wearable ultrasound-based systems.",
+    "key_figure_path": "output/figures/arxiv_2409_09915v1_caption_p1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "crossref:10.1038/s41578-024-00652-7",
+    "title": "Designing organic mixed conductors for electrochemical transistor applications",
+    "authors": [
+      "Yazhou Wang",
+      "Shofarul Wustoni",
+      "Jokubas Surgailis",
+      "Yizhou Zhong",
+      "Anil Koklu",
+      "Sahika Inal"
+    ],
+    "venue": "Nature Reviews Materials",
+    "published_at": "2024-02-29",
+    "source": "crossref",
+    "doi": "10.1038/s41578-024-00652-7",
+    "url": "https://doi.org/10.1038/s41578-024-00652-7",
+    "pdf_url": "https://www.nature.com/articles/s41578-024-00652-7.pdf",
+    "robot_type_tags": [
+      "oect_omiec"
+    ],
+    "paper_type": "transferable",
+    "score": 0.5648,
+    "abstract": "",
+    "key_figure_path": "output/figures/crossref_10_1038_s41578-024-00652-7_publisher_fig1.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4392159057",
+    "title": "Photonic neuromorphic architecture for tens-of-task lifelong learning",
+    "authors": [
+      "Yuan Cheng",
+      "Jianing Zhang",
+      "Tiankuang Zhou",
+      "Yuyan Wang",
+      "Zhihao Xu",
+      "Xiaoyun Yuan",
+      "Lu Fang"
+    ],
+    "venue": "Light Science & Applications",
+    "published_at": "2024-02-26",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41377-024-01395-4",
+    "url": "https://openalex.org/W4392159057",
+    "pdf_url": "https://www.nature.com/articles/s41377-024-01395-4.pdf",
+    "robot_type_tags": [
+      "metasurface_computing"
+    ],
+    "paper_type": "direct",
+    "score": 0.5994,
+    "abstract": "Abstract Scalable, high-capacity, and low-power computing architecture is the primary assurance for increasingly manifold and large-scale machine learning tasks. Traditional electronic artificial agents by conventional power-hungry processors have faced the issues of energy and scaling walls, hindering them from the sustainable performance improvement and iterative multi-task learning. Referring to another modality of light, photonic computing has been progressively applied in high-efficient neuromorphic systems. Here, we innovate a reconfigurable lifelong-learning optical neural network (L2ONN), for highly-integrated tens-of-task machine intelligence with elaborated algorithm-hardware co-design. Benefiting from the inherent sparsity and parallelism in massive photonic connections, L2ONN learns each single task by adaptively activating sparse photonic neuron connections in the coherent light field, while incrementally acquiring expertise on various tasks by gradually enlarging the activation. The multi-task optical features are parallelly processed by multi-spectrum representations allocated with different wavelengths. Extensive evaluations on free-space and on-chip architectures confirm that for the first time, L2ONN avoided the catastrophic forgetting issue of photonic computing, owning versatile skills on challenging tens-of-tasks (vision classification, voice recognition, medical diagnosis, etc.) with a single model. Particularly, L2ONN achieves more than an order of magnitude higher efficiency than the representative electronic artificial neural networks, and 14× larger capacity than existing optical neural networks while maintaining competitive performance on each individual task. The proposed photonic neuromorphic architecture points out a new form of lifelong learning scheme, permitting terminal/edge AI systems with light-speed efficiency and unprecedented scalability.",
+    "key_figure_path": "output/figures/openalex_W4392159057_caption_p2.png",
+    "key_figure_caption": "Cached key figure"
+  },
+  {
+    "paper_id": "openalex:W4392003681",
+    "title": "Monolithically integrated high-density vertical organic electrochemical transistor arrays and complementary circuits",
+    "authors": [
+      "Jae Hyun Kim",
+      "Robert M. Pankow",
+      "Yongjoon Cho",
+      "Isaiah D. Duplessis",
+      "Fei Qin",
+      "Dilara Meli",
+      "Rachel E. Daso",
+      "Ding Zheng",
+      "Wei Huang",
+      "Jonathan Rivnay",
+      "Tobin Jay Marks",
+      "Antonio F. Facchetti"
+    ],
+    "venue": "Nature Electronics",
+    "published_at": "2024-02-21",
+    "source": "openalex",
+    "doi": "https://doi.org/10.1038/s41928-024-01127-x",
+    "url": "https://openalex.org/W4392003681",
+    "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11326712/pdf/nihms-2010224.pdf",
+    "robot_type_tags": [
+      "oect_omiec"
+    ],
+    "paper_type": "transferable",
+    "score": 0.6413,
+    "abstract": "",
+    "key_figure_path": "output/figures/openalex_W4392003681_publisher_fig1.png",
+    "key_figure_caption": "Cached key figure"
+  }
+]
