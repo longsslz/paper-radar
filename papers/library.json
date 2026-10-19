@@ -1,5 +1,15 @@
 [
   {
+    "id": "10.1038-s42256-026-01325-6",
+    "title": "Large-scale iontronic skins with neural-hierarchical processing architecture",
+    "headline": "上万个触觉单元",
+    "venue": "Nature Machine Intelligence",
+    "added_at": "2026-10-19T09:45:07Z",
+    "added_date": "2026-10-19",
+    "publication_date": "2026-10-16",
+    "href": "10.1038-s42256-026-01325-6/index.html"
+  },
+  {
     "id": "10.1126-scirobotics.aal2505",
     "title": "A biomimetic robotic platform to study flight specializations of bats",
     "headline": "Bat Bot：把蝙蝠的复杂翼形，变成能闭环飞行的机器",
