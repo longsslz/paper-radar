@@ -1,161 +1,161 @@
 # Paper Radar Digest
 
-## 1. What the Sleeve Feels: Explainable Machine Learning for Textile Pressure-Based Postural Screening
-- Venue: arXiv
-- Published: 2026-10-07
-- Type: direct
-- Tags: smart_fiber_textile
-- Score: 0.4425
-- Core insight: 这项工作不是再追求一个更高的姿态分类分数，而是把智能织物部署真正会遇到的三件事放在一起验证：跨受试者泛化、可解释的身体接触证据，以及穿脱后沿周向错位的鲁棒性。29个物理可解释压力特征配合XGBoost，在未见受试者上与原始压力图2D-CNN表现相近。
-- Problem frame: 压力织物能生成与姿势相关的二维接触图，但若按帧随机划分，很容易把同一人的特征泄漏到训练和测试中；即使分类准确，模型也可能依赖不可解释的个体纹理，并在袖套重新穿戴产生少量旋转时迅速失效。
-- First principles: 前臂与织物的接触压力分布由总载荷、压力中心、四象限不对称、空间复杂度及短时变化共同决定。把这些量显式编码，可把姿势导致的几何重分布与受试者/佩戴差异分开；严格按人划分才检验模型是否学到了可迁移的接触规律。
-- Mechanism: 作者把细粒度活动合并为中性、潜在不良、功能/过渡三类，从20×10压力帧提取29个全局、空间、复杂度和时间特征，训练XGBoost，并与逻辑回归、随机森林和2D-CNN比较；再用SHAP、特征组消融、留一受试者交叉验证及周向循环平移压力图评估解释性和穿戴错位敏感性。
-- Boundary advanced: XGBoost在两个未见测试受试者的12,506帧上达到0.818准确率、0.788平衡准确率和0.801宏F1，留一受试者宏F1的个体标准差约0.06。但周向负向错移1/2/3个taxel时宏F1降至0.72/0.52/0.47，说明真实重复穿戴仍是主要风险；三类标签是启发式筛查标签，不是临床诊断。
-- Old problem: 已有智能服装工作常报告帧级准确率，却缺少受试者独立划分、物理解释、类内活动误差和穿脱偏移压力测试，导致离线成绩难以转化为可部署证据。
-- Why it works: 压力中心和象限不对称直接反映接触区域迁移，熵和离散度描述分布形状，短时差分捕捉过渡；树模型能组合这些异质、非线性特征，同时SHAP仍可追溯各物理量对判断的贡献。
-- True novelty: 真正新意是形成一套面向部署的证据链，而不是发明新型压力织物或分类器：严格跨人评估、可解释特征、类映射敏感性与模拟穿戴旋转被统一进同一研究设计。
-- Evidence: 本地解析到arXiv v1全文约3.0万字符和关键图。论文报告XGBoost 0.818/0.788/0.801三项指标，2D-CNN总体接近，并给出SHAP、消融、留一受试者和±1至±3 taxel旋转测试。证据仍是预印本与既有Smart-Sleeve数据再分析，没有新受试者前瞻采集、长期穿戴或临床结局。
-
-## 2. Open-Source Live-Reconfigurable Multi-Mode Wearable Ultrasound
-- Venue: arXiv
-- Published: 2026-10-01
-- Type: direct
-- Tags: flexible_ultrasound
-- Score: 0.5225
-- Core insight: 作者把可穿戴超声多模态切换从“每次重写全部硬件状态”改为状态感知的增量更新：主机维护外设影子寄存器，只发送模式间真正变化的寄存器，进一步把切换循环下沉到探头MCU，从而显著减少A-mode与多普勒模式交替的空窗。
-- Problem frame: 同一可穿戴探头要同时监测血管结构与血流时，不同模式需要不同通道、AFE、脉冲器和FPGA状态。完整重配置以及Wi-Fi往返延迟会吞掉有效采集时间，使多模态重复率低于生理监测所需水平。
-- First principles: 若相邻模式的大部分寄存器状态相同，则切换成本应与状态差异而不是全部配置规模成正比；在探头端执行确定性状态机又可移除网络连接、传输和响应时间，因此最短路径是“差分寄存器更新+本地调度”。
-- Mechanism: 每个模式被描述为完整硬件配置，主机侧影子寄存器比较当前与目标状态并生成转移专用写序列；序列可由Wi-Fi 6主机调度，或预装到TinyProbe MCU循环执行。实验在脉动流仿体上交替25–100次、1.43 kHz PRF的脉冲波多普勒发射与单次16通道A-mode采集。
-- Boundary advanced: 平均每次切换开销由完整重配置30.2 ms降至主机调度11.6 ms、MCU调度3.1 ms；75-shot多普勒块时多模态重复率达到16.0 Hz，为无开销理论上限17.7 Hz的90.1%。验证对象是流动仿体和单个平台，尚无人体佩戴、长期无线稳定性或端到端功耗结果。
-- Old problem: 既有软件定义超声往往能改参数，却把配置视为无状态命令；模式交替时反复发送不变寄存器，并受远程主机/网络调度抖动影响。
-- Why it works: 差分更新减少SPI与外设写操作，本地MCU调度消除TCP/Wi-Fi往返；把多普勒块长作为可调参数，还能在频谱估计质量和结构更新频率之间显式折中。
-- True novelty: 真正新意是面向可穿戴资源约束的转移感知控制栈及开源实现，而非新的超声换能器或新的多普勒算法。
-- Evidence: 本地解析到arXiv v1全文约2.1万字符和控制栈关键图。论文给出三种重配置路径的均值与方差，展示并行得到的多普勒谱和管腔直径轨迹，并开源TinyProbe控制栈。证据为预印本、单一脉动流仿体实验，未证明临床血流定量准确度。
-
-## 3. Two-dimensional pixel-level addressable mid-infrared metasurface spatial light modulator
-- Venue: Nature Communications
-- Published: 2026-07-07
+## 1. Polymer-based metasurfaces for scalable, reconfigurable and multifunctional nanophotonics
+- Venue: npj Nanophotonics
+- Published: 2026-10-13
 - Type: transferable
-- Tags: tunable_metasurface
-- Score: 0.7475
-- Core insight: 论文把相变metasurface、硅二极管选择器与两层BEOL金属交叉阵列集成，做出6×6二维独立寻址的透射式中红外幅度空间光调制器；核心突破是让有源metasurface从少量扇出像素走向可缩放交叉寻址。
-- Problem frame: 二维有源metasurface若为每个像素单独扇出线路，互连面积和寄生功耗会快速增长；交叉阵列又会出现偷漏电流，导致未选像素被加热，难以保持独立寻址和阵列扩展。
-- First principles: GSST非晶/晶态折射率差可移动导模共振并改变透射；微加热器通过短高功率脉冲非晶化、较长低功率脉冲结晶。串联PIN二极管提供方向选择，抑制交叉阵列中的sneak-path，使行列选址的电流主要流经目标像素。
-- Mechanism: AIM Photonics硅工艺先形成交叉互连、掺杂硅微加热器和PIN选择器，再在后端集成GSST metasurface。6×6阵列以25.5 V、13 µs脉冲非晶化，以18 V、11 ms脉冲结晶，并写入不同空间图案验证像素级控制。
-- Boundary advanced: 实测2.585 µm处透射对比度5.1 dB，低于设计的15 dB；像素间距400 µm、有效切换区60×20 µm，当前填充因子较低。稳定响应约16,700次后发生分层失效，且实验结晶循环采用30 s空气冷却；文中所称微秒级潜力、80–90%填充因子和更大阵列仍是工程推演。
-- Old problem: 此前二维电寻址metasurface多为极小阵列、反射结构或复杂扇出，缺少可在标准硅光子制造线上扩展的透射式中红外像素架构。
-- Why it works: 非易失相变材料无需静态保持功耗，导模共振把有限折射率变化放大为强透射差；二极管选择器、正交金属层和热隔离结构把像素写入约束在局部。
-- True novelty: 真正新意是“foundry硅底座+后端相变材料+选择器交叉阵列”的可制造系统架构，而不仅是展示一次相变光谱调制。
-- Evidence: 本地解析到出版社Article in Press全文约4.7万字符，关键图已保存。全文支持6×6独立寻址、5.1 dB实测对比、25.5 V/13 µs与18 V/11 ms脉冲，以及约16,700次稳定循环后分层失效。缓存关键图图注不完整；大规模阵列、绝对光功率和长期热管理尚未实证。
+- Tags: none
+- Score: 0.6425
+- Core insight: 这篇综述把聚合物超表面从“柔性基底替代物”提升为同时承载结构、加工与主动功能的材料平台：机械形变、分子/纳米颗粒掺入、三维打印及电化学调制可以在同一体系内实现规模制造、可重构与多功能光场控制。
+- Problem frame: 传统金属或高折射率介质超表面擅长精确调控光，但通常刚性、纳米加工昂贵，并且主动调谐需要额外异质集成；聚合物路线需要回答的不只是能否做出纳米结构，而是能否同时满足分辨率、面积、光学损耗、耐久性和快速可逆调谐。
+- First principles: 超表面的相位、幅度和偏振响应来自亚波长单元的几何与材料色散。聚合物把折射率、体积、形状、分子氧化态和颗粒组分都变成可控状态变量；拉伸改变单元间距与耦合，电化学掺杂改变复折射率，二维/双光子聚合则把设计自由度扩展到三维。
+- Mechanism: 论文按材料与加工链梳理 PMMA、PDMS、PEDOT:PSS、光刻胶与双光子树脂等平台，比较 EBL、光刻、纳米压印、双光子聚合和增材制造，并把这些路线映射到金属透镜、全息、传感、发光和动态光学；其中 PEDOT:PSS 等导电聚合物允许用约伏量级电化学势改变吸收与色散。
+- Boundary advanced: 它给出了从约 5–10 nm 级 EBL/NIL 到约 100 nm 级双光子加工的能力版图，并系统连接机械、电学和化学调谐。但这是一篇 2026 年综述，不是单一器件的速度、循环寿命或系统能耗实测；不同文献中的性能不能直接拼接成一个同时满足所有指标的平台。
+- Old problem: 以往讨论常把可扩展加工、柔性、主动调谐和功能分子集成分散在不同材料社区，导致设计者很难判断某种聚合物究竟是牺牲光学性能的基底，还是可进入信息处理闭环的主动介质。
+- Why it works: 聚合物的关键优势不是单一高折射率，而是材料化学与制造方式可共同编程：柔顺性允许几何重构，官能化允许吸收/发光/氧化还原响应，复制与打印降低面积扩展成本，因此同一光学单元的状态可由外部刺激连续改变。
+- True novelty: 真正价值是建立“材料—制造—重构—应用”的统一选择框架，并明确把 PEDOT:PSS、电化学调制和逆向设计纳入聚合物超表面版图；它为 OMIEC 与主动超表面的材料接口提供路线图，而不是宣称已完成 OECT 驱动的神经形态超表面。
+- Evidence: 本地已解析 npj Nanophotonics 正式综述 PDF（约 12 万字符）及 Fig.1。文中给出材料/工艺表、动态超表面章节和多类器件实例；证据等级为正式综述全文，适合支持设计空间和机制归纳，不适合当作某一集成系统的原始性能证据。
 
-## 4. Inverse-designed nanophotonic neural network accelerators for ultra-compact optical computing
-- Venue: Nature Communications
-- Published: 2026-03-04
-- Type: direct
-- Tags: metasurface_computing
-- Score: 0.697
-- Core insight: 作者利用Maxwell方程的线性叠加，把每个样本都要运行一次3D-FDTD的训练过程分解为少量基场模拟与矩阵重构，从而能反演设计20×20和30×20 µm²的固定权重纳米光子分类器。
-- Problem frame: 高折射率、亚波长纳米结构具有很高的空间自由度，但全波训练随样本量和三维网格急剧变贵；如果只用近似传播模型，又难以同时保证制造可行性与实验精度。
-- First principles: 线性无源光学满足叠加原理：任意输入特征场可由有限输入基模的复场线性组合重构。对这些基模做前向和伴随求解，就能批量得到训练样本的物理梯度，而每个亚波长体素的介电常数承担固定可训练自由度。
-- Mechanism: 训练在3D-FDTD中直接优化二值Si/SiO₂体素，并每轮加入低通、二值化和最小特征尺寸约束；芯片端用MZI阵列把10或15维特征编码到1550 nm光幅度，逆设计散射区一次传播后由类别端口光功率完成MNIST或MedNIST判断。
-- Boundary advanced: 实验准确率为MNIST 89%、MedNIST 90%，器件面积分别20×20和30×20 µm²，作者估算参数密度约4×10^8 mm⁻²。输入是预处理后的10/15维特征，不是原始图像；权重制造后固定、单波长运行，且仍依赖外部激光、MZI编码和探测。约±20 nm制造偏差已会明显影响准确率。
-- Old problem: 传统MZI网格、微环或衍射网络要么面积大，要么训练模型忽略强散射全波效应；直接用完整数据集逐样本FDTD优化又不可承受。
-- Why it works: 高折射率SOI在很小体积内产生丰富干涉与模式混合，叠加重构把大量样本计算转为矩阵乘法，伴随法则把梯度成本压缩到与输入/输出基数相关而不是与样本数相关。
-- True novelty: 真正新意是可并行的全波反演训练方法与实芯片分类验证的结合；所谓4亿参数/mm²描述的是设计体素密度，不能等同于可独立重写的数字权重数量。
-- Evidence: 本地解析到Nature Communications开放全文约6.4万字符和关键图。实验准确率89%/90%，训练集与实验子集的分布差异及10,000次bootstrap均有报告；论文还给出幅度主导编码的相位鲁棒性和制造偏差分析。它证明固定推理芯片，不证明在线学习、可重构权重或系统级能耗。
-
-## 5. An organic spiking artificial neuron with excitatory and inhibitory synapses: towards soft and flexible organic neuromorphic processing
-- Venue: npj Flexible Electronics
-- Published: 2026-01-22
-- Type: direct
-- Tags: neuromorphic_oect
-- Score: 0.6716
-- Core insight: 论文用互补p/n型OFET、寄生电容和亚阈值突触电路，在同一柔性基底上集成兼具兴奋与抑制输入的有机脉冲神经元，并把输出脉冲用于实时光照反馈。
-- Problem frame: 软体机器人和生物界面需要机械顺应、低功耗的神经形态节点，但多数脉冲神经元依赖刚性硅；OECT虽有离子记忆优势，却常受几十赫兹以下速度、电解质依赖和持续离子注入限制。
-- First principles: OFET在亚阈值区可用小栅压指数调制脉冲电流，集成电容对兴奋/抑制电流做时间积分；Axon-Hillock式胞体在膜电位越阈后发放并复位，因而自然实现加和、频率调制和巧合检测。
-- Mechanism: 作者在柔性玻璃上制造互补OFET、脉冲电流源突触和Axon-Hillock胞体，利用栅漏重叠寄生电容形成时间常数；20个完整神经元集成于芯片，并由环境光传感器与Arduino调节突触权重和LED亮度，构成演示性闭环。
-- Boundary advanced: 兴奋/抑制时间常数约60/280 ms，输出频率覆盖0–60 Hz，胞体静态功耗低于10 nW；弯曲半径仅验证到205 mm，重复电测约7轮，尚非高循环柔性寿命。闭环仍依赖商用光传感器和Arduino，不能称为全有机自主感算系统。
-- Old problem: 已有有机神经元常只具兴奋输入、器件分散或工作速度慢，难以在同一柔性平台复现兴奋—抑制平衡及实际反馈行为。
-- Why it works: 互补OFET提供正负方向的稳定电子电流，亚阈值工作降低能耗，寄生电容把原本不利的几何重叠转化为生物时间尺度的积分元件，胞体阈值则把连续积分变成离散脉冲。
-- True novelty: 真正新意是全有机、同基底、可弯曲的兴奋/抑制脉冲神经元系统；它刻意采用OFET而不是OECT，因此不能当作OECT神经元性能证据。
-- Evidence: 本地解析到npj Flexible Electronics Article in Press全文约5.6万字符和关键图。论文展示20个集成神经元、60/280 ms突触时间常数、0–60 Hz调制、巧合检测及光反馈；部分性能在205 mm弯曲条件下保持。长期弯折、植入安全、千赫兹潜力和电压缩放仍是未来方向。
-
-## 6. AI-native robotic vision systems enabled by in-sensor computing
-- Venue: npj Unconventional Computing
-- Published: 2026-01-07
-- Type: transferable
-- Tags: integrated_system
-- Score: 0.6396
-- Core insight: 这篇综述把AI-native机器人视觉定义为“传感器直接生成适合推理的数据”，并用突触型、神经元型和视网膜层级型三类器件说明边缘增强、事件编码和卷积/储备池计算如何前移到成像端。
-- Problem frame: 传统机器人视觉先采集高冗余帧，再在处理器中做格式转换、特征提取与推理，数据搬运造成延迟和功耗；移动机器人又难以承载持续增加的算力、存储和散热。
-- First principles: 若光敏器件的电导历史、阈值放电或阵列耦合直接实现时间积分、脉冲化和空间滤波，输出的信息熵与后端任务更匹配，就能减少ADC、存储访问和冗余传输；但器件非理想与任务数据分布必须共同设计。
-- Mechanism: 综述先从生物突触、神经元和视网膜层级抽象三种功能，再分别梳理光敏忆阻/晶体管的轮廓增强，阈值/首脉冲时间编码的事件检测，以及阵列内卷积、储备池和层级处理，并映射到机器人识别、运动感知和导航案例。
-- Boundary advanced: 贡献是分类框架和研究路线图，不是统一硬件实验。文章明确指出帧率、器件均一性、可训练性、阵列互连、稳定性、动态场景细节保留及与现有AI软件栈兼容仍未解决；引用的单篇性能不能当作综述自身的系统指标。
-- Old problem: 相关工作常按材料体系或单器件功能罗列，缺少从生物计算原语到机器人任务的数据格式视角，因此很难比较“器件内计算”究竟省掉了哪一段系统开销。
-- Why it works: 以输出数据格式而非材料命名为主线，可以把模拟预处理、脉冲事件和空间计算分别对应到不同后端模型，并暴露传感器—算法协同的真正接口。
-- True novelty: 真正价值是提出AI-native视觉的系统化器件分类和需求清单，而不是一个新的in-sensor器件或机器人原型。
-- Evidence: 本地解析到npj Unconventional Computing综述全文约9.0万字符和关键图。全文覆盖突触增强、事件驱动与层级视觉三条路线，并专节讨论速度、精度、阵列规模、环境鲁棒性和训练兼容问题。证据属于二次综合，具体性能需回到被引原始论文核验。
-
-## 7. Ultra-compact broadband terahertz spectroscopy sensor enabled by resonant-gradient metasurface
-- Venue: Nature Communications
-- Published: 2025-12-11
-- Type: transferable
-- Tags: terahertz_microwave
-- Score: 0.7311
-- Core insight: 作者把不同尺寸的金微条连续排成空间梯度，让各位置承载不同频率的高Q准BIC共振，用19个模式在400×125 µm²内覆盖0.9 THz，并以空间—频谱编码读取多组生物分子指纹。
-- Problem frame: 传统多共振THz传感器只离散采样少数频点，宽带像素化方案又占地大、制造复杂；混合物的多条吸收峰容易因环境扰动、共振重叠和基线变化而错位。
-- First principles: 理想BIC与远场解耦而具有强场约束；轻微破坏几何对称性会打开有限辐射通道，得到可激发的高Q准BIC。沿空间连续改变微条尺度，就把共振频率连续映射到位置，同时局域近场放大分子吸收。
-- Mechanism: 三金微条meta-atom通过尺寸不对称形成QBIC，19组不同尺度单元构成共振梯度；宽带THz-TDS一次激发全部位置，提取L-Glu、GABA和Gln及其混合物的空间条码，再用DNN估计混合比例并连续跟踪浓度变化。
-- Boundary advanced: 器件覆盖0.9 THz，文中给出约80倍增强因子和约10 µg/mm²统一LOD；L-Glu每3 s监测一次、连续612 s，SNR约28 dB。系统仍依赖0.5–7 THz台式TDS和特定样品/油介质，不是便携芯片级光源—探测器，也没有临床队列。
-- Old problem: 既有QBIC传感常为窄带单峰，像素条码法需要更大面积和多次扫描，难以同时获得宽带、紧凑和实时混合物识别。
-- Why it works: 梯度尺寸给出密集而互补的频率采样，QBIC局域场提高光—物质相互作用；空间并行读出保留多组分指纹，DNN则处理峰形重叠和浓度非线性。
-- True novelty: 真正新意是把共振梯度metasurface作为一个连续空间—频谱编码器，兼顾多QBIC密度、混合物动态监测与数据驱动反演；它本身是静态结构，并非可重构metasurface。
-- Evidence: 本地解析到Nature Communications Article in Press全文约5.5万字符和出版社Fig. 1。全文支持19模式、0.9 THz、400×125 µm²、612 s动态监测、约28 dB SNR、EF约80和LOD约10 µg/mm²，并展示三种氨基酸相关分子混合识别。便携化与临床选择性尚未验证。
-
-## 8. High-density soft bioelectronic fibres for multimodal sensing and stimulation
-- Venue: Nature
-- Published: 2025-09-17
-- Type: transferable
-- Tags: bio_sensing
-- Score: 0.595
-- Core insight: 论文先在二维薄膜上用成熟微加工排布多种器件，再把薄膜螺旋卷成一维S-NeuroString，从而在纤维尺度同时容纳高密度压力、电化学和刺激电极，并进入胃肠与脑组织做多模态接口。
-- Problem frame: 一维植入纤维容易进入曲折组织，却难以在曲面上直接完成高密度、多层、多材料微加工；热拉丝又受高温和应变条件约束，功能密度、材料选择与柔软性难兼得。
-- First principles: 二维薄膜提供大的可加工面积与精确图案化，螺旋卷绕把平面宽度折叠进纤维周向与径向，因此投影宽度上的器件密度可成百倍提高；低模量薄膜和液态金属互连维持弯折、打结与组织顺应。
-- Mechanism: 器件以LIG压力/电化学传感器、EGaIn互连和PEDOT:PSS复合刺激电极在薄膜上制备，再通过螺旋转化得到150–400 µm级纤维。系统用于小鼠结肠动力映射与刺激、猪小肠压力反馈和血清素检测，以及脑内单单位记录。
-- Boundary advanced: 250/400 µm纤维可集成150个传感元件（81压力、69电化学），相对平面投影宽度密度提高约120倍；血清素灵敏度0.332 nA nM⁻¹、外推LOD约24 nM。动物证据涵盖离体/在体小鼠和少量猪实验，但不是长期植入、闭环自治疗或人体试验。
-- Old problem: 现有电子纤维常功能单一、通道稀疏或依赖高温热拉丝，无法把多种软生物电子器件精确布置在同一细纤维的轴向、周向和径向。
-- Why it works: 先平面制造再几何折叠，避开曲面光刻的对准难题；卷绕还允许表面与内嵌元件分层布置，柔软基底、液态互连与导电聚合物电极共同降低组织机械失配。
-- True novelty: 真正新意是可定位多功能元件的二维到一维螺旋制造范式，而不是某一种压力或血清素传感材料。
-- Evidence: 研究包的正式条目为2025年Nature论文，但本地可读全文来自2023年bioRxiv早期稿《Spiral NeuroString》，约5.5万字符，关键图保存自该稿。题名、作者与核心技术对应，但不能假设最终Nature版本所有数字与表述完全相同；当前分析以早期全文证据为边界。
-
-## 9. Electrochemically actuated microelectrodes for minimally invasive peripheral nerve interfaces
-- Venue: Nature Materials
-- Published: 2024-04-26
-- Type: transferable
-- Tags: bio_sensing
-- Score: 0.5282
-- Core insight: 作者把PPy(DBS)电化学体积驱动器与PEDOT:PSS低阻微电极集成成可主动张开、包覆和重新定位的超薄神经袖套，使植入时不再依赖缝线或胶粘固定。
-- Problem frame: 传统神经袖套需要复杂摆放和固定，闭合结构重新定位时可能压迫神经；一次性形状记忆材料难以在体液中反复、连续地重构三维形状。
-- First principles: PPy(DBS)在水系电解质中发生可逆离子交换与体积膨胀/收缩；与惰性薄层形成双层后，微小电压即可转化为大曲率。PEDOT:PSS降低电极—电解质界面阻抗，使形状驱动与神经记录共存。
-- Mechanism: 在2 µm Parylene C上沉积约4 µm PPy(DBS)执行器并图案化28个PEDOT:PSS/Au记录电极，通过−1.1至0.6 V范围调节卷曲；器件可先放松靠近神经，再在接近0 V条件下自包覆大鼠坐骨神经并记录按压足部诱发的神经尖峰。
-- Boundary advanced: 微电极在PBS中1 kHz阻抗4.1±0.4 kΩ，1000次大弯折后基本不变；执行器做了500次循环，细胞在300次±0.5 V刺激后72 h存活率约99%。在体是麻醉大鼠急性实验，论文也明确称acute animal trials，未证明慢性稳定、组织反应或长期功能恢复。
-- Old problem: 被动薄膜袖套难在狭小手术空间中自动形成可靠接触，一次性热/溶胀形变器件又不能安全重复松开和重新定位。
-- Why it works: 导电聚合物把低电压电化学反应直接变成可逆体积应变，微米厚双层结构用很小力获得大曲率；低阻PEDOT:PSS电极在卷曲过程中保持记录质量。
-- True novelty: 真正新意是可逆软执行器与高密度神经电极的单片结合，使电极位置和包覆力本身成为可编程变量，而不仅是更柔软的被动袖套。
-- Evidence: 本地解析到Nature Materials正式全文约5.4万字符和出版社Fig. 1。论文包含材料/电化学表征、500次执行循环、1000次弯折阻抗和多只大鼠急性神经记录；未给出慢性植入周/月级随访。
-
-## 10. Understanding asymmetric switching times in accumulation mode organic electrochemical transistors
-- Venue: Nature Materials
-- Published: 2024-04-17
+## 2. Ad hoc manufactured OECT glucose sensor in capillary-driven microfluidic
+- Venue: npj Biosensing
+- Published: 2025-12-04
 - Type: transferable
 - Tags: oect_omiec
-- Score: 0.572
-- Core insight: 作者用operando光学显微镜直接看到积累型OECT开启经历“横向掺杂前沿传播+随后均匀垂直掺杂”两阶段，而关闭主要是无前沿的单阶段去掺杂；这一空间动力学加上载流子密度依赖迁移率，解释了普遍存在的慢开快关。
-- Problem frame: 常用单RC OECT瞬态模型假定开关都由同一离子充放电过程控制，无法解释积累型器件开启有延迟、关闭快得多，以及不同聚合物中开关不对称跨越数个数量级的实验事实。
-- First principles: 开启时，离子注入与空穴注入必须先让掺杂前沿跨越沟道，漏极电流才显著增加；随后离子继续沿厚度方向进入聚合物并伴随结构松弛。关闭时载流子减少会通过密度依赖迁移率非线性地同步压低电流，因此电流衰减可快于单纯去掺杂浓度变化。
-- Mechanism: 研究以650 nm长通滤光成像极化子吸收，同步记录ID/IG，在PB2T-TEG、P3MEEMT和P3HT及KCl/KTFSI中比较OECT与光谱电化学动力学；再以含前沿延迟的双指数开启、单指数关闭和时变电阻SPICE模型联系几何、电位、离子浓度与材料结构。
-- Boundary advanced: PB2T-TEG中τon/τoff可达529，而其独立掺杂/去掺杂比仅5.8；垂直掺杂阶段电流与光学时间常数约290/200 ms，另一个慢开启分量约2–3 s。结果指向离子输运限制，但离子分布并未被直接成像，模型为经验化描述，器件材料与几何范围也有限。
-- Old problem: 过去把开启和关闭都压缩成一个RC常数，或把快关简单归因于聚合物去掺杂更快，忽略了沟道内的空间前沿、载流子注入和迁移率随密度变化。
-- Why it works: 光学极化子图像提供电流之外的空间可观测量，使前沿传播、均匀掺杂和去掺杂可分离；改变沟道长度、膜厚、栅压、离子浓度和阴离子又把各时间常数与离子输运而非漏极电子输运关联起来。
-- True novelty: 真正新意是把OECT开关不对称从经验波形提升为可观察的时空过程，并给出可操作设计规则：缩短沟道、减薄膜层、提高有效栅驱动与离子浓度、选更易注入的阴离子和更刚性的聚合物。
-- Evidence: 自动OA工具最初未取得出版社PDF，NSF公共仓储作者稿仅作为候选保留；随后SPIS求助收到交付邮件并下载到Nature Materials正式排版版。文件为第23卷第5期656–663页，正文9页、约5.2万字符，首页题名、作者和DOI完全匹配，PyMuPDF全文可读；关键图已保存。
+- Score: 0.7918
+- Core insight: 作者没有把低稳定性的 AoGDH 强行做成长寿命植入传感器，而是反向设计“按需制造”：在 OECT 栅极上原位电聚合 ETE-COONa/AoGDH，并让毛细驱动微流控承担无泵采样与现场功能化，从而以即时制备换取无氧敏、无介体的葡萄糖检测。
+- Problem frame: 第三代酶传感希望直接电子转移以免依赖氧或介体，但 GOx 的 FAD 位点深埋，AoGDH 虽更利于电子耦合却稳定性较差；同时，便携 OECT 传感还需要低体积、无外泵的样品引入和可重复制造。
+- First principles: 当酶的 FAD 辅因子距导电聚合物约纳米尺度时，电子隧穿可把葡萄糖氧化反应直接耦合到栅极电位；OECT 的体相离子调制再把小的界面电荷变化放大为漏极电流。毛细压力提供无需外部能量的流体驱动。
+- Mechanism: 研究把 AoGDH 与 ETE-COONa 或 ETE-S 单体混合，在 PEDOT:PSS/Au 栅极上低电位电聚合，形成酶—导电聚合物矩阵；随后将 OECT 嵌入 3D 打印毛细微流控，在器件内完成聚合、冲洗和 0.5–100 mM 葡萄糖检测。
+- Boundary advanced: 开放器件可覆盖生理相关浓度，并在 0–0.5 V 多个栅压下响应；微流控中仍可分辨 5 mM，但响应低于开放体系。4 个器件的剂量曲线与 7 天储存测试显示灵敏度下降，且验证仅在缓冲液中，没有全血/间质液干扰、临床样本或长期连续监测。
+- Old problem: 常见滴涂酶层取向随机、易脱落；传统微流控依赖泵阀；为了延长寿命而进行复杂固定化又会增加制造与电子转移距离。
+- Why it works: ETE 单体能在温和电位下把酶包埋进导电网络，AoGDH 避开 GOx 的氧竞争，OECT 的跨导提供电流放大；把不稳定功能层延后到使用前生成，降低了长期货架稳定性对系统的约束。
+- True novelty: 创新点是“可现场聚合的 OECT 栅极 + 被动毛细微流控”的系统组合，而不是单独发明葡萄糖酶或 OECT。它把材料稳定性缺点转化为制造时序设计问题。
+- Evidence: 本地已解析 npj Biosensing 正式 Article PDF（约 3.9 万字符）和关键图。正文给出 100 μM–40 mM 开放器件响应、0.5–100 mM 微流控测试、4 器件曲线、0/5/7 天稳定性及生理范围标记。证据仍停留在缓冲液台架实验。
+
+## 3. Electrically tunable physical reservoir computing on two-terminal devices
+- Venue: npj Unconventional Computing
+- Published: 2025-11-27
+- Type: direct
+- Tags: neuromorphic_oect
+- Score: 0.6333
+- Core insight: 该工作用脉冲间基底电压调节 Pt/HfO2/TiN 两端忆阻器的弛豫，而不是增加器件端口或外围反馈，把固定材料时间常数变成可编程时间尺度；同一器件因而能覆盖 0.14–100 ms 的事件流。
+- Problem frame: 物理储备池依赖衰减记忆，但器件固有时间常数通常固定：输入过慢时状态已遗忘，输入过快时状态未分离。为不同任务换器件或做外部时间缩放会增加复杂度，并削弱物理计算的硬件优势。
+- First principles: 忆阻器脉冲后的导电态由缺陷/离子弛豫回落。脉冲间施加基底电压会改变势垒与回落速率，从而改变有效记忆核；多个基底电压等价于并行采样不同时间常数，增加状态矩阵秩与可分性。
+- Mechanism: 作者在 Pt/HfO2/TiN 器件上交替施加数据脉冲和 0–1.6 V 基底电压，以单个或多个 Vb 生成储备池状态；用 N-MNIST 事件帧、叠加振荡器低通响应和 Mackey–Glass 混沌预测验证分类、频域和时间序列任务。
+- Boundary advanced: 基底电压把有效弛豫从约 1.2 ms 拉长到最高约 123 ms，使 N-MNIST 在 0.14–100 ms 三个数量级间隔上保持稳定，多个 Vb 接近软件基线；Mackey–Glass 200 步预测 NRMSE 为 0.27。测量系统限制了最短尺度，论文也未给出完整阵列、ADC/读出和训练开销的端到端能耗。
+- Old problem: 传统两端物理储备池结构简单，却被单一固有时间常数锁死；提高任务适应性常依赖多器件、多端口、光刺激或额外调制。
+- Why it works: Vb 在不改变输入脉冲编码的情况下改变弛豫动力学；不同 Vb 对相同历史产生不同衰减轨迹，线性读出便能从更丰富、互补的状态中分离时序模式。
+- True novelty: 新意不是再次用忆阻器做 RC，而是把“脉冲间电位”定义为可编程时间常数旋钮，在保持两端结构的同时扩展多时间尺度处理。
+- Evidence: 本地已解析 npj Unconventional Computing 正式 Article PDF（约 6.1 万字符）和关键图。器件循环、36 器件变异、弛豫曲线、N-MNIST、频率响应和 Mackey–Glass 均有实验/计算证据；系统级能效与大阵列可扩展性仍未闭环。
+
+## 4. Multilayer nonlinear diffraction neural networks with programmable and fast ReLU activation function
+- Venue: Nature Communications
+- Published: 2025-11-24
+- Type: direct
+- Tags: tunable_metasurface, metasurface_computing, terahertz_microwave
+- Score: 0.9605
+- Core insight: 论文把可编程超表面单元、RF 检波器、放大器和加法器合成非线性层，在微波传播过程中直接实现类似 ReLU 的激活，使衍射网络从被动线性映射升级为可级联、可调阈值的多层物理网络。
+- Problem frame: 衍射神经网络的传播快且并行，但线性层叠不能获得深网络的表达力；既有光电转换或材料非线性往往需要高光强、延迟大、功耗与级联复杂度高。
+- First principles: 自由空间传播完成线性复数矩阵映射，检波把场强变为电信号，带偏置的 RF 放大/求和电路形成阈值增益，再由可编程辐射单元重发。只要局部输入—输出曲线具有分段线性增益，多层传播就获得非线性可分性。
+- Mechanism: 作者在 5.8 GHz 构建线性衍射层和集成 RF 有源器件的非线性超表面层，通过偏置电压调节阈值与增益；系统既处理编码图像，也直接接收人体姿态散射场，并比较线性与非线性网络。
+- Boundary advanced: 实测激活延迟 17.7 ns；MNIST、Fashion-MNIST 准确率分别 92.81% 和 78.8%，较线性网络高 4 个百分点以上；8 类实时姿态为 93.06%，线性基线 81.85%。论文给出器件级低功耗与进一步降至亚纳秒的理论路径，但没有与数字端到端系统同口径的总功耗、训练能耗和复杂场景泛化。
+- Old problem: 可编程超表面可以重写线性权重，却常停在单层线性分类或编码；外接数字非线性会重新引入采样、转换和数据搬运瓶颈。
+- Why it works: 空间传播天然并行，局部有源单元只需实现低维非线性而不承担全局矩阵乘；偏置控制将阈值从入射强度中解耦，使低强度信号也能跨层传播并形成更高阶决策边界。
+- True novelty: 真正新意是可编程微波超表面内部的快速 ReLU-like 层及其多层级联，并用直接人体散射场验证“感知即计算”，而非仅离线加载图像。
+- Evidence: 本地已解析 Nature Communications 正式全文（约 6.2 万字符）和关键图。17.7 ns、三项分类准确率及硬件结构均来自论文实验；亚 426 ps/226 ps 属器件替换后的理论估算，不能当作当前原型实测。
+
+## 5. Review for optical metalens based on metasurfaces: fabrication and applications
+- Venue: Microsystems & Nanoengineering
+- Published: 2025-10-21
+- Type: transferable
+- Tags: none
+- Score: 0.6185
+- Core insight: 这篇 66 页综述把金属透镜商业化的核心矛盾定位为“纳米单元精度 × 大面积吞吐 × 光学效率 × 复杂曲面集成”，并用掩模光刻、无掩模写入和增材制造三条工艺路线映射不同应用。
+- Problem frame: 金属透镜拥有比传统光学更高的相位/偏振自由度，但实验室 EBL 样品难直接扩展到厘米尺度、晶圆级一致性和可接受成本；单纯提高数值孔径并不能解决制造误差、封装与系统光效。
+- First principles: 相位误差由单元尺寸、形貌与材料折射率偏差共同决定；口径增大时单元数量和累计缺陷迅速上升。并行光刻/压印提高吞吐，直写与双光子打印提高三维自由度，两者需要在分辨率和面积之间权衡。
+- Mechanism: 综述比较光刻、EBL、纳米压印、激光直写、双光子聚合等制造技术，再按照明、波束整形、能量转换、显微、内窥与天文成像梳理金属透镜的系统角色，并讨论算法共设计和 CMOS 兼容。
+- Boundary advanced: 文中汇集 2 cm 级金属透镜、4 英寸晶圆加工、5000 个晶圆级器件以及多类亚 100 nm 结构实例，但这些指标来自不同工作；它是开放获取综述，不是可重构金属透镜或神经网络的统一实验。
+- Old problem: 很多金属透镜论文在小面积、单波长条件下展示高质量焦斑，却回避大口径的缺陷率、制造节拍、封装和与传感器耦合。
+- Why it works: 把器件设计转译为制造容差问题后，工艺选择可由所需口径、最小线宽、纵横比、材料和曲面决定；算法设计还能在结构自由度与可制造性之间做联合优化。
+- True novelty: 价值在于完整制造—应用对照表和商业化约束总结，而不是提出新的金属透镜结构。对本雷达方向，它提供超表面从论文图案走向规模阵列的制造基线。
+- Evidence: 本地已解析 Microsystems & Nanoengineering 开放获取 Review PDF（约 9.9 万字符、66 页）和关键图。证据适合支持工艺范围和系统约束；跨文献数字不可视为单器件综合性能。
+
+## 6. Maestro: A 302 GFLOPS/W and 19.8GFLOPS RISC-V Vector-Tensor Architecture for Wearable Ultrasound Edge Computing
+- Venue: arXiv
+- Published: 2025-03-06
+- Type: direct
+- Tags: flexible_ultrasound
+- Score: 0.4685
+- Core insight: Maestro 把可穿戴超声所需的 FFT 预处理、向量运算和 CNN 张量计算放进同一 65 nm RISC-V SoC，以存储耦合 FFT 与统一 Vector-Tensor Unit 减少数据搬运，使超声手势管线可以从远端 PC 回到本地。
+- Problem frame: 可穿戴超声前端产生高带宽数据，而通用 MCU 难以同时承担频域预处理和神经网络；远端卸载增加延迟、无线功耗与隐私风险。单独堆一个 CNN 加速器又不能覆盖 FFT 和控制流。
+- First principles: 系统能耗常由存储层级与数据移动主导。让 FFT 引擎靠近存储、让同一向量寄存器/执行单元支持标量、SIMD 与张量算子，可复用数据路径并提高不同阶段的有效利用率。
+- Mechanism: 芯片包含 RV32 集群、可配置 VTU 和 16/32 位浮点 FFT 加速器；作者在超声通道预处理与 CNN 后处理管线上测量吞吐、功耗和能效，并与相近任务 SoC 比较。
+- Boundary advanced: VTU 峰值为 19.8 GFLOPS、301.7–302 GFLOPS/W（FP16），FFT 为 3.6 GFLOPS、60.6 GFLOPS/W；特定可穿戴超声管线报告 12 mW、2.5 mJ 和约 5 倍加速。芯片总体工作包络可到约 212 mW，12 mW 不能外推为所有任务功耗；当前是 arXiv v1，未证明完整贴肤探头长期运行。
+- Old problem: 既有边缘 SoC 常分别优化 DSP、FFT 或 DNN，导致超声端到端管线跨单元搬运并依赖主机；可穿戴场景又无法接受桌面 GPU 的功耗。
+- Why it works: 超声管线天然包含规则 FFT 与高算术密度卷积，专用但可编程的数据通路能让两类算子各用合适精度和并行度，同时保留 RISC-V 控制。
+- True novelty: 新意是面向可穿戴超声任务的异构算子组合与实测芯片，而非新的超声成像或手势算法；其贡献位于传感器后端的系统边界。
+- Evidence: 已从 arXiv 官方地址获取并核验 16 页 v1 PDF，题名与编号匹配，全文约 8.4 万字符，关键图存在。峰值与应用管线数据来自硅后测量/论文表格，但论文仍是预印本，且未给出多受试者贴肤系统验证。
+
+## 7. Forearm Ultrasound based Gesture Recognition on Edge
+- Venue: arXiv
+- Published: 2024-09-16
+- Type: direct
+- Tags: flexible_ultrasound
+- Score: 0.446
+- Core insight: 这项工作证明了一个很窄但实用的结论：把前臂超声 CNN 做 Float16 量化后，Raspberry Pi 4 可以在模型大小约 0.24 MB、单帧推理约 0.31 s 的条件下维持约 92% 帧级测试准确率。
+- Problem frame: 前臂超声手势识别多在桌面 GPU 上完成，缺少移动端闭环；但边缘部署不仅受模型大小限制，还受探头数据采集、传输、实时性和跨人泛化制约。
+- First principles: 卷积模型的权重与激活精度降低可减少存储和带宽，而超声纹理的类别间差异在适度量化下仍可保留；真正端到端延迟还包括采集、UDP 传输、缩放和显示。
+- Mechanism: 作者用单名受试者、4 类手势、2400 帧数据训练五层 CNN，将 TensorFlow 模型转换为多种 TFLite 量化版本，在 Raspberry Pi 4 上比较大小、精度与推理时间，并通过 Windows 采集后 UDP 发送到 Pi 做演示。
+- Boundary advanced: Float16 模型从约 1.5 MB 降到约 0.24 MB，帧级测试为 92%、0.31 s；不显示图像的演示为 85.3%、172 ms，10 帧可视化演示仅 80% 且约 2 s/帧。数据只来自 1 人，随机帧划分可能高估泛化，采集仍依赖 Windows，因此尚不是独立可穿戴系统。
+- Old problem: 既有研究容易把离线 GPU 分类准确率当作可穿戴可用性，却没有把模型压缩和目标边缘硬件延迟放进同一实验。
+- Why it works: Float16 量化减少模型存储与内存访问，且这组四手势在同一受试者、同一探头位置下可分性较高；Pi 的 TFLite 运行时能直接利用压缩模型。
+- True novelty: 真正贡献是早期部署可行性与多种量化对照，不是新算法。它同样暴露了单人、帧泄漏和非独立采集链等关键缺口。
+- Evidence: 本地已有 arXiv v1 全文与关键图。正文明确报告 1 名受试者、2400 帧、1800/600 划分、92%/0.31 s，以及两种演示的 85.3%/172 ms 和 80%/约 2 s。证据等级为预印本单人受控演示。
+
+## 8. Designing organic mixed conductors for electrochemical transistor applications
+- Venue: Nature Reviews Materials
+- Published: 2024-02-29
+- Type: transferable
+- Tags: oect_omiec
+- Score: 0.5648
+- Core insight: 这篇 Nature Reviews Materials 综述把 OECT 性能从单一迁移率或跨导指标还原为 OMIEC 分子结构同时决定电子传输、离子进入、体积膨胀、力学顺应、生物相容和记忆效应的多目标设计问题。
+- Problem frame: OECT 应用从神经界面、代谢物传感扩展到柔性、刺激响应和存储，但同一种侧链或骨架修改往往同时改变结晶、离子溶剂化、电子态和机械稳定性；只按稳态跨导筛材料难以预测真实器件。
+- First principles: OECT 通道是体相离子—电子耦合体系：离子注入改变聚合物氧化态与载流子密度，同时引发溶胀和微结构重排。化学骨架、亲水侧链、交联和共混控制电子耦合、离子化学势与力学耗散之间的权衡。
+- Mechanism: 官方页面与图组按 OECT 工作原理和历史、代表性 OMIEC 化学结构、材料时间线、电学/力学调控策略，以及多功能 OMIEC 与刺激响应应用组织证据，并把生物相容、拉伸、刺激响应和记忆保持视为材料设计输出。
+- Boundary advanced: 该综述给出材料—器件—应用的系统框架，但不是新的 OMIEC 或器件实验；当前本地未取得出版社 PDF。可用证据为 Nature 正式摘要、Fig.1–5 结构和正式元数据，KAUST 只提供明确标注的 post-print 入口，下载直链本次返回 HTML 壳，不能计为已验证全文。
+- Old problem: 领域常把 p 型高跨导材料、n 型稳定材料、可拉伸器件和神经形态记忆分开优化，缺少能解释“为什么一种化学修改在某任务获益、在另一任务失效”的统一材料逻辑。
+- Why it works: 把 OMIEC 看成开放的离子—电子热力学与动力学系统，可同时解释跨导、速度、滞后、溶胀和记忆；分子设计必须匹配目标任务所需的时间尺度、环境与机械边界。
+- True novelty: 真正价值是把 OMIEC 化学设计与 OECT 功能边界系统对齐，并强调多功能来自耦合而非附加模块；它为本方向选择可调超表面材料或物理神经元状态变量提供材料学坐标系。
+- Evidence: 证据等级为出版社正式摘要/图级综述页面，非本地全文。Nature 页面确认 2024 年 Version of Record、卷页 9:249–265、Fig.1–5 主题与摘要中的材料设计主张；分析只保留正式页面实际支持的机制与边界。
+
+## 9. Photonic neuromorphic architecture for tens-of-task lifelong learning
+- Venue: Light Science & Applications
+- Published: 2024-02-26
+- Type: direct
+- Tags: metasurface_computing
+- Score: 0.5994
+- Core insight: L2ONN 用稀疏光子连接保护旧任务、逐任务扩大激活区域，并以不同波长并行承载任务表示，使同一光学网络获得持续学习能力，而不是每来一个任务就重训并覆盖原有权重。
+- Problem frame: 光学神经网络擅长并行矩阵运算，却与电子网络一样会灾难性遗忘；为每个任务复制独立光路又会迅速耗尽面积、端口和波长资源。
+- First principles: 衍射传播提供大规模线性连接，稀疏激活降低新任务与旧权重的重叠，多波长提供近似正交的并行通道。若新增任务只占用未激活或低冲突的光子连接，旧任务映射就能被保留。
+- Mechanism: 自由空间方案用多光谱输入、稀疏衍射层和 PCM 光学滤波器逐任务激活连接；片上方案用硅光波导、槽结构和输出探测器实现代表性任务增量学习，并以电子全连接读出/训练配合光学前端。
+- Boundary advanced: 数值/自由空间评估最多连续学习 14 个任务、占用约 96.3% 光子连接，容量相对既有 ONN 报告 14 倍且效率高一个数量级；片上实验验证了较小规模的代表性任务，并不等于 14 个任务全部在芯片上实测。训练、探测和读出仍含电子环节，端到端能耗口径需谨慎。
+- Old problem: 传统 ONN 在新任务训练后旧任务准确率可快速跌入遗忘区，静态光学权重也难在有限硬件上同时容纳多域任务。
+- Why it works: 稀疏掩码把参数冲突从全局重写变成局部增量占用，多波长把不同任务的光场表示并行复用同一传播结构；因此网络容量主要受未占用光子连接和串扰约束。
+- True novelty: 创新点是面向持续学习的光子资源分配机制及自由空间—片上双重验证，而不是单次静态分类。
+- Evidence: 本地已解析 Light: Science & Applications 开放获取正式全文（约 5.3 万字符）和关键图。14 任务、96.3% 激活、14 倍容量来自大规模评估；片上 Fig.5 是代表性少任务实验，二者已在分析中分开。
+
+## 10. Monolithically integrated high-density vertical organic electrochemical transistor arrays and complementary circuits
+- Venue: Nature Electronics
+- Published: 2024-02-21
+- Type: transferable
+- Tags: oect_omiec
+- Score: 0.6413
+- Core insight: 作者用电子束把连续 OMIEC 薄膜的局部区域转成电子绝缘、仍保持离子可通的区域，从而避免刻蚀造成的地形断裂和短路，在同一连续膜上实现高密度垂直 OECT 阵列与上下堆叠互补逻辑。
+- Problem frame: OECT 的湿法/软材料难做高分辨微纳图案；传统刻蚀会切断离子通路、产生台阶并妨碍多层电极交叉，导致阵列密度和互补电路集成远落后于无机电子。
+- First principles: 电子束交联或损伤可选择性压低有机半导体的电子输运，却不必完全移除材料；保留拓扑连续的离子渗透层，可把“电隔离”和“离子连通”分离。垂直沟道再把通道长度压到薄膜厚度尺度，提高跨导和速度。
+- Mechanism: 研究对 p 型和 n 型 OMIEC 做空间选择电子束曝光，定义有效与失活区域，再上下布置源漏电极形成 vOECT；由此制作有源矩阵、10×10 垂直堆叠互补反相器阵列以及 NAND/NOR 固态离子凝胶逻辑。
+- Boundary advanced: 正式摘要和 PMC 正文报告最高约 720 万 OECT/cm²、0.08–1.7 S 跨导、<100 μs 瞬态和 >100,000 次稳定开关；互补反相器平均增益约 135.68±30.72，NAND/NOR 电路面积约 300 μm²。验证仍是实验室微纳制造与受控电解质/离子凝胶，未覆盖长期生物环境、晶圆良率或与传感阵列的完整系统。
+- Old problem: 已有垂直 OECT 能提高单位面积电流，却因有机层刻蚀、层间接触和 p/n 材料图案化困难，难以形成高密度、可寻址、互补逻辑阵列。
+- Why it works: 选择性失活让一张连续膜同时承担离子网络和电子像素隔离，避免物理挖空造成的电极短接；垂直纳米沟道缩短载流路径，p/n 堆叠则在低电压下获得高增益逻辑。
+- True novelty: 真正新意是“电子绝缘但离子连通”的非起伏图案化范式，以及它对 3D 互补 OECT 集成的直接解锁，而非单个高跨导器件。
+- Evidence: Nature 官方页面确认 Version of Record、卷页 7:234–243 与关键图；PubMed/PMC 提供完整作者稿级正文和图表，支持密度、跨导、速度、循环及逻辑数据。本地研究包未取得出版社最终 PDF，因此证据标为“正式页面 + PMC 完整作者稿”，不计作出版社 PDF 全文。
